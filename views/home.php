@@ -166,5 +166,79 @@
 			<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
 		</a>
 	</section>
+
+	<!-- Recentes política -->
+	<div class="politica">
+		<div class="noticias-maiores">
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="noticia-maior-politica">
+					<img src="https://f.i.uol.com.br/fotografia/2019/03/09/15521605565c84172c8e6a5_1552160556_3x2_md.jpg">
+					<div class="noticia-maior-conteudo">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="noticia-maior-politica">
+					<img src="https://veja.abril.com.br/wp-content/uploads/2020/11/JAIR-BOLSONARO-EMBRATUR-AGIF364762.jpg.jpg">
+					<div class="noticia-maior-conteudo">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="noticias-menores-politica">
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="noticia-menor-politica">
+					<img src="https://ogimg.infoglobo.com.br/in/23339989-b88-b82/FT1086A/652/80469877_Brazils-new-President-Jair-Bolsonaro-L-and-Brazils-new-Vice-President-Hamilton-Mourao.jpg">
+					<div class="noticia-menor-conteudo-politica">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="noticia-menor-politica">
+					<img src="https://ogimg.infoglobo.com.br/in/24721212-7c1-090/FT1086A/652/xgued.jpg.pagespeed.ic.Zlr3jdpuvY.jpg">
+					<div class="noticia-menor-conteudo-politica">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="noticia-menor-politica">
+					<img src="https://i2.wp.com/souconcurseiroevoupassar.blog/wp-content/uploads/2020/08/Blog_PF.png?fit=600%2C350&ssl=1">
+					<div class="noticia-menor-conteudo-politica">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="noticia-menor-politica">
+					<img src="https://www.direcaoconcursos.com.br/wp-content/uploads/2019/10/Screenshot_2019-10-14-policial-federal-Pesquisa-Google1.png">
+					<div class="noticia-menor-conteudo-politica">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<!-- Publicidade -->
+	<div class="publicidade">
+		<div class="publicidade-item">
+			<p>PUBLICIDADE</p>
+		</div>
+	</div>
 </body>
 </html>
