@@ -1,0 +1,494 @@
+/* League-Gotic Regular */
+@font-face {
+    font-family: 'league_gothicregular';
+    src: url('../fonts/league-gotic/leaguegothic-regular-webfont.woff2') format('woff2'),
+         url('../fonts/league-gotic/leaguegothic-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* League-Gotic Condensed Italic */
+@font-face {
+    font-family: 'league_gothiccondensed_italic';
+    src: url('../fonts/league-gotic/leaguegothic-condenseditalic-webfont.woff2') format('woff2'),
+         url('../fonts/league-gotic/leaguegothic-condenseditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* League-Gotic CnRg */
+@font-face {
+    font-family: 'league_gothicCnRg';
+    src: url('../fonts/league-gotic/leaguegothic-condensedregular-webfont.woff2') format('woff2'),
+         url('../fonts/league-gotic/leaguegothic-condensedregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* League-Gotic Italic */
+@font-face {
+    font-family: 'league_gothicitalic';
+    src: url('../fonts/league-gotic/leaguegothic-italic-webfont.woff2') format('woff2'),
+         url('../fonts/league-gotic/leaguegothic-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Montserrat Thin */
+@font-face {
+    font-family: 'montserratthin';
+    src: url('../fonts/montserrat/montserrat-thin-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat/montserrat-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Montserrat Semibold */
+@font-face {
+    font-family: 'montserratsemibold';
+    src: url('../fonts/montserrat/montserrat-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat/montserrat-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Montserrat Regular */
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../fonts/montserrat/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Montserrat Medium */
+@font-face {
+    font-family: 'montserratmedium';
+    src: url('../fonts/montserrat/montserrat-medium-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat/montserrat-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Montserrat Light */
+@font-face {
+    font-family: 'montserratlight';
+    src: url('../fonts/montserrat/montserrat-light-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat/montserrat-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Montserrat ExtraLight */
+@font-face {
+    font-family: 'montserratextralight';
+    src: url('../fonts/montserrat/montserrat-extralight-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat/montserrat-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Montserrat ExtraBold */
+@font-face {
+    font-family: 'montserratextrabold';
+    src: url('../fonts/montserrat/montserrat-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat/montserrat-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Montserrat Bold */
+@font-face {
+    font-family: 'montserratbold';
+    src: url('../fonts/montserrat/montserrat-bold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat/montserrat-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Montserrat Black */
+@font-face {
+    font-family: 'montserratblack';
+    src: url('../fonts/montserrat/montserrat-black-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat/montserrat-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Topo */
+.topo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: black;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+.item-topo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.item-topo img {
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+}
+.item-topo p {
+	font-family: 'montserratregular';
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	color: white;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: default;
+}
+
+/* Slideshow */
+.slideshow {
+	height: 580px;
+}
+.slideshow-controls {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	flex-direction: column;
+	height: 580px;
+	padding-left: 90px;
+	padding-right: 90px;
+}
+.slide-button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 480px;
+	z-index: 2;
+}
+.slide-button img {
+	width: 68px;
+	height: 68px;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	cursor: pointer;
+	margin-top: 45px;
+}
+.slide-button img:hover {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.slide-dots {
+	width: 280px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	z-index: 2;
+}
+.slide-dot {
+	width: 70px;
+	height: 4px;
+	background-color: white;
+	cursor: pointer;
+}
+.slide-dot-active {
+	background-color: #E0E0E0;
+}
+.slideshow-item {
+	width: 100%;
+	height: 580px;
+	display: none;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	position: absolute;
+	overflow: hidden;
+}
+.slideshow-item img {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	filter: brightness(91%);
+	z-index: -1;
+}
+.slideshow-item-conteudo {
+	width: 570px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 70px;
+	margin-left: 90px;
+}
+.slideshow-item-conteudo a {
+	text-decoration: none;
+}
+.slideshow-item-conteudo h2 {
+	margin: 0;
+	padding: 0;
+	font-family: 'league_gothicregular';
+	font-size: 52px;
+	color: white;
+}
+.slideshow-item-conteudo p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	margin-top: 20px;
+	color: white;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Recentes */
+.recentes {
+	display: flex;
+	padding-top: 70px;
+	padding-left: 90px;
+	padding-right: 90px;
+	flex-direction: column;
+}
+.topo-recentes {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.topo-recentes a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	text-decoration: none;
+}
+.topo-recentes a:hover {
+	text-decoration: underline;
+	color: black;
+}
+.topo-recentes p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 16px;
+	color: black;
+}
+.topo-recentes img {
+	width: 32px;
+	height: 32px;
+	margin-left: 10px;
+}
+.noticias-recentes {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 500px;
+	margin-top: 20px;
+}
+.noticias-recentes a {
+	color: white;
+	text-decoration: none;
+}
+.noticia-maior {
+	width: 700px;
+	height: 500px;
+	display: flex;
+	align-items: flex-end;
+}
+.noticia-maior img {
+	width: 700px;
+	height: 500px;
+	position: absolute;
+	filter: brightness(91%);
+	z-index: -1;
+	transition: filter 0.8s;
+}
+.noticia-maior:hover img {
+	filter: brightness(61%);
+} 
+.noticia-maior-conteudo {
+	width: 470px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 40px;
+	margin-left: 40px;
+}
+.noticia-maior-conteudo h2 {
+	margin: 0;
+	padding: 0;
+	font-family: 'league_gothicregular';
+	font-size: 36px;
+	color: white;
+}
+.noticia-maior-conteudo p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	margin-top: 20px;
+	color: white;
+}
+.noticias-menores {
+	width: 430px;
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.noticia-menor {
+	width: 430px;
+	height: 230px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.noticia-menor img {
+	width: 430px;
+	height: 230px;
+	position: absolute;
+	z-index: -1;
+	filter: brightness(91%);
+	transition: filter 0.8s;
+}
+.noticia-menor:hover img {
+	filter: brightness(61%);
+}
+.noticia-menor-conteudo {
+	width: 400px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.noticia-menor-conteudo h2 {
+	margin: 0;
+	padding: 0;
+	font-family: 'league_gothicregular';
+	font-size: 36px;
+	color: white;
+}
+.noticia-menor-conteudo p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: white;
+}
+
+/* Seções */
+.secoes {
+	display: flex;
+	margin-left: 220px;
+	margin-right: 220px;
+	border-top: 1px solid black;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-left: 100px;
+	padding-right: 100px;
+	margin-top: 70px;
+}
+.secao {
+	width: 130px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+}
+.right {
+	border-right: 1px solid black;
+}
+.secoes a {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: black;
+	text-decoration: none;
+}
+.secoes a:hover {
+	text-decoration: underline;
+}
+
+/* Publicidade */
+.publicidade {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-left: 90px;
+	padding-right: 90px;
+	margin-top: 70px;
+}
+.publicidade-item {
+	width: 100%;
+	height: 120px;
+	background-color: black;
+	text-align: center;
+	line-height: 120px;
+}
+.publicidade-item p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: white;
+	cursor: default;
+}
+
+/* Topo da seção */
+.topo-secao {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 30px;
+	border-top: 1px solid #DC2121;
+	margin-right: 220px;
+	margin-left: 220px;
+	margin-top: 70px;
+}
+.topo-secao a {
+	width: 100%;
+	color: #DC2121;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.topo-secao a:hover {
+	text-decoration: underline;
+}
+.topo-secao p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 16px;
+	color: #DC2121;
+}
+.topo-secao img {
+	width: 32px;
+	height: 32px;
+	margin-left: 10px;
+}
