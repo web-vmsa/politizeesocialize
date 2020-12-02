@@ -178,7 +178,7 @@
 	</section>
 
 	<!-- Recentes política -->
-	<div class="politica">
+	<section class="politica">
 		<div class="noticias-maiores">
 			<a href="<?php echo BASE_URL; ?>postagem/url">
 				<div class="noticia-maior-politica">
@@ -242,7 +242,7 @@
 				</div>
 			</a>
 		</div>
-	</div>
+	</section>
 
 	<!-- Publicidade -->
 	<div class="publicidade">
@@ -307,7 +307,7 @@
 						<p>20 DE OUT | 2020</p>
 					</div>
 					<video id="my-video" class="video-js vjs-theme-city" poster="https://www.vagalume.com.br/ludmilla/images/ludmilla.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>system/files/video.mp4" type="video/mp4" />
+						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
 					</video>
 					<div class="conteudo-video">
 						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
@@ -323,7 +323,7 @@
 						<p>20 DE OUT | 2020</p>
 					</div>
 					<video id="my-video" class="video-js vjs-theme-city" poster="https://static1.purepeople.com.br/articles/7/28/05/97/@/3187348-marina-ruy-barbosa-e-comparada-com-model-624x600-1.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>system/files/video.mp4" type="video/mp4" />
+						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
 					</video>
 					<div class="conteudo-video">
 						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
@@ -504,5 +504,213 @@
 			<p>PUBLICIDADE</p>
 		</div>
 	</div>
+
+	<!-- Esportes -->
+	<section class="topo-secao esportes-topo-secao">
+		<a href="<?php echo BASE_URL; ?>categoria/esportes">
+			<div class="item-topo-secao"></div>
+			<div class="item-topo-secao">
+				<p>ESPORTES</p>
+			</div>
+			<div class="item-topo-secao justify-right">
+				<img src="<?php echo BASE_URL; ?>assets/images/right-yellow.svg">
+			</div>
+		</a>
+	</section>
+
+	<!-- Notícias recentes Esportes -->
+	<section class="esportes">
+		<!-- Jogos -->
+		<div class="futebol">
+			<div class="jogos">
+				<div class="topo-recentes">
+					<a href="<?php echo BASE_URL; ?>jogos/resultados">
+						<p>Resultados</p>
+						<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+					</a>
+				</div>
+				<!-- Resultados -->
+				<div class="jogos-divs">
+					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+						<p>FLA 1-1 RSC</p>
+					</div></a>
+					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+						<p>SPFC 3-1 BAH</p>
+					</div></a>
+					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+						<p>VAS 1-4 CEA</p>
+					</div></a>
+					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+						<p>INT 0-0 ATH</p>
+					</div></a>
+				</div>
+			</div>
+			<div class="divisor"></div>
+			<div class="jogos">
+				<div class="topo-recentes">
+					<a href="<?php echo BASE_URL; ?>jogos">
+						<p>Próximos jogos</p>
+						<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+					</a>
+				</div>
+				<!-- Jogos -->
+				<div class="jogos-divs">
+					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+						<p>FLA 1-1 RSC</p>
+					</div></a>
+					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+						<p>SPFC 3-1 BAH</p>
+					</div></a>
+					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+						<p>VAS 1-4 CEA</p>
+					</div></a>
+					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+						<p>INT 0-0 ATH</p>
+					</div></a>
+				</div>
+			</div>
+		</div>
+		<!-- -->
+
+		<!-- Notícias -->
+		<div class="noticias-menores-politica">
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="noticia-menor-politica">
+					<img src="https://m.extra.globo.com/incoming/24751825-daf-ba9/w488h275-PROP/90486867_es-rio-de-janeiro-rj-13112020treino-do-flamengono-ninho-do-uruburogerio-c.jpg">
+					<div class="noticia-menor-conteudo-politica">
+						<div class="jogo-descricao">
+							<p>FLAMENGO E SANTOS</p>
+						</div>
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>20 DE OUT | 2020</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="noticia-menor-politica">
+					<img src="https://jpimg.com.br/uploads/2020/09/marinho-participou-de-nove-gols-em-nove-jogos-do-santos-no-brasileirao.jpg">
+					<div class="noticia-menor-conteudo-politica">
+						<div class="jogo-descricao">
+							<p>FLAMENGO E SANTOS</p>
+						</div>
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>20 DE OUT | 2020</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="noticia-menor-politica">
+					<img src="https://cdn.diariodolitoral.com.br/upload/dn_noticia/2020/09/marinho_2.jpg">
+					<div class="noticia-menor-conteudo-politica">
+						<div class="jogo-descricao">
+							<p>FLAMENGO E SANTOS</p>
+						</div>
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>20 DE OUT | 2020</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="noticia-menor-politica">
+					<img src="https://uploads.metropoles.com/wp-content/uploads/2020/11/09180535/Rogerio-Ceni-Flamengo-600x400.jpg">
+					<div class="noticia-menor-conteudo-politica">
+						<div class="jogo-descricao">
+							<p>FLAMENGO E SANTOS</p>
+						</div>
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>20 DE OUT | 2020</p>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<!-- Carousel e vídeos -->
+		<div class="carousel-videos">
+			<div class="lado-carousel">
+				<div class="carousel-controls">
+					<img id="passa-carousel" src="<?php echo BASE_URL; ?>assets/images/left-arrow-white.svg">
+					<div class="slide-dots-carousel">
+						<div data-id="1" class="slide-dot-carousel"></div>
+						<div data-id="2" class="slide-dot-carousel"></div>
+						<div data-id="3" class="slide-dot-carousel"></div>
+					</div>
+					<img id="volta-carousel" src="<?php echo BASE_URL; ?>assets/images/right-arrow.svg">
+				</div>
+
+				<div class="carousel-slide">
+					<img src="https://sportbuzz.uol.com.br/media/_versions/gettyimages-1160655989_widelg.jpg">
+					<a href="<?php echo BASE_URL; ?>postagem/url">
+						<div class="slide-carousel-conteudo">
+							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
+						</div>
+					</a>
+				</div>
+				<div class="carousel-slide">
+					<img src="https://esbrasil.com.br/wp-content/uploads/2019/08/Daniel_site.jpg">
+					<a href="<?php echo BASE_URL; ?>postagem/url">
+						<div class="slide-carousel-conteudo">
+							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
+						</div>
+					</a>
+				</div>
+				<div class="carousel-slide">
+					<img src="https://conteudo.imguol.com.br/c/esporte/41/2020/11/28/neymar-faz-gol-de-penalti-na-partida-psg-x-bordeaux-pelo-campeonato-frances-1606600195230_v2_450x337.jpg">
+					<a href="<?php echo BASE_URL; ?>postagem/url">
+						<div class="slide-carousel-conteudo">
+							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="videos-esportes">
+				<a href="<?php echo BASE_URL; ?>jogo/">
+					<div class="video-esporte">
+						<div class="lado-video">
+							<video id="video-esporte" class="video-js vjs-theme-city" poster="https://f.i.uol.com.br/fotografia/2020/10/01/16016045635f768bd3d96b2_1601604563_3x2_md.jpg" preload="auto" data-setup="{}">
+							 	<source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
+							</video>
+							<div class="video-conteudo">
+								<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
+								<p>20 DE OUT | 2020</p>
+							</div>
+						</div>
+						<div class="lado-descricao">
+							<h2>ROGERIO CENI</h2>
+							<div class="link-video">
+								<p>Lorem Ipsum</p>
+								<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>jogo/">
+					<div class="video-esporte">
+						<div class="lado-video">
+							<video id="video-esporte" class="video-js vjs-theme-city" poster="https://jpimg.com.br/uploads/2020/10/brenner-rubens-chiri-spfc.jpg" preload="auto" data-setup="{}">
+							 	<source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
+							</video>
+							<div class="video-conteudo">
+								<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
+								<p>20 DE OUT | 2020</p>
+							</div>
+						</div>
+						<div class="lado-descricao">
+							<h2>ROGERIO CENI</h2>
+							<div class="link-video">
+								<p>Lorem Ipsum</p>
+								<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
 </body>
 </html>

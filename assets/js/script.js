@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+  /*
+  *  Slideshow Main
+  */
   var slideIndex = 1;
   showSlides(slideIndex);
 
@@ -43,6 +46,10 @@ $(document).ready(function(){
 
   });
 
+
+  /*
+  *  Modifica topo
+  */
   $( window ).scroll(function() {
     
     if ($(this).scrollTop() > 200){
@@ -59,6 +66,10 @@ $(document).ready(function(){
 
   });
 
+
+  /*
+  *   Slideshow Colunistas
+  */
   var slideColunistas = 1;
   showSlidesColunistas(slideColunistas);
 
@@ -108,5 +119,57 @@ $(document).ready(function(){
 
   });
 
+
+  /*
+  *   Slideshow seção esportes
+  */
+  var slideCarousel = 1;
+  showSlidesCarousel(slideCarousel);
+
+  // Next/previous controls
+  function plusSlidesCarousel(n) {
+    showSlidesCarousel(slideCarousel += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlideCarousel(n) {
+    showSlidesCarousel(slideCarousel = n);
+  }
+
+  function showSlidesCarousel(n) {
+    var i;
+    var slidesCarousel = document.getElementsByClassName("carousel-slide");
+    var dotsCarousel = document.getElementsByClassName("slide-dot-carousel");
+    if (n > slidesCarousel.length) {slideCarousel = 1}
+    if (n < 1) {slideCarousel = slidesCarousel.length}
+    for (i = 0; i < slidesCarousel.length; i++) {
+        slidesCarousel[i].style.display = "none";
+    }
+    for (i = 0; i < dotsCarousel.length; i++) {
+        dotsCarousel[i].className = dotsCarousel[i].className.replace(" slide-dot-carousel-active", "");
+    }
+    slidesCarousel[slideCarousel-1].style.display = "flex";
+    dotsCarousel[slideCarousel-1].className += " slide-dot-carousel-active";
+  }
+
+  $("#passa-carousel").on('click', function(){
+
+      plusSlidesCarousel(-1);
+
+    });
+
+    $("#volta-carousel").on('click', function(){
+
+      plusSlidesCarousel(+1);
+
+    });
+
+    $(".slide-dot-carousel").on('click', function(){
+
+      n = $(this).data("id");
+
+      currentSlideCarousel(n);
+
+    });
 
 });

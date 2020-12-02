@@ -524,7 +524,15 @@ body {
 .televisao-topo-secao p {
 	color: #4B0082;
 }
-
+.esportes-topo-secao {
+	border-top: 1px solid #ECEC12;
+}
+.esportes-topo-secao a {
+	color: #ECEC12;
+}
+.esportes-topo-secao p {
+	color: #ECEC12;
+}
 
 
 /* Política */
@@ -650,7 +658,7 @@ body {
 }
 .lado-videos {
 	width: 380px;
-	height: 1040px;
+	height: 1050px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -849,4 +857,261 @@ body {
 	-moz-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
+}
+
+/* Esportes */
+.esportes {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-left: 90px;
+	padding-right: 90px;
+	margin-top: 70px;
+}
+.futebol {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.jogos {
+	width: 560px;
+	display: flex;
+	flex-direction: column;
+}
+.jogos-divs {
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.jogos-divs a {
+	text-decoration: none;
+}
+.jogo-div {
+	width: 120px;
+	height: 50px;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.jogo-div p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: white;
+}
+.divisor {
+	width: 1px;
+	height: 50px;
+	background-color: #BDBDBD;
+}
+.esportes .noticia-menor-politica:hover .noticia-menor-conteudo-politica h2 {
+	color: #ECEC12;
+}
+.jogo-descricao {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.jogo-descricao p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	margin-bottom: 20px;
+	color: black;
+}
+.carousel-videos {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 50px;
+}
+.lado-carousel {
+	width: 750px;
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.videos-esportes {
+	width: 380px;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.videos-esportes a {
+	text-decoration: none;
+}
+.video-esporte {
+	width: 100%;
+	height: 230px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+.video-esporte:hover .lado-descricao h2 {
+	color: #ECEC12;
+}
+.lado-video {
+	width: 180px;
+	height: 230px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+#video-esporte {
+	width: 180px;
+	height: 230px;
+	position: absolute;
+	z-index: -1;
+}
+.video-conteudo {
+	width: 160px;
+	height: 200px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.video-conteudo img {
+	width: 32px;
+	height: 32px;
+}
+.video-conteudo p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: white;
+}
+.lado-descricao {
+	width: 190px;
+	margin-left: 10px;
+	height: 230px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.link-video {
+	display: flex;
+	flex-direction: column;
+}
+.link-video img {
+	width: 32px;
+	height: 32px;
+}
+.link-video p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: black;
+	margin-bottom: 10px;
+}
+.lado-descricao h2 {
+	margin: 0;
+	padding: 0;
+	font-family: 'league_gothicregular';
+	font-size: 36px;
+	color: black;
+	transition: color 0.8s;
+}
+
+/* Carousel */
+.carousel-controls {
+	width: 730px;
+	height: 480px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.carousel-controls img {
+	width: 52px;
+	height: 52px;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	cursor: pointer;
+	position: relative;
+	z-index: 3;
+}
+.carousel-controls img:hover {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.slide-dots-carousel {
+	width: 280px;
+	height: 440px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	position: relative;
+	z-index: 2;
+}
+.slide-dot-carousel {
+	width: 70px;
+	height: 4px;
+	background-color: white;
+	cursor: pointer;
+}
+.slide-dot-carousel-active {
+	background-color: #E0E0E0;
+}
+.carousel-slide {
+	width: 750px;
+	height: 500px;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.carousel-slide img {
+	width: 750px;
+	height: 500px;
+	position: absolute;
+	filter: brightness(91%);
+}
+.carousel-slide a {
+	text-decoration: none;
+}
+.slide-carousel-conteudo {
+	width: 450px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	z-index: 3;
+	margin-top: 160px;
+}
+.slide-carousel-conteudo p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: white;
+	margin-top: 20px;
+}
+.slide-carousel-conteudo h2 {
+	margin: 0;
+	padding: 0;
+	font-family: 'league_gothicregular';
+	font-size: 36px;
+	color: white;
+	transition: color 0.8s;
 }
