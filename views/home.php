@@ -147,7 +147,7 @@
 	</section>
 
 	<!-- Seções -->
-	<div class="secoes">
+	<nav class="secoes">
 		<a href="<?php echo BASE_URL; ?>categoria/televisao"><div class="secao right">TELEVISÃO</div></a>
 		<a href="<?php echo BASE_URL; ?>categoria/politica"><div class="secao right">POLÍTICA</div></a>
 		<a href="<?php echo BASE_URL; ?>categoria/esportes"><div class="secao right">ESPORTES</div></a>
@@ -155,7 +155,7 @@
 		<a href="<?php echo BASE_URL; ?>categoria/saude"><div class="secao">SAÚDE</div></a>
 		<a href="<?php echo BASE_URL; ?>categoria/colunas"><div class="secao right">COLUNAS</div></a>
 		<a href="<?php echo BASE_URL; ?>categoria/financas"><div class="secao">FINANÇAS</div></a>
-	</div>
+	</nav>
 
 	<!-- Publicidade -->
 	<div class="publicidade">
@@ -335,7 +335,7 @@
 	</section>
 
 	<!-- Colunistas -->
-	<section class="colunistas">
+	<section class="colunistas televisao-secao">
 		<div class="topo-colunistas">
 			<a href="<?php echo BASE_URL; ?>colunistas">
 				<p>COLUNISTAS</p>
@@ -640,7 +640,7 @@
 					<img id="volta-carousel" src="<?php echo BASE_URL; ?>assets/images/right-arrow.svg">
 				</div>
 
-				<div class="carousel-slide">
+				<div class="carousel-slide fade">
 					<img src="https://sportbuzz.uol.com.br/media/_versions/gettyimages-1160655989_widelg.jpg">
 					<a href="<?php echo BASE_URL; ?>postagem/url">
 						<div class="slide-carousel-conteudo">
@@ -649,7 +649,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="carousel-slide">
+				<div class="carousel-slide fade">
 					<img src="https://esbrasil.com.br/wp-content/uploads/2019/08/Daniel_site.jpg">
 					<a href="<?php echo BASE_URL; ?>postagem/url">
 						<div class="slide-carousel-conteudo">
@@ -658,7 +658,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="carousel-slide">
+				<div class="carousel-slide fade">
 					<img src="https://conteudo.imguol.com.br/c/esporte/41/2020/11/28/neymar-faz-gol-de-penalti-na-partida-psg-x-bordeaux-pelo-campeonato-frances-1606600195230_v2_450x337.jpg">
 					<a href="<?php echo BASE_URL; ?>postagem/url">
 						<div class="slide-carousel-conteudo">
@@ -712,5 +712,186 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- Tarjas abaixo da seção esportes -->
+	<div class="tarjas">
+		<div class="tarja-esquerda"></div>
+		<div class="tarja-direita"></div>
+	</div>
+
+	<!-- Colunistas -->
+	<section class="colunistas esportes-secao">
+		<div class="topo-colunistas">
+			<a href="<?php echo BASE_URL; ?>colunistas">
+				<p>COLUNISTAS</p>
+				<img src="<?php echo BASE_URL; ?>assets/images/right-yellow.svg">
+			</a>
+		</div>
+		<!-- -->
+		<div class="slide-colunistas-esportes">
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://img.estadao.com.br/fotos/crop/1200x1200/resources/jpg/8/0/1579647009808.jpg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/EdmundoVasco2008.jpg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://futebolatino.lance.com.br/wp-content/uploads/2020/03/jornal-espanhol-relembra-historias-e-declaracoes-polemicas-de-romario-Futebol-Latino-25-03.jpeg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<!-- -->
+		<div class="slide-colunistas-esportes">
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://jpimg.com.br/uploads/2020/10/brenner-rubens-chiri-spfc.jpg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://www.esporteinterativo.com.br/__export/1598051660157/sites/esporteinterativo/img/2020/08/21/agif20081919353737_1_crop1598051658952.jpg_2060162980.jpg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://bolavip.com/__export/1606738512090/sites/bolavip/img/2020/11/30/rodrigo_caioo_crop1606738476353.jpg_1902800913.jpg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<!-- -->
+		<div class="slide-colunistas-esportes">
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://thumbs.web.sapo.io/?W=800&H=0&delay_optim=1&epic=NTAxECcfHQfh+jNXETDk3ZQn+0c04rskJ9VJ9aLZtiRo3qjkpAyxT6c2CMAzY2SZspVN5ibUEyzn4ruSwovEHJbiGMbtmw8FONtOLodhNrD8pes=">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://www.esporteinterativo.com.br/__export/1598051660157/sites/esporteinterativo/img/2020/08/21/agif20081919353737_1_crop1598051658952.jpg_2060162980.jpg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://bolavip.com/__export/1606738512090/sites/bolavip/img/2020/11/30/rodrigo_caioo_crop1606738476353.jpg_1902800913.jpg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<!-- -->
+		<div class="slide-colunistas-controls">
+			<img id="passa-colunista-esportes" src="<?php echo BASE_URL; ?>assets/images/left-arrow.svg">
+			<div class="slide-dots-secao">
+				<div data-id="1" class="slide-dot-secao-esportes"></div>
+				<div data-id="2" class="slide-dot-secao-esportes"></div>
+				<div data-id="3" class="slide-dot-secao-esportes"></div>
+			</div>
+			<img id="volta-colunista-esportes" src="<?php echo BASE_URL; ?>assets/images/right-arrow-black.svg">
+		</div>
+	</section>
+
+	<!-- Seções -->
+	<nav class="secoes">
+		<a href="<?php echo BASE_URL; ?>categoria/televisao"><div class="secao right">TELEVISÃO</div></a>
+		<a href="<?php echo BASE_URL; ?>categoria/politica"><div class="secao right">POLÍTICA</div></a>
+		<a href="<?php echo BASE_URL; ?>categoria/esportes"><div class="secao right">ESPORTES</div></a>
+		<a href="<?php echo BASE_URL; ?>categoria/economia"><div class="secao right">ECONOMIA</div></a>
+		<a href="<?php echo BASE_URL; ?>categoria/saude"><div class="secao">SAÚDE</div></a>
+		<a href="<?php echo BASE_URL; ?>categoria/colunas"><div class="secao right">COLUNAS</div></a>
+		<a href="<?php echo BASE_URL; ?>categoria/financas"><div class="secao">FINANÇAS</div></a>
+	</nav>
 </body>
 </html>

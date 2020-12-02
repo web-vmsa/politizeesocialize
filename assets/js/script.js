@@ -172,4 +172,56 @@ $(document).ready(function(){
 
     });
 
+  /*
+  *   Slideshow Colunistas da seção de esportes
+  */
+  var ColunistasEsportes = 1;
+  showColunistasEsportes(ColunistasEsportes);
+
+  // Next/previous controls
+  function plusColunistasEsportes(n) {
+    showColunistasEsportes(ColunistasEsportes += n);
+  }
+
+  // Thumbnail image controls
+  function currentColunistasEsportes(n) {
+    showColunistasEsportes(ColunistasEsportes = n);
+  }
+
+  function showColunistasEsportes(n) {
+    var i;
+    var slidesColunistasEsportes = document.getElementsByClassName("slide-colunistas-esportes");
+    var dotsColunistasEsportes = document.getElementsByClassName("slide-dot-secao-esportes");
+    if (n > slidesColunistasEsportes.length) {ColunistasEsportes = 1}
+    if (n < 1) {ColunistasEsportes = slidesColunistasEsportes.length}
+    for (i = 0; i < slidesColunistasEsportes.length; i++) {
+        slidesColunistasEsportes[i].style.display = "none";
+    }
+    for (i = 0; i < dotsColunistasEsportes.length; i++) {
+        dotsColunistasEsportes[i].className = dotsColunistasEsportes[i].className.replace(" slide-dot-secao-active", "");
+    }
+    slidesColunistasEsportes[ColunistasEsportes-1].style.display = "flex";
+    dotsColunistasEsportes[ColunistasEsportes-1].className += " slide-dot-secao-active";
+  }
+
+  $("#passa-colunista-esportes").on('click', function(){
+
+    plusColunistasEsportes(-1);
+
+  });
+
+  $("#volta-colunista-esportes").on('click', function(){
+
+    plusColunistasEsportes(+1);
+
+  });
+
+  $(".slide-dot-secao-esportes").on('click', function(){
+
+    n = $(this).data("id");
+
+    currentColunistasEsportes(n);
+
+  });
+
 });
