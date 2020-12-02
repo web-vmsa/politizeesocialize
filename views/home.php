@@ -36,18 +36,24 @@
 
 	<!-- Script -->
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
+
+	<!-- Video js -->
+	<link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+	<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	<script src="https://vjs.zencdn.net/7.10.2/video.js"></script>
+	<link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
 </head>
 <body>
 	<!-- Header -->
 	<header class="topo">
-		<div class="item-topo some">
+		<div class="item-topo some justify-left">
 			<img alt="Menu icon" src="<?php echo BASE_URL; ?>assets/images/menu.svg">
 			<p>MENU</p>
 		</div>
 		<div class="item-topo">
 			<p class="modifica">28 DE OUTUBRO DE 2020</p>
 		</div>
-		<div class="item-topo some">
+		<div class="item-topo some justify-right">
 			<p>PESQUISAR</p>
 			<img alt="Search icon" src="<?php echo BASE_URL; ?>assets/images/search.svg">
 		</div>
@@ -159,11 +165,15 @@
 	</div>
 
 	<!-- Política -->
-	<section class="topo-secao">
+	<section class="topo-secao politica-topo-secao">
 		<a href="<?php echo BASE_URL; ?>categoria/politica">
-			<div></div>
-			<p>POLÍTICA</p>
-			<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
+			<div class="item-topo-secao"></div>
+			<div class="item-topo-secao">
+				<p>POLÍTICA</p>
+			</div>
+			<div class="item-topo-secao justify-right">
+				<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
+			</div>
 		</a>
 	</section>
 
@@ -233,6 +243,260 @@
 			</a>
 		</div>
 	</div>
+
+	<!-- Publicidade -->
+	<div class="publicidade">
+		<div class="publicidade-item">
+			<p>PUBLICIDADE</p>
+		</div>
+	</div>
+
+	<!-- Televisão -->
+	<section class="topo-secao televisao-topo-secao">
+		<a href="<?php echo BASE_URL; ?>categoria/politica">
+			<div class="item-topo-secao"></div>
+			<div class="item-topo-secao">
+				<p>TELEVISÃO</p>
+			</div>
+			<div class="item-topo-secao justify-right">
+				<img src="<?php echo BASE_URL; ?>assets/images/right-purple.svg">
+			</div>
+		</a>
+	</section>
+
+	<!-- Notícias recentes Televisão -->
+	<section class="televisao">
+		<div class="lado-noticias">
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="noticia-maior">
+					<img src="https://uploads.metropoles.com/wp-content/uploads/2020/09/01085635/anitta-56-1024x683.jpg">
+					<div class="noticia-maior-conteudo">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="noticia-menor-politica">
+					<img src="https://i.uai.com.br/IEvZhk8IbLMyhraHAfZQWoIGV4c=/750x0/imgsapp2.uai.com.br/app/noticia_133890394703/2020/11/27/265437/20201129133043275275e.jpg">
+					<div class="noticia-menor-conteudo-politica">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="noticia-menor-politica">
+					<img src="https://static.poder360.com.br/2020/06/jn-868x644.jpg">
+					<div class="noticia-menor-conteudo-politica">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+
+			<div class="border-bottom"></div>
+		</div>
+		<div class="lado-videos">
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="video">
+					<div class="topo-video">
+						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
+						<p>20 DE OUT | 2020</p>
+					</div>
+					<video id="my-video" class="video-js vjs-theme-city" poster="https://www.vagalume.com.br/ludmilla/images/ludmilla.jpg" preload="auto" data-setup="{}">
+						 <source src="<?php echo BASE_URL; ?>system/files/video.mp4" type="video/mp4" />
+					</video>
+					<div class="conteudo-video">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<?php echo BASE_URL; ?>postagem/url">
+				<div class="video">
+					<div class="topo-video">
+						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
+						<p>20 DE OUT | 2020</p>
+					</div>
+					<video id="my-video" class="video-js vjs-theme-city" poster="https://static1.purepeople.com.br/articles/7/28/05/97/@/3187348-marina-ruy-barbosa-e-comparada-com-model-624x600-1.jpg" preload="auto" data-setup="{}">
+						 <source src="<?php echo BASE_URL; ?>system/files/video.mp4" type="video/mp4" />
+					</video>
+					<div class="conteudo-video">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</section>
+
+	<!-- Colunistas -->
+	<section class="colunistas">
+		<div class="topo-colunistas">
+			<a href="<?php echo BASE_URL; ?>colunistas">
+				<p>COLUNISTAS</p>
+				<img src="<?php echo BASE_URL; ?>assets/images/right-purple.svg">
+			</a>
+		</div>
+		<!-- -->
+		<div class="slide-colunistas">
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://thumbs.web.sapo.io/?W=800&H=0&delay_optim=1&epic=NTAxECcfHQfh+jNXETDk3ZQn+0c04rskJ9VJ9aLZtiRo3qjkpAyxT6c2CMAzY2SZspVN5ibUEyzn4ruSwovEHJbiGMbtmw8FONtOLodhNrD8pes=">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://www.esporteinterativo.com.br/__export/1598051660157/sites/esporteinterativo/img/2020/08/21/agif20081919353737_1_crop1598051658952.jpg_2060162980.jpg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://bolavip.com/__export/1606738512090/sites/bolavip/img/2020/11/30/rodrigo_caioo_crop1606738476353.jpg_1902800913.jpg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<!-- -->
+		<div class="slide-colunistas">
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://jpimg.com.br/uploads/2020/10/brenner-rubens-chiri-spfc.jpg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://www.esporteinterativo.com.br/__export/1598051660157/sites/esporteinterativo/img/2020/08/21/agif20081919353737_1_crop1598051658952.jpg_2060162980.jpg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://bolavip.com/__export/1606738512090/sites/bolavip/img/2020/11/30/rodrigo_caioo_crop1606738476353.jpg_1902800913.jpg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<!-- -->
+		<div class="slide-colunistas">
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://thumbs.web.sapo.io/?W=800&H=0&delay_optim=1&epic=NTAxECcfHQfh+jNXETDk3ZQn+0c04rskJ9VJ9aLZtiRo3qjkpAyxT6c2CMAzY2SZspVN5ibUEyzn4ruSwovEHJbiGMbtmw8FONtOLodhNrD8pes=">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://www.esporteinterativo.com.br/__export/1598051660157/sites/esporteinterativo/img/2020/08/21/agif20081919353737_1_crop1598051658952.jpg_2060162980.jpg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+				<div class="colunista">
+					<div class="foto-colunista">
+						<img src="https://bolavip.com/__export/1606738512090/sites/bolavip/img/2020/11/30/rodrigo_caioo_crop1606738476353.jpg_1902800913.jpg">
+					</div>
+					<div class="dados-colunista">
+						<p>Lorem Ipsum</p>
+						<div class="redes-sociais-colunista">
+							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
+							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<!-- -->
+		<div class="slide-colunistas-controls">
+			<img id="passa-colunista" src="<?php echo BASE_URL; ?>assets/images/left-arrow.svg">
+			<div class="slide-dots-secao">
+				<div data-id="1" class="slide-dot-secao"></div>
+				<div data-id="2" class="slide-dot-secao"></div>
+				<div data-id="3" class="slide-dot-secao"></div>
+			</div>
+			<img id="volta-colunista" src="<?php echo BASE_URL; ?>assets/images/right-arrow-black.svg">
+		</div>
+	</section>
 
 	<!-- Publicidade -->
 	<div class="publicidade">

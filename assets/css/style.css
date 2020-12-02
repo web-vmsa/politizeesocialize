@@ -136,6 +136,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	width: 300px;
 }
 .item-topo img {
 	width: 32px;
@@ -312,13 +313,13 @@ body {
 	text-decoration: none;
 }
 .noticia-maior {
-	width: 700px;
+	width: 750px;
 	height: 500px;
 	display: flex;
 	align-items: flex-end;
 }
 .noticia-maior img {
-	width: 700px;
+	width: 750px;
 	height: 500px;
 	position: absolute;
 	filter: brightness(91%);
@@ -352,7 +353,7 @@ body {
 	color: white;
 }
 .noticias-menores {
-	width: 430px;
+	width: 380px;
 	height: 500px;
 	display: flex;
 	align-items: center;
@@ -360,14 +361,14 @@ body {
 	flex-direction: column;
 }
 .noticia-menor {
-	width: 430px;
+	width: 380px;
 	height: 230px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 .noticia-menor img {
-	width: 430px;
+	width: 380px;
 	height: 230px;
 	position: absolute;
 	z-index: -1;
@@ -378,7 +379,7 @@ body {
 	filter: brightness(77%);
 }
 .noticia-menor-conteudo {
-	width: 400px;
+	width: 350px;
 	height: 200px;
 	display: flex;
 	flex-direction: column;
@@ -465,14 +466,25 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	padding-top: 20px;
-	border-top: 1px solid #DC2121;
 	margin-right: 220px;
 	margin-left: 220px;
 	margin-top: 70px;
 }
+.item-topo-secao {
+	width: 200px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.justify-right {
+	justify-content: flex-end;
+}
+.justify-left {
+	justify-content: flex-start;
+}
 .topo-secao a {
 	width: 100%;
-	color: #DC2121;
 	text-decoration: none;
 	display: flex;
 	align-items: center;
@@ -486,13 +498,34 @@ body {
 	padding: 0;
 	font-family: 'montserratmedium';
 	font-size: 16px;
-	color: #DC2121;
 }
 .topo-secao img {
 	width: 32px;
 	height: 32px;
 	margin-left: 10px;
 }
+
+
+.politica-topo-secao {
+	border-top: 1px solid #DC2121;
+}
+.politica-topo-secao a {
+	color: #DC2121;
+}
+.politica-topo-secao p {
+	color: #DC2121;
+}
+.televisao-topo-secao {
+	border-top: 1px solid #4B0082;
+}
+.televisao-topo-secao a {
+	color: #4B0082;
+}
+.televisao-topo-secao p {
+	color: #4B0082;
+}
+
+
 
 /* Política */
 .politica {
@@ -582,4 +615,238 @@ body {
 }
 .noticia-menor-politica:hover h2 {
 	color: #DC2121;
+}
+
+/* Televisão */
+.televisao {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding-left: 90px;
+	padding-right: 90px;
+	margin-top: 70px;
+}
+.televisao .noticia-menor-politica:hover h2 {
+	color: #4B0082;
+}
+.televisao .noticia-maior:hover .noticia-maior-conteudo h2 {
+	color: #4B0082;
+}
+.televisao a {
+	text-decoration: none;
+}
+.lado-noticias {
+	width: 750px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+}
+.border-bottom {
+	margin-top: 50px;
+	background-color: black;
+	width: 100%;
+	height: 1px;
+}
+.lado-videos {
+	width: 380px;
+	height: 1040px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.video {
+	width: 100%;
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+}
+#my-video {
+	width: 380px;
+	height: 500px;
+	position: absolute;
+	z-index: -1;
+}
+.video:hover .conteudo-video h2 {
+	color: #4B0082;
+}
+.conteudo-video {
+	width: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 18px;
+}
+.topo-video {
+	width: 350px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 18px;
+}
+.topo-video img {
+	width: 52px;
+	height: 52px;
+}
+.topo-video p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: white;
+}
+.conteudo-video h2 {
+	margin: 0;
+	padding: 0;
+	font-family: 'league_gothicregular';
+	font-size: 36px;
+	color: white;
+	transition: color 0.8s;
+}
+.conteudo-video p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: white;
+	margin-top: 20px;
+}
+
+/* Colunistas */
+.colunistas {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 70px;
+	padding-left: 90px;
+	padding-right: 90px;
+}
+.topo-colunistas {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.topo-colunistas a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	text-decoration: none;
+}
+.topo-colunistas a:hover {
+	text-decoration: underline;
+	color: #4B0082;
+}
+.topo-colunistas p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 16px;
+	color: #4B0082;
+}
+.topo-colunistas img {
+	width: 32px;
+	height: 32px;
+	margin-left: 10px;
+}
+.slide-colunistas {
+	width: 100%;
+	margin-top: 50px;
+	display: none;
+	align-items: center;
+	justify-content: space-between;
+}
+.slide-colunistas a {
+	color: black;
+	text-decoration: none;
+}
+.colunista {
+	width: 350px;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	border-right: 1px solid #BDBDBD;
+}
+.foto-colunista {
+	width: 150px;
+	height: 150px;
+	background-color: pink;
+	border-radius: 80px;
+	overflow: hidden;
+	margin-right: 10px;
+}
+.foto-colunista img {
+	width: auto;
+	height: 150px;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.colunista:hover .foto-colunista img {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.dados-colunista {
+	display: flex;
+	flex-direction: column;
+}
+.dados-colunista p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 16px;
+	color: black;
+}
+.redes-sociais-colunista {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+}
+.redes-sociais-colunista img {
+	width: 22px;
+	height: 22px;
+	margin-right: 10px;
+}
+.slide-colunistas-controls {
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.slide-dots-secao {
+	width: 280px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	z-index: 2;
+}
+.slide-dot-secao {
+	width: 70px;
+	height: 4px;
+	background-color: black;
+	cursor: pointer;
+}
+.slide-dot-secao-active {
+	background-color: #4B0082;
+}
+.slide-colunistas-controls img {
+	width: 68px;
+	height: 68px;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	cursor: pointer;
+	margin-top: 45px;
+}
+.slide-colunistas-controls img:hover {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
