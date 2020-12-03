@@ -44,6 +44,10 @@
 	<link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
 </head>
 <body>
+	<!-- Facebook plugin -->
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="8w1uRG64"></script>
+
 	<!-- Header -->
 	<header class="topo">
 		<div class="item-topo some justify-left">
@@ -352,9 +356,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -367,9 +371,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -382,9 +386,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -400,9 +404,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -415,9 +419,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -430,9 +434,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -448,9 +452,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -463,9 +467,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -478,9 +482,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -737,9 +741,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -752,9 +756,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -767,9 +771,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -785,9 +789,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -800,9 +804,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -815,9 +819,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -833,9 +837,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -848,9 +852,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -863,9 +867,9 @@
 					<div class="dados-colunista">
 						<p>Lorem Ipsum</p>
 						<div class="redes-sociais-colunista">
-							<a href=""><img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"></a>
-							<a href=""><img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-42-151143.png"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+							<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
 						</div>
 					</div>
 				</div>
@@ -893,5 +897,131 @@
 		<a href="<?php echo BASE_URL; ?>categoria/colunas"><div class="secao right">COLUNAS</div></a>
 		<a href="<?php echo BASE_URL; ?>categoria/financas"><div class="secao">FINANÇAS</div></a>
 	</nav>
+
+	<!-- Vídeos -->
+	<section class="videos-rodape">
+		<div class="videos">
+			<div class="topo-recentes">
+				<a href="<?php echo BASE_URL; ?>videos">
+					<p>VÍDEOS</p>
+					<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+				</a>
+			</div>
+
+			<div class="caixa-videos">
+				<a href="<?php echo BASE_URL; ?>postagem/url">
+					<div class="video-rodape">
+						<div class="topo-video-rodape">
+							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
+							<p>20 DE OUT | 2020</p>
+						</div>
+						<video id="my-video-rodape" class="video-js vjs-theme-city" poster="https://static.politico.com/dims4/default/1755c64/2147483647/resize/1160x%3E/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fc5%2F00%2F1a5863e64680b3c05987e15d3efa%2F20201124-donald-trump-ap-773.jpg" preload="auto" data-setup="{}">
+							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
+						</video>
+						<div class="conteudo-video-rodape">
+							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>postagem/url">
+					<div class="video-rodape">
+						<div class="topo-video-rodape">
+							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
+							<p>20 DE OUT | 2020</p>
+						</div>
+						<video id="my-video-rodape" class="video-js vjs-theme-city" poster="https://www.infomoney.com.br/wp-content/uploads/2020/09/cropped-Joe-Biden.jpg?fit=1024%2C576&quality=75&strip=all" preload="auto" data-setup="{}">
+							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
+						</video>
+						<div class="conteudo-video-rodape">
+							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>postagem/url">
+					<div class="video-rodape">
+						<div class="topo-video-rodape">
+							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
+							<p>20 DE OUT | 2020</p>
+						</div>
+						<video id="my-video-rodape" class="video-js vjs-theme-city" poster="https://s2.glbimg.com/GZ9JHX1nNNAbFJGcpW2zqRD3uCA=/0x0:1135x757/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/Q/d/KwXr58SNiJMaYBvNcAiQ/felipeararuna.jpg" preload="auto" data-setup="{}">
+							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
+						</video>
+						<div class="conteudo-video-rodape">
+							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>postagem/url">
+					<div class="video-rodape">
+						<div class="topo-video-rodape">
+							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
+							<p>20 DE OUT | 2020</p>
+						</div>
+						<video id="my-video-rodape" class="video-js vjs-theme-city" poster="https://s2.glbimg.com/-uLuxz9MOsAb9QNoYYjKUsS29Uk=/251x78:910x607/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/a/A/zSsP3cTy2XOLCzOlKgIw/brasileiro.jpeg" preload="auto" data-setup="{}">
+							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
+						</video>
+						<div class="conteudo-video-rodape">
+							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
+						</div>
+					</div>
+				</a>
+
+				<button id="load-more-videos">CARREGAR MAIS</button>
+			</div>
+		</div>
+		<!-- Widgets -->
+		<div class="asides">
+			<!-- Redes sociais -->
+			<aside class="widget">
+				<div class="topo-recentes">
+					<a href="<?php echo BASE_URL; ?>">
+						<p>REDES SOCIAIS</p>
+						<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+					</a>
+				</div>
+
+				<div class="corpo-widget">
+					<a href="https://www.instagram.com"><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+					<a href="https://www.youtube.com"><img src="<?php echo BASE_URL; ?>assets/images/youtube.svg"></a>
+					<a href="ttps://www.facebook.com"><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+				</div>
+			</aside>
+
+			<!-- Newsletter lateral -->
+			<aside class="widget-newsletter">
+				<div class="topo-recentes">
+					<a href="<?php echo BASE_URL; ?>">
+						<p>ASSINE A NEWSLETTER</p>
+						<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+					</a>
+				</div>
+
+				<div class="corpo-widget-newsletter">
+					<form method="POST" id="form_newsletter">
+						<input type="text" name="email" id="email" placeholder="E-mail">
+						<button type="submit">ASSINAR</button>
+					</form>
+				</div>
+			</aside>
+
+			<!-- Facebook lateral -->
+			<aside class="widget-facebook">
+				<div class="topo-recentes">
+					<a href="<?php echo BASE_URL; ?>">
+						<p>FACEBOOK</p>
+						<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+					</a>
+				</div>
+
+				<div class="corpo-widget-facebook">
+					<div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="270" data-height="480" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+				</div>
+			</aside>
+		</div>
+	</section>
 </body>
 </html>
