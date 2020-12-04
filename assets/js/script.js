@@ -224,4 +224,32 @@ $(document).ready(function(){
 
   });
 
+  /*
+  *   Abrir o menu
+  */
+  $(".abrir-menu").click(function(){
+
+      $(".modal").fadeIn("slow");
+
+  });
+
+  /*
+  *   Fechar o menu
+  */
+  $(".fechar-menu").click(function(){
+
+      $(".modal").fadeOut("slow");
+
+  });
+
+  /*
+  *   Abrir caixa de pesquisa
+  */
+  $(".pesquisar").click(function(){
+
+      $(".modal").fadeIn("slow");
+      $("#pesquisar").focus();
+
+  });
+
 });

@@ -48,16 +48,146 @@
 	<div id="fb-root"></div>
 	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="8w1uRG64"></script>
 
+	<!-- Modal -->
+	<div class="modal">
+		<!-- Menu -->
+		<header class="menu">
+			<div class="item-menu conteudo-left fechar-menu">
+				<img alt="Menu icon" src="<?php echo BASE_URL; ?>assets/images/close.svg">
+				<p>MENU</p>
+			</div>
+			<div class="item-menu">
+				<p>POLITIZE E SOCIALIZE</p>
+			</div>
+			<div class="item-menu conteudo-right">
+				<form method="POST">
+					<input type="text" id="pesquisar" name="pesquisar" placeholder="PESQUISAR...">
+					<button>
+						<img src="<?php echo BASE_URL; ?>assets/images/search.svg">
+					</button>
+				</form>
+			</div>
+		</header>
+
+		<!-- Conteúdo do menu -->
+		<nav class="conteudo-menu">
+			<div class="topo-recentes">
+				<p>NAVEGAÇÃO</p>
+			</div>
+
+			<div class="itens-menu">
+				<a href="<?php echo BASE_URL; ?>">
+					<div class="card-navegacao">
+						<img class="card-navegacao-img" src="https://www.zonacurva.com.br/wp-content/uploads/2020/01/isen%C3%A7%C3%A3o-jornalismo.jpg">
+						<div class="card-texto">
+							<p>INICIO</p>
+							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>">
+					<div class="card-navegacao">
+						<img class="card-navegacao-img" src="https://www.racecomunicacao.com.br/wp-content/uploads/2018/01/Assessoria-de-imprensa-e-branding.jpg">
+						<div class="card-texto">
+							<p>SEJA ESCRITOR</p>
+							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>">
+					<div class="card-navegacao">
+						<img class="card-navegacao-img" src="https://angra.rj.gov.br/sopa/fotos/noticias/56979_I.jpg">
+						<div class="card-texto">
+							<p>DOE SANGUE</p>
+							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<!-- Categorias -->
+			<div class="topo-recentes">
+				<p>CATEGORIAS</p>
+			</div>
+
+			<div class="itens-menu">
+				<a href="<?php echo BASE_URL; ?>">
+					<div class="card-navegacao">
+						<img class="card-navegacao-img" src="https://maranhaohoje.com/wp-content/uploads/2018/04/Galo.jpg">
+						<div class="card-texto">
+							<p>ESPORTES</p>
+							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>">
+					<div class="card-navegacao">
+						<img class="card-navegacao-img" src="https://conteudo.imguol.com.br/c/parceiros/ab/2020/12/02/presidente-do-brasil-jair-bolsonaro-1606912952211_v2_450x337.jpg">
+						<div class="card-texto">
+							<p>POLÍTICA</p>
+							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>">
+					<div class="card-navegacao">
+						<img class="card-navegacao-img" src="https://s2.glbimg.com/hPzLCw15vJyIznSwNP-MRS60uUk=/620x430/e.glbimg.com/og/ed/f/original/2020/03/09/gettyimages-1203348066.jpg">
+						<div class="card-texto">
+							<p>SAÚDE</p>
+							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>">
+					<div class="card-navegacao">
+						<img class="card-navegacao-img" src="https://cdn4.ecycle.com.br/cache/images/2018-02/50-650-economia-o-que-e.jpg">
+						<div class="card-texto">
+							<p>ECONOMIA</p>
+							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>">
+					<div class="card-navegacao">
+						<img class="card-navegacao-img" src="https://mcacont.com.br/wp-content/uploads/2020/02/controlar-as-finan%C3%A7as--400x400.jpg">
+						<div class="card-texto">
+							<p>FINANÇAS</p>
+							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>">
+					<div class="card-navegacao">
+						<img class="card-navegacao-img" src="https://www.elasnotapetevermelho.com.br/wp-content/uploads/2017/10/anitta-400x400.jpg">
+						<div class="card-texto">
+							<p>TELEVISÃO</p>
+							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>">
+					<div class="card-navegacao">
+						<img class="card-navegacao-img" src="https://www.caaraponews.com.br/userfiles/uploads/imagens/materias/2019/09/original/3c9d6b1a37398f34c707473299bfd7df.jpg">
+						<div class="card-texto">
+							<p>COLUNAS</p>
+							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
+						</div>
+					</div>
+				</a>
+			</div>
+		</nav>
+	</div>
+
 	<!-- Header -->
 	<header class="topo">
-		<div class="item-topo some justify-left">
+		<div class="item-topo some justify-left abrir-menu">
 			<img alt="Menu icon" src="<?php echo BASE_URL; ?>assets/images/menu.svg">
 			<p>MENU</p>
 		</div>
 		<div class="item-topo">
 			<p class="modifica">28 DE OUTUBRO DE 2020</p>
 		</div>
-		<div class="item-topo some justify-right">
+		<div class="item-topo some justify-right pesquisar">
 			<p>PESQUISAR</p>
 			<img alt="Search icon" src="<?php echo BASE_URL; ?>assets/images/search.svg">
 		</div>
@@ -910,60 +1040,60 @@
 
 			<div class="caixa-videos">
 				<a href="<?php echo BASE_URL; ?>postagem/url">
-					<div class="video-rodape">
-						<div class="topo-video-rodape">
+					<div class="video">
+						<div class="topo-video">
 							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
 							<p>20 DE OUT | 2020</p>
 						</div>
-						<video id="my-video-rodape" class="video-js vjs-theme-city" poster="https://static.politico.com/dims4/default/1755c64/2147483647/resize/1160x%3E/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Fc5%2F00%2F1a5863e64680b3c05987e15d3efa%2F20201124-donald-trump-ap-773.jpg" preload="auto" data-setup="{}">
+						<video id="my-video" class="video-js vjs-theme-city" poster="https://static.independent.co.uk/2020/12/04/07/w_56539538.jpg?width=640" preload="auto" data-setup="{}">
 							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
 						</video>
-						<div class="conteudo-video-rodape">
+						<div class="conteudo-video">
 							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
 							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
 						</div>
 					</div>
 				</a>
 				<a href="<?php echo BASE_URL; ?>postagem/url">
-					<div class="video-rodape">
-						<div class="topo-video-rodape">
+					<div class="video">
+						<div class="topo-video">
 							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
 							<p>20 DE OUT | 2020</p>
 						</div>
-						<video id="my-video-rodape" class="video-js vjs-theme-city" poster="https://www.infomoney.com.br/wp-content/uploads/2020/09/cropped-Joe-Biden.jpg?fit=1024%2C576&quality=75&strip=all" preload="auto" data-setup="{}">
+						<video id="my-video" class="video-js vjs-theme-city" poster="https://thumbnails.texastribune.org/C-grfyuIcbith-IMQzQKF0ShUpw=/850x570/smart/filters:quality(75)/https://static.texastribune.org/media/files/20ddd1716338a3c77a767d8833a40208/Joe%20Biden%20MS%20TT.jpg" preload="auto" data-setup="{}">
 							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
 						</video>
-						<div class="conteudo-video-rodape">
+						<div class="conteudo-video">
 							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
 							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
 						</div>
 					</div>
 				</a>
 				<a href="<?php echo BASE_URL; ?>postagem/url">
-					<div class="video-rodape">
-						<div class="topo-video-rodape">
+					<div class="video">
+						<div class="topo-video">
 							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
 							<p>20 DE OUT | 2020</p>
 						</div>
-						<video id="my-video-rodape" class="video-js vjs-theme-city" poster="https://s2.glbimg.com/GZ9JHX1nNNAbFJGcpW2zqRD3uCA=/0x0:1135x757/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/Q/d/KwXr58SNiJMaYBvNcAiQ/felipeararuna.jpg" preload="auto" data-setup="{}">
+						<video id="my-video" class="video-js vjs-theme-city" poster="https://s2.glbimg.com/GZ9JHX1nNNAbFJGcpW2zqRD3uCA=/0x0:1135x757/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/Q/d/KwXr58SNiJMaYBvNcAiQ/felipeararuna.jpg" preload="auto" data-setup="{}">
 							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
 						</video>
-						<div class="conteudo-video-rodape">
+						<div class="conteudo-video">
 							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
 							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
 						</div>
 					</div>
 				</a>
 				<a href="<?php echo BASE_URL; ?>postagem/url">
-					<div class="video-rodape">
-						<div class="topo-video-rodape">
+					<div class="video">
+						<div class="topo-video">
 							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
 							<p>20 DE OUT | 2020</p>
 						</div>
-						<video id="my-video-rodape" class="video-js vjs-theme-city" poster="https://s2.glbimg.com/-uLuxz9MOsAb9QNoYYjKUsS29Uk=/251x78:910x607/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/a/A/zSsP3cTy2XOLCzOlKgIw/brasileiro.jpeg" preload="auto" data-setup="{}">
+						<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
 							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
 						</video>
-						<div class="conteudo-video-rodape">
+						<div class="conteudo-video">
 							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
 							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
 						</div>
@@ -1022,6 +1152,41 @@
 				</div>
 			</aside>
 		</div>
+	</section>
+
+	<!-- Rodapé -->
+	<footer class="rodape">
+		<nav class="menu-rodape">
+			<a href="<?php echo BASE_URL; ?>categoria/colunas">COLUNAS</a>
+			<a href="<?php echo BASE_URL; ?>categoria/economia">ECONOMIA</a>	
+			<a href="<?php echo BASE_URL; ?>categoria/esportes">ESPORTES</a>
+			<a href="<?php echo BASE_URL; ?>categoria/financas">FINANÇAS</a>
+			<a href="<?php echo BASE_URL; ?>categoria/politica">POLÍTICA</a>
+			<a href="<?php echo BASE_URL; ?>categoria/saude">SAÚDE</a>
+			<a href="<?php echo BASE_URL; ?>categoria/televisao">TELEVISÃO</a>
+			<a href="<?php echo BASE_URL; ?>">SEJA ESCRITOR</a>
+			<a href="<?php echo BASE_URL; ?>">HOMEPAGE</a>
+		</nav>
+		<div class="item-rodape">
+			<h3>SEJA UM ESCRITOR</h3>
+			<p>FAÇA PARTE DA EQUIPE DE ESCRITORES DO PORTAL</p>
+			<a href="<?php echo BASE_URL; ?>">> SAIBA MAIS</a>
+		</div>
+		<div class="item-rodape">
+			<h3>NEWSLETTER</h3>
+			<p>NÃO PERCA NADA DE NOVO DO PORTAL, ASSINE A NEWSLETTER</p>
+			<form method="POST" id="form_newsletter_rodape">
+				<input type="text" name="email" id="email_rodape" placeholder="E-mail">
+				<button type="submit">
+					<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
+				</button>
+			</form>
+		</div>
+	</footer>
+
+	<!-- Copyright -->
+	<section class="copyright">
+		<p>POLITIZE E SOCIALIZE. TODOS OS DIREITOS RESERVADOS. @2017-@2020</p>
 	</section>
 </body>
 </html>
