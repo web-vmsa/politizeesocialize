@@ -19,17 +19,20 @@
 	<meta property="og:url" content="<?php echo BASE_URL; ?>">
 	<meta property="og:title" content="Politize e socialize - Política em um só lugar">
 	<meta property="og:description" content="Economia, esportes, política, finanças e televisão no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
-	<meta property="og:image" content="">
+	<meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="<?php echo BASE_URL; ?>">
 	<meta property="twitter:title" content="Politize e socialize - Política em um só lugar">
 	<meta property="twitter:description" content="Economia, esportes, política, finanças e televisão no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
-	<meta property="twitter:image" content="">
+	<meta property="twitter:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style.css">
+
+	<!-- Favicon -->
+	<link rel="icon" href="<?php echo BASE_URL; ?>assets/images/favicon.png" type="image/x-icon" />
 
 	<!-- jQuery -->
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.5.1.min.js"></script>
