@@ -38,7 +38,7 @@
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.5.1.min.js"></script>
 
 	<!-- Script -->
-	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
+	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/effects.js"></script>
 
 	<!-- Video js -->
 	<link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
@@ -50,6 +50,216 @@
 	<!-- Facebook plugin -->
 	<div id="fb-root"></div>
 	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="8w1uRG64"></script>
+
+	<!-- SlidesShow -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+		  /*
+		  *  Slideshow Main
+		  */
+		  var slideIndex = 1;
+		  showSlides(slideIndex);
+
+		  // Next/previous controls
+		  function plusSlides(n) {
+		    showSlides(slideIndex += n);
+		  }
+
+		  // Thumbnail image controls
+		  function currentSlide(n) {
+		    showSlides(slideIndex = n);
+		  }
+
+		  function showSlides(n) {
+		    var i;
+		    var slides = document.getElementsByClassName("slideshow-item");
+		    var dots = document.getElementsByClassName("slide-dot");
+		    if (n > slides.length) {slideIndex = 1}
+		    if (n < 1) {slideIndex = slides.length}
+		    for (i = 0; i < slides.length; i++) {
+		        slides[i].style.display = "none";
+		    }
+		    for (i = 0; i < dots.length; i++) {
+		        dots[i].className = dots[i].className.replace(" slide-dot-active", "");
+		    }
+		    slides[slideIndex-1].style.display = "flex";
+		    dots[slideIndex-1].className += " slide-dot-active";
+		  }
+
+		  $("#passa-slide").on('click', function(){
+
+		    plusSlides(+1);
+
+		  });
+
+		  $(".slide-dot").on('click', function(){
+
+		    n = $(this).data("id");
+
+		    currentSlide(n);
+
+		  });
+
+		  /*
+		  *   Slideshow Colunistas
+		  */
+		  var slideColunistas = 1;
+		  showSlidesColunistas(slideColunistas);
+
+		  // Next/previous controls
+		  function plusSlidesColunistas(n) {
+		    showSlidesColunistas(slideColunistas += n);
+		  }
+
+		  // Thumbnail image controls
+		  function currentSlideColunistas(n) {
+		    showSlidesColunistas(slideColunistas = n);
+		  }
+
+		  function showSlidesColunistas(n) {
+		    var i;
+		    var slidesColunistas = document.getElementsByClassName("slide-colunistas");
+		    var dotsColunistas = document.getElementsByClassName("slide-dot-secao");
+		    if (n > slidesColunistas.length) {slideColunistas = 1}
+		    if (n < 1) {slideColunistas = slidesColunistas.length}
+		    for (i = 0; i < slidesColunistas.length; i++) {
+		        slidesColunistas[i].style.display = "none";
+		    }
+		    for (i = 0; i < dotsColunistas.length; i++) {
+		        dotsColunistas[i].className = dotsColunistas[i].className.replace(" slide-dot-secao-active", "");
+		    }
+		    slidesColunistas[slideColunistas-1].style.display = "flex";
+		    dotsColunistas[slideColunistas-1].className += " slide-dot-secao-active";
+		  }
+
+		  $("#passa-colunista").on('click', function(){
+
+		    plusSlidesColunistas(-1);
+
+		  });
+
+		  $("#volta-colunista").on('click', function(){
+
+		    plusSlidesColunistas(+1);
+
+		  });
+
+		  $(".slide-dot-secao").on('click', function(){
+
+		    n = $(this).data("id");
+
+		    currentSlideColunistas(n);
+
+		  });
+
+
+		  /*
+		  *   Slideshow seção esportes
+		  */
+		  var slideCarousel = 1;
+		  showSlidesCarousel(slideCarousel);
+
+		  // Next/previous controls
+		  function plusSlidesCarousel(n) {
+		    showSlidesCarousel(slideCarousel += n);
+		  }
+
+		  // Thumbnail image controls
+		  function currentSlideCarousel(n) {
+		    showSlidesCarousel(slideCarousel = n);
+		  }
+
+		  function showSlidesCarousel(n) {
+		    var i;
+		    var slidesCarousel = document.getElementsByClassName("carousel-slide");
+		    var dotsCarousel = document.getElementsByClassName("slide-dot-carousel");
+		    if (n > slidesCarousel.length) {slideCarousel = 1}
+		    if (n < 1) {slideCarousel = slidesCarousel.length}
+		    for (i = 0; i < slidesCarousel.length; i++) {
+		        slidesCarousel[i].style.display = "none";
+		    }
+		    for (i = 0; i < dotsCarousel.length; i++) {
+		        dotsCarousel[i].className = dotsCarousel[i].className.replace(" slide-dot-carousel-active", "");
+		    }
+		    slidesCarousel[slideCarousel-1].style.display = "flex";
+		    dotsCarousel[slideCarousel-1].className += " slide-dot-carousel-active";
+		  }
+
+		  $("#passa-carousel").on('click', function(){
+
+		      plusSlidesCarousel(-1);
+
+		    });
+
+		    $("#volta-carousel").on('click', function(){
+
+		      plusSlidesCarousel(+1);
+
+		    });
+
+		    $(".slide-dot-carousel").on('click', function(){
+
+		      n = $(this).data("id");
+
+		      currentSlideCarousel(n);
+
+		    });
+
+		  /*
+		  *   Slideshow Colunistas da seção de esportes
+		  */
+		  var ColunistasEsportes = 1;
+		  showColunistasEsportes(ColunistasEsportes);
+
+		  // Next/previous controls
+		  function plusColunistasEsportes(n) {
+		    showColunistasEsportes(ColunistasEsportes += n);
+		  }
+
+		  // Thumbnail image controls
+		  function currentColunistasEsportes(n) {
+		    showColunistasEsportes(ColunistasEsportes = n);
+		  }
+
+		  function showColunistasEsportes(n) {
+		    var i;
+		    var slidesColunistasEsportes = document.getElementsByClassName("slide-colunistas-esportes");
+		    var dotsColunistasEsportes = document.getElementsByClassName("slide-dot-secao-esportes");
+		    if (n > slidesColunistasEsportes.length) {ColunistasEsportes = 1}
+		    if (n < 1) {ColunistasEsportes = slidesColunistasEsportes.length}
+		    for (i = 0; i < slidesColunistasEsportes.length; i++) {
+		        slidesColunistasEsportes[i].style.display = "none";
+		    }
+		    for (i = 0; i < dotsColunistasEsportes.length; i++) {
+		        dotsColunistasEsportes[i].className = dotsColunistasEsportes[i].className.replace(" slide-dot-secao-active", "");
+		    }
+		    slidesColunistasEsportes[ColunistasEsportes-1].style.display = "flex";
+		    dotsColunistasEsportes[ColunistasEsportes-1].className += " slide-dot-secao-active";
+		  }
+
+		  $("#passa-colunista-esportes").on('click', function(){
+
+		    plusColunistasEsportes(-1);
+
+		  });
+
+		  $("#volta-colunista-esportes").on('click', function(){
+
+		    plusColunistasEsportes(+1);
+
+		  });
+
+		  $(".slide-dot-secao-esportes").on('click', function(){
+
+		    n = $(this).data("id");
+
+		    currentColunistasEsportes(n);
+
+		  });
+
+		});
+	</script>
 
 	<!-- Modal -->
 	<div class="modal">
@@ -63,7 +273,7 @@
 				<p>POLITIZE E SOCIALIZE</p>
 			</div>
 			<div class="item-menu conteudo-right">
-				<form method="POST">
+				<form method="POST" action="<?php echo BASE_URL; ?>home/resultados/{{pesquisa}}">
 					<input type="text" id="pesquisar" name="pesquisar" placeholder="PESQUISAR...">
 					<button>
 						<img src="<?php echo BASE_URL; ?>assets/images/search.svg">
@@ -114,7 +324,7 @@
 			</div>
 
 			<div class="itens-menu">
-				<a href="<?php echo BASE_URL; ?>">
+				<a href="<?php echo BASE_URL; ?>home/categoria/esportes">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="https://maranhaohoje.com/wp-content/uploads/2018/04/Galo.jpg">
 						<div class="card-texto">
@@ -123,7 +333,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>">
+				<a href="<?php echo BASE_URL; ?>home/categoria/politica">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="https://conteudo.imguol.com.br/c/parceiros/ab/2020/12/02/presidente-do-brasil-jair-bolsonaro-1606912952211_v2_450x337.jpg">
 						<div class="card-texto">
@@ -132,7 +342,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>">
+				<a href="<?php echo BASE_URL; ?>home/categoria/saude">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="https://s2.glbimg.com/hPzLCw15vJyIznSwNP-MRS60uUk=/620x430/e.glbimg.com/og/ed/f/original/2020/03/09/gettyimages-1203348066.jpg">
 						<div class="card-texto">
@@ -141,7 +351,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>">
+				<a href="<?php echo BASE_URL; ?>home/categoria/economia">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="https://cdn4.ecycle.com.br/cache/images/2018-02/50-650-economia-o-que-e.jpg">
 						<div class="card-texto">
@@ -150,7 +360,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>">
+				<a href="<?php echo BASE_URL; ?>home/categoria/financas">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="https://mcacont.com.br/wp-content/uploads/2020/02/controlar-as-finan%C3%A7as--400x400.jpg">
 						<div class="card-texto">
@@ -159,7 +369,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>">
+				<a href="<?php echo BASE_URL; ?>home/categoria/televisao">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="https://www.elasnotapetevermelho.com.br/wp-content/uploads/2017/10/anitta-400x400.jpg">
 						<div class="card-texto">
@@ -168,7 +378,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>">
+				<a href="<?php echo BASE_URL; ?>colunas">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="https://www.caaraponews.com.br/userfiles/uploads/imagens/materias/2019/09/original/3c9d6b1a37398f34c707473299bfd7df.jpg">
 						<div class="card-texto">
@@ -202,7 +412,7 @@
 		<div class="slideshow-item fade">
 			<img src="https://cdnmundo3.img.sputniknews.com/img/107783/13/1077831336_0:91:1920:1128_1000x541_80_0_0_4e921ae64701db005c2821747dd2bec6.jpg">
 			<div class="slideshow-item-conteudo">
-				<a href="<?php echo BASE_URL; ?>postagem/url">
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
 					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
 				</a>
@@ -211,7 +421,7 @@
 		<div class="slideshow-item fade">
 			<img src="https://exame.com/wp-content/uploads/2019/01/parlamento-portugal.jpg?quality=70&strip=info&w=1024">
 			<div class="slideshow-item-conteudo">
-				<a href="<?php echo BASE_URL; ?>postagem/url">
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
 					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
 				</a>
@@ -220,7 +430,7 @@
 		<div class="slideshow-item fade">
 			<img src="https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/5bd9cf950cf252f8f40b239e/1024">
 			<div class="slideshow-item-conteudo">
-				<a href="<?php echo BASE_URL; ?>postagem/url">
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
 					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
 				</a>
@@ -243,14 +453,14 @@
 	<!-- Recentes -->
 	<section class="recentes">
 		<div class="topo-recentes">
-			<a href="<?php echo BASE_URL; ?>categoria/recentes">
+			<a href="<?php echo BASE_URL; ?>home/categoria/recentes">
 				<p>RECENTES</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
 		</div>
 
 		<div class="noticias-recentes">
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-maior">
 					<img src="https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2020/11/17/2020-11-17T122607Z_1_LYNXMPEGAG0TV_RTROPTP_4_AMBIENTE-BOLSONARO-MADEIRA.JPG">
 					<div class="noticia-maior-conteudo">
@@ -260,7 +470,7 @@
 				</div>
 			</a>
 			<div class="noticias-menores">
-				<a href="<?php echo BASE_URL; ?>postagem/url">
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 					<div class="noticia-menor">
 						<img src="https://m.extra.globo.com/incoming/24772342-f1c-085/w488h275-PROP/covas.jpg">
 						<div class="noticia-menor-conteudo">
@@ -270,7 +480,7 @@
 					</div>
 				</a>
 
-				<a href="<?php echo BASE_URL; ?>postagem/url">
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 					<div class="noticia-menor">
 						<img src="https://todoscomciro.com/wp-content/uploads/2018/08/img-psb-nao-neutralidade-ciro.jpeg">
 						<div class="noticia-menor-conteudo">
@@ -285,13 +495,13 @@
 
 	<!-- Seções -->
 	<nav class="secoes">
-		<a href="<?php echo BASE_URL; ?>categoria/televisao"><div class="secao right">TELEVISÃO</div></a>
-		<a href="<?php echo BASE_URL; ?>categoria/politica"><div class="secao right">POLÍTICA</div></a>
-		<a href="<?php echo BASE_URL; ?>categoria/esportes"><div class="secao right">ESPORTES</div></a>
-		<a href="<?php echo BASE_URL; ?>categoria/economia"><div class="secao right">ECONOMIA</div></a>
-		<a href="<?php echo BASE_URL; ?>categoria/saude"><div class="secao">SAÚDE</div></a>
-		<a href="<?php echo BASE_URL; ?>categoria/colunas"><div class="secao right">COLUNAS</div></a>
-		<a href="<?php echo BASE_URL; ?>categoria/financas"><div class="secao">FINANÇAS</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/televisao"><div class="secao right">TELEVISÃO</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/politica"><div class="secao right">POLÍTICA</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/esportes"><div class="secao right">ESPORTES</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/economia"><div class="secao right">ECONOMIA</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/saude"><div class="secao">SAÚDE</div></a>
+		<a href="<?php echo BASE_URL; ?>colunas"><div class="secao right">COLUNAS</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/financas"><div class="secao">FINANÇAS</div></a>
 	</nav>
 
 	<!-- Publicidade -->
@@ -303,7 +513,7 @@
 
 	<!-- Política -->
 	<section class="topo-secao politica-topo-secao">
-		<a href="<?php echo BASE_URL; ?>categoria/politica">
+		<a href="<?php echo BASE_URL; ?>home/categoria/politica">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>POLÍTICA</p>
@@ -317,7 +527,7 @@
 	<!-- Recentes política -->
 	<section class="politica">
 		<div class="noticias-maiores">
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-maior-politica">
 					<img src="https://f.i.uol.com.br/fotografia/2019/03/09/15521605565c84172c8e6a5_1552160556_3x2_md.jpg">
 					<div class="noticia-maior-conteudo">
@@ -327,7 +537,7 @@
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-maior-politica">
 					<img src="https://veja.abril.com.br/wp-content/uploads/2020/11/JAIR-BOLSONARO-EMBRATUR-AGIF364762.jpg.jpg">
 					<div class="noticia-maior-conteudo">
@@ -339,7 +549,7 @@
 		</div>
 
 		<div class="noticias-menores-politica">
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-menor-politica">
 					<img src="https://ogimg.infoglobo.com.br/in/23339989-b88-b82/FT1086A/652/80469877_Brazils-new-President-Jair-Bolsonaro-L-and-Brazils-new-Vice-President-Hamilton-Mourao.jpg">
 					<div class="noticia-menor-conteudo-politica">
@@ -349,7 +559,7 @@
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-menor-politica">
 					<img src="https://ogimg.infoglobo.com.br/in/24721212-7c1-090/FT1086A/652/xgued.jpg.pagespeed.ic.Zlr3jdpuvY.jpg">
 					<div class="noticia-menor-conteudo-politica">
@@ -359,7 +569,7 @@
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-menor-politica">
 					<img src="https://i2.wp.com/souconcurseiroevoupassar.blog/wp-content/uploads/2020/08/Blog_PF.png?fit=600%2C350&ssl=1">
 					<div class="noticia-menor-conteudo-politica">
@@ -369,7 +579,7 @@
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-menor-politica">
 					<img src="https://www.direcaoconcursos.com.br/wp-content/uploads/2019/10/Screenshot_2019-10-14-policial-federal-Pesquisa-Google1.png">
 					<div class="noticia-menor-conteudo-politica">
@@ -390,7 +600,7 @@
 
 	<!-- Televisão -->
 	<section class="topo-secao televisao-topo-secao">
-		<a href="<?php echo BASE_URL; ?>categoria/politica">
+		<a href="<?php echo BASE_URL; ?>home/categoria/politica">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>TELEVISÃO</p>
@@ -404,7 +614,7 @@
 	<!-- Notícias recentes Televisão -->
 	<section class="televisao">
 		<div class="lado-noticias">
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-maior">
 					<img src="https://uploads.metropoles.com/wp-content/uploads/2020/09/01085635/anitta-56-1024x683.jpg">
 					<div class="noticia-maior-conteudo">
@@ -414,7 +624,7 @@
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-menor-politica">
 					<img src="https://i.uai.com.br/IEvZhk8IbLMyhraHAfZQWoIGV4c=/750x0/imgsapp2.uai.com.br/app/noticia_133890394703/2020/11/27/265437/20201129133043275275e.jpg">
 					<div class="noticia-menor-conteudo-politica">
@@ -424,7 +634,7 @@
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-menor-politica">
 					<img src="https://static.poder360.com.br/2020/06/jn-868x644.jpg">
 					<div class="noticia-menor-conteudo-politica">
@@ -437,7 +647,7 @@
 			<div class="border-bottom"></div>
 		</div>
 		<div class="lado-videos">
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="video">
 					<div class="topo-video">
 						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
@@ -453,7 +663,7 @@
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="video">
 					<div class="topo-video">
 						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
@@ -474,14 +684,14 @@
 	<!-- Colunistas -->
 	<section class="colunistas televisao-secao">
 		<div class="topo-colunistas">
-			<a href="<?php echo BASE_URL; ?>colunistas">
+			<a href="<?php echo BASE_URL; ?>colunas">
 				<p>COLUNISTAS</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right-purple.svg">
 			</a>
 		</div>
 		<!-- -->
 		<div class="slide-colunistas">
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://thumbs.web.sapo.io/?W=800&H=0&delay_optim=1&epic=NTAxECcfHQfh+jNXETDk3ZQn+0c04rskJ9VJ9aLZtiRo3qjkpAyxT6c2CMAzY2SZspVN5ibUEyzn4ruSwovEHJbiGMbtmw8FONtOLodhNrD8pes=">
@@ -496,7 +706,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://www.esporteinterativo.com.br/__export/1598051660157/sites/esporteinterativo/img/2020/08/21/agif20081919353737_1_crop1598051658952.jpg_2060162980.jpg">
@@ -511,7 +721,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://bolavip.com/__export/1606738512090/sites/bolavip/img/2020/11/30/rodrigo_caioo_crop1606738476353.jpg_1902800913.jpg">
@@ -529,7 +739,7 @@
 		</div>
 		<!-- -->
 		<div class="slide-colunistas">
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://jpimg.com.br/uploads/2020/10/brenner-rubens-chiri-spfc.jpg">
@@ -544,7 +754,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://www.esporteinterativo.com.br/__export/1598051660157/sites/esporteinterativo/img/2020/08/21/agif20081919353737_1_crop1598051658952.jpg_2060162980.jpg">
@@ -559,7 +769,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://bolavip.com/__export/1606738512090/sites/bolavip/img/2020/11/30/rodrigo_caioo_crop1606738476353.jpg_1902800913.jpg">
@@ -577,7 +787,7 @@
 		</div>
 		<!-- -->
 		<div class="slide-colunistas">
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://thumbs.web.sapo.io/?W=800&H=0&delay_optim=1&epic=NTAxECcfHQfh+jNXETDk3ZQn+0c04rskJ9VJ9aLZtiRo3qjkpAyxT6c2CMAzY2SZspVN5ibUEyzn4ruSwovEHJbiGMbtmw8FONtOLodhNrD8pes=">
@@ -592,7 +802,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://www.esporteinterativo.com.br/__export/1598051660157/sites/esporteinterativo/img/2020/08/21/agif20081919353737_1_crop1598051658952.jpg_2060162980.jpg">
@@ -607,7 +817,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://bolavip.com/__export/1606738512090/sites/bolavip/img/2020/11/30/rodrigo_caioo_crop1606738476353.jpg_1902800913.jpg">
@@ -644,7 +854,7 @@
 
 	<!-- Esportes -->
 	<section class="topo-secao esportes-topo-secao">
-		<a href="<?php echo BASE_URL; ?>categoria/esportes">
+		<a href="<?php echo BASE_URL; ?>home/categoria/esportes">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>ESPORTES</p>
@@ -661,23 +871,23 @@
 		<div class="futebol">
 			<div class="jogos">
 				<div class="topo-recentes">
-					<a href="<?php echo BASE_URL; ?>jogos/resultados">
+					<a href="<?php echo BASE_URL; ?>jogos/finalizados">
 						<p>Resultados</p>
 						<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 					</a>
 				</div>
 				<!-- Resultados -->
 				<div class="jogos-divs">
-					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
 						<p>FLA 1-1 RSC</p>
 					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
 						<p>SPFC 3-1 BAH</p>
 					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
 						<p>VAS 1-4 CEA</p>
 					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
 						<p>INT 0-0 ATH</p>
 					</div></a>
 				</div>
@@ -692,16 +902,16 @@
 				</div>
 				<!-- Jogos -->
 				<div class="jogos-divs">
-					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
 						<p>FLA 1-1 RSC</p>
 					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
 						<p>SPFC 3-1 BAH</p>
 					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
 						<p>VAS 1-4 CEA</p>
 					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogo"><div class="jogo-div">
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
 						<p>INT 0-0 ATH</p>
 					</div></a>
 				</div>
@@ -711,7 +921,7 @@
 
 		<!-- Notícias -->
 		<div class="noticias-menores-politica">
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-menor-politica">
 					<img src="https://m.extra.globo.com/incoming/24751825-daf-ba9/w488h275-PROP/90486867_es-rio-de-janeiro-rj-13112020treino-do-flamengono-ninho-do-uruburogerio-c.jpg">
 					<div class="noticia-menor-conteudo-politica">
@@ -724,7 +934,7 @@
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-menor-politica">
 					<img src="https://jpimg.com.br/uploads/2020/09/marinho-participou-de-nove-gols-em-nove-jogos-do-santos-no-brasileirao.jpg">
 					<div class="noticia-menor-conteudo-politica">
@@ -737,7 +947,7 @@
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-menor-politica">
 					<img src="https://cdn.diariodolitoral.com.br/upload/dn_noticia/2020/09/marinho_2.jpg">
 					<div class="noticia-menor-conteudo-politica">
@@ -750,7 +960,7 @@
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>postagem/url">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-menor-politica">
 					<img src="https://uploads.metropoles.com/wp-content/uploads/2020/11/09180535/Rogerio-Ceni-Flamengo-600x400.jpg">
 					<div class="noticia-menor-conteudo-politica">
@@ -779,7 +989,7 @@
 
 				<div class="carousel-slide fade">
 					<img src="https://sportbuzz.uol.com.br/media/_versions/gettyimages-1160655989_widelg.jpg">
-					<a href="<?php echo BASE_URL; ?>postagem/url">
+					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 						<div class="slide-carousel-conteudo">
 							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
 							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
@@ -788,7 +998,7 @@
 				</div>
 				<div class="carousel-slide fade">
 					<img src="https://esbrasil.com.br/wp-content/uploads/2019/08/Daniel_site.jpg">
-					<a href="<?php echo BASE_URL; ?>postagem/url">
+					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 						<div class="slide-carousel-conteudo">
 							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
 							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
@@ -797,7 +1007,7 @@
 				</div>
 				<div class="carousel-slide fade">
 					<img src="https://conteudo.imguol.com.br/c/esporte/41/2020/11/28/neymar-faz-gol-de-penalti-na-partida-psg-x-bordeaux-pelo-campeonato-frances-1606600195230_v2_450x337.jpg">
-					<a href="<?php echo BASE_URL; ?>postagem/url">
+					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 						<div class="slide-carousel-conteudo">
 							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
 							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
@@ -806,7 +1016,7 @@
 				</div>
 			</div>
 			<div class="videos-esportes">
-				<a href="<?php echo BASE_URL; ?>jogo/">
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 					<div class="video-esporte">
 						<div class="lado-video">
 							<video id="video-esporte" class="video-js vjs-theme-city" poster="https://f.i.uol.com.br/fotografia/2020/10/01/16016045635f768bd3d96b2_1601604563_3x2_md.jpg" preload="auto" data-setup="{}">
@@ -826,7 +1036,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>jogo/">
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 					<div class="video-esporte">
 						<div class="lado-video">
 							<video id="video-esporte" class="video-js vjs-theme-city" poster="https://jpimg.com.br/uploads/2020/10/brenner-rubens-chiri-spfc.jpg" preload="auto" data-setup="{}">
@@ -859,14 +1069,14 @@
 	<!-- Colunistas -->
 	<section class="colunistas esportes-secao">
 		<div class="topo-colunistas">
-			<a href="<?php echo BASE_URL; ?>colunistas">
+			<a href="<?php echo BASE_URL; ?>colunas">
 				<p>COLUNISTAS</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right-yellow.svg">
 			</a>
 		</div>
 		<!-- -->
 		<div class="slide-colunistas-esportes">
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://img.estadao.com.br/fotos/crop/1200x1200/resources/jpg/8/0/1579647009808.jpg">
@@ -881,7 +1091,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/EdmundoVasco2008.jpg">
@@ -896,7 +1106,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://futebolatino.lance.com.br/wp-content/uploads/2020/03/jornal-espanhol-relembra-historias-e-declaracoes-polemicas-de-romario-Futebol-Latino-25-03.jpeg">
@@ -914,7 +1124,7 @@
 		</div>
 		<!-- -->
 		<div class="slide-colunistas-esportes">
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://jpimg.com.br/uploads/2020/10/brenner-rubens-chiri-spfc.jpg">
@@ -929,7 +1139,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://www.esporteinterativo.com.br/__export/1598051660157/sites/esporteinterativo/img/2020/08/21/agif20081919353737_1_crop1598051658952.jpg_2060162980.jpg">
@@ -944,7 +1154,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://bolavip.com/__export/1606738512090/sites/bolavip/img/2020/11/30/rodrigo_caioo_crop1606738476353.jpg_1902800913.jpg">
@@ -962,7 +1172,7 @@
 		</div>
 		<!-- -->
 		<div class="slide-colunistas-esportes">
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://thumbs.web.sapo.io/?W=800&H=0&delay_optim=1&epic=NTAxECcfHQfh+jNXETDk3ZQn+0c04rskJ9VJ9aLZtiRo3qjkpAyxT6c2CMAzY2SZspVN5ibUEyzn4ruSwovEHJbiGMbtmw8FONtOLodhNrD8pes=">
@@ -977,7 +1187,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://www.esporteinterativo.com.br/__export/1598051660157/sites/esporteinterativo/img/2020/08/21/agif20081919353737_1_crop1598051658952.jpg_2060162980.jpg">
@@ -992,7 +1202,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="<?php echo BASE_URL; ?>colunistas/colunista">
+			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
 					<div class="foto-colunista">
 						<img src="https://bolavip.com/__export/1606738512090/sites/bolavip/img/2020/11/30/rodrigo_caioo_crop1606738476353.jpg_1902800913.jpg">
@@ -1022,13 +1232,13 @@
 
 	<!-- Seções -->
 	<nav class="secoes">
-		<a href="<?php echo BASE_URL; ?>categoria/televisao"><div class="secao right">TELEVISÃO</div></a>
-		<a href="<?php echo BASE_URL; ?>categoria/politica"><div class="secao right">POLÍTICA</div></a>
-		<a href="<?php echo BASE_URL; ?>categoria/esportes"><div class="secao right">ESPORTES</div></a>
-		<a href="<?php echo BASE_URL; ?>categoria/economia"><div class="secao right">ECONOMIA</div></a>
-		<a href="<?php echo BASE_URL; ?>categoria/saude"><div class="secao">SAÚDE</div></a>
-		<a href="<?php echo BASE_URL; ?>categoria/colunas"><div class="secao right">COLUNAS</div></a>
-		<a href="<?php echo BASE_URL; ?>categoria/financas"><div class="secao">FINANÇAS</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/televisao"><div class="secao right">TELEVISÃO</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/politica"><div class="secao right">POLÍTICA</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/esportes"><div class="secao right">ESPORTES</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/economia"><div class="secao right">ECONOMIA</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/saude"><div class="secao">SAÚDE</div></a>
+		<a href="<?php echo BASE_URL; ?>colunas"><div class="secao right">COLUNAS</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/financas"><div class="secao">FINANÇAS</div></a>
 	</nav>
 
 	<!-- Vídeos -->
@@ -1042,7 +1252,7 @@
 			</div>
 
 			<div class="caixa-videos">
-				<a href="<?php echo BASE_URL; ?>postagem/url">
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 					<div class="video">
 						<div class="topo-video">
 							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
@@ -1057,7 +1267,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>postagem/url">
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 					<div class="video">
 						<div class="topo-video">
 							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
@@ -1072,7 +1282,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>postagem/url">
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 					<div class="video">
 						<div class="topo-video">
 							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
@@ -1087,7 +1297,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>postagem/url">
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 					<div class="video">
 						<div class="topo-video">
 							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
@@ -1160,13 +1370,13 @@
 	<!-- Rodapé -->
 	<footer class="rodape">
 		<nav class="menu-rodape">
-			<a href="<?php echo BASE_URL; ?>categoria/colunas">COLUNAS</a>
-			<a href="<?php echo BASE_URL; ?>categoria/economia">ECONOMIA</a>	
-			<a href="<?php echo BASE_URL; ?>categoria/esportes">ESPORTES</a>
-			<a href="<?php echo BASE_URL; ?>categoria/financas">FINANÇAS</a>
-			<a href="<?php echo BASE_URL; ?>categoria/politica">POLÍTICA</a>
-			<a href="<?php echo BASE_URL; ?>categoria/saude">SAÚDE</a>
-			<a href="<?php echo BASE_URL; ?>categoria/televisao">TELEVISÃO</a>
+			<a href="<?php echo BASE_URL; ?>colunas">COLUNAS</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/economia">ECONOMIA</a>	
+			<a href="<?php echo BASE_URL; ?>home/categoria/esportes">ESPORTES</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/financas">FINANÇAS</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/politica">POLÍTICA</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/saude">SAÚDE</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/televisao">TELEVISÃO</a>
 			<a href="<?php echo BASE_URL; ?>">SEJA ESCRITOR</a>
 			<a href="<?php echo BASE_URL; ?>">HOMEPAGE</a>
 		</nav>
