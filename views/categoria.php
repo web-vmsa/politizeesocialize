@@ -309,10 +309,8 @@
 	<!-- Recentes -->
 	<section class="recentes">
 		<div class="topo-recentes">
-			<a href="<?php echo BASE_URL; ?>home/categoria/recentes">
-				<p>RECENTES</p>
-				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
-			</a>
+			<p class="cursor-default">RECENTES</p>
+			<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 		</div>
 
 		<div class="noticias-recentes">
@@ -364,6 +362,186 @@
 	<div class="publicidade">
 		<div class="publicidade-item">
 			<p>PUBLICIDADE</p>
+		</div>
+	</div>
+
+	<!-- Destaques -->
+	<section class="topo-secao destaques-topo-secao">
+		<div class="item-topo-secao"></div>
+		<div class="item-topo-secao">
+			<p class="cursor-default">DESTAQUES</p>
+		</div>
+		<div class="item-topo-secao justify-right">
+			<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+		</div>
+	</section>
+
+	<!-- Recentes -->
+	<section class="politica destaques">
+		<div class="noticias-maiores">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+				<div class="noticia-maior-politica">
+					<img src="https://s2.glbimg.com/UDPD9jKWz2831nnRnb7-7tmfrqs=/0x0:1280x853/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/L/z/RYs7wwTUmALWjqUDS41w/whatsapp-image-2019-09-19-at-00.43.15.jpeg">
+					<div class="noticia-maior-conteudo">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+				<div class="noticia-maior-politica">
+					<img src="https://colunadofla.com/wp-content/uploads/2020/07/rodrigo-caio.jpg">
+					<div class="noticia-maior-conteudo">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="noticias-menores-politica">
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+				<div class="noticia-menor-politica">
+					<img src="https://www.lance.com.br/files/article_main/uploads/2020/08/29/5f4adc962b03c.jpeg">
+					<div class="noticia-menor-conteudo-politica">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+				<div class="noticia-menor-politica">
+					<img src="https://s2.glbimg.com/mngGalithA5ohe3KzGBZp6Zwnlw=/0x0:2048x1152/540x304/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/O/U/FPY20dRwiOAt5VO1ZCBw/50688013266-2d0cdaa7c7-k.jpg">
+					<div class="noticia-menor-conteudo-politica">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+				<div class="noticia-menor-politica">
+					<img src="https://conteudo.imguol.com.br/c/esporte/82/2020/12/05/rafael-sobis-comemora-gol-marcado-pelo-cruzeiro-sobre-o-brasil-de-pelotas-no-mineirao-1607217708438_v2_450x337.jpg">
+					<div class="noticia-menor-conteudo-politica">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+				<div class="noticia-menor-politica">
+					<img src="https://www.coritiba.com.br/imgview/show/161345/50">
+					<div class="noticia-menor-conteudo-politica">
+						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</section>
+
+	<!-- Publicidade -->
+	<div class="publicidade">
+		<div class="publicidade-item">
+			<p>PUBLICIDADE</p>
+		</div>
+	</div>
+
+	<!-- Colunistas -->
+	<section class="topo-secao destaques-topo-secao">
+		<a href="<?php echo BASE_URL; ?>colunas">
+			<div class="item-topo-secao"></div>
+			<div class="item-topo-secao">
+				<p>COLUNISTAS</p>
+			</div>
+			<div class="item-topo-secao justify-right">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+			</div>
+		</a>
+	</section>
+
+	<!-- Colunistas e postagens -->
+	<div class="colunistas-categoria">
+		<div class="lado-colunistas">
+			<div class="topo-recentes">
+				<a href="<?php echo BASE_URL; ?>colunas">
+					<p>Colunistas</p>
+					<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+				</a>
+			</div>
+
+			<!-- Colunistas -->
+			<div class="lado-colunistas-todos">
+				<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+					<div class="lado-colunistas-colunista">
+						<div class="foto-colunista">
+							<img src="https://thumbs.web.sapo.io/?W=800&H=0&delay_optim=1&epic=NTAxECcfHQfh+jNXETDk3ZQn+0c04rskJ9VJ9aLZtiRo3qjkpAyxT6c2CMAzY2SZspVN5ibUEyzn4ruSwovEHJbiGMbtmw8FONtOLodhNrD8pes=">
+						</div>
+						<div class="dados-colunista">
+							<p>Lorem Ipsum</p>
+							<div class="redes-sociais-colunista">
+								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
+							</div>
+						</div>
+					</div>
+				</a>
+
+				<div class="hr-colunista"></div>
+
+				<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+					<div class="lado-colunistas-colunista">
+						<div class="foto-colunista">
+							<img src="https://conteudo.imguol.com.br/c/esporte/ca/2020/12/01/rogerio-ceni-a-frente-do-flamengo-contra-o-racing-pela-libertadores-1606873342561_v2_450x337.jpg">
+						</div>
+						<div class="dados-colunista">
+							<p>Lorem Ipsum</p>
+							<div class="redes-sociais-colunista">
+								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
+							</div>
+						</div>
+					</div>
+				</a>
+
+				<div class="hr-colunista"></div>
+
+				<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+					<div class="lado-colunistas-colunista">
+						<div class="foto-colunista">
+							<img src="https://www.diariodepernambuco.com.br/static/app/noticia_127983242361/2019/11/21/811387/20191121133348315362u.jpg">
+						</div>
+						<div class="dados-colunista">
+							<p>Lorem Ipsum</p>
+							<div class="redes-sociais-colunista">
+								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
+							</div>
+						</div>
+					</div>
+				</a>
+
+				<div class="hr-colunista"></div>
+
+				<button id="load-more">CARREGAR MAIS</button>
+			</div>
+		</div>
+		<div class="lado-postagens">
+			<div class="topo-recentes">
+				<a href="<?php echo BASE_URL; ?>colunas">
+					<p>Postagens</p>
+					<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+				</a>
+			</div>
+
+			<!-- Postagens recentes -->
+			<div class="lado-postagens-todas"></div>
 		</div>
 	</div>
 
