@@ -38,7 +38,7 @@
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.5.1.min.js"></script>
 
 	<!-- Script -->
-	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/effects.js"></script>
+	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
 
 	<!-- Video js -->
 	<link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />

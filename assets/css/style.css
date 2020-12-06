@@ -764,7 +764,7 @@ body {
 .televisao-secao .topo-colunistas p {
 	color: #4B0082;
 }
-.televisao-secao .slide-dot-secao-active {
+.televisao-secao .slide-dot-active {
 	background-color: #4B0082;
 }
 .esportes-secao .topo-colunistas a:hover {
@@ -774,7 +774,7 @@ body {
 .esportes-secao .topo-colunistas p {
 	color: #ECEC12;
 }
-.esportes-secao .slide-dot-secao-active {
+.esportes-secao .slide-dot-active {
 	background-color: #ECEC12;
 }
 /* --- */
@@ -1112,7 +1112,7 @@ body {
 	background-color: white;
 	cursor: pointer;
 }
-.slide-dot-carousel-active {
+.slide-dots-carousel .slide-dot-active {
 	background-color: #E0E0E0;
 }
 .carousel-slide {
