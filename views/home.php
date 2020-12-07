@@ -264,6 +264,24 @@
 						</div>
 					</div>
 				</a>
+				<a href="<?php echo BASE_URL; ?>home/categoria/musica">
+					<div class="card-navegacao">
+						<img class="card-navegacao-img" src="https://play-lh.googleusercontent.com/dwyqtk9CgAaoXUcYB8pUHXRErF5A2Shd0UrZdBLkpAFx_e630aZahwN31HRZWNksIQ">
+						<div class="card-texto">
+							<p>MÚSICA</p>
+							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>home/categoria/educacao">
+					<div class="card-navegacao">
+						<img class="card-navegacao-img" src="https://i1.wp.com/www.institutomillenium.org.br/wp-content/uploads/2018/11/educacaoo.jpg?fit=620%2C465&ssl=1">
+						<div class="card-texto">
+							<p>EUCAÇÃO</p>
+							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
+						</div>
+					</div>
+				</a>
 			</div>
 		</nav>
 	</div>
@@ -377,6 +395,8 @@
 		<a href="<?php echo BASE_URL; ?>home/categoria/esportes"><div class="secao right">ESPORTES</div></a>
 		<a href="<?php echo BASE_URL; ?>home/categoria/economia"><div class="secao right">ECONOMIA</div></a>
 		<a href="<?php echo BASE_URL; ?>home/categoria/saude"><div class="secao">SAÚDE</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/educacao"><div class="secao right">EDUCAÇÃO</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/musica"><div class="secao right">MÚSICA</div></a>
 		<a href="<?php echo BASE_URL; ?>colunas"><div class="secao right">COLUNAS</div></a>
 		<a href="<?php echo BASE_URL; ?>home/categoria/financas"><div class="secao">FINANÇAS</div></a>
 	</nav>
@@ -1114,6 +1134,8 @@
 		<a href="<?php echo BASE_URL; ?>home/categoria/esportes"><div class="secao right">ESPORTES</div></a>
 		<a href="<?php echo BASE_URL; ?>home/categoria/economia"><div class="secao right">ECONOMIA</div></a>
 		<a href="<?php echo BASE_URL; ?>home/categoria/saude"><div class="secao">SAÚDE</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/educacao"><div class="secao right">EDUCAÇÃO</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/musica"><div class="secao right">MÚSICA</div></a>
 		<a href="<?php echo BASE_URL; ?>colunas"><div class="secao right">COLUNAS</div></a>
 		<a href="<?php echo BASE_URL; ?>home/categoria/financas"><div class="secao">FINANÇAS</div></a>
 	</nav>
@@ -1254,6 +1276,8 @@
 			<a href="<?php echo BASE_URL; ?>home/categoria/politica">POLÍTICA</a>
 			<a href="<?php echo BASE_URL; ?>home/categoria/saude">SAÚDE</a>
 			<a href="<?php echo BASE_URL; ?>home/categoria/televisao">TELEVISÃO</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/educacao">EDUCAÇÃO</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/musica">MÚSICA</a>
 			<a href="<?php echo BASE_URL; ?>">SEJA ESCRITOR</a>
 			<a href="<?php echo BASE_URL; ?>">HOMEPAGE</a>
 		</nav>

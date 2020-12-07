@@ -1,3 +1,10 @@
+/*
+*	Fontes do site: League Gotic e Montserrat
+*	
+*			--- By FontSquirel ---
+*	https://www.fontsquirrel.com/tools/webfont-generator
+*/
+
 /* League-Gotic Regular */
 @font-face {
     font-family: 'league_gothicregular';
@@ -516,7 +523,10 @@ body {
 	margin-left: 10px;
 }
 
-
+/*
+*	Especificações do Topo
+* 	Alteração da Classe principal
+*/
 .politica-topo-secao {
 	border-top: 1px solid #DC2121;
 }
@@ -556,6 +566,53 @@ body {
 .cursor-default {
 	cursor: default;
 }
+.economia-topo-secao {
+	border-top: 1px solid #32CD32;
+}
+.economia-topo-secao a {
+	color: #32CD32;
+}
+.economia-topo-secao p {
+	color: #32CD32;
+}
+.financas-topo-secao {
+	border-top: 1px solid #32CD32;
+}
+.financas-topo-secao a {
+	color: #32CD32;
+}
+.financas-topo-secao p {
+	color: #32CD32;
+}
+.saude-topo-secao {
+	border-top: 1px solid #6495ED;
+}
+.saude-topo-secao a {
+	color: #6495ED;
+}
+.saude-topo-secao p {
+	color: #6495ED;
+}
+.educacao-topo-secao {
+	border-top: 1px solid #C8A2C8;
+}
+.educacao-topo-secao a {
+	color: #C8A2C8;
+}
+.educacao-topo-secao p {
+	color: #C8A2C8;
+}
+.musica-topo-secao {
+	border-top: 1px solid #AA22BB;
+}
+.musica-topo-secao a {
+	color: #AA22BB;
+}
+.musica-topo-secao p {
+	color: #AA22BB;
+}
+/*
+*/
 
 
 /* Política */
@@ -579,13 +636,60 @@ body {
 }
 
 
-
-.destaques .noticia-maior-politica:hover h2 {
+/* 
+*	Especificações do :hover da Categoria
+*	ALteração da Classe principal
+*/
+.destaques-politica .noticia-maior-politica:hover h2 {
+	color: #DC2121;
+}
+.destaques-politica .noticia-menor-politica:hover h2 {
+	color: #DC2121;
+}
+.destaques-televisao .noticia-maior-politica:hover h2 {
+	color: #4B0082;
+}
+.destaques-televisao .noticia-menor-politica:hover h2 {
+	color: #4B0082;
+}
+.destaques-esportes .noticia-maior-politica:hover h2 {
 	color: #ECEC12;
 }
-.destaques .noticia-menor-politica:hover h2 {
+.destaques-esportes .noticia-menor-politica:hover h2 {
 	color: #ECEC12;
 }
+.destaques-economia .noticia-maior-politica:hover h2 {
+	color: #32CD32;
+}
+.destaques-economia .noticia-menor-politica:hover h2 {
+	color: #32CD32;
+}
+.destaques-saude .noticia-maior-politica:hover h2 {
+	color: #6495ED;
+}
+.destaques-saude .noticia-menor-politica:hover h2 {
+	color: #6495ED;
+}
+.destaques-educacao .noticia-maior-politica:hover h2 {
+	color: #C8A2C8;
+}
+.destaques-educacao .noticia-menor-politica:hover h2 {
+	color: #C8A2C8;
+}
+.destaques-musica .noticia-maior-politica:hover h2 {
+	color: #AA22BB;
+}
+.destaques-musica .noticia-menor-politica:hover h2 {
+	color: #AA22BB;
+}
+.destaques-financas .noticia-maior-politica:hover h2 {
+	color: #32CD32;
+}
+.destaques-financas .noticia-menor-politica:hover h2 {
+	color: #32CD32;
+}
+/*
+*/
 
 
 
@@ -1634,12 +1738,70 @@ body {
 	padding: 0;
 	font-family: 'montserratmedium';
 	font-size: 28px;
-	color: white;
 	cursor: default;
 }
+
+
+/* 
+*	Especificações da Tarja das Categorias
+*/
 .tarja-categoria-esportes {
 	background-color: #ECEC12;
 }
+.tarja-categoria-esportes p {
+	color: white;
+}
+.tarja-categoria-colunas {
+	background-color: #DC2121;
+}
+.tarja-categoria-colunas p {
+	color: white;
+}
+.tarja-categoria-televisao {
+	background-color: #4B0082;
+}
+.tarja-categoria-televisao p {
+	color: white;
+}
+.tarja-categoria-politica {
+	background-color: #DC2121;
+}
+.tarja-categoria-politica p {
+	color: white;
+}
+.tarja-categoria-economia {
+	background-color: #32CD32;
+}
+.tarja-categoria-economia p {
+	color: white;
+}
+.tarja-categoria-financas {
+	background-color: #32CD32;
+}
+.tarja-categoria-financas p {
+	color: white;
+}
+.tarja-categoria-saude {
+	background-color: #6495ED;
+}
+.tarja-categoria-saude p {
+	color: white;
+}
+.tarja-categoria-educacao {
+	background-color: #C8A2C8;
+}
+.tarja-categoria-educacao p {
+	color: white;
+}
+.tarja-categoria-musica {
+	background-color: #AA22BB;
+}
+.tarja-categoria-musica p {
+	color: white;
+}
+/*
+*/
+
 
 /* Slideshow da Categoria */
 .slideshow-categoria {
@@ -1798,9 +1960,6 @@ body {
 	height: 150px;
 	width: 150px;
 }
-.lado-postagens-todas .noticia-menor-politica:hover h2 {
-	color: #ECEC12;
-}
 .lado-colunistas-todos a {
 	color: black;
 	text-decoration: none;
@@ -1945,4 +2104,105 @@ body {
 	margin-top: 70px;
 	height: 1px;
 	background-color: black;
+}
+
+/* Linha */
+.linha {
+	width: 100%;
+	height: 1px;
+	background-color: black;
+	margin-top: 70px;
+}
+
+/* Colunistas da Seção */
+.colunistas-secao {
+	display: flex;
+	padding-left: 90px;
+	padding-right: 90px;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.colunistas-secao a {
+	text-decoration: none;
+}
+.colunista-secao {
+	width: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 70px;
+	text-align: center;
+}
+.colunista-secao-foto {
+	width: 150px;
+	height: 150px;
+	border-radius: 80px;
+	overflow: hidden;
+}
+.colunista-secao-foto img {
+	width: auto;
+	height: 150px;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.colunista-secao:hover .colunista-secao-foto img {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.colunista-secao h2 {
+	margin: 0;
+	padding: 0;
+	font-family: 'league_gothicregular';
+	font-size: 36px;
+	margin-top: 20px;
+}
+.colunista-secao p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	margin-top: 20px;
+	color: black;
+}
+
+
+/*
+*	Especificações da Seções
+*	H2 e P
+*/
+.colunistas-secao-politica .colunista-secao h2 {
+	color: #DC2121;
+}
+.colunistas-secao-televisao .colunista-secao h2 {
+	color: #4B0082;
+}
+.colunistas-secao-esportes .colunista-secao h2 {
+	color: #ECEC12;
+}
+.colunistas-secao-economia .colunista-secao h2 {
+	color: #32CD32;
+}
+.colunistas-secao-financas .colunista-secao h2 {
+	color: #32CD32;
+}
+.colunistas-secao-saude .colunista-secao h2 {
+	color: #6495ED;
+}
+.colunistas-secao-educacao .colunista-secao h2 {
+	color: #C8A2C8;
+}
+.colunistas-secao-musica .colunista-secao h2 {
+	color: #AA22BB;
+}
+/*
+*/
+
+.borda-colunista-secao {
+	height: 100px;
+	width: 1px;
+	background-color: #BDBDBD;
 }

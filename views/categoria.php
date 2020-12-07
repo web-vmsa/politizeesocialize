@@ -2,12 +2,12 @@
 <html>
 <head>
 	<!-- Primary Meta Tags -->
-	<title>Politize e socialize - Política em um só lugar</title>
-	<meta name="title" content="Politize e socialize - Política em um só lugar">
-	<meta name="description" content="Economia, esportes, política, finanças e televisão no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
+	<title>Politize e socialize - Tudo sobre Esportes</title>
+	<meta name="title" content="Politize e socialize - Tudo sobre Esportes">
+	<meta name="description" content="Saiba tudo sobre Esportes no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="Política, economia, site de notícias, televisão, novelas, esportes, Flamengo, Corinthians, jogos de futebol">
+	<meta name="keywords" content="Esportes, Flamengo, Corinthians, Brasileirão, Champions League, FIFA">
 	<meta name="robots" content="index, follow">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="language" content="Portuguese">
@@ -17,15 +17,15 @@
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="<?php echo BASE_URL; ?>home/categoria/{{categoria}}">
-	<meta property="og:title" content="Politize e socialize - Política em um só lugar">
-	<meta property="og:description" content="Economia, esportes, política, finanças e televisão no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
+	<meta property="og:title" content="Politize e socialize - Tudo sobre Esportes">
+	<meta property="og:description" content="Saiba tudo sobre Esportes no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
 	<meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="<?php echo BASE_URL; ?>home/categoria/{{categoria}}">
-	<meta property="twitter:title" content="Politize e socialize - Política em um só lugar">
-	<meta property="twitter:description" content="Economia, esportes, política, finanças e televisão no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
+	<meta property="twitter:title" content="Politize e socialize - Tudo sobre Esportes">
+	<meta property="twitter:description" content="Saiba tudo sobre Esportes no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
 	<meta property="twitter:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
 
 	<!-- Css -->
@@ -237,6 +237,24 @@
 						</div>
 					</div>
 				</a>
+				<a href="<?php echo BASE_URL; ?>home/categoria/musica">
+					<div class="card-navegacao">
+						<img class="card-navegacao-img" src="https://play-lh.googleusercontent.com/dwyqtk9CgAaoXUcYB8pUHXRErF5A2Shd0UrZdBLkpAFx_e630aZahwN31HRZWNksIQ">
+						<div class="card-texto">
+							<p>MÚSICA</p>
+							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>home/categoria/educacao">
+					<div class="card-navegacao">
+						<img class="card-navegacao-img" src="https://i1.wp.com/www.institutomillenium.org.br/wp-content/uploads/2018/11/educacaoo.jpg?fit=620%2C465&ssl=1">
+						<div class="card-texto">
+							<p>EUCAÇÃO</p>
+							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
+						</div>
+					</div>
+				</a>
 			</div>
 		</nav>
 	</div>
@@ -354,6 +372,8 @@
 		<a href="<?php echo BASE_URL; ?>home/categoria/esportes"><div class="secao right">ESPORTES</div></a>
 		<a href="<?php echo BASE_URL; ?>home/categoria/economia"><div class="secao right">ECONOMIA</div></a>
 		<a href="<?php echo BASE_URL; ?>home/categoria/saude"><div class="secao">SAÚDE</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/educacao"><div class="secao right">EDUCAÇÃO</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/musica"><div class="secao right">MÚSICA</div></a>
 		<a href="<?php echo BASE_URL; ?>colunas"><div class="secao right">COLUNAS</div></a>
 		<a href="<?php echo BASE_URL; ?>home/categoria/financas"><div class="secao">FINANÇAS</div></a>
 	</nav>
@@ -377,7 +397,7 @@
 	</section>
 
 	<!-- Recentes -->
-	<section class="politica destaques">
+	<section class="politica destaques-esportes">
 		<div class="noticias-maiores">
 			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-maior-politica">
@@ -541,7 +561,7 @@
 			</div>
 
 			<!-- Postagens recentes -->
-			<div class="lado-postagens-todas">
+			<div class="lado-postagens-todas destaques-esportes">
 				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 					<div class="noticia-menor-politica">
 						<img src="https://www.lance.com.br/files/article_main/uploads/2020/08/29/5f4adc962b03c.jpeg">
@@ -593,6 +613,26 @@
 			<button type="submit">ASSINAR    >></button>
 		</form>
 	</section>
+
+	<!-- Publicidade -->
+	<div class="publicidade">
+		<div class="publicidade-item">
+			<p>PUBLICIDADE</p>
+		</div>
+	</div>
+
+	<!-- Seções -->
+	<nav class="secoes">
+		<a href="<?php echo BASE_URL; ?>home/categoria/televisao"><div class="secao right">TELEVISÃO</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/politica"><div class="secao right">POLÍTICA</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/esportes"><div class="secao right">ESPORTES</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/economia"><div class="secao right">ECONOMIA</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/saude"><div class="secao">SAÚDE</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/educacao"><div class="secao right">EDUCAÇÃO</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/musica"><div class="secao right">MÚSICA</div></a>
+		<a href="<?php echo BASE_URL; ?>colunas"><div class="secao right">COLUNAS</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/financas"><div class="secao">FINANÇAS</div></a>
+	</nav>
 
 	<!-- Vídeos -->
 	<section class="videos-rodape">
@@ -730,6 +770,8 @@
 			<a href="<?php echo BASE_URL; ?>home/categoria/politica">POLÍTICA</a>
 			<a href="<?php echo BASE_URL; ?>home/categoria/saude">SAÚDE</a>
 			<a href="<?php echo BASE_URL; ?>home/categoria/televisao">TELEVISÃO</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/educacao">EDUCAÇÃO</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/musica">MÚSICA</a>
 			<a href="<?php echo BASE_URL; ?>">SEJA ESCRITOR</a>
 			<a href="<?php echo BASE_URL; ?>">HOMEPAGE</a>
 		</nav>
