@@ -541,20 +541,58 @@
 			</div>
 
 			<!-- Postagens recentes -->
-			<div class="lado-postagens-todas"></div>
+			<div class="lado-postagens-todas">
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+					<div class="noticia-menor-politica">
+						<img src="https://www.lance.com.br/files/article_main/uploads/2020/08/29/5f4adc962b03c.jpeg">
+						<div class="noticia-menor-conteudo-politica">
+							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+							<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+						</div>
+					</div>
+				</a>
+
+				<div class="hr-postagens"></div>
+
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+					<div class="noticia-menor-politica">
+						<img src="https://pbs.twimg.com/media/EogWyRfWMAIU90g.jpg">
+						<div class="noticia-menor-conteudo-politica">
+							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+							<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+						</div>
+					</div>
+				</a>
+
+				<div class="hr-postagens"></div>
+
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+					<div class="noticia-menor-politica">
+						<img src="https://s2.glbimg.com/vkCxRLzR_FXKmqzxPTPHufEJ-cQ=/0x0:1500x844/540x304/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/Q/z/sNhrseSBS0XDPqOLPlPw/05-12-2020-csa-x-america-mg-ac-6103.jpg">
+						<div class="noticia-menor-conteudo-politica">
+							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+							<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+						</div>
+					</div>
+				</a>
+
+				<div class="hr-postagens"></div>
+
+				<button id="load-more-posts">CARREGAR MAIS</button>
+			</div>
 		</div>
 	</div>
 
-	<!-- Seções -->
-	<nav class="secoes">
-		<a href="<?php echo BASE_URL; ?>home/categoria/televisao"><div class="secao right">TELEVISÃO</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/politica"><div class="secao right">POLÍTICA</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/esportes"><div class="secao right">ESPORTES</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/economia"><div class="secao right">ECONOMIA</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/saude"><div class="secao">SAÚDE</div></a>
-		<a href="<?php echo BASE_URL; ?>colunas"><div class="secao right">COLUNAS</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/financas"><div class="secao">FINANÇAS</div></a>
-	</nav>
+	<!-- Newsletter -->
+	<div class="borda-top-newsletter"></div>
+	<section class="secao-newsletter">
+		<p>RECEBA AS NOVIDADES DE ESPORTES<br>NO SEU E-MAIL</p>
+
+		<form method="POST" id="form_newsletter">
+			<input type="text" name="email" id="email" placeholder="SEU MELHOR E-MAIL">
+			<button type="submit">ASSINAR    >></button>
+		</form>
+	</section>
 
 	<!-- Vídeos -->
 	<section class="videos-rodape">

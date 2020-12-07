@@ -1763,11 +1763,49 @@ body {
 }
 .lado-postagens-todas {
 	width: 100%;
-	height: 100px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: column;
 	border: 1px solid #BDBDBD;
 	margin-top: 20px;
 }
+#load-more-posts {
+	width: 672px;
+	height: 40px;
+	border: none;
+	background-color: black;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	margin: auto;
+}
+.hr-postagens {
+	width: 672px;
+	height: 1px;
+	background-color: #BDBDBD;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.lado-postagens-todas .noticia-menor-politica {
+	margin-top: 0;
+	margin-left: 40px;
+}
+.lado-postagens-todas .noticia-menor-politica img {
+	height: 150px;
+	width: 150px;
+}
+.lado-postagens-todas .noticia-menor-politica:hover h2 {
+	color: #ECEC12;
+}
 .lado-colunistas-todos a {
+	color: black;
+	text-decoration: none;
+}
+.lado-postagens-todas a {
 	color: black;
 	text-decoration: none;
 }
@@ -1835,4 +1873,76 @@ body {
 	width: 22px;
 	height: 22px;
 	margin-right: 10px;
+}
+
+/* Newsletter da Categoria */
+.secao-newsletter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 30px;
+	padding-bottom: 75px;
+	background-color: #F2F2F2;
+	text-align: center;
+	padding-left: 90px;
+	padding-right: 90px;
+}
+.secao-newsletter form {
+	width: 100%;
+	display: flex;
+	margin-top: 60px;
+	align-items: center;
+	justify-content: space-between;
+}
+.secao-newsletter input {
+	width: 853px;
+	height: 38px;
+	background-color: black;
+	border: none;
+	padding-left: 20px;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: white;
+	outline: none;
+}
+.secao-newsletter button {
+	width: 270px;
+	height: 40px;
+	background-color: #DC2121;
+	border: none;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: white;
+	cursor: pointer;
+	outline: none;
+}
+.secao-newsletter ::-webkit-input-placeholder {
+   color: #BDBDBD;
+}
+.secao-newsletter :-moz-placeholder { /* Firefox 18- */
+   color: #BDBDBD;  
+}
+.secao-newsletter ::-moz-placeholder {  /* Firefox 19+ */
+   color: #BDBDBD;  
+}
+.secao-newsletter :-ms-input-placeholder {  
+   color: #BDBDBD;  
+}
+.secao-newsletter p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 16px;
+	color: black;
+	cursor: default;
+	line-height: 25px;
+}
+.borda-top-newsletter {
+	display: flex;
+	margin-right: 220px;
+	margin-left: 220px;
+	margin-top: 70px;
+	height: 1px;
+	background-color: black;
 }
