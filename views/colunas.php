@@ -210,11 +210,11 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>home/categoria/financas">
+				<a href="<?php echo BASE_URL; ?>home/categoria/games">
 					<div class="card-navegacao">
-						<img class="card-navegacao-img" src="https://mcacont.com.br/wp-content/uploads/2020/02/controlar-as-finan%C3%A7as--400x400.jpg">
+						<img class="card-navegacao-img" src="https://i2.wp.com/roteirobaby.com.br/portal/wp-content/uploads/2018/08/console-controller-gamer-21067.jpg?resize=600%2C400&ssl=1">
 						<div class="card-texto">
-							<p>FINANÇAS</p>
+							<p>GAMES</p>
 							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
 						</div>
 					</div>
@@ -296,7 +296,7 @@
 		<a href="<?php echo BASE_URL; ?>home/categoria/educacao"><div class="secao right">EDUCAÇÃO</div></a>
 		<a href="<?php echo BASE_URL; ?>home/categoria/musica"><div class="secao right">MÚSICA</div></a>
 		<a href="<?php echo BASE_URL; ?>colunas"><div class="secao right">COLUNAS</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/financas"><div class="secao">FINANÇAS</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/games"><div class="secao">GAMES</div></a>
 	</nav>
 
 	<!-- Linha -->
@@ -911,21 +911,21 @@
 	<!-- Linha -->
 	<div class="linha"></div>
 
-	<!-- Finanças -->
-	<section class="topo-secao financas-topo-secao">
+	<!-- Games -->
+	<section class="topo-secao games-topo-secao">
 		<a href="<?php echo BASE_URL; ?>home/categoria/financas">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
-				<p>FINANÇAS</p>
+				<p>GAMES</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-financas.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right-games.svg">
 			</div>
 		</a>
 	</section>
 
-	<!-- Colunistas da Seção Finanças -->
-	<div class="colunistas-secao colunistas-secao-financas">
+	<!-- Colunistas da Seção Games -->
+	<div class="colunistas-secao colunistas-secao-games">
 		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
@@ -1026,7 +1026,7 @@
 		<a href="<?php echo BASE_URL; ?>home/categoria/educacao"><div class="secao right">EDUCAÇÃO</div></a>
 		<a href="<?php echo BASE_URL; ?>home/categoria/musica"><div class="secao right">MÚSICA</div></a>
 		<a href="<?php echo BASE_URL; ?>colunas"><div class="secao right">COLUNAS</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/financas"><div class="secao">FINANÇAS</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/games"><div class="secao">GAMES</div></a>
 	</nav>
 
 	<!-- Vídeos -->
@@ -1161,7 +1161,7 @@
 			<a href="<?php echo BASE_URL; ?>colunas">COLUNAS</a>
 			<a href="<?php echo BASE_URL; ?>home/categoria/economia">ECONOMIA</a>	
 			<a href="<?php echo BASE_URL; ?>home/categoria/esportes">ESPORTES</a>
-			<a href="<?php echo BASE_URL; ?>home/categoria/financas">FINANÇAS</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/games">GAMES</a>
 			<a href="<?php echo BASE_URL; ?>home/categoria/politica">POLÍTICA</a>
 			<a href="<?php echo BASE_URL; ?>home/categoria/saude">SAÚDE</a>
 			<a href="<?php echo BASE_URL; ?>home/categoria/televisao">TELEVISÃO</a>

@@ -575,14 +575,14 @@ body {
 .economia-topo-secao p {
 	color: #32CD32;
 }
-.financas-topo-secao {
-	border-top: 1px solid #32CD32;
+.games-topo-secao {
+	border-top: 1px solid #363636;
 }
-.financas-topo-secao a {
-	color: #32CD32;
+.games-topo-secao a {
+	color: #363636;
 }
-.financas-topo-secao p {
-	color: #32CD32;
+.games-topo-secao p {
+	color: #363636;
 }
 .saude-topo-secao {
 	border-top: 1px solid #6495ED;
@@ -682,11 +682,11 @@ body {
 .destaques-musica .noticia-menor-politica:hover h2 {
 	color: #AA22BB;
 }
-.destaques-financas .noticia-maior-politica:hover h2 {
-	color: #32CD32;
+.destaques-games .noticia-maior-politica:hover h2 {
+	color: #363636;
 }
-.destaques-financas .noticia-menor-politica:hover h2 {
-	color: #32CD32;
+.destaques-games .noticia-menor-politica:hover h2 {
+	color: #363636;
 }
 /*
 */
@@ -1775,10 +1775,10 @@ body {
 .tarja-categoria-economia p {
 	color: white;
 }
-.tarja-categoria-financas {
-	background-color: #32CD32;
+.tarja-categoria-games {
+	background-color: #363636;
 }
-.tarja-categoria-financas p {
+.tarja-categoria-games p {
 	color: white;
 }
 .tarja-categoria-saude {
@@ -2186,8 +2186,8 @@ body {
 .colunistas-secao-economia .colunista-secao h2 {
 	color: #32CD32;
 }
-.colunistas-secao-financas .colunista-secao h2 {
-	color: #32CD32;
+.colunistas-secao-games .colunista-secao h2 {
+	color: #363636;
 }
 .colunistas-secao-saude .colunista-secao h2 {
 	color: #6495ED;
