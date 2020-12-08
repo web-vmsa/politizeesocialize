@@ -116,7 +116,7 @@
 		<!-- Menu -->
 		<header class="menu">
 			<div class="item-menu conteudo-left fechar-menu">
-				<img onclick="ativaSlides(+1);" alt="Menu icon" src="<?php echo BASE_URL; ?>assets/images/close.svg">
+				<img alt="Menu icon" src="<?php echo BASE_URL; ?>assets/images/close.svg">
 				<p>MENU</p>
 			</div>
 			<div class="item-menu">
@@ -275,9 +275,9 @@
 	</header>
 
 	<!-- Tarja fixa da seção -->
-	<div class="tarja-categoria tarja-categoria-colunas">
+	<section class="tarja-categoria tarja-categoria-colunas">
 		<p>COLUNAS E COLUNISTAS</p>
-	</div>
+	</section>
 
 	<!-- Publicidade -->
 	<div class="publicidade">
@@ -316,7 +316,7 @@
 	</section>
 
 	<!-- Colunistas da Seção Política -->
-	<div class="colunistas-secao colunistas-secao-politica">
+	<section class="colunistas-secao colunistas-secao-politica">
 		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
@@ -384,7 +384,7 @@
 				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
 			</div>
 		</a>
-	</div>
+	</section>
 
 	<!-- Linha -->
 	<div class="linha"></div>
@@ -403,7 +403,7 @@
 	</section>
 
 	<!-- Colunistas da Seção Televisão -->
-	<div class="colunistas-secao colunistas-secao-televisao">
+	<section class="colunistas-secao colunistas-secao-televisao">
 		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
@@ -471,7 +471,7 @@
 				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
 			</div>
 		</a>
-	</div>
+	</section>
 
 	<!-- Linha -->
 	<div class="linha"></div>
@@ -490,7 +490,7 @@
 	</section>
 
 	<!-- Colunistas da Seção Esportes -->
-	<div class="colunistas-secao colunistas-secao-esportes">
+	<section class="colunistas-secao colunistas-secao-esportes">
 		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
@@ -558,7 +558,7 @@
 				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
 			</div>
 		</a>
-	</div>
+	</section>
 
 	<!-- Linha -->
 	<div class="linha"></div>
@@ -577,7 +577,7 @@
 	</section>
 
 	<!-- Colunistas da Seção Economia -->
-	<div class="colunistas-secao colunistas-secao-economia">
+	<section class="colunistas-secao colunistas-secao-economia">
 		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
@@ -645,7 +645,7 @@
 				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
 			</div>
 		</a>
-	</div>
+	</section>
 
 	<!-- Linha -->
 	<div class="linha"></div>
@@ -664,7 +664,7 @@
 	</section>
 
 	<!-- Colunistas da Seção Saúde -->
-	<div class="colunistas-secao colunistas-secao-saude">
+	<section class="colunistas-secao colunistas-secao-saude">
 		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
@@ -732,7 +732,7 @@
 				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
 			</div>
 		</a>
-	</div>
+	</section>
 
 	<!-- Linha -->
 	<div class="linha"></div>
@@ -751,7 +751,7 @@
 	</section>
 
 	<!-- Colunistas da Seção Educação -->
-	<div class="colunistas-secao colunistas-secao-educacao">
+	<section class="colunistas-secao colunistas-secao-educacao">
 		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
@@ -819,7 +819,7 @@
 				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
 			</div>
 		</a>
-	</div>
+	</section>
 
 	<!-- Linha -->
 	<div class="linha"></div>
@@ -838,7 +838,7 @@
 	</section>
 
 	<!-- Colunistas da Seção Música -->
-	<div class="colunistas-secao colunistas-secao-musica">
+	<section class="colunistas-secao colunistas-secao-musica">
 		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
@@ -906,7 +906,7 @@
 				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
 			</div>
 		</a>
-	</div>
+	</section>
 
 	<!-- Linha -->
 	<div class="linha"></div>
@@ -925,7 +925,7 @@
 	</section>
 
 	<!-- Colunistas da Seção Games -->
-	<div class="colunistas-secao colunistas-secao-games">
+	<section class="colunistas-secao colunistas-secao-games">
 		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
@@ -993,7 +993,7 @@
 				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
 			</div>
 		</a>
-	</div>
+	</section>
 
 	<!-- Linha -->
 	<div class="linha"></div>
@@ -1125,10 +1125,8 @@
 			<!-- Newsletter lateral -->
 			<aside class="widget-newsletter">
 				<div class="topo-recentes">
-					<a href="<?php echo BASE_URL; ?>">
-						<p>ASSINE A NEWSLETTER</p>
-						<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
-					</a>
+					<p class="cursor-default">ASSINE A NEWSLETTER</p>
+					<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 				</div>
 
 				<div class="corpo-widget-newsletter">

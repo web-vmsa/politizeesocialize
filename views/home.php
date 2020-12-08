@@ -1220,10 +1220,8 @@
 			<!-- Redes sociais -->
 			<aside class="widget">
 				<div class="topo-recentes">
-					<a href="<?php echo BASE_URL; ?>">
-						<p>REDES SOCIAIS</p>
-						<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
-					</a>
+					<p class="cursor-default">REDES SOCIAIS</p>
+					<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 				</div>
 
 				<div class="corpo-widget">
@@ -1236,10 +1234,8 @@
 			<!-- Newsletter lateral -->
 			<aside class="widget-newsletter">
 				<div class="topo-recentes">
-					<a href="<?php echo BASE_URL; ?>">
-						<p>ASSINE A NEWSLETTER</p>
-						<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
-					</a>
+					<p class="cursor-default">ASSINE A NEWSLETTER</p>
+					<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 				</div>
 
 				<div class="corpo-widget-newsletter">

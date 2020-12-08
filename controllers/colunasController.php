@@ -9,5 +9,13 @@ class colunasController extends controller {
 		$this->loadView('colunas', $dados);
 
 	}
+
+	public function colunista() {
+
+
+		$dados = array();
+
+		$this->loadView('colunista', $dados);
+	}
 	
 }

@@ -2206,3 +2206,109 @@ body {
 	width: 1px;
 	background-color: #BDBDBD;
 }
+
+/* Perfil do Colunista */
+.topo-perfil-colunista {
+	height: 250px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	padding-left: 90px;
+	padding-right: 90px;
+	border-bottom: 1px solid black;
+	background-color: #CCC;
+}
+.dados-colunista-perfil {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.dados-colunista-perfil h2 {
+	margin: 0;
+	padding: 0;
+	font-family: 'league_gothicregular';
+	font-size: 52px;
+	color: #363636;
+	margin-bottom: 15px;
+}
+.foto-colunista-perfil {
+	width: 200px;
+	height: 200px;
+	background-color: #CCC;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	border: 1px solid black;
+	margin-right: 15px;
+	position: relative;
+	margin-bottom: -50px;
+}
+.foto-colunista-perfil img {
+	width: 230px;
+	height: 230px;
+}
+.redes-sociais-colunista-perfil {
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.redes-sociais-colunista-perfil img {
+	width: 50px;
+	height: 50px;
+	border: none;
+	margin-left: 20px;
+	border-radius: 25px;
+}
+
+/* Bio Colunista */
+.bio-colunista {
+	display: flex;
+	margin-left: 220px;
+	margin-right: 220px;
+	margin-top: 120px;
+	background-color: #E0E0E0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+.bio-colunista p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 16px;
+	color: black;
+}
+
+/* Todas as postagens */
+.todas-postagens {
+	padding-left: 90px;
+	padding-right: 90px;
+	padding-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.todas-postagens a {
+	text-decoration: none;
+}
+.carregar-mais {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 70px;
+}
+#load-more-posts {
+	width: 550px;
+	height: 40px;
+	border: none;
+	background-color: black;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+}
