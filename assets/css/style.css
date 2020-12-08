@@ -2312,3 +2312,187 @@ body {
 	outline: none;
 	cursor: pointer;
 }
+
+/* Tarja da data dos jogos */
+.data-jogos {
+	display: flex;
+	width: 550px;
+	margin: auto;
+	margin-top: 70px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+.data-jogos p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 16px;
+	color: white;
+}
+
+
+/* 
+*	Tarja da data do jogo Especificações
+*/
+.hoje {
+	background-color: #1ECFDA;
+}
+.outro {
+	background-color: #DC2121;
+}
+/*
+*/
+
+/* Placarar do jogo */
+.jogos-placares {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-top: 50px;
+}
+.jogos-placares a {
+	text-decoration: none;
+}
+.jogo-sem-borda {
+	border: none;
+}
+.jogo-com-borda {
+	border: 1px solid black;
+}
+.linha-abaixo-jogo {
+	width: 926px;
+	margin-right: 220px;
+	margin-left: 220px;
+	height: 1px;
+	background-color: #E0E0E0;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.jogo-placar {
+	width: 550px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.status-jogo {
+	width: 150px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	position: absolute;
+	margin-top: -50px;
+}
+.status-jogo p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 12px;
+	color: white;
+}
+.campeonato-jogo {
+	width: 350px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.campeonato-jogo p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 12px;
+	color: black;
+}
+.placar {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.placar img {
+	width: 80px;
+	height: 80px;
+}
+.placar p {
+	width: 140px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratregular';
+	font-size: 22px;
+	color: black;
+}
+.placar h2 {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratregular';
+	font-size: 26px;
+	color: black;
+}
+.placar span {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratextralight';
+	font-size: 26px;
+	color: black;
+}
+.data-oficial {
+	width: 350px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.data-oficial p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratmedium';
+	font-size: 12px;
+	color: black;
+}
+#load-more-games {
+	width: 550px;
+	height: 40px;
+	border: none;
+	background-color: black;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	margin-top: 40px;
+}
+#load-more-jogos {
+	width: 550px;
+	height: 40px;
+	border: none;
+	background-color: black;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
