@@ -17,5 +17,13 @@ class homeController extends controller {
 
 		$this->loadView('categoria', $dados);
 	}
+
+	public function resultados(){
+
+
+		$dados = array();
+
+		$this->loadView('resultados', $dados);
+	}
 	
 }

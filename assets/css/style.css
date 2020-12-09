@@ -1387,7 +1387,7 @@ body {
 	margin-top: 20px;
 }
 #load-more-videos {
-	width: 100%;
+	width: 780px;
 	height: 40px;
 	border: none;
 	background-color: black;
@@ -2356,7 +2356,7 @@ body {
 	justify-content: center;
 	margin-top: 70px;
 }
-#load-more-posts {
+.carregar-mais button {
 	width: 550px;
 	height: 40px;
 	border: none;
@@ -2691,5 +2691,24 @@ body {
 
 
 
-
-
+/* Caixa de pesquisa */
+.search-form input {
+	background-color: transparent;
+	border: 1px solid #BDBDBD;
+	color: black;
+}
+.search-form button {
+	background-color: black;
+}
+.search-form ::-webkit-input-placeholder {
+   color: black;
+}
+.search-form :-moz-placeholder { /* Firefox 18- */
+   color: black;  
+}
+.search-form ::-moz-placeholder {  /* Firefox 19+ */
+   color: black;  
+}
+.search-form :-ms-input-placeholder {  
+   color: black;  
+}
