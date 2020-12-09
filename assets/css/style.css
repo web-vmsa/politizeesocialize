@@ -2488,7 +2488,35 @@ body {
 	margin-top: 40px;
 }
 
-
+/* Página não encontrada */
+.body-notfound {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-top: 70px;
+}
+.body-notfound span {
+	font-size: 288px;
+}
+.body-notfound h2 {
+	margin: 0;
+	padding: 0;
+	font-family: 'league_gothicregular';
+	font-size: 36px;
+	color: black;
+	transition: color 0.8s;
+}
+.body-notfound p {
+	width: 500px;
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratregular';
+	font-size: 18px;
+	margin-top: 20px;
+	color: black;
+	text-align: center;
+}
 
 
 
