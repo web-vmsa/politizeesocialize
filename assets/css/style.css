@@ -314,6 +314,61 @@ body {
 	font-size: 16px;
 	color: black;
 }
+
+
+/* Especificações do Topo Recentes 
+*/
+.topo-recentes-politica a:hover {
+	color: #DC2121;
+}
+.topo-recentes-politica p {
+	color: #DC2121;
+}
+.topo-recentes-televisao a:hover {
+	color: #4B0082;
+}
+.topo-recentes-televisao p {
+	color: #4B0082;
+}
+.topo-recentes-esportes a:hover {
+	color: #ECEC12;
+}
+.topo-recentes-esportes p {
+	color: #ECEC12;
+}
+.topo-recentes-economia a:hover {
+	color: #32CD32;
+}
+.topo-recentes-economia p {
+	color: #32CD32;
+}
+.topo-recentes-saude a:hover {
+	color: #6495ED;
+}
+.topo-recentes-saude p {
+	color: #6495ED;
+}
+.topo-recentes-educacao a:hover {
+	color: #C8A2C8;
+}
+.topo-recentes-educacao p {
+	color: #C8A2C8;
+}
+.topo-recentes-musica a:hover {
+	color: #AA22BB;
+}
+.topo-recentes-musica p {
+	color: #AA22BB;
+}
+.topo-recentes-games a:hover {
+	color: #363636;
+}
+.topo-recentes-games p {
+	color: #363636;
+}
+/**/
+
+
 .topo-recentes img {
 	width: 32px;
 	height: 32px;
@@ -2518,6 +2573,120 @@ body {
 	text-align: center;
 }
 
+/* Vídeos recentes */
+.videos-recentes {
+	margin-top: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-left: 90px;
+	padding-right: 90px;
+}
+
+
+
+
+/* Caixa dos Vídeos Especificações */
+.caixa-dos-videos-recentes .video:hover .conteudo-video h2 {
+	color: white;
+}
+.caixa-dos-videos-politica .video:hover .conteudo-video h2 {
+	color: #DC2121;
+}
+.caixa-dos-videos-televisao .video:hover .conteudo-video h2 {
+	color: #4B0082;
+}
+.caixa-dos-videos-esportes .video:hover .conteudo-video h2 {
+	color: #ECEC12;
+}
+.caixa-dos-videos-economia .video:hover .conteudo-video h2 {
+	color: #32CD32;
+}
+.caixa-dos-videos-saude .video:hover .conteudo-video h2 {
+	color: #6495ED;
+}
+.caixa-dos-videos-educacao .video:hover .conteudo-video h2 {
+	color: #C8A2C8;
+}
+.caixa-dos-videos-musica .video:hover .conteudo-video h2 {
+	color: #AA22BB;
+}
+.caixa-dos-videos-games .video:hover .conteudo-video h2 {
+	color: #363636;
+}
+/**/
+
+
+
+
+.caixa-dos-videos {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.caixa-dos-videos a {
+	text-decoration: none;
+}
+.caixa-dos-videos .video {
+	width: 380px;
+	margin-top: 20px;
+}
+
+
+/* Carregar mais vídeos */
+.load-more {
+	display: flex;
+	padding-left: 90px;
+	padding-right: 90px;
+	margin-top: 20px;
+	align-items: center;
+	justify-content: center;
+}
+.load-more button {
+	width: 100%;
+	height: 40px;
+	border: none;
+	font-family: 'montserratmedium';
+	font-size: 14px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+}
+
+
+/* 
+* 	Especificações do Botão de Carregar mais 
+*/
+.recentes-load-more button {
+	background-color: black;
+}
+.politica-load-more button {
+	background-color: #DC2121;
+}
+.televisao-load-more button {
+	background-color: #4B0082;
+}
+.esportes-load-more button {
+	background-color: #ECEC12;
+}
+.economia-load-more button {
+	background-color: #32CD32;
+}
+.saude-load-more button {
+	background-color: #6495ED;
+}
+.educacao-load-more button {
+	background-color: #C8A2C8;
+}
+.musica-load-more button {
+	background-color: #AA22BB;
+}
+.games-load-more button {
+	background-color: #363636;
+}
+/**/
 
 
 
