@@ -2746,7 +2746,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'league_gothicregular';
-	font-size: 52px;
+	font-size: 62px;
 	color: black;
 	margin-top: 40px;
 	margin-bottom: 20px;
@@ -3011,8 +3011,35 @@ body {
 	margin-bottom: 40px;
 }
 
-
-
-
-
-
+/* Placar do jogo */
+.postagem-jogo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #F2F2F2;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+.postagem-jogo a {
+	text-decoration: none;
+}
+.fundo-branco {
+	background-color: white;
+}
+.placar-p {
+	margin: 0;
+	padding: 0;
+	font-family: 'montserratregular';
+	font-size: 22px;
+	color: black;
+	margin-bottom: 50px;
+	cursor: default;
+}
+.borda-bottom-placar {
+	display: flex;
+	margin-right: 220px;
+	margin-left: 220px;
+	height: 1px;
+	background-color: black;
+}

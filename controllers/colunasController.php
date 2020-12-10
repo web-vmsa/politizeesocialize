@@ -17,5 +17,13 @@ class colunasController extends controller {
 
 		$this->loadView('colunista', $dados);
 	}
+
+	public function opiniao() {
+
+
+		$dados = array();
+
+		$this->loadView('opiniao', $dados);
+	}
 	
 }

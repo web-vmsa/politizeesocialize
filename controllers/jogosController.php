@@ -18,5 +18,14 @@ class jogosController extends controller {
 		$this->loadView('finalizados', $dados);
 
 	}
+
+	public function jogo(){
+
+
+		$dados = array();
+
+		$this->loadView('jogo', $dados);
+
+	}
 	
 }

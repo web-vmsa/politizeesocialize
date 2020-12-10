@@ -20,14 +20,14 @@
 	<meta property="article:section" content="Seção do artigo">
 	<meta property="article:tag" content="Tags do artigo">
 	<meta property="article:published_time" content="date_time">
-	<meta property="og:url" content="<?php echo BASE_URL; ?>">
+	<meta property="og:url" content="<?php echo BASE_URL; ?>colunas/opiniao/{{url}}">
 	<meta property="og:title" content="Politize e socialize - Política em um só lugar">
 	<meta property="og:description" content="Economia, esportes, política, finanças e televisão no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
 	<meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="<?php echo BASE_URL; ?>">
+	<meta property="twitter:url" content="<?php echo BASE_URL; ?>colunas/opiniao/{{url}}">
 	<meta property="twitter:title" content="Politize e socialize - Política em um só lugar">
 	<meta property="twitter:description" content="Economia, esportes, política, finanças e televisão no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
 	<meta property="twitter:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
@@ -219,8 +219,8 @@
 	</header>
 
 	<!-- Tarja fixa da seção -->
-	<section class="tarja-categoria tarja-categoria-politica">
-		<p>POLÍTICA</p>
+	<section class="tarja-categoria tarja-categoria-esportes">
+		<p>OPINIÃO / ESPORTES</p>
 	</section>
 
 	<!-- Dados do artigo -->
@@ -241,15 +241,15 @@
 			<div class="lado-share">
 				<p>Share this —</p>
 
-				<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo BASE_URL; ?>home/postagem/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
-				<a href="https://api.whatsapp.com/send?text=<?php echo BASE_URL; ?>home/postagem/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/whatsapp.svg"></a>
-				<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo BASE_URL; ?>home/postagem/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo BASE_URL; ?>colunas/opiniao/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
+				<a href="https://api.whatsapp.com/send?text=<?php echo BASE_URL; ?>colunas/opiniao/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/whatsapp.svg"></a>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo BASE_URL; ?>colunas/opiniao/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
 			</div>
 		</div>
 	</div>
 
 	<?php
-		$type_video = "video";
+		$type_video = "imagem";
 	?>
 
 	<!-- Arquivo principal do artigo -->
@@ -278,8 +278,6 @@
 
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis maximus rhoncus. Vestibulum blandit arcu nec feugiat posuere. Aenean aliquet orci mi, nec placerat dolor fermentum eget. Pellentesque vel neque ut turpis ultrices commodo eu eu ex. Vestibulum blandit arcu nec feugiat posuere. Aenean aliquet orci mi, nec placerat dolor fermentum eget. Pellentesque vel neque ut turpis ultrices commodo eu eu ex.</p>
 
-		<img src="https://s2.glbimg.com/n8bxblHe4tA1NYbKz5wVQKdl9UA=/0x0:1280x948/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/2/Z/XhCCDqRdAwode4sThAVA/whatsapp-image-2020-10-03-at-13.43.59.jpeg">
-
 		<h2>Lorem Ipsum</h2>
 
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis maximus rhoncus. Vestibulum blandit arcu nec feugiat posuere. Aenean aliquet orci mi, nec placerat dolor fermentum eget. Pellentesque vel neque ut turpis ultrices commodo eu eu ex.</p>
@@ -287,12 +285,6 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis maximus rhoncus. Vestibulum blandit arcu nec feugiat posuere. <a href="">Aenean aliquet orci mi, nec placerat dolor fermentum eget.</a> Pellentesque vel neque ut turpis ultrices commodo eu eu ex. Vestibulum blandit arcu nec feugiat posuere. Aenean aliquet orci mi, nec placerat dolor fermentum eget. Pellentesque vel neque ut turpis ultrices commodo eu eu ex.</p>
 
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis maximus rhoncus. Vestibulum blandit arcu nec feugiat posuere. Aenean aliquet orci mi, nec placerat dolor fermentum eget. Pellentesque vel neque ut turpis ultrices commodo eu eu ex. Vestibulum blandit arcu nec feugiat posuere. Aenean aliquet orci mi, nec placerat dolor fermentum eget. Pellentesque vel neque ut turpis ultrices commodo eu eu ex.</p>
-
-		<ul>
-			<li><a href="">Lorem ipsum Dolor sit Amet, adipscing elit.</a></li>
-			<li><a href="">Lorem ipsum Dolor sit Amet, adipscing elit.</a></li>
-			<li><a href="">Lorem ipsum Dolor sit Amet, adipscing elit.</a></li>
-		</ul>
 
 		<div class="linha"></div>
 	</div>
@@ -312,20 +304,20 @@
 	</div>
 
 	<!-- Mais da categoria -->
-	<section class="topo-secao politica-topo-secao">
-		<a href="<?php echo BASE_URL; ?>home/categoria/politica">
+	<section class="topo-secao esportes-topo-secao">
+		<a href="<?php echo BASE_URL; ?>home/categoria/esportes">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
-				<p class="cursor-default">POLÍTICA</p>
+				<p class="cursor-default">ESPORTES</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right-yellow.svg">
 			</div>
 		</a>
 	</section>
 
 	<!-- Recentes -->
-	<section class="politica destaques-politica">
+	<section class="politica destaques-esportes">
 		<div class="noticias-maiores">
 			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-maior-politica">
@@ -391,10 +383,104 @@
 		</div>
 	</section>
 
+	<!-- Publicidade -->
+	<div class="publicidade">
+		<div class="publicidade-item">
+			<p>PUBLICIDADE</p>
+		</div>
+	</div>
+
+	<!-- Esportes -->
+	<section class="topo-secao esportes-topo-secao">
+		<a href="<?php echo BASE_URL; ?>home/categoria/esportes">
+			<div class="item-topo-secao"></div>
+			<div class="item-topo-secao">
+				<p>COLUNISTAS</p>
+			</div>
+			<div class="item-topo-secao justify-right">
+				<img src="<?php echo BASE_URL; ?>assets/images/right-yellow.svg">
+			</div>
+		</a>
+	</section>
+
+	<!-- Colunistas da Seção Esportes -->
+	<section class="colunistas-secao colunistas-secao-esportes">
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+			<div class="colunista-secao">
+				<div class="colunista-secao-foto">
+					<img src="https://static.poder360.com.br/2020/12/JairBolsonaro-PessoaComDeficiencia-Michelle-14-868x644.jpg">
+				</div>
+				<h2>VICTOR MIGUEL</h2>
+				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+			</div>
+		</a>
+
+		<div class="borda-colunista-secao"></div>
+
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+			<div class="colunista-secao">
+				<div class="colunista-secao-foto">
+					<img src="https://imagens.brasil.elpais.com/resizer/PDFt8rv5N6BqUV6kcID838G79Fo=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SH7RXY3KBBGC7E2MGUR34CCHPA.jpg">
+				</div>
+				<h2>VICTOR MIGUEL</h2>
+				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+			</div>
+		</a>
+
+		<div class="borda-colunista-secao"></div>
+
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+			<div class="colunista-secao">
+				<div class="colunista-secao-foto">
+					<img src="https://f.i.uol.com.br/fotografia/2020/05/30/15908728835ed2cb33ad63d_1590872883_3x2_md.jpg">
+				</div>
+				<h2>VICTOR MIGUEL</h2>
+				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+			</div>
+		</a>
+
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+			<div class="colunista-secao">
+				<div class="colunista-secao-foto">
+					<img src="https://imagens.brasil.elpais.com/resizer/6PompmIOEFiHliFkdnHBi-dO2EI=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SBJ3UW43NBHBLGRMP73V22ZF3I.jpg">
+				</div>
+				<h2>VICTOR MIGUEL</h2>
+				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+			</div>
+		</a>
+
+		<div class="borda-colunista-secao"></div>
+
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+			<div class="colunista-secao">
+				<div class="colunista-secao-foto">
+					<img src="https://www.cartacapital.com.br/wp-content/uploads/2020/10/Lula-2.jpg">
+				</div>
+				<h2>VICTOR MIGUEL</h2>
+				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+			</div>
+		</a>
+
+		<div class="borda-colunista-secao"></div>
+
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+			<div class="colunista-secao">
+				<div class="colunista-secao-foto">
+					<img src="https://static1.purepeople.com.br/articles/0/30/68/00/@/3467315-andreia-sadi-revela-nome-dos-filhos-com-624x600-2.jpg">
+				</div>
+				<h2>VICTOR MIGUEL</h2>
+				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+			</div>
+		</a>
+	</section>
+
+	<!-- Linha -->
+	<div class="linha"></div>
+
 	<!-- Newsletter -->
 	<div class="borda-top-newsletter"></div>
 	<section class="secao-newsletter">
-		<p>ASSINE A NEWSLETTER E RECEBA AS NOVIDADES<br>NO SEU E-MAIL</p>
+		<p>ASSINE A NEWSLETTER E RECEBA AS OPINIÕES<br>NO SEU E-MAIL</p>
 
 		<form method="POST" id="form_newsletter">
 			<input type="text" name="email" id="email" placeholder="SEU MELHOR E-MAIL">

@@ -20,14 +20,14 @@
 	<meta property="article:section" content="Seção do artigo">
 	<meta property="article:tag" content="Tags do artigo">
 	<meta property="article:published_time" content="date_time">
-	<meta property="og:url" content="<?php echo BASE_URL; ?>">
+	<meta property="og:url" content="<?php echo BASE_URL; ?>jogos/jogo/{{url}}">
 	<meta property="og:title" content="Politize e socialize - Política em um só lugar">
 	<meta property="og:description" content="Economia, esportes, política, finanças e televisão no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
 	<meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="<?php echo BASE_URL; ?>">
+	<meta property="twitter:url" content="<?php echo BASE_URL; ?>jogos/jogo/{{url}}">
 	<meta property="twitter:title" content="Politize e socialize - Política em um só lugar">
 	<meta property="twitter:description" content="Economia, esportes, política, finanças e televisão no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
 	<meta property="twitter:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
@@ -54,6 +54,66 @@
 	<!-- Facebook plugin -->
 	<div id="fb-root"></div>
 	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="8w1uRG64"></script>
+
+	<!-- SlidesShow -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var slideIndex = [1,1,1,1];
+			var slideId = ["carousel-slide"]
+			var dotId = ["slide-dot-carousel"]
+			showDivs(1, 0);
+
+			function plusDivs(n, no) {
+			  showDivs(slideIndex[no] += n, no);
+			}
+
+			function currentDivs(n, no) {
+			  showDivs(slideIndex[no] = n, no);
+			}
+
+			function showDivs(n, no) {
+			  var i;
+			  var x = document.getElementsByClassName(slideId[no]);
+			  var d = document.getElementsByClassName(dotId[no]);
+			  if (n > x.length) {slideIndex[no] = 1}
+			  if (n < 1) {slideIndex[no] = x.length}
+			  for (i = 0; i < x.length; i++) {
+			    x[i].style.display = "none";  
+			  }
+			  for (i = 0; i < d.length; i++) {
+			    	d[i].className = d[i].className.replace(" slide-dot-active", "");
+			   }
+			  x[slideIndex[no]-1].style.display = "flex";  
+			  d[slideIndex[no]-1].className += " slide-dot-active";
+			}
+
+			$(".passa-slide").on("click", function(){
+
+				slideN = $(this).data("id");
+
+				plusDivs(1, slideN);
+
+			});
+
+			$(".volta-slide").on("click", function(){
+
+				slideX = $(this).data("id");
+
+				plusDivs(-1, slideX);
+
+			});
+
+			$(".slide-dot-carousel").on("click", function(){
+
+				dataSlide = $(this).data("slide");
+				dotCurrent = $(this).data("id");
+				currentDivs(dotCurrent, dataSlide);
+
+			});
+		  
+		});
+	</script>
 
 	<!-- Modal -->
 	<div class="modal">
@@ -219,9 +279,39 @@
 	</header>
 
 	<!-- Tarja fixa da seção -->
-	<section class="tarja-categoria tarja-categoria-politica">
-		<p>POLÍTICA</p>
+	<section class="tarja-categoria tarja-categoria-esportes">
+		<p>ESPORTES</p>
 	</section>
+
+	<!-- Placar do jogo -->
+	<div class="postagem-jogo">
+
+		<p class="placar-p">Placar</p>
+
+		<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}">
+			<div class="jogo-placar jogo-com-borda fundo-branco">
+				<div class="status-jogo">
+					<p>Ao vivo</p>
+				</div>
+				<div class="campeonato-jogo">
+					<p>Libertadores - Oitavas de Final / Ida</p>
+				</div>
+				<div class="placar">
+					<img src="https://rceit.com.br/wp-content/uploads/2019/05/gr%C3%AAmio-escudo-1.png">
+					<p>Grêmio</p>
+					<h2><span>1-1</span></h2>
+					<p>Santos</p>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/9/92/LogoSantosFC.png">
+				</div>
+				<div class="data-oficial">
+					<p>12/08/2020 12h30</p>
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<!-- Borda do placar -->
+	<div class="borda-bottom-placar"></div>
 
 	<!-- Dados do artigo -->
 	<div class="dados-artigo">
@@ -241,9 +331,9 @@
 			<div class="lado-share">
 				<p>Share this —</p>
 
-				<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo BASE_URL; ?>home/postagem/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
-				<a href="https://api.whatsapp.com/send?text=<?php echo BASE_URL; ?>home/postagem/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/whatsapp.svg"></a>
-				<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo BASE_URL; ?>home/postagem/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo BASE_URL; ?>jogos/jogo/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
+				<a href="https://api.whatsapp.com/send?text=<?php echo BASE_URL; ?>jogos/jogo/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/whatsapp.svg"></a>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo BASE_URL; ?>jogos/jogo/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
 			</div>
 		</div>
 	</div>
@@ -259,7 +349,7 @@
 	</div>
 	<?php else: ?>
 	<div class="file-artigo">
-		<video id="video-artigo" class="video-js" poster="https://images.autosport.pt/2020/12/romain-grosjean.jpg" controls preload="auto" data-setup="{}">
+		<video id="video-artigo" class="video-js" poster="https://images.daznservices.com/di/library/GOAL/47/6a/para-matheus-henrique-gremio-santos-libertadores-09122020_8l94xkiipsp91sh6t2xba1ov5.jpg?t=1318531478&quality=100" controls preload="auto" data-setup="{}">
 			<source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
 		</video>
 	</div>
@@ -272,27 +362,36 @@
 
 	<!-- Postagem -->
 	<div class="postagem">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis maximus rhoncus. Vestibulum blandit arcu nec feugiat posuere. Aenean aliquet orci mi, nec placerat dolor fermentum eget. Pellentesque vel neque ut turpis ultrices commodo eu eu ex.</p>
+		<h2>(Lance a lance &#9917;)</h2>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis maximus rhoncus. Vestibulum blandit arcu nec feugiat posuere. <a href="">Aenean aliquet orci mi, nec placerat dolor fermentum eget.</a> Pellentesque vel neque ut turpis ultrices commodo eu eu ex. Vestibulum blandit arcu nec feugiat posuere. Aenean aliquet orci mi, nec placerat dolor fermentum eget. Pellentesque vel neque ut turpis ultrices commodo eu eu ex.</p>
+		<h3>&#9201; 90' minutos</h3>
+		<p>Fim de papo! Grêmio e Santos ficam com o 1-1 no placar, agora o Santos decide em casa pelas quartas de final da Libertadores.</p>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis maximus rhoncus. Vestibulum blandit arcu nec feugiat posuere. Aenean aliquet orci mi, nec placerat dolor fermentum eget. Pellentesque vel neque ut turpis ultrices commodo eu eu ex. Vestibulum blandit arcu nec feugiat posuere. Aenean aliquet orci mi, nec placerat dolor fermentum eget. Pellentesque vel neque ut turpis ultrices commodo eu eu ex.</p>
+		<h3>&#129349; GOOOOOOOOOOOOOOOOOOOLLLLLLL! Do Grêmiooooooooooo</h3>
+		<p>Diego Souza converte o pênalti e deixa tudo igual na Arena do Grêmio</p>
 
-		<img src="https://s2.glbimg.com/n8bxblHe4tA1NYbKz5wVQKdl9UA=/0x0:1280x948/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/2/Z/XhCCDqRdAwode4sThAVA/whatsapp-image-2020-10-03-at-13.43.59.jpeg">
+		<img src="https://i.ytimg.com/vi/wK41ZWrSYhs/hqdefault.jpg">
 
-		<h2>Lorem Ipsum</h2>
+		<h3>É PÊNALTIIIII!</h3>
+		<p>O Grêmio tem a chance de deixar tudo igual no Placar, Diego Souza vai para a marca da Cal.</p>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis maximus rhoncus. Vestibulum blandit arcu nec feugiat posuere. Aenean aliquet orci mi, nec placerat dolor fermentum eget. Pellentesque vel neque ut turpis ultrices commodo eu eu ex.</p>
+		<h3>&#9201; 90'Minutos passados, 1 a 0</h3>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis maximus rhoncus. Vestibulum blandit arcu nec feugiat posuere. <a href="">Aenean aliquet orci mi, nec placerat dolor fermentum eget.</a> Pellentesque vel neque ut turpis ultrices commodo eu eu ex. Vestibulum blandit arcu nec feugiat posuere. Aenean aliquet orci mi, nec placerat dolor fermentum eget. Pellentesque vel neque ut turpis ultrices commodo eu eu ex.</p>
+		<h3>EXPULSOOO! &#128213;</h3>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis maximus rhoncus. Vestibulum blandit arcu nec feugiat posuere. Aenean aliquet orci mi, nec placerat dolor fermentum eget. Pellentesque vel neque ut turpis ultrices commodo eu eu ex. Vestibulum blandit arcu nec feugiat posuere. Aenean aliquet orci mi, nec placerat dolor fermentum eget. Pellentesque vel neque ut turpis ultrices commodo eu eu ex.</p>
+		<p>Pituca que fazia grande partida é expulso</p>
 
-		<ul>
-			<li><a href="">Lorem ipsum Dolor sit Amet, adipscing elit.</a></li>
-			<li><a href="">Lorem ipsum Dolor sit Amet, adipscing elit.</a></li>
-			<li><a href="">Lorem ipsum Dolor sit Amet, adipscing elit.</a></li>
-		</ul>
+		<h3>&#9201; 45' minutos</h3>
+		<p>Fim do primeiro tempo, Santos 1-0 Grêmio</p>
+
+		<h3>&#129349; GOOOOOOOOOOOOOOOOLLLLLLLLLL! É do SANTOOOOOSS</h3>
+
+		<p>Kaio Jorge abre o marcador para o peixe aos 36' minutos de jogo.</p>
+
+		<img src="https://pbs.twimg.com/media/DW63xM-W0AA9Nd0.jpg">
+
+		<h3>&#9201; 01' minutos</h3>
+		<p>Inicio de jogo, Grêmio e Santos pela Libertadores</p>
 
 		<div class="linha"></div>
 	</div>
@@ -311,90 +410,224 @@
 		</div>
 	</div>
 
-	<!-- Mais da categoria -->
-	<section class="topo-secao politica-topo-secao">
-		<a href="<?php echo BASE_URL; ?>home/categoria/politica">
+	<!-- Esportes -->
+	<section class="topo-secao esportes-topo-secao">
+		<a href="<?php echo BASE_URL; ?>home/categoria/esportes">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
-				<p class="cursor-default">POLÍTICA</p>
+				<p>ESPORTES</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right-yellow.svg">
 			</div>
 		</a>
 	</section>
 
-	<!-- Recentes -->
-	<section class="politica destaques-politica">
-		<div class="noticias-maiores">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-maior-politica">
-					<img src="https://s2.glbimg.com/UDPD9jKWz2831nnRnb7-7tmfrqs=/0x0:1280x853/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/L/z/RYs7wwTUmALWjqUDS41w/whatsapp-image-2019-09-19-at-00.43.15.jpeg">
-					<div class="noticia-maior-conteudo">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-					</div>
+	<!-- Notícias recentes Esportes -->
+	<section class="esportes">
+		<!-- Jogos -->
+		<div class="futebol">
+			<div class="jogos">
+				<div class="topo-recentes">
+					<a href="<?php echo BASE_URL; ?>jogos/finalizados">
+						<p>Resultados</p>
+						<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+					</a>
 				</div>
-			</a>
-
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-maior-politica">
-					<img src="https://colunadofla.com/wp-content/uploads/2020/07/rodrigo-caio.jpg">
-					<div class="noticia-maior-conteudo">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-					</div>
+				<!-- Resultados -->
+				<div class="jogos-divs">
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
+						<p>FLA 1-1 RSC</p>
+					</div></a>
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
+						<p>SPFC 3-1 BAH</p>
+					</div></a>
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
+						<p>VAS 1-4 CEA</p>
+					</div></a>
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
+						<p>INT 0-0 ATH</p>
+					</div></a>
 				</div>
-			</a>
+			</div>
+			<div class="divisor"></div>
+			<div class="jogos">
+				<div class="topo-recentes">
+					<a href="<?php echo BASE_URL; ?>jogos">
+						<p>Próximos jogos</p>
+						<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+					</a>
+				</div>
+				<!-- Jogos -->
+				<div class="jogos-divs">
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
+						<p>FLA 1-1 RSC</p>
+					</div></a>
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
+						<p>SPFC 3-1 BAH</p>
+					</div></a>
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
+						<p>VAS 1-4 CEA</p>
+					</div></a>
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
+						<p>INT 0-0 ATH</p>
+					</div></a>
+				</div>
+			</div>
 		</div>
+		<!-- -->
 
+		<!-- Notícias -->
 		<div class="noticias-menores-politica">
 			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-menor-politica">
-					<img src="https://www.lance.com.br/files/article_main/uploads/2020/08/29/5f4adc962b03c.jpeg">
+					<img src="https://m.extra.globo.com/incoming/24751825-daf-ba9/w488h275-PROP/90486867_es-rio-de-janeiro-rj-13112020treino-do-flamengono-ninho-do-uruburogerio-c.jpg">
 					<div class="noticia-menor-conteudo-politica">
+						<div class="jogo-descricao">
+							<p>FLAMENGO E SANTOS</p>
+						</div>
 						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+						<p>20 DE OUT | 2020</p>
 					</div>
 				</div>
 			</a>
 
 			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-menor-politica">
-					<img src="https://s2.glbimg.com/mngGalithA5ohe3KzGBZp6Zwnlw=/0x0:2048x1152/540x304/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/O/U/FPY20dRwiOAt5VO1ZCBw/50688013266-2d0cdaa7c7-k.jpg">
+					<img src="https://jpimg.com.br/uploads/2020/09/marinho-participou-de-nove-gols-em-nove-jogos-do-santos-no-brasileirao.jpg">
 					<div class="noticia-menor-conteudo-politica">
+						<div class="jogo-descricao">
+							<p>FLAMENGO E SANTOS</p>
+						</div>
 						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+						<p>20 DE OUT | 2020</p>
 					</div>
 				</div>
 			</a>
 
 			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-menor-politica">
-					<img src="https://conteudo.imguol.com.br/c/esporte/82/2020/12/05/rafael-sobis-comemora-gol-marcado-pelo-cruzeiro-sobre-o-brasil-de-pelotas-no-mineirao-1607217708438_v2_450x337.jpg">
+					<img src="https://cdn.diariodolitoral.com.br/upload/dn_noticia/2020/09/marinho_2.jpg">
 					<div class="noticia-menor-conteudo-politica">
+						<div class="jogo-descricao">
+							<p>FLAMENGO E SANTOS</p>
+						</div>
 						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+						<p>20 DE OUT | 2020</p>
 					</div>
 				</div>
 			</a>
 
 			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="noticia-menor-politica">
-					<img src="https://www.coritiba.com.br/imgview/show/161345/50">
+					<img src="https://uploads.metropoles.com/wp-content/uploads/2020/11/09180535/Rogerio-Ceni-Flamengo-600x400.jpg">
 					<div class="noticia-menor-conteudo-politica">
+						<div class="jogo-descricao">
+							<p>FLAMENGO E SANTOS</p>
+						</div>
 						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+						<p>20 DE OUT | 2020</p>
 					</div>
 				</div>
 			</a>
 		</div>
+
+		<!-- Carousel e vídeos -->
+		<div class="carousel-videos">
+			<div class="lado-carousel">
+				<div class="carousel-controls">
+					<img data-id="0" class="volta-slide" src="<?php echo BASE_URL; ?>assets/images/left-arrow-white.svg">
+					<div class="slide-dots-carousel">
+						<div data-slide="0" data-id="1" class="slide-dot-carousel"></div>
+						<div data-slide="0" data-id="2" class="slide-dot-carousel"></div>
+						<div data-slide="0" data-id="3" class="slide-dot-carousel"></div>
+					</div>
+					<img data-id="0" class="passa-slide" src="<?php echo BASE_URL; ?>assets/images/right-arrow.svg">
+				</div>
+
+				<div class="carousel-slide fade">
+					<img src="https://sportbuzz.uol.com.br/media/_versions/gettyimages-1160655989_widelg.jpg">
+					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+						<div class="slide-carousel-conteudo">
+							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
+						</div>
+					</a>
+				</div>
+				<div class="carousel-slide fade">
+					<img src="https://esbrasil.com.br/wp-content/uploads/2019/08/Daniel_site.jpg">
+					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+						<div class="slide-carousel-conteudo">
+							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
+						</div>
+					</a>
+				</div>
+				<div class="carousel-slide fade">
+					<img src="https://conteudo.imguol.com.br/c/esporte/41/2020/11/28/neymar-faz-gol-de-penalti-na-partida-psg-x-bordeaux-pelo-campeonato-frances-1606600195230_v2_450x337.jpg">
+					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+						<div class="slide-carousel-conteudo">
+							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="videos-esportes">
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+					<div class="video-esporte">
+						<div class="lado-video">
+							<video id="video-esporte" class="video-js vjs-theme-city" poster="https://f.i.uol.com.br/fotografia/2020/10/01/16016045635f768bd3d96b2_1601604563_3x2_md.jpg" preload="auto" data-setup="{}">
+							 	<source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
+							</video>
+							<div class="video-conteudo">
+								<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
+								<p>20 DE OUT | 2020</p>
+							</div>
+						</div>
+						<div class="lado-descricao">
+							<h2>ROGERIO CENI</h2>
+							<div class="link-video">
+								<p>Lorem Ipsum</p>
+								<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+					<div class="video-esporte">
+						<div class="lado-video">
+							<video id="video-esporte" class="video-js vjs-theme-city" poster="https://jpimg.com.br/uploads/2020/10/brenner-rubens-chiri-spfc.jpg" preload="auto" data-setup="{}">
+							 	<source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
+							</video>
+							<div class="video-conteudo">
+								<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
+								<p>20 DE OUT | 2020</p>
+							</div>
+						</div>
+						<div class="lado-descricao">
+							<h2>ROGERIO CENI</h2>
+							<div class="link-video">
+								<p>Lorem Ipsum</p>
+								<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
 	</section>
+
+	<!-- Tarjas abaixo da seção esportes -->
+	<div class="tarjas">
+		<div class="tarja-esquerda"></div>
+		<div class="tarja-direita"></div>
+	</div>
 
 	<!-- Newsletter -->
 	<div class="borda-top-newsletter"></div>
 	<section class="secao-newsletter">
-		<p>ASSINE A NEWSLETTER E RECEBA AS NOVIDADES<br>NO SEU E-MAIL</p>
+		<p>ASSINE A NEWSLETTER E RECEBA AS NOVIDADES DE<br>ESPORTES NO SEU E-MAIL</p>
 
 		<form method="POST" id="form_newsletter">
 			<input type="text" name="email" id="email" placeholder="SEU MELHOR E-MAIL">
