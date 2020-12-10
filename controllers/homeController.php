@@ -25,5 +25,13 @@ class homeController extends controller {
 
 		$this->loadView('resultados', $dados);
 	}
+
+	public function postagem(){
+
+
+		$dados = array();
+
+		$this->loadView('postagem', $dados);
+	}
 	
 }
