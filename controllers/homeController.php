@@ -26,7 +26,7 @@ class homeController extends controller {
 		$this->loadView('resultados', $dados);
 	}
 
-	public function postagem(){
+	public function noticia(){
 
 
 		$dados = array();

@@ -81,7 +81,7 @@
 			<div class="itens-menu">
 				<a href="<?php echo BASE_URL; ?>">
 					<div class="card-navegacao">
-						<img class="card-navegacao-img" src="https://www.zonacurva.com.br/wp-content/uploads/2020/01/isen%C3%A7%C3%A3o-jornalismo.jpg">
+						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_home.png">
 						<div class="card-texto">
 							<p>INICIO</p>
 							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
@@ -90,18 +90,18 @@
 				</a>
 				<a href="<?php echo BASE_URL; ?>">
 					<div class="card-navegacao">
-						<img class="card-navegacao-img" src="https://www.racecomunicacao.com.br/wp-content/uploads/2018/01/Assessoria-de-imprensa-e-branding.jpg">
+						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_escritor.png">
 						<div class="card-texto">
 							<p>SEJA ESCRITOR</p>
 							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>">
+				<a href="https://pt-br.facebook.com/pages/category/Community/Politize-e-socialize-748330938697380/">
 					<div class="card-navegacao">
-						<img class="card-navegacao-img" src="https://angra.rj.gov.br/sopa/fotos/noticias/56979_I.jpg">
+						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_facebook.png">
 						<div class="card-texto">
-							<p>DOE SANGUE</p>
+							<p>FACEBOOK</p>
 							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
 						</div>
 					</div>
@@ -116,7 +116,7 @@
 			<div class="itens-menu">
 				<a href="<?php echo BASE_URL; ?>home/categoria/esportes">
 					<div class="card-navegacao">
-						<img class="card-navegacao-img" src="https://maranhaohoje.com/wp-content/uploads/2018/04/Galo.jpg">
+						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_esportes.png">
 						<div class="card-texto">
 							<p>ESPORTES</p>
 							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
@@ -125,7 +125,7 @@
 				</a>
 				<a href="<?php echo BASE_URL; ?>home/categoria/politica">
 					<div class="card-navegacao">
-						<img class="card-navegacao-img" src="https://conteudo.imguol.com.br/c/parceiros/ab/2020/12/02/presidente-do-brasil-jair-bolsonaro-1606912952211_v2_450x337.jpg">
+						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_politica.png">
 						<div class="card-texto">
 							<p>POLÍTICA</p>
 							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
@@ -134,7 +134,7 @@
 				</a>
 				<a href="<?php echo BASE_URL; ?>home/categoria/saude">
 					<div class="card-navegacao">
-						<img class="card-navegacao-img" src="https://s2.glbimg.com/hPzLCw15vJyIznSwNP-MRS60uUk=/620x430/e.glbimg.com/og/ed/f/original/2020/03/09/gettyimages-1203348066.jpg">
+						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_saude.png">
 						<div class="card-texto">
 							<p>SAÚDE</p>
 							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
@@ -143,7 +143,7 @@
 				</a>
 				<a href="<?php echo BASE_URL; ?>home/categoria/economia">
 					<div class="card-navegacao">
-						<img class="card-navegacao-img" src="https://cdn4.ecycle.com.br/cache/images/2018-02/50-650-economia-o-que-e.jpg">
+						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_economia.png">
 						<div class="card-texto">
 							<p>ECONOMIA</p>
 							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
@@ -152,7 +152,7 @@
 				</a>
 				<a href="<?php echo BASE_URL; ?>home/categoria/games">
 					<div class="card-navegacao">
-						<img class="card-navegacao-img" src="https://i2.wp.com/roteirobaby.com.br/portal/wp-content/uploads/2018/08/console-controller-gamer-21067.jpg?resize=600%2C400&ssl=1">
+						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_games.png">
 						<div class="card-texto">
 							<p>GAMES</p>
 							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
@@ -161,7 +161,7 @@
 				</a>
 				<a href="<?php echo BASE_URL; ?>home/categoria/televisao">
 					<div class="card-navegacao">
-						<img class="card-navegacao-img" src="https://www.elasnotapetevermelho.com.br/wp-content/uploads/2017/10/anitta-400x400.jpg">
+						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_televisao.png">
 						<div class="card-texto">
 							<p>TELEVISÃO</p>
 							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
@@ -170,7 +170,7 @@
 				</a>
 				<a href="<?php echo BASE_URL; ?>colunas">
 					<div class="card-navegacao">
-						<img class="card-navegacao-img" src="https://www.caaraponews.com.br/userfiles/uploads/imagens/materias/2019/09/original/3c9d6b1a37398f34c707473299bfd7df.jpg">
+						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_colunas.png">
 						<div class="card-texto">
 							<p>COLUNAS</p>
 							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
@@ -179,7 +179,7 @@
 				</a>
 				<a href="<?php echo BASE_URL; ?>home/categoria/musica">
 					<div class="card-navegacao">
-						<img class="card-navegacao-img" src="https://play-lh.googleusercontent.com/dwyqtk9CgAaoXUcYB8pUHXRErF5A2Shd0UrZdBLkpAFx_e630aZahwN31HRZWNksIQ">
+						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_musica.png">
 						<div class="card-texto">
 							<p>MÚSICA</p>
 							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
@@ -188,9 +188,9 @@
 				</a>
 				<a href="<?php echo BASE_URL; ?>home/categoria/educacao">
 					<div class="card-navegacao">
-						<img class="card-navegacao-img" src="https://i1.wp.com/www.institutomillenium.org.br/wp-content/uploads/2018/11/educacaoo.jpg?fit=620%2C465&ssl=1">
+						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_educacao.png">
 						<div class="card-texto">
-							<p>EUCAÇÃO</p>
+							<p>EDUCAÇÃO</p>
 							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
 						</div>
 					</div>
@@ -327,9 +327,9 @@
 				</div>
 
 				<div class="corpo-widget">
-					<a href="https://www.instagram.com"><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
-					<a href="https://www.youtube.com"><img src="<?php echo BASE_URL; ?>assets/images/youtube.svg"></a>
-					<a href="ttps://www.facebook.com"><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+					<a href="https://www.instagram.com/politizeesocialize/"><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+					<a href="https://www.youtube.com/channel/UCfgaSsfSpQQx-h-5qhMR7ag/featured"><img src="<?php echo BASE_URL; ?>assets/images/youtube.svg"></a>
+					<a href="https://pt-br.facebook.com/pages/category/Community/Politize-e-socialize-748330938697380/"><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
 				</div>
 			</aside>
 
