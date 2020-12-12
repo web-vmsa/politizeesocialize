@@ -1660,6 +1660,7 @@ body {
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
+	outline: none;
 }
 .item-menu input {
 	width: 150px;
@@ -3390,6 +3391,33 @@ body {
   	padding-right: 50px;
   	padding-left: 50px;
   	margin-top: 12px;
+  }
+  .linha-abaixo-jogo {
+  	width: 754px;
+  }
+  .borda-bottom-placar {
+  	margin-right: 135px;
+  	margin-left: 135px;
+  }
+  .dados-artigo {
+  	padding-right: 135px;
+  	padding-left: 135px;
+  }
+  .file-artigo {
+  	padding-right: 50px;
+  	padding-left: 50px;
+  }
+  .descricao-arquivo {
+  	padding-right: 50px;
+  	padding-left: 50px;
+  }
+  .postagem {
+  	padding-left: 135px;
+  	padding-right: 135px;
+  }
+  .facebook-comments {
+  	padding-right: 135px;
+  	padding-left: 135px;
   }
   
 }
