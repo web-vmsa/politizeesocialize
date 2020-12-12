@@ -3301,6 +3301,96 @@ body {
   .card-navegacao {
   	width: 296px;
   }
+  .slideshow-categoria-item img {
+  	height: 580px;
+  }
+  .slideshow-categoria-controls img {
+  	margin-bottom: 85px;
+  }
+  .colunistas-categoria {
+  	padding-right: 50px;
+  	padding-left: 50px;
+  }
+  .lado-colunistas {
+  	width: 330px;
+  }
+  .lado-postagens {
+  	width: 573px;
+  }
+  .lado-postagens-todas .noticia-menor-politica {
+  	margin-left: 20px;
+  }
+  .lado-postagens-todas {
+  	padding-top: 20px;
+  	padding-bottom: 20px;
+  }
+  .hr-postagens {
+  	width: 534px;
+  }
+  #load-more-posts {
+  	width: 534px;
+  }
+  .lado-colunistas-todos {
+  	padding-top: 20px;
+  	padding-bottom: 20px;
+  }
+  .borda-top-newsletter {
+  	margin-right: 135px;
+  	margin-left: 135px;
+  }
+  .secao-newsletter {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  }
+  .secao-newsletter input {
+  	width: 615px;
+  }
+  .colunistas-secao {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  }
+  .borda-colunista-secao {
+  	height: 100px;
+  }
+  .topo-perfil-colunista {
+  	padding-right: 50px;
+  	padding-left: 50px;
+  }
+  .bio-colunista {
+  	margin-right: 135px;
+  	margin-left: 135px;
+  }
+  .todas-postagens {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  }
+  .videos-recentes {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  }
+  .videos-recentes .topo-video {
+  	display: none;
+  }
+  .videos-recentes .video {
+  	width: 300px;
+  	height: 375px;
+  	justify-content: flex-end;
+  }
+  .videos-recentes #my-video {
+  	width: 300px;
+  	height: 375px;
+  }
+  .conteudo-video {
+  	width: 275px;
+  }
+  .conteudo-video p {
+  	display: none;
+  }
+  .load-more {
+  	padding-right: 50px;
+  	padding-left: 50px;
+  	margin-top: 12px;
+  }
   
 }
 
