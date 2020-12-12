@@ -13,6 +13,7 @@
 	<meta name="language" content="Portuguese">
 	<meta name="revisit-after" content="2 days">
 	<meta name="author" content="Victor Miguel">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">

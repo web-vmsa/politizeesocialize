@@ -2050,13 +2050,12 @@ body {
 .foto-colunista {
 	width: 150px;
 	height: 150px;
-	background-color: pink;
 	border-radius: 80px;
 	overflow: hidden;
 	margin-right: 10px;
 }
 .foto-colunista img {
-	width: auto;
+	width: 150px;
 	height: 150px;
 	-moz-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
@@ -3043,3 +3042,349 @@ body {
 	height: 1px;
 	background-color: black;
 }
+
+
+
+/* 
+  ##Device = Ipad Pro
+  ##Screen = 1024px to higher resolution Ipad
+*/
+
+@media screen and (max-width: 1024px) and (min-width: 1020px) {
+  
+  /* CSS */
+  .topo {
+  	padding-left: 30px;
+  	padding-right: 30px;
+  }
+  .slideshow-item img {
+  	height: 580px;
+  }
+  .slideshow-item-conteudo {
+  	margin-left: 50px;
+  }
+  .slideshow-controls {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  }
+  .recentes {
+  	padding-right: 50px;
+  	padding-left: 50px;
+  }
+  .noticias-recentes {
+  	height: 448px;
+  }
+  .noticia-maior {
+  	width: 100%;
+  	height: 448px;
+  }
+  .noticia-maior img {
+  	height: 448px;
+  }
+  .noticia-maior img {
+  	width: 50%;
+  }
+  .noticia-maior-conteudo {
+  	margin-left: 20px;
+  	margin-bottom: 20px;
+  }
+  .noticias-menores {
+  	width: 371px;
+  	height: 448px;
+  }
+  .noticia-menor {
+  	width: 371px;
+  	height: 205px;
+  }
+  .noticia-menor img {
+  	width: 371px;
+  	height: 205px;
+  }
+  .noticia-menor-conteudo {
+  	height: 180px;
+  }
+  .secoes {
+  	margin-left: 135px;
+  	margin-right: 135px;
+  	padding-left: 10px;
+  	padding-right: 10px;
+  }
+  .publicidade {
+  	padding-right: 50px;
+  	padding-left: 50px;
+  }
+  .topo-secao {
+  	margin-right: 135px;
+  	margin-left: 135px;
+  }
+  .politica {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  	margin-top: 20px;
+  }
+  .noticia-maior-politica {
+  	width: 80%;
+  }
+  .noticia-maior-politica img {
+  	width: 448px;
+  	height: 448px;
+  }
+  .noticia-maior-conteudo {
+  	width: 457px;
+  }
+  .noticia-menor-politica {
+  	width: 448px;
+  }
+  .noticia-menor-conteudo-politica p {
+  	display: none;
+  }
+  .noticia-menor-conteudo-politica img {
+  	width: 190px;
+  	height: 190px;
+  }
+  .televisao {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  }
+  .lado-noticias {
+  	width: 55%;
+  }
+  .lado-videos {
+  	height: 950px;
+  }
+  .border-bottom {
+  	display: none;
+  }
+  .colunistas {
+  	padding-right: 50px;
+  	padding-left: 50px;
+  }
+  .colunista {
+  	width: 274px;
+  	height: 120px;
+  }
+  .video {
+  	height: 448px;
+  }
+  #my-video {
+  	height: 448px;
+  }
+  .foto-colunista {
+  	width: 120px;
+  	height: 120px;
+  }
+  .foto-colunista img {
+  	width: 125px;
+  	height: 125px;
+  }
+  .esportes {
+  	padding-right: 50px;
+  	padding-left: 50px;
+  }
+  .jogos {
+  	width: 450px;
+  }
+  .jogo-div {
+  	width: 100px;
+  	height: 45px;
+  }
+  .jogo-div p {
+  	font-size: 12px;
+  }
+  .lado-carousel {
+  	width: 60%;
+  }
+  .videos-esportes {
+  	width: 35%;
+  	height: 448px;
+  }
+  .carousel-slide img {
+  	width: 554px;
+  	height: 448px;
+  }
+  .carousel-controls {
+  	width: 534px;
+  	height: 438px;
+  }
+  .carousel-controls img {
+  	margin-top: 300px;
+  }
+  .carousel-slide {
+  	width: 60%;
+  	height: 448px;
+  }
+  .slide-dots-carousel {
+  	width: 250px;
+  	height: 380px;
+  }
+  .slide-dots-secao {
+  	width: 250px
+  }
+  .slide-dots {
+  	width: 250px;
+  }
+  .slide-carousel-conteudo {
+  	margin-top: 120px;
+  }
+  .video-esporte {
+  	height: 200px;
+  }
+  .lado-descricao {
+  	height: 200px;
+  }
+  .lado-video {
+  	width: 306px;
+  	height: 200px;
+  }
+  #video-esporte {
+  	height: 200px;
+  }
+  .video-conteudo {
+  	height: 170px;
+  }
+  .tarjas {
+  	display: none;
+  }
+  .videos {
+  	width: 100%;
+  }
+  .videos-rodape {
+  	flex-direction: column;
+  	padding-right: 50px;
+  	padding-left: 50px;
+  }
+  .futebol {
+  	flex-wrap: wrap;
+  }
+  .carousel-videos {
+  	flex-wrap: wrap;
+  }
+  .asides {
+  	margin-top: 70px;
+  	width: 100%;
+  	flex-direction: row;
+  	justify-content: space-between;
+  }
+  .widget-newsletter {
+  	margin-top: 0;
+  }
+  .widget-facebook {
+  	margin-top: 0;
+  }
+  .caixa-videos .video {
+  	width: 453px;
+  }
+  .caixa-videos #my-video {
+  	width: 452px;
+  }
+  .caixa-videos .topo-video {
+  	width: 410px;
+  }
+  .caixa-videos .conteudo-video {
+  	width: 410px;
+  }
+  #load-more-videos {
+  	width: 924px;
+  }
+  .rodape {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  }
+  .conteudo-menu {
+  	padding-right: 50px;
+  	padding-left: 50px;
+  }
+  .menu {
+  	padding-right: 30px;
+  	padding-left: 30px;
+  }
+  .card-navegacao {
+  	width: 296px;
+  }
+  
+}
+
+/* 
+  ##Device = Tablet / Ipad
+  ##Screen = 768px to higher resolution Tablet / Ipad
+*/
+
+@media screen and (max-width: 768px) and (min-width: 764px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Mobile
+  ##Screen = 425px to mobile resolution
+*/
+
+@media screen and (max-width: 425px) and (min-width: 421px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Pixel 2 XL
+  ##Screen = 411px to mobile resolution
+*/
+
+@media screen and (max-width: 414px) and (min-width: 411px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Iphone 6/7/8
+  ##Screen = 375px to mobile resolution
+*/
+
+@media screen and (max-width: 375px) and (min-width: 371px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Galaxy S5
+  ##Screen = 360px to mobile resolution
+*/
+
+@media screen and (max-width: 360px) and (min-width: 356px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Iphone 5/SE
+  ##Screen = 320px to mobile resolution
+*/
+
+@media screen and (max-width: 320px) {
+  
+  /* CSS */
+  
+}
+
+
+
+
+
+
+/* <!------ [Landscape Modes] ------> */
+
+/* 
+  ##Device = Galaxy S5 Landscape
+  ##Screen = 640px to mobile landscape
+*/
+
+@media screen and (max-width: 640px) and (min-width: 636px) {
+  
+  /* CSS */
+  
+}
+
