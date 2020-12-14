@@ -3594,6 +3594,9 @@ body {
   	width: 100%;
   	margin-top: 30px;
   }
+  .jogo-div {
+  	width: 145px;
+  }
   .divisor {
   	display: none;
   }
@@ -3855,7 +3858,82 @@ body {
   	padding-right: 50px;
   	margin-top: 30px;
   }
-  
+  .colunistas-secao {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  }
+  .colunista-secao {
+  	width: 185px;
+  }
+  .topo-perfil-colunista {
+  	padding-right: 50px;
+  	padding-left: 50px;
+  }
+  .redes-sociais-colunista-perfil img {
+  	margin-left: 9px;
+  	width: 40px;
+  	height: 40px;
+  	border-radius: 20px; 
+  }
+  .bio-colunista {
+  	margin-left: 70px;
+  	margin-right: 70px;
+  }
+  .todas-postagens {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  }
+  .carregar-mais #load-more-posts {
+  	width: 520px;
+  }
+  .linha-abaixo-jogo {
+  	width: 628px;
+  	margin-right: 0;
+  	margin-left: 0;
+  }
+  .borda-bottom-placar {
+  	margin-left: 70px;
+  	margin-right: 70px;
+  }
+  .dados-artigo {
+  	padding-right: 70px;
+  	padding-left: 70px;
+  }
+  .autor-share {
+  	flex-direction: column;
+  }
+  .lado-share {
+  	margin-top: 30px;
+  }
+  .file-artigo {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  }
+  #video-artigo {
+  	height: 350px;
+  }
+  .file-artigo img {
+  	min-height: 350px;
+  }
+  .descricao-arquivo {
+  	padding-right: 50px;
+  	padding-left: 50px; 
+  }
+  .postagem {
+  	padding-left: 70px;
+  	padding-right: 70px;
+  }
+  .postagem img {
+  	min-height: 350px;
+  }
+  .postagem iframe {
+  	height: 350px;
+  }
+  .facebook-comments {
+  	padding-left: 70px;
+  	padding-right: 70px;
+  }
+
 }
 
 /* 
