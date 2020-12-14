@@ -3715,6 +3715,146 @@ body {
   	width: 668px;
   	margin-top: 30px;
   }
+  .menu {
+  	padding-right: 30px;
+  	padding-left: 30px;
+  }
+  .conteudo-menu {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  }
+  .card-navegacao {
+  	width: 319px;
+  	height: 319px;
+  	margin-top: 30px;
+  }
+  .card-navegacao-img {
+  	width: 323px;
+  	height: 323px;
+  }
+  .itens-menu {
+  	margin-top: -10px;
+  }
+  .slideshow-categoria {
+  	height: 380px;
+  }
+  .slideshow-categoria-controls {
+  	height: 380px;
+  }
+  .slideshow-categoria-controls img {
+  	margin-left: 50px;
+  	margin-right: 50px;
+  	margin-bottom: 90px;
+  }
+  .slide-dots-categoria {
+  	width: 245px;
+  }
+  .slideshow-categoria-item {
+  	height: 380px;
+  }
+  .slideshow-categoria-item-conteudo {
+  	width: 455px;
+  	margin-top: 11px;
+  	margin-left: 177px;
+  }
+  .colunistas-categoria {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  	flex-wrap: wrap;
+  }
+  .lado-colunistas {
+  	width: 100%;
+  }
+  .lado-colunistas .hr-colunista {
+  	width: 590px;
+  }
+  .lado-colunistas-colunista {
+		width: 590px;
+		height: 150px;
+		display: flex;
+		align-items: center;
+   }
+  .lado-colunistas .foto-colunista {
+		width: 150px;
+		height: 150px;
+		background-color: pink;
+		border-radius: 80px;
+		overflow: hidden;
+		margin-right: 10px;
+	}
+  .lado-colunistas .foto-colunista img {
+		width: auto;
+		height: 150px;
+		-moz-transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+   .lado-colunistas .colunista:hover .foto-colunista img {
+		-moz-transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+   .lado-colunistas .dados-colunista {
+		display: flex;
+		flex-direction: column;
+	}
+   .lado-colunistas .dados-colunista p {
+		margin: 0;
+		padding: 0;
+		font-family: 'montserratmedium';
+		font-size: 16px;
+		color: black;
+	}
+   .lado-colunistas .redes-sociais-colunista {
+		display: flex;
+		flex-direction: row;
+		margin-top: 10px;
+	}
+   .lado-colunistas .redes-sociais-colunista img {
+		width: 22px;
+		height: 22px;
+		margin-right: 10px;
+	}
+   .lado-postagens {
+		width: 100%;
+		margin-top: 30px;
+	}
+	.lado-postagens .hr-postagens {
+  	width: 590px;
+  }
+  .lado-postagens #load-more-posts {
+  	width: 590px;
+  }
+  .borda-top-newsletter {
+  	margin-left: 70px;
+  	margin-right: 70px;
+  }
+  .secao-newsletter {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  }
+  .secao-newsletter button {
+  	width: 185px;
+  }
+  .secao-newsletter input {
+  	width: 445px;
+  }
+  .videos-recentes {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  }
+  .caixa-dos-videos .video {
+  	width: 319px;
+  	margin-top: 30px;
+  }
+  .caixa-dos-videos {
+  	margin-top: -10px;
+  }
+  .load-more {
+  	padding-left: 50px;
+  	padding-right: 50px;
+  	margin-top: 30px;
+  }
   
 }
 
