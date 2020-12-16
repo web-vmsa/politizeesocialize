@@ -3944,6 +3944,466 @@ body {
 @media screen and (max-width: 425px) and (min-width: 421px) {
   
   /* CSS */
+  .topo {
+  	padding-left: 0;
+  	padding-right: 0;
+  	flex-direction: column;
+  	justify-content: center;
+  }
+  .item-topo {
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 100%;
+  	margin-top: 20px;
+  	margin-bottom: 20px;
+  }
+  .justify-right {
+  	justify-content: center;
+  }
+  .justify-left {
+  	justify-content: center;
+  }
+  .abrir-menu p {
+  	display: none;
+  }
+  .pesquisar p {
+  	display: none;
+  }
+  .slideshow {
+  	height: 300px;
+  }
+  .slideshow-item {
+  	height: 300px;
+  }
+  .slideshow-item img {
+  	height: 300px;
+  }
+  .slideshow-item-conteudo {
+  	width: 342px;
+  	margin-left: 20px;
+  	margin-top: 47px;
+  }
+  .slideshow-item-conteudo h2 {
+  	font-size: 38px;
+  }
+  .slideshow-item-conteudo p {
+  	font-size: 12px;
+  	margin-top: 10px;
+  }
+  .slideshow-controls {
+  	height: 300px;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  }
+  .slide-button {
+  	height: 300px;
+  }
+  .slide-button img {
+  	margin-top: 75px;
+  	width: 40px;
+  	height: 40px;
+  }
+  .slide-dot {
+  	width: 50px;
+  	height: 2px;
+  }
+  .slide-dots {
+  	width: 180px;
+  	height: 60px;
+  }
+  .topo-recentes p {
+  	font-size: 14px;
+  }
+  .recentes {
+  	padding-top: 35px;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  }
+  .noticias-recentes {
+  	flex-direction: column;
+  	height: auto;
+  }
+  .noticia-maior {
+  	width: 385px;
+  	height: 335px;
+  }
+  .noticia-maior img {
+  	width: 385px;
+  	height: 335px;
+  }
+  .noticia-maior-conteudo {
+  	width: 375px;
+  	margin-bottom: 20px;
+  	margin-left: 20px;
+  }
+  .noticia-maior-conteudo  h2 {
+  	font-size: 38px;
+  }
+  .noticia-maior-conteudo  p {
+  	font-size: 12px;
+  	margin-top: 10px;
+  }
+  .noticias-menores {
+  	width: 385px;
+  	height: auto;
+  	align-items: center;
+  	justify-content: center;
+  }
+  .noticia-menor {
+  	width: 385px;
+  	height: 335px;
+  	margin-top: 20px;
+  }
+  .noticia-menor img {
+  	width: 385px;
+  	height: 335px;
+  }
+  .noticia-menor-conteudo {
+  	width: 346px;
+  	height: 298px;
+  }
+  .noticia-menor-conteudo  h2 {
+  	font-size: 38px;
+  }
+  .noticia-menor-conteudo  p {
+  	font-size: 12px;
+  }
+  .secoes {
+  	margin-left: 40px;
+  	margin-right: 40px;
+  	padding-left: 0;
+  	padding-right: 0;
+  	margin-top: 35px;
+  }
+  .secao {
+  	width: 86px;
+  }
+  .right {
+  	border-right: none;
+  }
+  .secoes a {
+  	font-size: 12px;
+  }
+  .publicidade {
+  	padding-right: 20px;
+  	padding-left: 20px;
+  	margin-top: 35px;
+  }
+  .publicidade-item {
+  	height: 100px;
+  	line-height: 100px;
+  }
+  .publicidade-item p {
+  	font-size: 12px;
+  }
+  .topo-secao {
+  	margin-right: 35px;
+  	margin-left: 35px;
+  	margin-top: 35px;
+  }
+  .item-topo-secao p {
+  	font-size: 14px;
+  }
+  .topo-secao img {
+  	margin-left: 86px;
+  	width: 26px;
+  	height: 26px;
+  }
+  .politica {
+  	margin-top: 15px;
+  	padding-right: 20px;
+  	padding-left: 20px;
+  }
+  .noticias-maiores {
+  	flex-wrap: wrap;
+  	justify-content: center;
+  }
+  .noticia-maior-politica {
+  	width: 385px;
+  	height: 335px;
+  	margin-top: 20px;
+  }
+  .noticia-maior-politica img {
+  	width: 385px;
+  	height: 335px;
+  }
+  .noticia-menor-politica {
+  	width: 385px;
+  	margin-top: 20px;
+  }
+  .noticia-menor-politica img {
+  	width: 125px;
+  	height: 125px;
+  }
+  .noticia-menor-conteudo-politica  h2 {
+  	font-size: 38px;
+  }
+  .noticia-menor-conteudo-politica  p {
+  	font-size: 12px;
+  	margin-top: 10px;
+  }
+  .televisao {
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	justify-content: center;
+  	margin-top: 35px;
+  	flex-wrap: wrap;
+  }
+  .lado-noticias {
+  	width: auto;
+  }
+  .border-bottom {
+  	display: none;
+  }
+  .lado-videos {
+  	width: auto;
+  	height: auto;
+  }
+  .video {
+  	margin-top: 20px;
+  }
+  #my-video {
+  	width: 385px;
+  }
+  .colunistas {
+  	margin-top: 35px;
+  	padding-right: 20px;
+  	padding-left: 20px;
+  }
+  .topo-colunistas p {
+  	font-size: 14px;
+  }
+  .slide-colunistas {
+  	margin-top: 15px;
+  	flex-direction: column;
+  	justify-content: center;
+  }
+  .slide-colunistas-esportes {
+  	margin-top: 15px;
+  	flex-direction: column;
+  	justify-content: center;
+  }
+  .colunista {
+  	border-right: none;
+  	margin-top: 20px;
+  }
+  .slide-colunistas-controls img {
+  	margin-top: 0;
+  }
+  .slide-dot-secao {
+  	width: 50px;
+  	height: 2px;
+  }
+  .slide-dot-secao-esportes {
+  	width: 50px;
+  	height: 2px;
+  }
+  .slide-dots-secao {
+  	width: 180px;
+  	height: 60px;
+  }
+  .esportes {
+  	margin-top: 35px;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  }
+  .futebol {
+  	flex-wrap: wrap;
+  	margin-top: -15px;
+  }
+  .divisor {
+  	display: none;
+  }
+  .jogos {
+  	width: 385px;
+  	margin-top: 20px;
+  }
+  .jogo-div {
+  	width: 84px;
+  	height: 41px;
+  }
+  .jogo-descricao {
+  	display: none;
+  }
+  .carousel-videos {
+  	margin-top: 35px;
+  	flex-wrap: wrap;
+  }
+  .lado-carousel {
+  	width: 385px;
+  }
+  .videos-esportes {
+  	width: 385px;
+  	height: auto;
+  	margin-top: 20px;
+  }
+  .carousel-slide {
+  	width: 385px;
+  	height: 335px;
+  }
+  .carousel-slide img {
+  	width: 385px;
+  	height: 335px;
+  }
+  .carousel-controls {
+  	width: 346px;
+  	height: 335px;
+  }
+  .slide-dot-carousel {
+  	width: 50px;
+  	height: 2px;
+  }
+  .slide-dots-carousel {
+  	width: 180px;
+  	height: 266px;
+  }
+  .slide-carousel-conteudo {
+  	width: 346px;
+  	margin-top: 33px;
+  }
+  .slide-carousel-conteudo h2 {
+  	font-size: 38px;
+  }
+  .slide-carousel-conteudo p {
+  	font-size: 12px;
+  	margin-top: 10px;
+  }
+  .carousel-controls img {
+  	width: 38px;
+  	height: 38px;
+  	margin-top: 260px;
+  }
+  .video-esporte {
+  	margin-top: 20px;
+  }
+  .lado-descricao h2 {
+  	font-size: 38px;
+  }
+  .link-video p {
+  	font-size: 12px;
+  }
+  .tarjas {
+  	display: none;
+  }
+  .videos-rodape {
+  	padding-right: 20px;
+  	padding-left: 20px;
+  	margin-top: 35px;
+  	flex-wrap: wrap;
+  }
+  .videos {
+  	width: auto;
+  }
+  .caixa-videos {
+  	width: 385px;
+  	flex-wrap: wrap;
+  }
+  .caixa-videos .video {
+  	width: 385px;
+  }
+  #load-more-videos {
+  	width: 385px;
+  }
+  .asides {
+  	width: auto;
+  	margin-top: 35px;
+  }
+  .widget {
+  	width: 385px;
+  }
+  .widget-newsletter {
+  	width: 385px;
+  	margin-top: 35px;
+  }
+  .corpo-widget-newsletter form {
+  	width: 385px;
+  }
+  .corpo-widget-newsletter input {
+  	width: 375px;
+  }
+  .corpo-widget-newsletter button {
+  	width: 385px;
+  }
+  .widget-facebook {
+  	margin-top: 35px;
+  	width: 385px;
+  }
+  .corpo-widget-facebook {
+  	width: 385px;
+  }
+  .rodape {
+  	justify-content: center;
+  	align-items: center;
+  	flex-direction: column;
+  	padding-top: 75px;
+  	padding-bottom: 75px;
+  	margin-top: 35px;
+  }
+  .menu-rodape {
+  	width: 385px;
+  	align-items: center;
+  }
+  .item-rodape {
+  	width: 385px;
+  	margin-top: 100px;
+  	align-items: center;
+  	text-align: center;
+  }
+  .item-rodape input {
+  	width: 300px;
+  }
+  .copyright {
+  	padding-right: 20px;
+  	padding-left: 20px;
+  	width: auto;
+  }
+  .topo {
+  	padding-left: 0;
+  	padding-right: 0;
+  	flex-direction: column;
+  	justify-content: center;
+  }
+
+  .menu {
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: auto;
+  	flex-direction: column;
+  }
+  .item-menu {
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 100%;
+  	margin-top: 20px;
+  	margin-bottom: 20px;
+  }
+  .conteudo-right {
+  	justify-content: center;
+  }
+  .conteudo-left {
+  	justify-content: center;
+  }
+  .fechar-menu p {
+  	display: none;
+  }
+  .item-menu form {
+  	width: 210px;
+  }
+  .conteudo-menu {
+  	padding-right: 20px;
+  	padding-left: 20px;
+  }
+  .card-navegacao {
+  	width: 385px;
+  	height: 385px;
+  }
+  .card-navegacao-img {
+  	width: 387px;
+  	height: 387px;
+  }
   
 }
 
