@@ -458,8 +458,12 @@
 
 		<div class="linha-abaixo-jogo"></div>
 
-		<button id="load-more-jogos">CARREGAR MAIS</button>
 	</section>
+
+	<!-- Carregar mais jogos -->
+	<div class="carregar-mais-jogos">
+		<button id="load-more-jogos">CARREGAR MAIS</button>
+	</div>
 
 	<!-- Linha -->
 	<div class="linha"></div>
