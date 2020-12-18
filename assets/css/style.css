@@ -4741,6 +4741,17 @@ body {
   	font-size: 24px;
   	margin-top: 25px;
   }
+  .postagem h4 {
+  	font-size: 22px;
+  	margin-top: 25px;
+  }
+  .postagem h5 {
+  	font-size: 20px;
+  	margin-top: 25px;
+  }
+  .postagem h6 {
+  	margin-top: 25px;
+  }
   .body-notfound {
   	padding-top: 55px;
   }
