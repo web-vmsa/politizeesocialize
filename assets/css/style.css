@@ -6106,10 +6106,10 @@ body {
   	height: 26px;
   }
   .tarja-categoria p {
-  	font-size: 22px;
+  	font-size: 19px;
   }
   .tarja-categoria-esportes {
-  	height: 69px;
+  	height: 55px;
   }
   .slideshow-categoria {
   	height: 300px;
@@ -6121,8 +6121,8 @@ body {
   	height: 300px;
   }
   .slideshow-categoria-item-conteudo {
-  	width: 342px;
-  	margin-left: 40px;
+  	width: 324px;
+  	margin-left: 27px;
   	margin-top: 0;
   }
   .slideshow-categoria-item-conteudo h2 {
@@ -6165,14 +6165,18 @@ body {
   	margin-top: 35px;
   }
   .hr-postagens {
-  	width: 328px;
+  	width: 290px;
+  }
+  .lado-postagens-todas .noticia-menor-politica img {
+  	width: 100px;
+  	height: 100px;
   }
   .lado-postagens-todas .noticia-menor-politica {
-  	width: 350px;
+  	width: 305px;
   	margin-left: 23px;
   }
   #load-more-posts {
-  	width: 328px;
+  	width: 290px;
   }
   .borda-top-newsletter {
   	margin-top: 55px;
@@ -6190,11 +6194,11 @@ body {
   	margin-top: 45px;
   }
   .secao-newsletter input {
-  	width: 352px;
+  	width: 315px;
   }
   .secao-newsletter button {
   	margin-top: 12px;
-  	width: 372px;
+  	width: 335px;
   }
   .linha {
   	margin-top: 35px;
@@ -6260,33 +6264,33 @@ body {
   	padding-right: 20px;
   }
   .caixa-dos-videos .video {
-  	width: 372px;
+  	width: 335px;
   }
   #load-more-results {
-  	width: 344px;
+  	width: 290px;
   }
   .data-jogos {
-  	width: 372px;
+  	width: 335px;
   	margin-top: 55px;
   }
   .jogo-placar {
-  	width: 372px;
+  	width: 335px;
   }
   .placar img {
   	width: 50px;
   	height: 50px;
   }
   .placar p {
-  	width: 100px;
-  	font-size: 18px;
+  	width: 88px;
+  	font-size: 16px;
   }
   .linha-abaixo-jogo {
   	margin-right: 0;
   	margin-left: 0;
-  	width: 372px;
+  	width: 335px;
   }
   #load-more-jogos {
-  	width: 344px;
+  	width: 290px;
   }
   .placar-p {
   	font-size: 18px;
