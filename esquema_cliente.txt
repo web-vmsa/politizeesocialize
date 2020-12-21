@@ -3,7 +3,7 @@ homeController.php
 	www.politizeesocialize.com
 	www.politizeesocialize.com/home/categoria/{{politica}}
 	www.politizeesocialize.com/home/resultados/{{pesquisa}}
-	www.politizeesocialize.com/home/postagem/{{postagem}}
+	www.politizeesocialize.com/home/noticia/{{noticia}}
 
 colunasController.php
 
