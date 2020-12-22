@@ -4448,7 +4448,7 @@ body {
   .tarja-categoria p {
   	font-size: 22px;
   }
-  .tarja-categoria-esportes {
+  .tarja-categoria {
   	height: 69px;
   }
   .slideshow-categoria {
@@ -5275,7 +5275,7 @@ body {
   .tarja-categoria p {
   	font-size: 22px;
   }
-  .tarja-categoria-esportes {
+  .tarja-categoria {
   	height: 69px;
   }
   .slideshow-categoria {
@@ -6108,8 +6108,8 @@ body {
   .tarja-categoria p {
   	font-size: 19px;
   }
-  .tarja-categoria-esportes {
-  	height: 55px;
+  .tarja-categoria {
+  	height: 80px;
   }
   .slideshow-categoria {
   	height: 300px;
@@ -6945,8 +6945,8 @@ body {
   .tarja-categoria p {
   	font-size: 19px;
   }
-  .tarja-categoria-esportes {
-  	height: 55px;
+  .tarja-categoria {
+  	height: 80px;
   }
   .slideshow-categoria {
   	height: 300px;
@@ -7784,10 +7784,10 @@ body {
   	height: 22px;
   }
   .tarja-categoria p {
-  	font-size: 19px;
+  	font-size: 16px;
   }
-  .tarja-categoria-esportes {
-  	height: 55px;
+  .tarja-categoria {
+  	height: 70px;
   }
   .slideshow-categoria {
   	height: 300px;
@@ -7799,12 +7799,12 @@ body {
   	height: 300px;
   }
   .slideshow-categoria-item-conteudo {
-  	width: 324px;
-  	margin-left: 27px;
+  	width: 301px;
+  	margin-left: 10px;
   	margin-top: 0;
   }
   .slideshow-categoria-item-conteudo h2 {
-  	font-size: 38px;
+  	font-size: 36px;
   }
   .slideshow-categoria-item-conteudo p {
   	font-size: 12px;
@@ -7816,8 +7816,8 @@ body {
   .slideshow-categoria-controls img {
   	width: 40px;
   	height: 40px;
-  	margin-right: 20px;
-  	margin-left: 20px;
+  	margin-right: 10px;
+  	margin-left: 10px;
   	margin-bottom: 16px;
   }
   .slide-dot-categoria {
@@ -7830,40 +7830,49 @@ body {
   	margin-bottom: 7px;
   }
   .colunistas-categoria {
-  	padding-left: 20px;
-  	padding-right: 20px;
+  	padding-left: 10px;
+  	padding-right: 10px;
   	flex-wrap: wrap;
   	margin-top: 35px;
   }
   .lado-colunistas {
   	width: 100%;
   }
+  .lado-colunistas-colunista {
+  	width: 277px;
+  }
   .lado-postagens {
   	width: 100%;
   	margin-top: 35px;
   }
+  .hr-colunista {
+  	width: 269px;
+  }
   .hr-postagens {
-  	width: 296px;
+  	width: 278px;
   }
   .lado-postagens-todas .noticia-menor-politica img {
-  	width: 100px;
-  	height: 100px;
+  	width: 80px;
+  	height: 80px;
   }
   .lado-postagens-todas .noticia-menor-politica {
-  	width: 305px;
-  	margin-left: 13px;
+  	width: 289px;
+  	margin-left: 12px;
+  }
+  #load-more {
+  	width: 269px;
   }
   #load-more-posts {
-  	width: 296px;
+  	width: 278px;
   }
   .borda-top-newsletter {
   	margin-top: 55px;
-  	margin-left: 35px;
-  	margin-right: 35px;
+  	margin-left: 20px;
+  	margin-right: 20px;
   }
   .secao-newsletter {
-  	padding-right: 20px;
-  	padding-left: 20px;
+  	padding-right: 10px;
+  	padding-left: 10px;
   	padding-bottom: 55px;
   }
   .secao-newsletter form {
@@ -7872,16 +7881,18 @@ body {
   	margin-top: 45px;
   }
   .secao-newsletter input {
-  	width: 300px;
+  	width: 280px;
   }
   .secao-newsletter button {
   	margin-top: 12px;
-  	width: 320px;
+  	width: 300px;
   }
   .linha {
   	margin-top: 35px;
   }
   .colunistas-secao {
+  	padding-left: 10px;
+  	padding-right: 10px;
   	flex-wrap: nowrap;
   	flex-direction: column;
   	justify-content: center;
@@ -7893,66 +7904,73 @@ body {
   	margin-top: 55px;
   }
   .colunista-secao h2 {
-  	font-size: 38px;
+  	font-size: 36px;
   }
   .colunista-secao p {
   	font-size: 12px;
   }
   .topo-perfil-colunista {
-  	padding-left: 20px;
-  	padding-right: 20px;
-  	height: 210px;
+  	padding-left: 10px;
+  	padding-right: 10px;
+  	height: 110px;
   }
   .redes-sociais-colunista-perfil {
   	display: none;
   }
   .foto-colunista-perfil {
-  	width: 150px;
-  	height: 150px;
+  	width: 100px;
+  	height: 100px;
   }
   .foto-colunista-perfil img {
-  	width: 170px;
-  	height: 170px;
+  	width: 110px;
+  	height: 110px;
   }
   .dados-colunista-perfil h2 {
-  	font-size: 38px;
+  	font-size: 36px;
+  	margin-bottom: 5px;
   }
   .bio-colunista {
-  	margin-left: 35px;
-  	margin-right: 35px;
+  	margin-left: 20px;
+  	margin-right: 20px;
   	margin-top: 85px;
   }
   .bio-colunista p {
   	font-size: 14px;
   }
   .todas-postagens {
-  	padding-right: 20px;
-  	padding-left: 20px;
+  	padding-right: 10px;
+  	padding-left: 10px;
   }
   .carregar-mais {
   	margin-top: 55px;
   }
   .videos-recentes {
   	margin-top: 35px;
-  	padding-left: 20px;
-  	padding-right: 20px;
+  	padding-left: 10px;
+  	padding-right: 10px;
   }
   .load-more {
-  	padding-left: 20px;
-  	padding-right: 20px;
+  	padding-left: 10px;
+  	padding-right: 10px;
   }
   .caixa-dos-videos .video {
-  	width: 320px;
+  	width: 300px;
   }
   #load-more-results {
   	width: 290px;
   }
   .data-jogos {
-  	width: 320px;
+  	width: 300px;
   	margin-top: 55px;
   }
   .jogo-placar {
-  	width: 320px;
+  	width: 300px;
+  }
+  .campeonato-jogo {
+  	width: 300px;
+  }
+  .data-oficial {
+  	width: 300px;
   }
   .placar img {
   	width: 35px;
@@ -7978,12 +7996,12 @@ body {
   	padding-bottom: 55px;
   }
   .borda-bottom-placar {
-  	margin-right: 35px;
-  	margin-left: 35px;
+  	margin-right: 20px;
+  	margin-left: 20px;
   }
   .dados-artigo {
-  	padding-left: 35px;
-  	padding-right: 35px;
+  	padding-left: 20px;
+  	padding-right: 20px;
   	margin-top: 55px;
   }
   .dados-artigo p {
@@ -8021,8 +8039,8 @@ body {
   }
   .file-artigo {
   	margin-top: 45px;
-  	padding-right: 20px;
-  	padding-left: 20px;
+  	padding-right: 10px;
+  	padding-left: 10px;
   }
   #video-artigo {
   	height: 300px;
@@ -8031,15 +8049,15 @@ body {
   	min-height: 300px;
   }
   .descricao-arquivo {
-  	padding-left: 20px;
-  	padding-right: 20px;
+  	padding-left: 10px;
+  	padding-right: 10px;
   }
   .descricao-arquivo p {
   	font-size: 14px;
   }
   .postagem {
-  	padding-left: 35px;
-  	padding-right: 35px;
+  	padding-left: 20px;
+  	padding-right: 20px;
   	padding-top: 30px;
   }
   .postagem p {
@@ -8061,8 +8079,8 @@ body {
   	margin-bottom: 0;
   }
   .facebook-comments {
-  	padding-left: 35px;
-  	padding-right: 35px;
+  	padding-left: 20px;
+  	padding-right: 20px;
   	margin-top: 25px;
   }
   .facebook-comments h2 {
