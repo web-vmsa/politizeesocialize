@@ -158,11 +158,11 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>">
+				<a href="<?php echo BASE_URL; ?>videos">
 					<div class="card-navegacao">
-						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_escritor.png">
+						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_videos.png">
 						<div class="card-texto">
-							<p>SEJA ESCRITOR</p>
+							<p>VÍDEOS</p>
 							<img src="<?php echo BASE_URL; ?>assets/images/right-white.svg">
 						</div>
 					</div>
@@ -986,7 +986,7 @@
 			<!-- Facebook lateral -->
 			<aside class="widget-facebook">
 				<div class="topo-recentes">
-					<a href="<?php echo BASE_URL; ?>">
+					<a href="https://pt-br.facebook.com/pages/category/Community/Politize-e-socialize-748330938697380/">
 						<p>FACEBOOK</p>
 						<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 					</a>
@@ -1011,13 +1011,17 @@
 			<a href="<?php echo BASE_URL; ?>home/categoria/televisao">TELEVISÃO</a>
 			<a href="<?php echo BASE_URL; ?>home/categoria/educacao">EDUCAÇÃO</a>
 			<a href="<?php echo BASE_URL; ?>home/categoria/musica">MÚSICA</a>
-			<a href="<?php echo BASE_URL; ?>">SEJA ESCRITOR</a>
+			<a href="<?php echo BASE_URL; ?>videos">VÍDEOS</a>
 			<a href="<?php echo BASE_URL; ?>">HOMEPAGE</a>
 		</nav>
 		<div class="item-rodape">
-			<h3>SEJA UM ESCRITOR</h3>
-			<p>FAÇA PARTE DA EQUIPE DE ESCRITORES DO PORTAL</p>
-			<a href="<?php echo BASE_URL; ?>">> SAIBA MAIS</a>
+			<h3>SIGA-NOS</h3>
+			<p>TAMBÉM TEMOS REDES SOCIAIS, FIQUE POR DENTRO</p>
+			<div class="rodape-sociais">
+				<a href="https://pt-br.facebook.com/pages/category/Community/Politize-e-socialize-748330938697380/"><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+				<a href="https://www.youtube.com/channel/UCfgaSsfSpQQx-h-5qhMR7ag/featured"><img src="<?php echo BASE_URL; ?>assets/images/youtube.svg"></a>
+				<a href="https://www.instagram.com/politizeesocialize/"><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+			</div>
 		</div>
 		<div class="item-rodape">
 			<h3>NEWSLETTER</h3>

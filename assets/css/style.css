@@ -1531,7 +1531,6 @@ body {
 	font-family: 'montserratmedium';
 	font-size: 12px;
 	color: white;
-	margin-top: 40px;
 	text-decoration: underline;
 }
 .item-rodape h3 {
@@ -1606,6 +1605,17 @@ body {
 }
 .menu-rodape a:hover {
 	text-decoration: underline;
+}
+.rodape-sociais {
+	margin-top: 40px;
+	display: flex;
+	width: 180px;
+	align-items: center;
+	justify-content: space-between;
+}
+.rodape-sociais img {
+	width: 45px;
+	height: 45px;
 }
 
 /* Copyright */
