@@ -308,7 +308,7 @@
 	<section class="videos-recentes" id="politica">
 		<div class="topo-recentes topo-recentes-politica">
 			<a href="<?php echo BASE_URL; ?>home/categoria/politica">
-				<p class="cursor-default">VÍDEOS SOBRE POLÍTICA</p>
+				<p>VÍDEOS SOBRE POLÍTICA</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
 			</a>
 		</div>
@@ -374,7 +374,7 @@
 	<section class="videos-recentes" id="televisao">
 		<div class="topo-recentes topo-recentes-televisao">
 			<a href="<?php echo BASE_URL; ?>home/categoria/televisao">
-				<p class="cursor-default">VÍDEOS SOBRE TELEVISÃO</p>
+				<p>VÍDEOS SOBRE TELEVISÃO</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right-purple.svg">
 			</a>
 		</div>
@@ -440,7 +440,7 @@
 	<section class="videos-recentes" id="esportes">
 		<div class="topo-recentes topo-recentes-esportes">
 			<a href="<?php echo BASE_URL; ?>home/categoria/esportes">
-				<p class="cursor-default">VÍDEOS SOBRE ESPORTES</p>
+				<p>VÍDEOS SOBRE ESPORTES</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right-yellow.svg">
 			</a>
 		</div>
@@ -506,7 +506,7 @@
 	<section class="videos-recentes" id="economia">
 		<div class="topo-recentes topo-recentes-economia">
 			<a href="<?php echo BASE_URL; ?>home/categoria/economia">
-				<p class="cursor-default">VÍDEOS SOBRE ECONOMIA</p>
+				<p>VÍDEOS SOBRE ECONOMIA</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right-economia.svg">
 			</a>
 		</div>
@@ -572,7 +572,7 @@
 	<section class="videos-recentes" id="saude">
 		<div class="topo-recentes topo-recentes-saude">
 			<a href="<?php echo BASE_URL; ?>home/categoria/saude">
-				<p class="cursor-default">VÍDEOS SOBRE SAÚDE</p>
+				<p>VÍDEOS SOBRE SAÚDE</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right-saude.svg">
 			</a>
 		</div>
@@ -638,7 +638,7 @@
 	<section class="videos-recentes" id="educacao">
 		<div class="topo-recentes topo-recentes-educacao">
 			<a href="<?php echo BASE_URL; ?>home/categoria/educacao">
-				<p class="cursor-default">VÍDEOS SOBRE EDUCAÇÃO</p>
+				<p>VÍDEOS SOBRE EDUCAÇÃO</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right-educacao.svg">
 			</a>
 		</div>
@@ -704,7 +704,7 @@
 	<section class="videos-recentes" id="musica">
 		<div class="topo-recentes topo-recentes-musica">
 			<a href="<?php echo BASE_URL; ?>home/categoria/musica">
-				<p class="cursor-default">VÍDEOS SOBRE MÚSICA</p>
+				<p>VÍDEOS SOBRE MÚSICA</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right-musica.svg">
 			</a>
 		</div>
@@ -770,7 +770,7 @@
 	<section class="videos-recentes" id="games">
 		<div class="topo-recentes topo-recentes-games">
 			<a href="<?php echo BASE_URL; ?>home/categoria/politica">
-				<p class="cursor-default">VÍDEOS SOBRE GAMES</p>
+				<p>VÍDEOS SOBRE GAMES</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right-games.svg">
 			</a>
 		</div>

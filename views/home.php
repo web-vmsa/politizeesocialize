@@ -56,13 +56,11 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 
-			var slideIndex = [1,1,1,1];
-			var slideId = ["slideshow-item", "carousel-slide", "slide-colunistas", "slide-colunistas-esportes"]
-			var dotId = ["slide-dot", "slide-dot-carousel", "slide-dot-secao", "slide-dot-secao-esportes"]
+			var slideIndex = [1,1];
+			var slideId = ["slideshow-item", "carousel-slide"]
+			var dotId = ["slide-dot", "slide-dot-carousel"]
 			showDivs(1, 0);
 			showDivs(1, 1);
-			showDivs(1, 2);
-			showDivs(1, 3);
 
 			function plusDivs(n, no) {
 			  showDivs(slideIndex[no] += n, no);
@@ -109,22 +107,6 @@
 				slideCurrent = $(this).data("slide");
 				dotCurrent = $(this).data("id");
 				currentDivs(dotCurrent, slideCurrent);
-
-			});
-
-			$(".slide-dot-secao").on("click", function(){
-
-				dataSlide = $(this).data("slide");
-				dotCurrent = $(this).data("id");
-				currentDivs(dotCurrent, dataSlide);
-
-			});
-
-			$(".slide-dot-secao-esportes").on("click", function(){
-
-				dataSlide = $(this).data("slide");
-				dotCurrent = $(this).data("id");
-				currentDivs(dotCurrent, dataSlide);
 
 			});
 
@@ -579,7 +561,7 @@
 		</div>
 	</section>
 
-	<!-- Colunistas -->
+	<!-- Colunistas 
 	<section class="colunistas televisao-secao">
 		<div class="topo-colunistas">
 			<a href="<?php echo BASE_URL; ?>colunas">
@@ -587,7 +569,7 @@
 				<img src="<?php echo BASE_URL; ?>assets/images/right-purple.svg">
 			</a>
 		</div>
-		<!-- -->
+		
 		<div class="slide-colunistas">
 			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
@@ -635,7 +617,7 @@
 				</div>
 			</a>
 		</div>
-		<!-- -->
+		
 		<div class="slide-colunistas">
 			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
@@ -683,7 +665,7 @@
 				</div>
 			</a>
 		</div>
-		<!-- -->
+		
 		<div class="slide-colunistas">
 			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
@@ -731,7 +713,7 @@
 				</div>
 			</a>
 		</div>
-		<!-- -->
+		
 		<div class="slide-colunistas-controls">
 			<img data-id="2" class="volta-slide" src="<?php echo BASE_URL; ?>assets/images/left-arrow.svg">
 			<div class="slide-dots-secao">
@@ -742,6 +724,7 @@
 			<img data-id="2" class="passa-slide" src="<?php echo BASE_URL; ?>assets/images/right-arrow-black.svg">
 		</div>
 	</section>
+-->
 
 	<!-- Publicidade -->
 	<div class="publicidade">
@@ -964,7 +947,7 @@
 		<div class="tarja-direita"></div>
 	</div>
 
-	<!-- Colunistas -->
+	<!-- Colunistas
 	<section class="colunistas esportes-secao">
 		<div class="topo-colunistas">
 			<a href="<?php echo BASE_URL; ?>colunas">
@@ -972,7 +955,7 @@
 				<img src="<?php echo BASE_URL; ?>assets/images/right-yellow.svg">
 			</a>
 		</div>
-		<!-- -->
+		
 		<div class="slide-colunistas-esportes">
 			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
@@ -1020,7 +1003,7 @@
 				</div>
 			</a>
 		</div>
-		<!-- -->
+		
 		<div class="slide-colunistas-esportes">
 			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
@@ -1068,7 +1051,7 @@
 				</div>
 			</a>
 		</div>
-		<!-- -->
+		
 		<div class="slide-colunistas-esportes">
 			<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
 				<div class="colunista">
@@ -1116,7 +1099,7 @@
 				</div>
 			</a>
 		</div>
-		<!-- -->
+		
 		<div class="slide-colunistas-controls">
 			<img data-id="3" class="volta-slide" src="<?php echo BASE_URL; ?>assets/images/left-arrow.svg">
 			<div class="slide-dots-secao">
@@ -1127,6 +1110,7 @@
 			<img data-id="3" class="passa-slide" src="<?php echo BASE_URL; ?>assets/images/right-arrow-black.svg">
 		</div>
 	</section>
+-->
 
 	<!-- Seções -->
 	<nav class="secoes">
@@ -1257,7 +1241,7 @@
 				</div>
 
 				<div class="corpo-widget-facebook">
-					<div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="270" data-height="480" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+					<div class="fb-page" data-href="https://www.facebook.com/Politize-e-socialize-748330938697380/" data-tabs="timeline" data-width="270" data-height="480" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
 				</div>
 			</aside>
 		</div>

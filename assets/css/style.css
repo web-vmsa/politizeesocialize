@@ -3317,6 +3317,7 @@ body {
   }
   .card-navegacao {
   	width: 296px;
+  	height: 670px;
   }
   .slideshow-categoria-item img {
   	height: 580px;
@@ -3750,6 +3751,9 @@ body {
   .card-navegacao-img {
   	width: 323px;
   	height: 323px;
+  }
+  .modal {
+  	height: 1024px;
   }
   .itens-menu {
   	margin-top: -10px;
@@ -4416,6 +4420,9 @@ body {
   	width: 100%;
   	margin-top: 20px;
   	margin-bottom: 20px;
+  }
+  .modal {
+  	height: 824px;
   }
   .conteudo-right {
   	justify-content: center;
@@ -5253,6 +5260,9 @@ body {
   .fechar-menu p {
   	display: none;
   }
+  .modal {
+  	height: 824px;
+  }
   .item-menu form {
   	width: 210px;
   }
@@ -6076,6 +6086,9 @@ body {
   	width: 100%;
   	margin-top: 20px;
   	margin-bottom: 20px;
+  }
+  .modal {
+  	height: 669px;
   }
   .conteudo-right {
   	justify-content: center;
@@ -6926,6 +6939,9 @@ body {
   .item-menu form {
   	width: 210px;
   }
+  .modal {
+  	height: 645px;
+  }
   .conteudo-menu {
   	padding-right: 20px;
   	padding-left: 20px;
@@ -7746,6 +7762,9 @@ body {
   	justify-content: center;
   	width: auto;
   	flex-direction: column;
+  }
+  .modal {
+  	height: 570px;
   }
   .item-menu {
   	display: flex;
