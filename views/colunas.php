@@ -311,7 +311,7 @@
 				<p>POLÍTICA</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</div>
 		</a>
 	</section>
@@ -398,7 +398,7 @@
 				<p>TELEVISÃO</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-purple.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</div>
 		</a>
 	</section>
@@ -485,7 +485,7 @@
 				<p>ESPORTES</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-yellow.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</div>
 		</a>
 	</section>
@@ -572,7 +572,7 @@
 				<p>ECONOMIA</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-economia.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</div>
 		</a>
 	</section>
@@ -659,7 +659,7 @@
 				<p>SAÚDE</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-saude.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</div>
 		</a>
 	</section>
@@ -746,7 +746,7 @@
 				<p>EDUCAÇÃO</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-educacao.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</div>
 		</a>
 	</section>
@@ -833,7 +833,7 @@
 				<p>MÚSICA</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-musica.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</div>
 		</a>
 	</section>
@@ -920,7 +920,7 @@
 				<p>GAMES</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-games.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</div>
 		</a>
 	</section>

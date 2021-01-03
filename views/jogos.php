@@ -485,7 +485,7 @@
 				<p>ESPORTES</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-yellow.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</div>
 		</a>
 	</section>
@@ -685,11 +685,12 @@
 		</div>
 	</section>
 
-	<!-- Tarjas abaixo da seção esportes -->
+	<!-- Tarjas abaixo da seção esportes 
 	<div class="tarjas">
 		<div class="tarja-esquerda"></div>
 		<div class="tarja-direita"></div>
 	</div>
+-->
 
 	<!-- Colunistas 
 	<section class="colunistas esportes-secao">

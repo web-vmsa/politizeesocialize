@@ -399,7 +399,7 @@
 				<p>POLÍTICA</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</div>
 		</a>
 	</section>
@@ -486,7 +486,7 @@
 				<p>TELEVISÃO</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-purple.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</div>
 		</a>
 	</section>
@@ -523,8 +523,6 @@
 					</div>
 				</div>
 			</a>
-
-			<div class="border-bottom"></div>
 		</div>
 		<div class="lado-videos">
 			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
@@ -741,7 +739,7 @@
 				<p>ESPORTES</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-yellow.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</div>
 		</a>
 	</section>
@@ -941,11 +939,12 @@
 		</div>
 	</section>
 
-	<!-- Tarjas abaixo da seção esportes -->
+	<!-- Tarjas abaixo da seção esportes 
 	<div class="tarjas">
 		<div class="tarja-esquerda"></div>
 		<div class="tarja-direita"></div>
 	</div>
+-->
 
 	<!-- Colunistas
 	<section class="colunistas esportes-secao">

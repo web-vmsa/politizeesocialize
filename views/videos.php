@@ -223,11 +223,11 @@
 	<!-- Vídeos recentes -->
 	<section class="videos-recentes">
 		<div class="topo-recentes">
-			<p class="cursor-default">VÍDEOS RECENTES</p>
+			<p class="cursor-default">RECENTES</p>
 			<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 		</div>
 
-		<div class="caixa-dos-videos caixa-dos-videos-recentes">
+		<div class="caixa-dos-videos caixa-dos-videos-politica">
 			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
 				<div class="video">
 					<div class="topo-video">
@@ -308,8 +308,8 @@
 	<section class="videos-recentes" id="politica">
 		<div class="topo-recentes topo-recentes-politica">
 			<a href="<?php echo BASE_URL; ?>home/categoria/politica">
-				<p>VÍDEOS SOBRE POLÍTICA</p>
-				<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
+				<p>POLÍTICA</p>
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
 		</div>
 
@@ -374,8 +374,8 @@
 	<section class="videos-recentes" id="televisao">
 		<div class="topo-recentes topo-recentes-televisao">
 			<a href="<?php echo BASE_URL; ?>home/categoria/televisao">
-				<p>VÍDEOS SOBRE TELEVISÃO</p>
-				<img src="<?php echo BASE_URL; ?>assets/images/right-purple.svg">
+				<p>TELEVISÃO</p>
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
 		</div>
 
@@ -440,8 +440,8 @@
 	<section class="videos-recentes" id="esportes">
 		<div class="topo-recentes topo-recentes-esportes">
 			<a href="<?php echo BASE_URL; ?>home/categoria/esportes">
-				<p>VÍDEOS SOBRE ESPORTES</p>
-				<img src="<?php echo BASE_URL; ?>assets/images/right-yellow.svg">
+				<p>ESPORTES</p>
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
 		</div>
 
@@ -506,8 +506,8 @@
 	<section class="videos-recentes" id="economia">
 		<div class="topo-recentes topo-recentes-economia">
 			<a href="<?php echo BASE_URL; ?>home/categoria/economia">
-				<p>VÍDEOS SOBRE ECONOMIA</p>
-				<img src="<?php echo BASE_URL; ?>assets/images/right-economia.svg">
+				<p>ECONOMIA</p>
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
 		</div>
 
@@ -572,8 +572,8 @@
 	<section class="videos-recentes" id="saude">
 		<div class="topo-recentes topo-recentes-saude">
 			<a href="<?php echo BASE_URL; ?>home/categoria/saude">
-				<p>VÍDEOS SOBRE SAÚDE</p>
-				<img src="<?php echo BASE_URL; ?>assets/images/right-saude.svg">
+				<p>SAÚDE</p>
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
 		</div>
 
@@ -638,8 +638,8 @@
 	<section class="videos-recentes" id="educacao">
 		<div class="topo-recentes topo-recentes-educacao">
 			<a href="<?php echo BASE_URL; ?>home/categoria/educacao">
-				<p>VÍDEOS SOBRE EDUCAÇÃO</p>
-				<img src="<?php echo BASE_URL; ?>assets/images/right-educacao.svg">
+				<p>EDUCAÇÃO</p>
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
 		</div>
 
@@ -704,8 +704,8 @@
 	<section class="videos-recentes" id="musica">
 		<div class="topo-recentes topo-recentes-musica">
 			<a href="<?php echo BASE_URL; ?>home/categoria/musica">
-				<p>VÍDEOS SOBRE MÚSICA</p>
-				<img src="<?php echo BASE_URL; ?>assets/images/right-musica.svg">
+				<p>MÚSICA</p>
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
 		</div>
 
@@ -770,8 +770,8 @@
 	<section class="videos-recentes" id="games">
 		<div class="topo-recentes topo-recentes-games">
 			<a href="<?php echo BASE_URL; ?>home/categoria/politica">
-				<p>VÍDEOS SOBRE GAMES</p>
-				<img src="<?php echo BASE_URL; ?>assets/images/right-games.svg">
+				<p>GAMES</p>
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
 		</div>
 

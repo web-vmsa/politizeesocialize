@@ -317,10 +317,10 @@
 		<a href="<?php echo BASE_URL; ?>home/categoria/politica">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
-				<p class="cursor-default">POLÍTICA</p>
+				<p>POLÍTICA</p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</div>
 		</a>
 	</section>

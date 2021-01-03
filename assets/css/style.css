@@ -302,6 +302,7 @@ body {
 	align-items: center;
 	justify-content: flex-start;
 	text-decoration: none;
+	color: black;
 }
 .topo-recentes a:hover {
 	text-decoration: underline;
@@ -317,7 +318,6 @@ body {
 
 
 /* Especificações do Topo Recentes 
-*/
 .topo-recentes-politica a:hover {
 	color: #DC2121;
 }
@@ -366,7 +366,7 @@ body {
 .topo-recentes-games p {
 	color: #363636;
 }
-/**/
+*/
 
 
 .topo-recentes img {
@@ -542,6 +542,7 @@ body {
 	margin-right: 220px;
 	margin-left: 220px;
 	margin-top: 70px;
+	border-top: 1px solid black;
 }
 .item-topo-secao {
 	width: 200px;
@@ -562,6 +563,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	color: black;
 }
 .topo-secao a:hover {
 	text-decoration: underline;
@@ -581,7 +583,7 @@ body {
 /*
 *	Especificações do Topo
 * 	Alteração da Classe principal
-*/
+
 .politica-topo-secao {
 	border-top: 1px solid #DC2121;
 }
@@ -618,9 +620,11 @@ body {
 .destaques-topo-secao p {
 	color: black;
 }
+*/
 .cursor-default {
 	cursor: default;
 }
+/*
 .economia-topo-secao {
 	border-top: 1px solid #32CD32;
 }
@@ -666,7 +670,6 @@ body {
 .musica-topo-secao p {
 	color: #AA22BB;
 }
-/*
 */
 
 
@@ -2669,12 +2672,13 @@ body {
 	color: white;
 	outline: none;
 	cursor: pointer;
+	background-color: black;
 }
 
 
 /* 
 * 	Especificações do Botão de Carregar mais 
-*/
+
 .recentes-load-more button {
 	background-color: black;
 }
@@ -2702,7 +2706,7 @@ body {
 .games-load-more button {
 	background-color: #363636;
 }
-/**/
+*/
 
 
 
