@@ -286,16 +286,48 @@
 
 	<!-- Slideshow -->
 	<main class="slideshow">
+
+		<?php 
+			foreach($noticias_slide as $dados):
+		?>
+
 		<!-- Itens -->
 		<div class="slideshow-item fade">
-			<img src="https://cdnmundo3.img.sputniknews.com/img/107783/13/1077831336_0:91:1920:1128_1000x541_80_0_0_4e921ae64701db005c2821747dd2bec6.jpg">
+			<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 			<div class="slideshow-item-conteudo">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+				<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
+					<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+					<p>POR <?php echo mb_strtoupper($dados['nome']); ?> | <?php echo $dados['dia']; ?> DE 
+
+				<?php
+					switch ($dados['mes']) {
+				        case "01":    $mes = "JANEIRO";     break;
+				        case "02":    $mes = "FEVEREIRO";   break;
+				        case "03":    $mes = "MARÇO";       break;
+				        case "04":    $mes = "ABRIL";       break;
+				        case "05":    $mes = "MAIO";        break;
+				        case "06":    $mes = "JUNHO";       break;
+				        case "07":    $mes = "JULHO";       break;
+				        case "08":    $mes = "AGOSTO";      break;
+				        case "09":    $mes = "SETEMBRO";    break;
+				        case "10":    $mes = "OUTUBRO";     break;
+				        case "11":    $mes = "NOVEMBRO";    break;
+				        case "12":    $mes = "DEZEMBRO";    break; 
+				 }
+				 
+				 echo $mes;
+				?>
+
+
+				<br>DE <?php echo $dados['ano']; ?></p>
 				</a>
 			</div>
 		</div>
+
+		<?php endforeach; ?>
+
+		<!--
+
 		<div class="slideshow-item fade">
 			<img src="https://exame.com/wp-content/uploads/2019/01/parlamento-portugal.jpg?quality=70&strip=info&w=1024">
 			<div class="slideshow-item-conteudo">
@@ -314,6 +346,9 @@
 				</a>
 			</div>
 		</div>
+
+		-->
+
 		<!-- Itens -->
 
 		<div class="slideshow-controls">

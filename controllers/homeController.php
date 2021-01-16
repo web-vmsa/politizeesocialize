@@ -3,8 +3,14 @@ class homeController extends controller {
 
 	public function index(){
 
+		$noticias_slide = new Noticias();
+		$noticias_slide->tipo = "imagem";
+		$noticias_slide->init = 0;
+		$noticias_slide->max = 4;
 
-		$dados = array();
+		$dados = array(
+			'noticias_slide' => $noticias_slide->get_news_slide()
+		);
 
 		$this->loadView('home', $dados);
 
