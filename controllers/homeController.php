@@ -4,12 +4,21 @@ class homeController extends controller {
 	public function index(){
 
 		$noticias_slide = new Noticias();
-		$noticias_slide->tipo = "imagem";
 		$noticias_slide->init = 0;
-		$noticias_slide->max = 4;
+		$noticias_slide->max = 3;
+
+		$noticia_maior = new Noticias();
+		$noticia_maior->init = 3;
+		$noticia_maior->max = 1;
+
+		$noticias_menores = new Noticias();
+		$noticias_menores->init = 4;
+		$noticias_menores->max = 2;
 
 		$dados = array(
-			'noticias_slide' => $noticias_slide->get_news_slide()
+			'noticias_slide' => $noticias_slide->get_news(),
+			'noticia_maior' => $noticia_maior->get_news(),
+			'noticias_menores' => $noticias_menores->get_news()
 		);
 
 		$this->loadView('home', $dados);
