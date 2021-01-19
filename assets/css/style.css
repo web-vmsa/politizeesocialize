@@ -803,6 +803,18 @@ body {
 .noticia-maior-politica:hover img {
 	filter: brightness(77%);
 } 
+.noticia-maior-politica video {
+	width: 560px;
+	height: 500px;
+	position: absolute;
+	filter: brightness(91%);
+	z-index: -1;
+	transition: filter 0.8s;
+	background-color: black;
+}
+.noticia-maior-politica:hover video {
+	filter: brightness(77%);
+} 
 .noticias-menores-politica {
 	width: 100%;
 	display: flex;
@@ -3194,6 +3206,10 @@ body {
   	width: 448px;
   	height: 448px;
   }
+  .noticia-maior-politica video {
+  	width: 448px;
+  	height: 448px;
+  }
   .noticia-maior-conteudo {
   	width: 457px;
   }
@@ -3583,6 +3599,10 @@ body {
   	height: 319px;
   }
   .noticia-maior-politica img {
+  	width: 319px;
+  	height: 319px;
+  }
+  .noticia-maior-politica video {
   	width: 319px;
   	height: 319px;
   }
@@ -4216,6 +4236,10 @@ body {
   	margin-top: 20px;
   }
   .noticia-maior-politica img {
+  	width: 385px;
+  	height: 335px;
+  }
+  .noticia-maior-politica video {
   	width: 385px;
   	height: 335px;
   }
@@ -5054,6 +5078,10 @@ body {
   	margin-top: 20px;
   }
   .noticia-maior-politica img {
+  	width: 372px;
+  	height: 335px;
+  }
+  .noticia-maior-politica video {
   	width: 372px;
   	height: 335px;
   }
@@ -5896,6 +5924,10 @@ body {
   	margin-top: 20px;
   }
   .noticia-maior-politica img {
+  	width: 335px;
+  	height: 335px;
+  }
+  .noticia-maior-politica video {
   	width: 335px;
   	height: 335px;
   }
@@ -6751,6 +6783,10 @@ body {
   	width: 320px;
   	height: 320px;
   }
+  .noticia-maior-politica video {
+  	width: 320px;
+  	height: 320px;
+  }
   .noticia-menor-politica {
   	width: 320px;
   	margin-top: 20px;
@@ -7600,6 +7636,10 @@ body {
   	margin-top: 20px;
   }
   .noticia-maior-politica img {
+  	width: 300px;
+  	height: 300px;
+  }
+  .noticia-maior-politica video {
   	width: 300px;
   	height: 300px;
   }
