@@ -838,6 +838,16 @@ body {
 .noticia-menor-politica:hover img {
 	filter: brightness(77%);
 } 
+.noticia-menor-politica video {
+	width: 220px;
+	height: 200px;
+	filter: brightness(91%);
+	transition: filter 0.8s;
+	background-color: black;
+}
+.noticia-menor-politica:hover video {
+	filter: brightness(77%);
+} 
 .noticia-menor-conteudo-politica {
 	display: flex;
 	flex-direction: column;
@@ -4251,6 +4261,10 @@ body {
   	width: 125px;
   	height: 125px;
   }
+  .noticia-menor-politica video {
+  	width: 125px;
+  	height: 125px;
+  }
   .noticia-menor-conteudo-politica  h2 {
   	font-size: 38px;
   }
@@ -5090,6 +5104,10 @@ body {
   	margin-top: 20px;
   }
   .noticia-menor-politica img {
+  	width: 100px;
+  	height: 100px;
+  }
+  .noticia-menor-politica video {
   	width: 100px;
   	height: 100px;
   }
@@ -5936,6 +5954,10 @@ body {
   	margin-top: 20px;
   }
   .noticia-menor-politica img {
+  	width: 100px;
+  	height: 100px;
+  }
+  .noticia-menor-politica video {
   	width: 100px;
   	height: 100px;
   }
@@ -6795,6 +6817,10 @@ body {
   	width: 100px;
   	height: 100px;
   }
+  .noticia-menor-politica video {
+  	width: 100px;
+  	height: 100px;
+  }
   .noticia-menor-conteudo-politica  h2 {
   	font-size: 28px;
   }
@@ -7648,6 +7674,10 @@ body {
   	margin-top: 20px;
   }
   .noticia-menor-politica img {
+  	width: 100px;
+  	height: 100px;
+  }
+  .noticia-menor-politica video {
   	width: 100px;
   	height: 100px;
   }

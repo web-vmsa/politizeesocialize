@@ -589,45 +589,59 @@
 		</div>
 
 		<div class="noticias-menores-politica">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+
+			<?php 
+				foreach($menores_politica as $dados):
+
+				$arquivo_prop = json_decode($dados['arquivo_prop']);
+			?>
+
+			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-menor-politica">
-					<img src="https://ogimg.infoglobo.com.br/in/23339989-b88-b82/FT1086A/652/80469877_Brazils-new-President-Jair-Bolsonaro-L-and-Brazils-new-Vice-President-Hamilton-Mourao.jpg">
+					
+					<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+					<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+					<video>
+						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+					</video>
+
+					<?php endif; ?>
+
 					<div class="noticia-menor-conteudo-politica">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+						<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+						<p>POR <?php echo mb_strtoupper($dados['nome']); ?> | <?php echo $dados['dia']; ?> DE 
+
+							<?php
+								switch ($dados['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo $mes;
+							?>
+
+
+							<br>DE <?php echo $dados['ano']; ?></p>
 					</div>
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://ogimg.infoglobo.com.br/in/24721212-7c1-090/FT1086A/652/xgued.jpg.pagespeed.ic.Zlr3jdpuvY.jpg">
-					<div class="noticia-menor-conteudo-politica">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-					</div>
-				</div>
-			</a>
+			<?php endforeach; ?>
 
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://i2.wp.com/souconcurseiroevoupassar.blog/wp-content/uploads/2020/08/Blog_PF.png?fit=600%2C350&ssl=1">
-					<div class="noticia-menor-conteudo-politica">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-					</div>
-				</div>
-			</a>
-
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://www.direcaoconcursos.com.br/wp-content/uploads/2019/10/Screenshot_2019-10-14-policial-federal-Pesquisa-Google1.png">
-					<div class="noticia-menor-conteudo-politica">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-					</div>
-				</div>
-			</a>
 		</div>
 	</section>
 

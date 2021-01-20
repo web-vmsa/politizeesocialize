@@ -20,11 +20,17 @@ class homeController extends controller {
 		$maiores_politica->init = 0;
 		$maiores_politica->max = 2;
 
+		$menores_politica = new Noticias();
+		$menores_politica->categoria = "politica";
+		$menores_politica->init = 2;
+		$menores_politica->max = 4;
+
 		$dados = array(
 			'noticias_slide' => $noticias_slide->get_news(),
 			'noticia_maior' => $noticia_maior->get_news(),
 			'noticias_menores' => $noticias_menores->get_news(),
-			'maiores_politica' => $maiores_politica->get_by_categoria()
+			'maiores_politica' => $maiores_politica->get_by_categoria(),
+			'menores_politica' => $menores_politica->get_by_categoria()
 		);
 
 		$this->loadView('home', $dados);
