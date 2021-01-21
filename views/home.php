@@ -654,7 +654,7 @@
 
 	<!-- Televisão -->
 	<section class="topo-secao televisao-topo-secao">
-		<a href="<?php echo BASE_URL; ?>home/categoria/politica">
+		<a href="<?php echo BASE_URL; ?>home/categoria/televisao">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>TELEVISÃO</p>
@@ -668,68 +668,153 @@
 	<!-- Notícias recentes Televisão -->
 	<section class="televisao">
 		<div class="lado-noticias">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+
+			<?php 
+				foreach($maior_televisao as $dados):
+
+				$arquivo_prop = json_decode($dados['arquivo_prop']);
+			?>
+
+			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-maior">
-					<img src="https://uploads.metropoles.com/wp-content/uploads/2020/09/01085635/anitta-56-1024x683.jpg">
+					
+					<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+					<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+					<video>
+						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+					</video>
+
+					<?php endif; ?>
+					
 					<div class="noticia-maior-conteudo">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+						<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+						<p>POR <?php echo mb_strtoupper($dados['nome']); ?> | <?php echo $dados['dia']; ?> DE 
+
+							<?php
+								switch ($dados['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo $mes;
+							?>
+
+
+							<br>DE <?php echo $dados['ano']; ?></p>
 					</div>
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+			<?php endforeach; ?>
+
+			<?php 
+				foreach($menores_televisao as $dados):
+
+				$arquivo_prop = json_decode($dados['arquivo_prop']);
+			?>
+
+			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-menor-politica">
-					<img src="https://i.uai.com.br/IEvZhk8IbLMyhraHAfZQWoIGV4c=/750x0/imgsapp2.uai.com.br/app/noticia_133890394703/2020/11/27/265437/20201129133043275275e.jpg">
+					
+					<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+					<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+					<video>
+						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+					</video>
+
+					<?php endif; ?>
+
 					<div class="noticia-menor-conteudo-politica">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+						<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+						<p>POR <?php echo mb_strtoupper($dados['nome']); ?> | <?php echo $dados['dia']; ?> DE 
+
+							<?php
+								switch ($dados['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo $mes;
+							?>
+
+
+							<br>DE <?php echo $dados['ano']; ?></p>
 					</div>
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://static.poder360.com.br/2020/06/jn-868x644.jpg">
-					<div class="noticia-menor-conteudo-politica">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-					</div>
-				</div>
-			</a>
+			<?php endforeach; ?>
+
 		</div>
 		<div class="lado-videos">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+
+			<?php
+				foreach($videos_televisao as $dados):
+			?>
+
+			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="video">
 					<div class="topo-video">
 						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
+						<p><?php echo $dados['dia']; ?> DE <?php
+								switch ($dados['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo $mes;
+							?> | <?php echo $dados['ano']; ?></p>
 					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://www.vagalume.com.br/ludmilla/images/ludmilla.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
+					<video id="my-video" class="video-js vjs-theme-city" preload="auto" data-setup="{}">
+						 <source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4" />
 					</video>
 					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
+						<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+						<p><?php echo mb_strtoupper($dados['descricao']); ?></p>
 					</div>
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://static1.purepeople.com.br/articles/7/28/05/97/@/3187348-marina-ruy-barbosa-e-comparada-com-model-624x600-1.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
+			<?php endforeach; ?>
+
 		</div>
 	</section>
 
@@ -931,18 +1016,25 @@
 				</div>
 				<!-- Resultados -->
 				<div class="jogos-divs">
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>FLA 1-1 RSC</p>
+
+					<?php 
+						foreach($resultados as $dados): 
+
+						$propriedades_jogo = json_decode($dados['jogo_prop']);
+
+						$alcunha_casa = new Jogos();
+						$alcunha_casa = $alcunha_casa->get_alcunha($propriedades_jogo->time_casa);
+
+						$alcunha_fora = new Jogos();
+						$alcunha_fora = $alcunha_fora->get_alcunha($propriedades_jogo->time_fora);
+					?>
+
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>"><div class="jogo-div">
+						<p><?php echo $alcunha_casa['alcunha']; ?> <?php echo $dados['placar']; ?> <?php echo $alcunha_fora['alcunha']; ?></p>
 					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>SPFC 3-1 BAH</p>
-					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>VAS 1-4 CEA</p>
-					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>INT 0-0 ATH</p>
-					</div></a>
+
+					<?php endforeach; ?>
+
 				</div>
 			</div>
 			<div class="divisor"></div>
@@ -955,18 +1047,25 @@
 				</div>
 				<!-- Jogos -->
 				<div class="jogos-divs">
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>FLA 1-1 RSC</p>
+
+					<?php 
+						foreach($agendados as $dados): 
+
+						$propriedades_jogo = json_decode($dados['jogo_prop']);
+
+						$alcunha_casa = new Jogos();
+						$alcunha_casa = $alcunha_casa->get_alcunha($propriedades_jogo->time_casa);
+
+						$alcunha_fora = new Jogos();
+						$alcunha_fora = $alcunha_fora->get_alcunha($propriedades_jogo->time_fora);
+					?>
+
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>"><div class="jogo-div">
+						<p><?php echo $alcunha_casa['alcunha']; ?> <?php echo $dados['placar']; ?> <?php echo $alcunha_fora['alcunha']; ?></p>
 					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>SPFC 3-1 BAH</p>
-					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>VAS 1-4 CEA</p>
-					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>INT 0-0 ATH</p>
-					</div></a>
+
+					<?php endforeach; ?>
+
 				</div>
 			</div>
 		</div>
@@ -974,57 +1073,62 @@
 
 		<!-- Notícias -->
 		<div class="noticias-menores-politica">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+
+			<?php 
+				foreach($noticias_jogos as $dados):
+
+				$arquivo_prop = json_decode($dados['arquivo_prop']);
+			?>
+
+			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-menor-politica">
-					<img src="https://m.extra.globo.com/incoming/24751825-daf-ba9/w488h275-PROP/90486867_es-rio-de-janeiro-rj-13112020treino-do-flamengono-ninho-do-uruburogerio-c.jpg">
+					
+					<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+					<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+					<video>
+						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+					</video>
+
+					<?php endif; ?>
+
 					<div class="noticia-menor-conteudo-politica">
 						<div class="jogo-descricao">
-							<p>FLAMENGO E SANTOS</p>
+
+							<?php 
+								$tags = explode(",", $dados['tags']);
+							?>
+
+							<p><?php echo mb_strtoupper($tags[0]); ?> E <?php echo mb_strtoupper($tags[1]); ?></p>
 						</div>
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>20 DE OUT | 2020</p>
+						<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+						<p><?php echo $dados['dia']; ?> DE <?php
+								switch ($dados['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo $mes;
+							?> | <?php echo $dados['ano']; ?></p>
 					</div>
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://jpimg.com.br/uploads/2020/09/marinho-participou-de-nove-gols-em-nove-jogos-do-santos-no-brasileirao.jpg">
-					<div class="noticia-menor-conteudo-politica">
-						<div class="jogo-descricao">
-							<p>FLAMENGO E SANTOS</p>
-						</div>
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>20 DE OUT | 2020</p>
-					</div>
-				</div>
-			</a>
+			<?php endforeach; ?>
 
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://cdn.diariodolitoral.com.br/upload/dn_noticia/2020/09/marinho_2.jpg">
-					<div class="noticia-menor-conteudo-politica">
-						<div class="jogo-descricao">
-							<p>FLAMENGO E SANTOS</p>
-						</div>
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>20 DE OUT | 2020</p>
-					</div>
-				</div>
-			</a>
-
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://uploads.metropoles.com/wp-content/uploads/2020/11/09180535/Rogerio-Ceni-Flamengo-600x400.jpg">
-					<div class="noticia-menor-conteudo-politica">
-						<div class="jogo-descricao">
-							<p>FLAMENGO E SANTOS</p>
-						</div>
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>20 DE OUT | 2020</p>
-					</div>
-				</div>
-			</a>
 		</div>
 
 		<!-- Carousel e vídeos -->
