@@ -86,7 +86,7 @@ class Noticias extends model {
 	*/
 	public function get_videos(){
 
-		$sql = "SELECT usuarios.id, usuarios.nome, noticias.id, JSON_VALUE(noticias.arquivo_prop, '$.tipo'), noticias.categoria, noticias.id_usuario, noticias.titulo, noticias.descricao, noticias.arquivo, noticias.url, noticias.arquivo_prop, noticias.data, DAY(noticias.data) as dia, MONTH(noticias.data) as mes, YEAR(noticias.data) as ano FROM noticias INNER JOIN usuarios ON usuarios.id = noticias.id_usuario WHERE noticias.status = '1' AND noticias.categoria = :categoria AND JSON_VALUE(noticias.arquivo_prop, '$.tipo') = 'video' ORDER BY noticias.id DESC LIMIT :init,:max";
+		$sql = "SELECT usuarios.id, usuarios.nome, noticias.id, JSON_VALUE(noticias.arquivo_prop, '$.tipo'), noticias.categoria, noticias.id_usuario, noticias.titulo, noticias.tags, noticias.descricao, noticias.arquivo, noticias.url, noticias.arquivo_prop, noticias.data, DAY(noticias.data) as dia, MONTH(noticias.data) as mes, YEAR(noticias.data) as ano FROM noticias INNER JOIN usuarios ON usuarios.id = noticias.id_usuario WHERE noticias.status = '1' AND noticias.categoria = :categoria AND JSON_VALUE(noticias.arquivo_prop, '$.tipo') = 'video' ORDER BY noticias.id DESC LIMIT :init,:max";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(':categoria', $this->categoria);
 		$sql->bindValue(':init', $this->init, PDO::PARAM_INT);
@@ -94,6 +94,28 @@ class Noticias extends model {
 		$sql->execute();
 		if ($sql->rowCount() > 0) {
 			return $sql->fetchAll();
+		} else {
+			return false;
+		}
+
+	}
+
+	/*
+	* Função de Pegar a notícia pela url
+	* 
+	* Esta função vai dar um select e buscar a notícia pela sua url passada
+	*
+	* @param $max é o valor final do count do limit
+	* @return true or false
+	*/
+	public function get_new(){
+
+		$sql = "SELECT usuarios.id, usuarios.nome, usuarios.foto, noticias.id, noticias.categoria, noticias.id_usuario, noticias.titulo, noticias.descricao, noticias.tags, noticias.postagem, noticias.arquivo, noticias.url, noticias.arquivo_prop, noticias.data, DAY(noticias.data) as dia, MONTH(noticias.data) as mes, YEAR(noticias.data) as ano FROM noticias INNER JOIN usuarios ON usuarios.id = noticias.id_usuario WHERE noticias.status = '1' AND noticias.url = :url";
+		$sql = $this->db->prepare($sql);
+		$sql->bindValue(':url', $this->url);
+		$sql->execute();
+		if ($sql->rowCount() > 0) {
+			return $sql->fetch();
 		} else {
 			return false;
 		}

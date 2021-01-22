@@ -55,6 +55,16 @@ class homeController extends controller {
 		$noticias_jogos->init = 0;
 		$noticias_jogos->max = 4;
 
+		$videos_esportes = new Noticias();
+		$videos_esportes->categoria = "esportes";
+		$videos_esportes->init = 0;
+		$videos_esportes->max = 2;
+
+		$slide_esportes = new Jogos();
+		$slide_esportes->status_jogo = "Fim de jogo";
+		$slide_esportes->init = 0;
+		$slide_esportes->max = 3;
+
 		$dados = array(
 			'noticias_slide' => $noticias_slide->get_news(),
 			'noticia_maior' => $noticia_maior->get_news(),
@@ -66,7 +76,9 @@ class homeController extends controller {
 			'videos_televisao' => $videos_televisao->get_videos(),
 			'resultados' => $resultados->get_jogos(),
 			'agendados' => $agendados->get_jogos(),
-			'noticias_jogos' => $noticias_jogos->get_by_categoria()
+			'noticias_jogos' => $noticias_jogos->get_by_categoria(),
+			'videos_esportes' => $videos_esportes->get_videos(),
+			'slide_esportes' => $slide_esportes->get_jogos()
 		);
 
 		$this->loadView('home', $dados);
@@ -89,12 +101,40 @@ class homeController extends controller {
 		$this->loadView('resultados', $dados);
 	}
 
-	public function noticia(){
+	public function noticia($url){
 
+		$noticia = new Noticias();
+		$noticia->url = $url;
+		$noticia = $noticia->get_new();
 
-		$dados = array();
+		if ($noticia == true) {
 
-		$this->loadView('postagem', $dados);
+			$maiores = new Noticias();
+			$maiores->categoria = $noticia['categoria'];
+			$maiores->init = 0;
+			$maiores->max = 2;
+
+			$menores = new Noticias();
+			$menores->categoria = $noticia['categoria'];
+			$menores->init = 2;
+			$menores->max = 4;
+
+			$dados = array(
+				'noticia' => $noticia,
+				'maiores' => $maiores->get_by_categoria(),
+				'menores' => $menores->get_by_categoria()
+			);
+
+			$this->loadView('postagem', $dados);
+
+		} else {
+
+			$dados = array();
+
+			$this->loadView('404', $dados);
+
+		}
+
 	}
 	
 }

@@ -1369,6 +1369,13 @@ body {
 	position: absolute;
 	filter: brightness(91%);
 }
+.carousel-slide video {
+	width: 750px;
+	height: 500px;
+	position: absolute;
+	filter: brightness(91%);
+	background-color: black;
+}
 .carousel-slide a {
 	text-decoration: none;
 }
@@ -3293,6 +3300,10 @@ body {
   	width: 554px;
   	height: 448px;
   }
+  .carousel-slide video {
+  	width: 554px;
+  	height: 448px;
+  }
   .carousel-controls {
   	width: 534px;
   	height: 438px;
@@ -3730,6 +3741,10 @@ body {
   	height: 380px;
   }
   .carousel-slide img {
+  	width: 668px;
+  	height: 380px;
+  }
+  .carousel-slide video {
   	width: 668px;
   	height: 380px;
   }
@@ -4390,6 +4405,10 @@ body {
   	height: 335px;
   }
   .carousel-slide img {
+  	width: 385px;
+  	height: 335px;
+  }
+  .carousel-slide video {
   	width: 385px;
   	height: 335px;
   }
@@ -5237,6 +5256,10 @@ body {
   	height: 335px;
   }
   .carousel-slide img {
+  	width: 372px;
+  	height: 335px;
+  }
+  .carousel-slide video {
   	width: 372px;
   	height: 335px;
   }
@@ -6093,6 +6116,10 @@ body {
   	height: 335px;
   }
   .carousel-slide img {
+  	width: 335px;
+  	height: 335px;
+  }
+  .carousel-slide video {
   	width: 335px;
   	height: 335px;
   }
@@ -6956,6 +6983,10 @@ body {
   	width: 320px;
   	height: 320px;
   }
+  .carousel-slide video {
+  	width: 320px;
+  	height: 320px;
+  }
   .carousel-controls {
   	width: 316px;
   	height: 320px;
@@ -7814,6 +7845,10 @@ body {
   	height: 300px;
   }
   .carousel-slide img {
+  	width: 300px;
+  	height: 300px;
+  }
+  .carousel-slide video {
   	width: 300px;
   	height: 300px;
   }

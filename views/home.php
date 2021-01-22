@@ -1144,75 +1144,85 @@
 					<img data-id="1" class="passa-slide" src="<?php echo BASE_URL; ?>assets/images/right-arrow.svg">
 				</div>
 
+				<?php 
+					foreach($slide_esportes as $dados):
+
+					$arquivo_prop = json_decode($dados['arquivo_prop']);
+				?>
+
 				<div class="carousel-slide fade">
-					<img src="https://sportbuzz.uol.com.br/media/_versions/gettyimages-1160655989_widelg.jpg">
-					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+					
+					<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+					<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+					<video>
+						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+					</video>
+
+					<?php endif; ?>
+
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>">
 						<div class="slide-carousel-conteudo">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
+							<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+							<p><?php echo $dados['descricao']; ?></p>
 						</div>
 					</a>
 				</div>
-				<div class="carousel-slide fade">
-					<img src="https://esbrasil.com.br/wp-content/uploads/2019/08/Daniel_site.jpg">
-					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-						<div class="slide-carousel-conteudo">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
-						</div>
-					</a>
-				</div>
-				<div class="carousel-slide fade">
-					<img src="https://conteudo.imguol.com.br/c/esporte/41/2020/11/28/neymar-faz-gol-de-penalti-na-partida-psg-x-bordeaux-pelo-campeonato-frances-1606600195230_v2_450x337.jpg">
-					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-						<div class="slide-carousel-conteudo">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
-						</div>
-					</a>
-				</div>
+				
+				<?php endforeach; ?>
+				
 			</div>
 			<div class="videos-esportes">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+
+				<?php
+					foreach($videos_esportes as $dados):
+
+					$tags = explode(",", $dados['tags']);
+				?>
+
+				<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 					<div class="video-esporte">
 						<div class="lado-video">
-							<video id="video-esporte" class="video-js vjs-theme-city" poster="https://f.i.uol.com.br/fotografia/2020/10/01/16016045635f768bd3d96b2_1601604563_3x2_md.jpg" preload="auto" data-setup="{}">
-							 	<source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
+							<video id="video-esporte" class="video-js vjs-theme-city" preload="auto" data-setup="{}">
+							 	<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4" />
 							</video>
 							<div class="video-conteudo">
 								<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-								<p>20 DE OUT | 2020</p>
+								<p><?php echo $dados['dia']; ?> DE <?php
+								switch ($dados['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo substr($mes, 0,-2);
+							?> | <?php echo $dados['ano']; ?></p>
 							</div>
 						</div>
 						<div class="lado-descricao">
-							<h2>ROGERIO CENI</h2>
+							<h2><?php echo mb_strtoupper($tags[0]); ?></h2>
 							<div class="link-video">
-								<p>Lorem Ipsum</p>
+								<p><?php echo $tags[1]; ?></p>
 								<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 							</div>
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video-esporte">
-						<div class="lado-video">
-							<video id="video-esporte" class="video-js vjs-theme-city" poster="https://jpimg.com.br/uploads/2020/10/brenner-rubens-chiri-spfc.jpg" preload="auto" data-setup="{}">
-							 	<source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-							</video>
-							<div class="video-conteudo">
-								<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-								<p>20 DE OUT | 2020</p>
-							</div>
-						</div>
-						<div class="lado-descricao">
-							<h2>ROGERIO CENI</h2>
-							<div class="link-video">
-								<p>Lorem Ipsum</p>
-								<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
-							</div>
-						</div>
-					</div>
-				</a>
+				
+				<?php endforeach; ?>
+
 			</div>
 		</div>
 	</section>
@@ -1413,69 +1423,11 @@
 			</div>
 
 			<div class="caixa-videos">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://static.independent.co.uk/2020/12/04/07/w_56539538.jpg?width=640" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://thumbnails.texastribune.org/C-grfyuIcbith-IMQzQKF0ShUpw=/850x570/smart/filters:quality(75)/https://static.texastribune.org/media/files/20ddd1716338a3c77a767d8833a40208/Joe%20Biden%20MS%20TT.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://s2.glbimg.com/GZ9JHX1nNNAbFJGcpW2zqRD3uCA=/0x0:1135x757/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/Q/d/KwXr58SNiJMaYBvNcAiQ/felipeararuna.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
 
-				<button id="load-more-videos">CARREGAR MAIS</button>
 			</div>
+
+			<button id="load-more-videos">CARREGAR MAIS</button>
+
 		</div>
 		<!-- Widgets -->
 		<div class="asides">
@@ -1501,7 +1453,7 @@
 				</div>
 
 				<div class="corpo-widget-newsletter">
-					<form method="POST" id="form_newsletter">
+					<form method="POST" id="form_newsletter" autocomplete="off">
 						<input type="text" name="email" id="email" placeholder="E-mail">
 						<button type="submit">ASSINAR</button>
 					</form>
@@ -1551,7 +1503,7 @@
 		<div class="item-rodape">
 			<h3>NEWSLETTER</h3>
 			<p>NÃO PERCA NADA DE NOVO DO PORTAL, ASSINE A NEWSLETTER</p>
-			<form method="POST" id="form_newsletter_rodape">
+			<form method="POST" id="form_newsletter_rodape" autocomplete="off">
 				<input type="text" name="email" id="email_rodape" placeholder="E-mail">
 				<button type="submit">
 					<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
