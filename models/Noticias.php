@@ -105,7 +105,6 @@ class Noticias extends model {
 	* 
 	* Esta função vai dar um select e buscar a notícia pela sua url passada
 	*
-	* @param $max é o valor final do count do limit
 	* @return true or false
 	*/
 	public function get_new(){

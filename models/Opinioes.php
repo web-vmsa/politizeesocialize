@@ -8,6 +8,7 @@
 */
 class Opinioes extends model {
 
+	public $url;
 	public $init;
 	public $max;
 
@@ -29,6 +30,27 @@ class Opinioes extends model {
 		$sql->execute();
 		if ($sql->rowCount() > 0) {
 			return $sql->fetchAll();
+		} else {
+			return false;
+		}
+
+	}
+
+	/*
+	* Função de Pegar uma opinião pela url
+	* 
+	* Esta função vai dar um select e buscar a opinião pela sua url passada
+	*
+	* @return true or false
+	*/
+	public function get_opi(){
+
+		$sql = "SELECT usuarios.id, usuarios.nome, usuarios.foto, opinioes.id, opinioes.categoria, opinioes.id_usuario, opinioes.titulo, opinioes.descricao, opinioes.tags, opinioes.postagem, opinioes.arquivo, opinioes.url, opinioes.arquivo_prop, opinioes.data, DAY(opinioes.data) as dia, MONTH(opinioes.data) as mes, YEAR(opinioes.data) as ano FROM opinioes INNER JOIN usuarios ON usuarios.id = opinioes.id_usuario WHERE opinioes.status = '1' AND opinioes.url = :url";
+		$sql = $this->db->prepare($sql);
+		$sql->bindValue(':url', $this->url);
+		$sql->execute();
+		if ($sql->rowCount() > 0) {
+			return $sql->fetch();
 		} else {
 			return false;
 		}
