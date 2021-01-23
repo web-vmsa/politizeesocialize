@@ -485,9 +485,9 @@
 			</div>
 		</a>
 
-		<div class="borda-colunista-secao"></div>
-
 		<?php endforeach; ?>
+
+		<div class="borda-colunista-secao"></div>
 
 	</section>
 

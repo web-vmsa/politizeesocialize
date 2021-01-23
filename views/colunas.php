@@ -318,73 +318,27 @@
 
 	<!-- Colunistas da Seção Política -->
 	<section class="colunistas-secao colunistas-secao-politica">
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static.poder360.com.br/2020/12/JairBolsonaro-PessoaComDeficiencia-Michelle-14-868x644.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
+		
+		<?php 
+			foreach($colunistas_politica as $dados):
+		?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/<?php echo $dados['nome']; ?>">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/PDFt8rv5N6BqUV6kcID838G79Fo=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SH7RXY3KBBGC7E2MGUR34CCHPA.jpg">
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['foto']; ?>">
 				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+				<h2><?php echo mb_strtoupper($dados['nome']); ?></h2>
+				<p>"<?php echo mb_strtoupper($dados['biografia']); ?>"</p>
 			</div>
 		</a>
+
+		<?php endforeach; ?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://f.i.uol.com.br/fotografia/2020/05/30/15908728835ed2cb33ad63d_1590872883_3x2_md.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/6PompmIOEFiHliFkdnHBi-dO2EI=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SBJ3UW43NBHBLGRMP73V22ZF3I.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://www.cartacapital.com.br/wp-content/uploads/2020/10/Lula-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static1.purepeople.com.br/articles/0/30/68/00/@/3467315-andreia-sadi-revela-nome-dos-filhos-com-624x600-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
 	</section>
 
 	<!-- Linha -->
@@ -405,73 +359,27 @@
 
 	<!-- Colunistas da Seção Televisão -->
 	<section class="colunistas-secao colunistas-secao-televisao">
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static.poder360.com.br/2020/12/JairBolsonaro-PessoaComDeficiencia-Michelle-14-868x644.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
+
+		<?php 
+			foreach($colunistas_televisao as $dados):
+		?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/<?php echo $dados['nome']; ?>">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/PDFt8rv5N6BqUV6kcID838G79Fo=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SH7RXY3KBBGC7E2MGUR34CCHPA.jpg">
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['foto']; ?>">
 				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+				<h2><?php echo mb_strtoupper($dados['nome']); ?></h2>
+				<p>"<?php echo mb_strtoupper($dados['biografia']); ?>"</p>
 			</div>
 		</a>
+
+		<?php endforeach; ?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://f.i.uol.com.br/fotografia/2020/05/30/15908728835ed2cb33ad63d_1590872883_3x2_md.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/6PompmIOEFiHliFkdnHBi-dO2EI=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SBJ3UW43NBHBLGRMP73V22ZF3I.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://www.cartacapital.com.br/wp-content/uploads/2020/10/Lula-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static1.purepeople.com.br/articles/0/30/68/00/@/3467315-andreia-sadi-revela-nome-dos-filhos-com-624x600-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
 	</section>
 
 	<!-- Linha -->
@@ -492,73 +400,27 @@
 
 	<!-- Colunistas da Seção Esportes -->
 	<section class="colunistas-secao colunistas-secao-esportes">
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static.poder360.com.br/2020/12/JairBolsonaro-PessoaComDeficiencia-Michelle-14-868x644.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
+		
+		<?php 
+			foreach($colunistas_esportes as $dados):
+		?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/<?php echo $dados['nome']; ?>">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/PDFt8rv5N6BqUV6kcID838G79Fo=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SH7RXY3KBBGC7E2MGUR34CCHPA.jpg">
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['foto']; ?>">
 				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+				<h2><?php echo mb_strtoupper($dados['nome']); ?></h2>
+				<p>"<?php echo mb_strtoupper($dados['biografia']); ?>"</p>
 			</div>
 		</a>
+
+		<?php endforeach; ?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://f.i.uol.com.br/fotografia/2020/05/30/15908728835ed2cb33ad63d_1590872883_3x2_md.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/6PompmIOEFiHliFkdnHBi-dO2EI=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SBJ3UW43NBHBLGRMP73V22ZF3I.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://www.cartacapital.com.br/wp-content/uploads/2020/10/Lula-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static1.purepeople.com.br/articles/0/30/68/00/@/3467315-andreia-sadi-revela-nome-dos-filhos-com-624x600-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
 	</section>
 
 	<!-- Linha -->
@@ -579,73 +441,27 @@
 
 	<!-- Colunistas da Seção Economia -->
 	<section class="colunistas-secao colunistas-secao-economia">
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static.poder360.com.br/2020/12/JairBolsonaro-PessoaComDeficiencia-Michelle-14-868x644.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
+		
+		<?php 
+			foreach($colunistas_economia as $dados):
+		?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/<?php echo $dados['nome']; ?>">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/PDFt8rv5N6BqUV6kcID838G79Fo=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SH7RXY3KBBGC7E2MGUR34CCHPA.jpg">
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['foto']; ?>">
 				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+				<h2><?php echo mb_strtoupper($dados['nome']); ?></h2>
+				<p>"<?php echo mb_strtoupper($dados['biografia']); ?>"</p>
 			</div>
 		</a>
+
+		<?php endforeach; ?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://f.i.uol.com.br/fotografia/2020/05/30/15908728835ed2cb33ad63d_1590872883_3x2_md.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/6PompmIOEFiHliFkdnHBi-dO2EI=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SBJ3UW43NBHBLGRMP73V22ZF3I.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://www.cartacapital.com.br/wp-content/uploads/2020/10/Lula-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static1.purepeople.com.br/articles/0/30/68/00/@/3467315-andreia-sadi-revela-nome-dos-filhos-com-624x600-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
 	</section>
 
 	<!-- Linha -->
@@ -666,73 +482,27 @@
 
 	<!-- Colunistas da Seção Saúde -->
 	<section class="colunistas-secao colunistas-secao-saude">
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static.poder360.com.br/2020/12/JairBolsonaro-PessoaComDeficiencia-Michelle-14-868x644.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
+		
+		<?php 
+			foreach($colunistas_saude as $dados):
+		?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/<?php echo $dados['nome']; ?>">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/PDFt8rv5N6BqUV6kcID838G79Fo=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SH7RXY3KBBGC7E2MGUR34CCHPA.jpg">
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['foto']; ?>">
 				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+				<h2><?php echo mb_strtoupper($dados['nome']); ?></h2>
+				<p>"<?php echo mb_strtoupper($dados['biografia']); ?>"</p>
 			</div>
 		</a>
+
+		<?php endforeach; ?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://f.i.uol.com.br/fotografia/2020/05/30/15908728835ed2cb33ad63d_1590872883_3x2_md.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/6PompmIOEFiHliFkdnHBi-dO2EI=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SBJ3UW43NBHBLGRMP73V22ZF3I.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://www.cartacapital.com.br/wp-content/uploads/2020/10/Lula-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static1.purepeople.com.br/articles/0/30/68/00/@/3467315-andreia-sadi-revela-nome-dos-filhos-com-624x600-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
 	</section>
 
 	<!-- Linha -->
@@ -753,73 +523,27 @@
 
 	<!-- Colunistas da Seção Educação -->
 	<section class="colunistas-secao colunistas-secao-educacao">
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static.poder360.com.br/2020/12/JairBolsonaro-PessoaComDeficiencia-Michelle-14-868x644.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
+		
+		<?php 
+			foreach($colunistas_educacao as $dados):
+		?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/<?php echo $dados['nome']; ?>">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/PDFt8rv5N6BqUV6kcID838G79Fo=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SH7RXY3KBBGC7E2MGUR34CCHPA.jpg">
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['foto']; ?>">
 				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+				<h2><?php echo mb_strtoupper($dados['nome']); ?></h2>
+				<p>"<?php echo mb_strtoupper($dados['biografia']); ?>"</p>
 			</div>
 		</a>
+
+		<?php endforeach; ?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://f.i.uol.com.br/fotografia/2020/05/30/15908728835ed2cb33ad63d_1590872883_3x2_md.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/6PompmIOEFiHliFkdnHBi-dO2EI=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SBJ3UW43NBHBLGRMP73V22ZF3I.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://www.cartacapital.com.br/wp-content/uploads/2020/10/Lula-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static1.purepeople.com.br/articles/0/30/68/00/@/3467315-andreia-sadi-revela-nome-dos-filhos-com-624x600-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
 	</section>
 
 	<!-- Linha -->
@@ -840,73 +564,27 @@
 
 	<!-- Colunistas da Seção Música -->
 	<section class="colunistas-secao colunistas-secao-musica">
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static.poder360.com.br/2020/12/JairBolsonaro-PessoaComDeficiencia-Michelle-14-868x644.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
+		
+		<?php 
+			foreach($colunistas_musica as $dados):
+		?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/<?php echo $dados['nome']; ?>">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/PDFt8rv5N6BqUV6kcID838G79Fo=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SH7RXY3KBBGC7E2MGUR34CCHPA.jpg">
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['foto']; ?>">
 				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+				<h2><?php echo mb_strtoupper($dados['nome']); ?></h2>
+				<p>"<?php echo mb_strtoupper($dados['biografia']); ?>"</p>
 			</div>
 		</a>
+
+		<?php endforeach; ?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://f.i.uol.com.br/fotografia/2020/05/30/15908728835ed2cb33ad63d_1590872883_3x2_md.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/6PompmIOEFiHliFkdnHBi-dO2EI=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SBJ3UW43NBHBLGRMP73V22ZF3I.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://www.cartacapital.com.br/wp-content/uploads/2020/10/Lula-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static1.purepeople.com.br/articles/0/30/68/00/@/3467315-andreia-sadi-revela-nome-dos-filhos-com-624x600-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
 	</section>
 
 	<!-- Linha -->
@@ -927,73 +605,27 @@
 
 	<!-- Colunistas da Seção Games -->
 	<section class="colunistas-secao colunistas-secao-games">
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static.poder360.com.br/2020/12/JairBolsonaro-PessoaComDeficiencia-Michelle-14-868x644.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
+		
+		<?php 
+			foreach($colunistas_games as $dados):
+		?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/<?php echo $dados['nome']; ?>">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/PDFt8rv5N6BqUV6kcID838G79Fo=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SH7RXY3KBBGC7E2MGUR34CCHPA.jpg">
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['foto']; ?>">
 				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+				<h2><?php echo mb_strtoupper($dados['nome']); ?></h2>
+				<p>"<?php echo mb_strtoupper($dados['biografia']); ?>"</p>
 			</div>
 		</a>
+
+		<?php endforeach; ?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://f.i.uol.com.br/fotografia/2020/05/30/15908728835ed2cb33ad63d_1590872883_3x2_md.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/6PompmIOEFiHliFkdnHBi-dO2EI=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SBJ3UW43NBHBLGRMP73V22ZF3I.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://www.cartacapital.com.br/wp-content/uploads/2020/10/Lula-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static1.purepeople.com.br/articles/0/30/68/00/@/3467315-andreia-sadi-revela-nome-dos-filhos-com-624x600-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
 	</section>
 
 	<!-- Linha -->
@@ -1004,8 +636,8 @@
 	<section class="secao-newsletter">
 		<p>RECEBA AS NOVIDADES DOS COLUNISTAS<br>NO SEU E-MAIL</p>
 
-		<form method="POST" id="form_newsletter">
-			<input type="text" name="email" id="email" placeholder="SEU MELHOR E-MAIL">
+		<form method="POST" id="form_newsletter_maior">
+			<input type="text" name="email" id="email_maior" placeholder="SEU MELHOR E-MAIL">
 			<button type="submit">ASSINAR    >></button>
 		</form>
 	</section>

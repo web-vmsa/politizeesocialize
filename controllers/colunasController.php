@@ -4,7 +4,43 @@ class colunasController extends controller {
 	public function index(){
 
 
-		$dados = array();
+		$colunistas_politica = new Colunistas();
+		$colunistas_politica->categoria = "politica";
+
+		$colunistas_televisao = new Colunistas();
+		$colunistas_televisao->categoria = "televisao";
+
+		$colunistas_esportes = new Colunistas();
+		$colunistas_esportes->categoria = "esportes";
+
+		$colunistas_esportes = new Colunistas();
+		$colunistas_esportes->categoria = "esportes";
+
+		$colunistas_economia = new Colunistas();
+		$colunistas_economia->categoria = "economia";
+
+		$colunistas_saude = new Colunistas();
+		$colunistas_saude->categoria = "saude";
+
+		$colunistas_educacao = new Colunistas();
+		$colunistas_educacao->categoria = "educacao";
+
+		$colunistas_musica = new Colunistas();
+		$colunistas_musica->categoria = "musica";
+
+		$colunistas_games = new Colunistas();
+		$colunistas_games->categoria = "games";
+
+		$dados = array(
+			'colunistas_politica' => $colunistas_politica->get_colunistas_by_categoria(),
+			'colunistas_televisao' => $colunistas_televisao->get_colunistas_by_categoria(),
+			'colunistas_esportes' => $colunistas_esportes->get_colunistas_by_categoria(),
+			'colunistas_economia' => $colunistas_economia->get_colunistas_by_categoria(),
+			'colunistas_saude' => $colunistas_saude->get_colunistas_by_categoria(),
+			'colunistas_educacao' => $colunistas_educacao->get_colunistas_by_categoria(),
+			'colunistas_musica' => $colunistas_musica->get_colunistas_by_categoria(),
+			'colunistas_games' => $colunistas_games->get_colunistas_by_categoria()
+		);
 
 		$this->loadView('colunas', $dados);
 
