@@ -85,12 +85,95 @@ class homeController extends controller {
 
 	}
 
-	public function categoria(){
+	public function categoria($nome){
 
 
-		$dados = array();
+		$categoria = new Categorias();
+		$categoria->nome = $nome;
+		$categoria = $categoria->get_categoria();
+ 
+		if($categoria == true) {
 
-		$this->loadView('categoria', $dados);
+			if ($categoria['nome'] == "recentes") {
+
+				$slide = new Noticias();
+				$slide->init = 0;
+				$slide->max = 3;
+
+				$noticia_maior = new Noticias();
+				$noticia_maior->init = 3;
+				$noticia_maior->max = 1;
+
+				$noticias_menores = new Noticias();
+				$noticias_menores->init = 4;
+				$noticias_menores->max = 2;
+
+				$maiores_destaque = new Noticias();
+				$maiores_destaque->init = 0;
+				$maiores_destaque->max = 2;
+
+				$menores_destaque = new Noticias();
+				$menores_destaque->init = 0;
+				$menores_destaque->max = 4;
+				
+				$dados = array(
+					'categoria' => $categoria,
+					'slide' => $slide->get_news(),
+					'noticia_maior' => $noticia_maior->get_news(),
+					'noticias_menores' => $noticias_menores->get_news(),
+					'maiores_destaque' => $maiores_destaque->get_news(),
+					'menores_destaque' => $menores_destaque->get_news()
+				);
+
+				$this->loadView('categoria', $dados);
+
+			} else {
+
+				$slide = new Noticias();
+				$slide->categoria = /*$categoria['nome'];*/"politica";
+				$slide->init = 0;
+				$slide->max = 3;
+
+				$noticia_maior = new Noticias();
+				$noticia_maior->categoria = /*$categoria['nome'];*/"politica";
+				$noticia_maior->init = 3;
+				$noticia_maior->max = 1;
+
+				$noticias_menores = new Noticias();
+				$noticias_menores->categoria = /*$categoria['nome'];*/"politica";
+				$noticias_menores->init = 4;
+				$noticias_menores->max = 2;
+
+				$maiores_destaque = new Noticias();
+				$maiores_destaque->categoria = /*$categoria['nome'];*/"politica";
+				$maiores_destaque->init = 0;
+				$maiores_destaque->max = 2;
+
+				$menores_destaque = new Noticias();
+				$menores_destaque->categoria = /*$categoria['nome'];*/"politica";
+				$menores_destaque->init = 0;
+				$menores_destaque->max = 4;
+				
+				$dados = array(
+					'categoria' => $categoria,
+					'slide' => $slide->get_by_categoria(),
+					'noticia_maior' => $noticia_maior->get_by_categoria(),
+					'noticias_menores' => $noticias_menores->get_by_categoria(),
+					'maiores_destaque' => $maiores_destaque->get_by_categoria(),
+					'menores_destaque' => $menores_destaque->get_by_categoria()
+				);
+
+				$this->loadView('categoria', $dados);
+
+			}
+		} else {
+
+			$dados = array();
+
+			$this->loadView("404", $dados);			
+
+		}
+		
 	}
 
 	public function resultados(){

@@ -2,12 +2,12 @@
 <html>
 <head>
 	<!-- Primary Meta Tags -->
-	<title>Politize e socialize - Tudo sobre Esportes</title>
-	<meta name="title" content="Politize e socialize - Tudo sobre Esportes">
-	<meta name="description" content="Saiba tudo sobre Esportes no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
+	<title>Politize e socialize - Tudo sobre <?php echo $categoria['nome']; ?></title>
+	<meta name="title" content="Politize e socialize - Tudo sobre <?php echo $categoria['nome']; ?>">
+	<meta name="description" content="<?php echo utf8_encode($categoria['descricao']); ?>">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="Esportes, Flamengo, Corinthians, Brasileirão, Champions League, FIFA">
+	<meta name="keywords" content="<?php echo utf8_encode($categoria['tags']); ?>">
 	<meta name="robots" content="index, follow">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="language" content="Portuguese">
@@ -17,16 +17,16 @@
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="<?php echo BASE_URL; ?>home/categoria/{{categoria}}">
-	<meta property="og:title" content="Politize e socialize - Tudo sobre Esportes">
-	<meta property="og:description" content="Saiba tudo sobre Esportes no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
+	<meta property="og:url" content="<?php echo BASE_URL; ?>home/categoria/<?php echo $categoria['nome']; ?>">
+	<meta property="og:title" content="Politize e socialize - Tudo sobre <?php echo $categoria['nome']; ?>">
+	<meta property="og:description" content="<?php echo utf8_encode($categoria['descricao']); ?>">
 	<meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="<?php echo BASE_URL; ?>home/categoria/{{categoria}}">
-	<meta property="twitter:title" content="Politize e socialize - Tudo sobre Esportes">
-	<meta property="twitter:description" content="Saiba tudo sobre Esportes no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
+	<meta property="twitter:url" content="<?php echo BASE_URL; ?>home/categoria/<?php echo $categoria['nome']; ?>">
+	<meta property="twitter:title" content="Politize e socialize - Tudo sobre <?php echo $categoria['nome']; ?>">
+	<meta property="twitter:description" content="<?php echo utf8_encode($categoria['descricao']); ?>">
 	<meta property="twitter:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
 
 	<!-- Css -->
@@ -276,8 +276,8 @@
 	</header>
 
 	<!-- Tarja fixa da seção -->
-	<section class="tarja-categoria tarja-categoria-esportes">
-		<p>ESPORTES</p>
+	<section class="tarja-categoria tarja-categoria-<?php echo $categoria['nome']; ?>">
+		<p><?php echo mb_strtoupper($categoria['nome']); ?></p>
 	</section>
 
 	<!-- Slideshow da categoria -->
@@ -294,35 +294,59 @@
 		</div>
 
 		<!-- Itens do Slide -->
+
+		<?php 
+			foreach($slide as $dados):
+
+			$arquivo_prop = json_decode($dados['arquivo_prop']);
+		?>
+
 		<div class="slideshow-categoria-item fade">
-			<img src="https://www.konami.com/kde_cms/eu_publish/uploads/pes2019_wt_a_saopaulo-1-1024x576.jpg">
+
+			<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+			<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+			<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+			<video>
+				<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+			</video>
+
+			<?php endif; ?>
+
 			<div class="slideshow-categoria-item-conteudo">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+				<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
+					<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+					<p>POR <?php echo mb_strtoupper($dados['nome']); ?> | <?php echo $dados['dia']; ?> DE 
+
+					<?php
+						switch ($dados['mes']) {
+					        case "01":    $mes = "JANEIRO";     break;
+					        case "02":    $mes = "FEVEREIRO";   break;
+					        case "03":    $mes = "MARÇO";       break;
+					        case "04":    $mes = "ABRIL";       break;
+					        case "05":    $mes = "MAIO";        break;
+					        case "06":    $mes = "JUNHO";       break;
+					        case "07":    $mes = "JULHO";       break;
+					        case "08":    $mes = "AGOSTO";      break;
+					        case "09":    $mes = "SETEMBRO";    break;
+					        case "10":    $mes = "OUTUBRO";     break;
+					        case "11":    $mes = "NOVEMBRO";    break;
+					        case "12":    $mes = "DEZEMBRO";    break; 
+					 }
+					 
+					 echo $mes;
+					?>
+
+
+				<br>DE <?php echo $dados['ano']; ?></p>
 				</a>
 			</div>
 		</div>
 
-		<div class="slideshow-categoria-item fade">
-			<img src="https://www.lance.com.br/files/article_main/uploads/2019/12/17/5df92a575b2f2.jpeg">
-			<div class="slideshow-categoria-item-conteudo">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</a>
-			</div>
-		</div>
+		<?php endforeach; ?>
 
-		<div class="slideshow-categoria-item fade">
-			<img src="https://noticiasdatv.uol.com.br/media/_versions/artigos/wellington-silva-fluminense-onde-assistir-brasileirao_fixed_large.jpg">
-			<div class="slideshow-categoria-item-conteudo">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</a>
-			</div>
-		</div>
 	</main>
 
 	<!-- Recentes -->
@@ -333,35 +357,113 @@
 		</div>
 
 		<div class="noticias-recentes">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+
+			<?php 
+				foreach($noticia_maior as $dados):
+
+				$arquivo_prop = json_decode($dados['arquivo_prop']);
+			?>
+
+			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-maior">
-					<img src="https://noticiasdatv.uol.com.br/media/_versions/artigos/maicon-diego-souza-gremio-onde-assistir-libertadores_fixed_large.jpg">
+
+					<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+					<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+					<video>
+						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+					</video>
+
+					<?php endif; ?>
+
 					<div class="noticia-maior-conteudo">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+						<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+						<p>POR <?php echo mb_strtoupper($dados['nome']); ?> | <?php echo $dados['dia']; ?> DE 
+
+						<?php
+							switch ($dados['mes']) {
+						        case "01":    $mes = "JANEIRO";     break;
+						        case "02":    $mes = "FEVEREIRO";   break;
+						        case "03":    $mes = "MARÇO";       break;
+						        case "04":    $mes = "ABRIL";       break;
+						        case "05":    $mes = "MAIO";        break;
+						        case "06":    $mes = "JUNHO";       break;
+						        case "07":    $mes = "JULHO";       break;
+						        case "08":    $mes = "AGOSTO";      break;
+						        case "09":    $mes = "SETEMBRO";    break;
+						        case "10":    $mes = "OUTUBRO";     break;
+						        case "11":    $mes = "NOVEMBRO";    break;
+						        case "12":    $mes = "DEZEMBRO";    break; 
+						 }
+						 
+						 echo $mes;
+						?>
+
+
+						<br>DE <?php echo $dados['ano']; ?></p>
 					</div>
 				</div>
 			</a>
+
+			<?php endforeach; ?>
+
 			<div class="noticias-menores">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+
+				<?php 
+					foreach($noticias_menores as $dados):
+
+					$arquivo_prop = json_decode($dados['arquivo_prop']);
+				?>
+
+				<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 					<div class="noticia-menor">
-						<img src="https://sportbuzz.uol.com.br/media/_versions/gettyimages-1229541646_widelg.jpg">
+						
+						<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+						<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+						<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+						<video>
+							<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+						</video>
+
+						<?php endif; ?>
+
 						<div class="noticia-menor-conteudo">
-							<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
+							<p>POR <?php echo mb_strtoupper($dados['nome']); ?> | <?php echo $dados['dia']; ?> DE 
+
+							<?php
+								switch ($dados['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo $mes;
+							?>
+
+
+							<br>DE <?php echo $dados['ano']; ?></p>
+							<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
 						</div>
 					</div>
 				</a>
 
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="noticia-menor">
-						<img src="https://assets.b9.com.br/wp-content/uploads/2019/07/tudo-ou-nada-seleio-amazon.jpg">
-						<div class="noticia-menor-conteudo">
-							<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						</div>
-					</div>
-				</a>
+				<?php endforeach; ?>
+
 			</div>
 		</div>
 	</section>
@@ -398,69 +500,116 @@
 	</section>
 
 	<!-- Recentes -->
-	<section class="politica destaques-esportes">
+	<section class="politica destaques-<?php echo $categoria['nome']; ?>">
 		<div class="noticias-maiores">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+
+			<?php 
+				foreach($maiores_destaque as $dados):
+
+				$arquivo_prop = json_decode($dados['arquivo_prop']);
+			?>
+
+			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-maior-politica">
-					<img src="https://s2.glbimg.com/UDPD9jKWz2831nnRnb7-7tmfrqs=/0x0:1280x853/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/L/z/RYs7wwTUmALWjqUDS41w/whatsapp-image-2019-09-19-at-00.43.15.jpeg">
+					<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+					<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+					<video>
+						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+					</video>
+
+					<?php endif; ?>
+
 					<div class="noticia-maior-conteudo">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+						<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+						<p>POR <?php echo mb_strtoupper($dados['nome']); ?> | <?php echo $dados['dia']; ?> DE 
+
+							<?php
+								switch ($dados['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo $mes;
+							?>
+
+
+							<br>DE <?php echo $dados['ano']; ?></p>
 					</div>
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-maior-politica">
-					<img src="https://colunadofla.com/wp-content/uploads/2020/07/rodrigo-caio.jpg">
-					<div class="noticia-maior-conteudo">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-					</div>
-				</div>
-			</a>
+			<?php endforeach; ?>
+
 		</div>
 
 		<div class="noticias-menores-politica">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+
+			<?php 
+				foreach($menores_destaque as $dados):
+
+				$arquivo_prop = json_decode($dados['arquivo_prop']);
+			?>
+
+			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-menor-politica">
-					<img src="https://www.lance.com.br/files/article_main/uploads/2020/08/29/5f4adc962b03c.jpeg">
+
+					<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+					<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+					<video>
+						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+					</video>
+
+					<?php endif; ?>
+
 					<div class="noticia-menor-conteudo-politica">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+						<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+						<p>POR <?php echo mb_strtoupper($dados['nome']); ?> | <?php echo $dados['dia']; ?> DE 
+
+							<?php
+								switch ($dados['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo $mes;
+							?>
+
+
+							<br>DE <?php echo $dados['ano']; ?></p>
 					</div>
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://s2.glbimg.com/mngGalithA5ohe3KzGBZp6Zwnlw=/0x0:2048x1152/540x304/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/O/U/FPY20dRwiOAt5VO1ZCBw/50688013266-2d0cdaa7c7-k.jpg">
-					<div class="noticia-menor-conteudo-politica">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-					</div>
-				</div>
-			</a>
+			<?php endforeach; ?>
 
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://conteudo.imguol.com.br/c/esporte/82/2020/12/05/rafael-sobis-comemora-gol-marcado-pelo-cruzeiro-sobre-o-brasil-de-pelotas-no-mineirao-1607217708438_v2_450x337.jpg">
-					<div class="noticia-menor-conteudo-politica">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-					</div>
-				</div>
-			</a>
-
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://www.coritiba.com.br/imgview/show/161345/50">
-					<div class="noticia-menor-conteudo-politica">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-					</div>
-				</div>
-			</a>
 		</div>
 	</section>
 
@@ -496,59 +645,10 @@
 
 			<!-- Colunistas -->
 			<div class="lado-colunistas-todos">
-				<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-					<div class="lado-colunistas-colunista">
-						<div class="foto-colunista">
-							<img src="https://thumbs.web.sapo.io/?W=800&H=0&delay_optim=1&epic=NTAxECcfHQfh+jNXETDk3ZQn+0c04rskJ9VJ9aLZtiRo3qjkpAyxT6c2CMAzY2SZspVN5ibUEyzn4ruSwovEHJbiGMbtmw8FONtOLodhNrD8pes=">
-						</div>
-						<div class="dados-colunista">
-							<p>Lorem Ipsum</p>
-							<div class="redes-sociais-colunista">
-								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
-								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
-								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
-							</div>
-						</div>
-					</div>
-				</a>
 
-				<div class="hr-colunista"></div>
+				<div id="resultado_colunistas">
 
-				<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-					<div class="lado-colunistas-colunista">
-						<div class="foto-colunista">
-							<img src="https://conteudo.imguol.com.br/c/esporte/ca/2020/12/01/rogerio-ceni-a-frente-do-flamengo-contra-o-racing-pela-libertadores-1606873342561_v2_450x337.jpg">
-						</div>
-						<div class="dados-colunista">
-							<p>Lorem Ipsum</p>
-							<div class="redes-sociais-colunista">
-								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
-								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
-								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
-							</div>
-						</div>
-					</div>
-				</a>
-
-				<div class="hr-colunista"></div>
-
-				<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-					<div class="lado-colunistas-colunista">
-						<div class="foto-colunista">
-							<img src="https://www.diariodepernambuco.com.br/static/app/noticia_127983242361/2019/11/21/811387/20191121133348315362u.jpg">
-						</div>
-						<div class="dados-colunista">
-							<p>Lorem Ipsum</p>
-							<div class="redes-sociais-colunista">
-								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
-								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
-								<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
-							</div>
-						</div>
-					</div>
-				</a>
-
-				<div class="hr-colunista"></div>
+				</div>
 
 				<button id="load-more">CARREGAR MAIS</button>
 			</div>
@@ -562,42 +662,11 @@
 			</div>
 
 			<!-- Postagens recentes -->
-			<div class="lado-postagens-todas destaques-esportes">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="noticia-menor-politica">
-						<img src="https://www.lance.com.br/files/article_main/uploads/2020/08/29/5f4adc962b03c.jpeg">
-						<div class="noticia-menor-conteudo-politica">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-						</div>
-					</div>
-				</a>
+			<div class="lado-postagens-todas destaques-<?php echo $categoria['nome']; ?>">
 
-				<div class="hr-postagens"></div>
+				<div id="resultado_postagens">
 
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="noticia-menor-politica">
-						<img src="https://pbs.twimg.com/media/EogWyRfWMAIU90g.jpg">
-						<div class="noticia-menor-conteudo-politica">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-						</div>
-					</div>
-				</a>
-
-				<div class="hr-postagens"></div>
-
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="noticia-menor-politica">
-						<img src="https://s2.glbimg.com/vkCxRLzR_FXKmqzxPTPHufEJ-cQ=/0x0:1500x844/540x304/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/Q/z/sNhrseSBS0XDPqOLPlPw/05-12-2020-csa-x-america-mg-ac-6103.jpg">
-						<div class="noticia-menor-conteudo-politica">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-						</div>
-					</div>
-				</a>
-
-				<div class="hr-postagens"></div>
+				</div>
 
 				<button id="load-more-posts">CARREGAR MAIS</button>
 			</div>
@@ -609,8 +678,8 @@
 	<section class="secao-newsletter">
 		<p>RECEBA AS NOVIDADES DE ESPORTES<br>NO SEU E-MAIL</p>
 
-		<form method="POST" id="form_newsletter">
-			<input type="text" name="email" id="email" placeholder="SEU MELHOR E-MAIL">
+		<form method="POST" id="form_newsletter_maior" autocomplete="off">
+			<input type="text" name="email" id="email_maior" placeholder="SEU MELHOR E-MAIL">
 			<button type="submit">ASSINAR    >></button>
 		</form>
 	</section>
@@ -646,69 +715,10 @@
 			</div>
 
 			<div class="caixa-videos">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://static.independent.co.uk/2020/12/04/07/w_56539538.jpg?width=640" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://thumbnails.texastribune.org/C-grfyuIcbith-IMQzQKF0ShUpw=/850x570/smart/filters:quality(75)/https://static.texastribune.org/media/files/20ddd1716338a3c77a767d8833a40208/Joe%20Biden%20MS%20TT.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://s2.glbimg.com/GZ9JHX1nNNAbFJGcpW2zqRD3uCA=/0x0:1135x757/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/Q/d/KwXr58SNiJMaYBvNcAiQ/felipeararuna.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
 
-				<button id="load-more-videos">CARREGAR MAIS</button>
 			</div>
+
+			<button id="load-more-videos">CARREGAR MAIS</button>
 		</div>
 		<!-- Widgets -->
 		<div class="asides">

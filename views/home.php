@@ -312,24 +312,24 @@
 					<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
 					<p>POR <?php echo mb_strtoupper($dados['nome']); ?> | <?php echo $dados['dia']; ?> DE 
 
-				<?php
-					switch ($dados['mes']) {
-				        case "01":    $mes = "JANEIRO";     break;
-				        case "02":    $mes = "FEVEREIRO";   break;
-				        case "03":    $mes = "MARÇO";       break;
-				        case "04":    $mes = "ABRIL";       break;
-				        case "05":    $mes = "MAIO";        break;
-				        case "06":    $mes = "JUNHO";       break;
-				        case "07":    $mes = "JULHO";       break;
-				        case "08":    $mes = "AGOSTO";      break;
-				        case "09":    $mes = "SETEMBRO";    break;
-				        case "10":    $mes = "OUTUBRO";     break;
-				        case "11":    $mes = "NOVEMBRO";    break;
-				        case "12":    $mes = "DEZEMBRO";    break; 
-				 }
-				 
-				 echo $mes;
-				?>
+					<?php
+						switch ($dados['mes']) {
+					        case "01":    $mes = "JANEIRO";     break;
+					        case "02":    $mes = "FEVEREIRO";   break;
+					        case "03":    $mes = "MARÇO";       break;
+					        case "04":    $mes = "ABRIL";       break;
+					        case "05":    $mes = "MAIO";        break;
+					        case "06":    $mes = "JUNHO";       break;
+					        case "07":    $mes = "JULHO";       break;
+					        case "08":    $mes = "AGOSTO";      break;
+					        case "09":    $mes = "SETEMBRO";    break;
+					        case "10":    $mes = "OUTUBRO";     break;
+					        case "11":    $mes = "NOVEMBRO";    break;
+					        case "12":    $mes = "DEZEMBRO";    break; 
+					 }
+					 
+					 echo $mes;
+					?>
 
 
 				<br>DE <?php echo $dados['ano']; ?></p>

@@ -162,4 +162,60 @@ $(document).ready(function(){
 
   });
 
+  /*
+  * Carregar mais colunistas
+  */
+  var inicio = 0;
+
+  document.onload = load_more();
+
+  $("#load-more").on("click", function(){
+
+    load_more();
+
+  });
+
+  function load_more(){
+
+    inicio++;
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_colunistas',
+      data:{inicio:inicio},
+      success:function(result){
+        $("#resultado_colunistas").append(result);
+      }
+    });
+
+  }
+
+  /*
+  * Carregar mais postagens
+  */
+  var postagens = 0;
+
+  document.onload = load_more_posts();
+
+  $("#load-more-posts").on("click", function(){
+
+    load_more_posts();
+
+  });
+
+  function load_more_posts(){
+
+    postagens++;
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_postagens',
+      data:{postagens:postagens},
+      success:function(result){
+        $("#resultado_postagens").append(result);
+      }
+    });
+
+  }
+
 });

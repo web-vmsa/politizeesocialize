@@ -1998,6 +1998,12 @@ body {
     min-width: 100%;
     filter: brightness(91%);
 }
+.slideshow-categoria-item video {
+    height: auto;
+    min-width: 100%;
+    filter: brightness(91%);
+    background-color: black;
+}
 .slideshow-categoria-item-conteudo {
 	width: 570px;
 	display: flex;
@@ -2087,6 +2093,10 @@ body {
 	margin-left: 40px;
 }
 .lado-postagens-todas .noticia-menor-politica img {
+	height: 150px;
+	width: 150px;
+}
+.lado-postagens-todas .noticia-menor-politica video {
 	height: 150px;
 	width: 150px;
 }
@@ -3407,6 +3417,9 @@ body {
   .slideshow-categoria-item img {
   	height: 580px;
   }
+  .slideshow-categoria-item video {
+  	height: 580px;
+  }
   .slideshow-categoria-controls img {
   	margin-bottom: 85px;
   }
@@ -4601,6 +4614,9 @@ body {
   .slideshow-categoria-item img {
   	height: 300px;
   }
+  .slideshow-categoria-item video {
+  	height: 300px;
+  }
   .slideshow-categoria-item-conteudo {
   	width: 342px;
   	margin-left: 40px;
@@ -5453,6 +5469,9 @@ body {
   	height: 300px;
   }
   .slideshow-categoria-item img {
+  	height: 300px;
+  }
+  .slideshow-categoria-item video {
   	height: 300px;
   }
   .slideshow-categoria-item-conteudo {
@@ -6315,6 +6334,9 @@ body {
   .slideshow-categoria-item img {
   	height: 300px;
   }
+  .slideshow-categoria-item video {
+  	height: 300px;
+  }
   .slideshow-categoria-item-conteudo {
   	width: 324px;
   	margin-left: 27px;
@@ -6363,6 +6385,10 @@ body {
   	width: 290px;
   }
   .lado-postagens-todas .noticia-menor-politica img {
+  	width: 100px;
+  	height: 100px;
+  }
+  .lado-postagens-todas .noticia-menor-politica video {
   	width: 100px;
   	height: 100px;
   }
@@ -7179,6 +7205,9 @@ body {
   .slideshow-categoria-item img {
   	height: 300px;
   }
+  .slideshow-categoria-item video {
+  	height: 300px;
+  }
   .slideshow-categoria-item-conteudo {
   	width: 324px;
   	margin-left: 27px;
@@ -7227,6 +7256,10 @@ body {
   	width: 296px;
   }
   .lado-postagens-todas .noticia-menor-politica img {
+  	width: 100px;
+  	height: 100px;
+  }
+  .lado-postagens-todas .noticia-menor-politica video {
   	width: 100px;
   	height: 100px;
   }
@@ -8047,6 +8080,9 @@ body {
   .slideshow-categoria-item img {
   	height: 300px;
   }
+  .slideshow-categoria-item video {
+  	height: 300px;
+  }
   .slideshow-categoria-item-conteudo {
   	width: 301px;
   	margin-left: 10px;
@@ -8101,6 +8137,10 @@ body {
   	width: 278px;
   }
   .lado-postagens-todas .noticia-menor-politica img {
+  	width: 80px;
+  	height: 80px;
+  }
+  .lado-postagens-todas .noticia-menor-politica video {
   	width: 80px;
   	height: 80px;
   }
