@@ -636,7 +636,7 @@
 	<section class="secao-newsletter">
 		<p>RECEBA AS NOVIDADES DOS COLUNISTAS<br>NO SEU E-MAIL</p>
 
-		<form method="POST" id="form_newsletter_maior">
+		<form method="POST" id="form_newsletter_maior" autocomplete="off">
 			<input type="text" name="email" id="email_maior" placeholder="SEU MELHOR E-MAIL">
 			<button type="submit">ASSINAR    >></button>
 		</form>

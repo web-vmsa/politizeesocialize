@@ -499,7 +499,7 @@
 	<section class="secao-newsletter">
 		<p>ASSINE A NEWSLETTER E RECEBA AS OPINIÕES<br>NO SEU E-MAIL</p>
 
-		<form method="POST" id="form_newsletter_maior">
+		<form method="POST" id="form_newsletter_maior" autocomplete="off">
 			<input type="text" name="email" id="email_maior" placeholder="SEU MELHOR E-MAIL">
 			<button type="submit">ASSINAR    >></button>
 		</form>
@@ -566,7 +566,7 @@
 				</div>
 
 				<div class="corpo-widget-newsletter">
-					<form method="POST" id="form_newsletter">
+					<form method="POST" id="form_newsletter" autocomplete="off">
 						<input type="text" name="email" id="email" placeholder="E-mail">
 						<button type="submit">ASSINAR</button>
 					</form>
@@ -616,7 +616,7 @@
 		<div class="item-rodape">
 			<h3>NEWSLETTER</h3>
 			<p>NÃO PERCA NADA DE NOVO DO PORTAL, ASSINE A NEWSLETTER</p>
-			<form method="POST" id="form_newsletter_rodape">
+			<form method="POST" id="form_newsletter_rodape" autocomplete="off">
 				<input type="text" name="email" id="email_rodape" placeholder="E-mail">
 				<button type="submit">
 					<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">

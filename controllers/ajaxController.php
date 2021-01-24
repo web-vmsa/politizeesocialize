@@ -267,5 +267,485 @@ class ajaxController extends controller {
 		$this->loadView('ajax', $dados);
 
 	}
+
+	public function load_politica(){
+
+
+		$dados = array();
+
+		if (!empty($_POST['politica'])) {
+			
+			$page = $_POST['politica'];
+
+			$max = 3;
+			$init = ($page * $max) - $max;
+
+			$videos = new Videos();
+			$videos->init = $init;
+			$videos->max = $max;
+			$data_video = $videos->get_all_videos();
+
+			foreach ($data_video as $item) {
+				
+				echo '<a href="'.BASE_URL.'home/noticia/'.$item['url'].'">';
+					echo '<div class="video">';
+						echo '<div class="topo-video">';
+							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
+							echo '<p>'.$item['dia'].' DE'; 
+							switch ($item['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo substr($mes, 0,-2);
+							echo ' | '.$item['ano'].'</p>';
+						echo '</div>';
+						echo '<video id="my-video" class="video-js vjs-theme-city" preload="auto" data-setup="{}">
+							 <source src="'.ADMIN_URL.'users/videos/'.$item['arquivo'].'" type="video/mp4" />
+						</video>';
+						echo '<div class="conteudo-video">';
+							echo '<h2>'.mb_strtoupper($item['titulo']).'</h2>';
+							echo '<p>'.mb_strtoupper($item['descricao']).'</p>';
+						echo '</div>';
+					echo '</div>';
+				echo '</a>';
+
+			}
+
+		}
+
+		$this->loadView('ajax', $dados);
+
+	}
+
+	public function load_televisao(){
+
+
+		$dados = array();
+
+		if (!empty($_POST['televisao'])) {
+			
+			$page = $_POST['televisao'];
+
+			$max = 3;
+			$init = ($page * $max) - $max;
+
+			$videos = new Videos();
+			$videos->init = $init;
+			$videos->max = $max;
+			$data_video = $videos->get_all_videos();
+
+			foreach ($data_video as $item) {
+				
+				echo '<a href="'.BASE_URL.'home/noticia/'.$item['url'].'">';
+					echo '<div class="video">';
+						echo '<div class="topo-video">';
+							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
+							echo '<p>'.$item['dia'].' DE'; 
+							switch ($item['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo substr($mes, 0,-2);
+							echo ' | '.$item['ano'].'</p>';
+						echo '</div>';
+						echo '<video id="my-video" class="video-js vjs-theme-city" preload="auto" data-setup="{}">
+							 <source src="'.ADMIN_URL.'users/videos/'.$item['arquivo'].'" type="video/mp4" />
+						</video>';
+						echo '<div class="conteudo-video">';
+							echo '<h2>'.mb_strtoupper($item['titulo']).'</h2>';
+							echo '<p>'.mb_strtoupper($item['descricao']).'</p>';
+						echo '</div>';
+					echo '</div>';
+				echo '</a>';
+
+			}
+
+		}
+
+		$this->loadView('ajax', $dados);
+
+	}
+
+	public function load_esportes(){
+
+
+		$dados = array();
+
+		if (!empty($_POST['esportes'])) {
+			
+			$page = $_POST['esportes'];
+
+			$max = 3;
+			$init = ($page * $max) - $max;
+
+			$videos = new Videos();
+			$videos->init = $init;
+			$videos->max = $max;
+			$data_video = $videos->get_all_videos();
+
+			foreach ($data_video as $item) {
+				
+				echo '<a href="'.BASE_URL.'home/noticia/'.$item['url'].'">';
+					echo '<div class="video">';
+						echo '<div class="topo-video">';
+							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
+							echo '<p>'.$item['dia'].' DE'; 
+							switch ($item['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo substr($mes, 0,-2);
+							echo ' | '.$item['ano'].'</p>';
+						echo '</div>';
+						echo '<video id="my-video" class="video-js vjs-theme-city" preload="auto" data-setup="{}">
+							 <source src="'.ADMIN_URL.'users/videos/'.$item['arquivo'].'" type="video/mp4" />
+						</video>';
+						echo '<div class="conteudo-video">';
+							echo '<h2>'.mb_strtoupper($item['titulo']).'</h2>';
+							echo '<p>'.mb_strtoupper($item['descricao']).'</p>';
+						echo '</div>';
+					echo '</div>';
+				echo '</a>';
+
+			}
+
+		}
+
+		$this->loadView('ajax', $dados);
+
+	}
+
+	public function load_economia(){
+
+
+		$dados = array();
+
+		if (!empty($_POST['economia'])) {
+			
+			$page = $_POST['economia'];
+
+			$max = 3;
+			$init = ($page * $max) - $max;
+
+			$videos = new Videos();
+			$videos->init = $init;
+			$videos->max = $max;
+			$data_video = $videos->get_all_videos();
+
+			foreach ($data_video as $item) {
+				
+				echo '<a href="'.BASE_URL.'home/noticia/'.$item['url'].'">';
+					echo '<div class="video">';
+						echo '<div class="topo-video">';
+							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
+							echo '<p>'.$item['dia'].' DE'; 
+							switch ($item['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo substr($mes, 0,-2);
+							echo ' | '.$item['ano'].'</p>';
+						echo '</div>';
+						echo '<video id="my-video" class="video-js vjs-theme-city" preload="auto" data-setup="{}">
+							 <source src="'.ADMIN_URL.'users/videos/'.$item['arquivo'].'" type="video/mp4" />
+						</video>';
+						echo '<div class="conteudo-video">';
+							echo '<h2>'.mb_strtoupper($item['titulo']).'</h2>';
+							echo '<p>'.mb_strtoupper($item['descricao']).'</p>';
+						echo '</div>';
+					echo '</div>';
+				echo '</a>';
+
+			}
+
+		}
+
+		$this->loadView('ajax', $dados);
+
+	}
+
+	public function load_saude(){
+
+
+		$dados = array();
+
+		if (!empty($_POST['saude'])) {
+			
+			$page = $_POST['saude'];
+
+			$max = 3;
+			$init = ($page * $max) - $max;
+
+			$videos = new Videos();
+			$videos->init = $init;
+			$videos->max = $max;
+			$data_video = $videos->get_all_videos();
+
+			foreach ($data_video as $item) {
+				
+				echo '<a href="'.BASE_URL.'home/noticia/'.$item['url'].'">';
+					echo '<div class="video">';
+						echo '<div class="topo-video">';
+							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
+							echo '<p>'.$item['dia'].' DE'; 
+							switch ($item['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo substr($mes, 0,-2);
+							echo ' | '.$item['ano'].'</p>';
+						echo '</div>';
+						echo '<video id="my-video" class="video-js vjs-theme-city" preload="auto" data-setup="{}">
+							 <source src="'.ADMIN_URL.'users/videos/'.$item['arquivo'].'" type="video/mp4" />
+						</video>';
+						echo '<div class="conteudo-video">';
+							echo '<h2>'.mb_strtoupper($item['titulo']).'</h2>';
+							echo '<p>'.mb_strtoupper($item['descricao']).'</p>';
+						echo '</div>';
+					echo '</div>';
+				echo '</a>';
+
+			}
+
+		}
+
+		$this->loadView('ajax', $dados);
+
+	}
+
+	public function load_educacao(){
+
+
+		$dados = array();
+
+		if (!empty($_POST['educacao'])) {
+			
+			$page = $_POST['educacao'];
+
+			$max = 3;
+			$init = ($page * $max) - $max;
+
+			$videos = new Videos();
+			$videos->init = $init;
+			$videos->max = $max;
+			$data_video = $videos->get_all_videos();
+
+			foreach ($data_video as $item) {
+				
+				echo '<a href="'.BASE_URL.'home/noticia/'.$item['url'].'">';
+					echo '<div class="video">';
+						echo '<div class="topo-video">';
+							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
+							echo '<p>'.$item['dia'].' DE'; 
+							switch ($item['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo substr($mes, 0,-2);
+							echo ' | '.$item['ano'].'</p>';
+						echo '</div>';
+						echo '<video id="my-video" class="video-js vjs-theme-city" preload="auto" data-setup="{}">
+							 <source src="'.ADMIN_URL.'users/videos/'.$item['arquivo'].'" type="video/mp4" />
+						</video>';
+						echo '<div class="conteudo-video">';
+							echo '<h2>'.mb_strtoupper($item['titulo']).'</h2>';
+							echo '<p>'.mb_strtoupper($item['descricao']).'</p>';
+						echo '</div>';
+					echo '</div>';
+				echo '</a>';
+
+			}
+
+		}
+
+		$this->loadView('ajax', $dados);
+
+	}
+
+	public function load_musica(){
+
+
+		$dados = array();
+
+		if (!empty($_POST['musica'])) {
+			
+			$page = $_POST['musica'];
+
+			$max = 3;
+			$init = ($page * $max) - $max;
+
+			$videos = new Videos();
+			$videos->init = $init;
+			$videos->max = $max;
+			$data_video = $videos->get_all_videos();
+
+			foreach ($data_video as $item) {
+				
+				echo '<a href="'.BASE_URL.'home/noticia/'.$item['url'].'">';
+					echo '<div class="video">';
+						echo '<div class="topo-video">';
+							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
+							echo '<p>'.$item['dia'].' DE'; 
+							switch ($item['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo substr($mes, 0,-2);
+							echo ' | '.$item['ano'].'</p>';
+						echo '</div>';
+						echo '<video id="my-video" class="video-js vjs-theme-city" preload="auto" data-setup="{}">
+							 <source src="'.ADMIN_URL.'users/videos/'.$item['arquivo'].'" type="video/mp4" />
+						</video>';
+						echo '<div class="conteudo-video">';
+							echo '<h2>'.mb_strtoupper($item['titulo']).'</h2>';
+							echo '<p>'.mb_strtoupper($item['descricao']).'</p>';
+						echo '</div>';
+					echo '</div>';
+				echo '</a>';
+
+			}
+
+		}
+
+		$this->loadView('ajax', $dados);
+
+	}
+
+	public function load_games(){
+
+
+		$dados = array();
+
+		if (!empty($_POST['games'])) {
+			
+			$page = $_POST['games'];
+
+			$max = 3;
+			$init = ($page * $max) - $max;
+
+			$videos = new Videos();
+			$videos->init = $init;
+			$videos->max = $max;
+			$data_video = $videos->get_all_videos();
+
+			foreach ($data_video as $item) {
+				
+				echo '<a href="'.BASE_URL.'home/noticia/'.$item['url'].'">';
+					echo '<div class="video">';
+						echo '<div class="topo-video">';
+							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
+							echo '<p>'.$item['dia'].' DE'; 
+							switch ($item['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo substr($mes, 0,-2);
+							echo ' | '.$item['ano'].'</p>';
+						echo '</div>';
+						echo '<video id="my-video" class="video-js vjs-theme-city" preload="auto" data-setup="{}">
+							 <source src="'.ADMIN_URL.'users/videos/'.$item['arquivo'].'" type="video/mp4" />
+						</video>';
+						echo '<div class="conteudo-video">';
+							echo '<h2>'.mb_strtoupper($item['titulo']).'</h2>';
+							echo '<p>'.mb_strtoupper($item['descricao']).'</p>';
+						echo '</div>';
+					echo '</div>';
+				echo '</a>';
+
+			}
+
+		}
+
+		$this->loadView('ajax', $dados);
+
+	}
 	
 }

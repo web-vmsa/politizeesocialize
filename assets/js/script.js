@@ -246,4 +246,228 @@ $(document).ready(function(){
 
   }
 
+  /*
+  * Carregar mais videos sobre política
+  */
+  var politica = 0;
+
+  document.onload = load_politica();
+
+  $(".politica-load-more").on("click", function(){
+
+    load_politica();
+
+  });
+
+  function load_politica(){
+
+    politica++;
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_politica',
+      data:{politica:politica},
+      success:function(result){
+        $(".recentes-politica").append(result);
+      }
+    });
+
+  }
+
+  /*
+  * Carregar mais videos sobre televisão
+  */
+  var televisao = 0;
+
+  document.onload = load_televisao();
+
+  $(".televisao-load-more").on("click", function(){
+
+    load_televisao();
+
+  });
+
+  function load_televisao(){
+
+    televisao++;
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_televisao',
+      data:{televisao:televisao},
+      success:function(result){
+        $(".caixa-dos-videos-televisao").append(result);
+      }
+    });
+
+  }
+
+  /*
+  * Carregar mais videos sobre esportes
+  */
+  var esportes = 0;
+
+  document.onload = load_esportes();
+
+  $(".esportes-load-more").on("click", function(){
+
+    load_esportes();
+
+  });
+
+  function load_esportes(){
+
+    esportes++;
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_esportes',
+      data:{esportes:esportes},
+      success:function(result){
+        $(".caixa-dos-videos-esportes").append(result);
+      }
+    });
+
+  }
+
+  /*
+  * Carregar mais videos sobre economia
+  */
+  var economia = 0;
+
+  document.onload = load_economia();
+
+  $(".economia-load-more").on("click", function(){
+
+    load_economia();
+
+  });
+
+  function load_economia(){
+
+    economia++;
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_economia',
+      data:{economia:economia},
+      success:function(result){
+        $(".caixa-dos-videos-economia").append(result);
+      }
+    });
+
+  }
+
+  /*
+  * Carregar mais videos sobre saúde
+  */
+  var saude = 0;
+
+  document.onload = load_saude();
+
+  $(".saude-load-more").on("click", function(){
+
+    load_saude();
+
+  });
+
+  function load_saude(){
+
+    saude++;
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_saude',
+      data:{saude:saude},
+      success:function(result){
+        $(".caixa-dos-videos-saude").append(result);
+      }
+    });
+
+  }
+
+  /*
+  * Carregar mais videos sobre educação
+  */
+  var educacao = 0;
+
+  document.onload = load_educacao();
+
+  $(".educacao-load-more").on("click", function(){
+
+    load_educacao();
+
+  });
+
+  function load_educacao(){
+
+    educacao++;
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_educacao',
+      data:{educacao:educacao},
+      success:function(result){
+        $(".caixa-dos-videos-educacao").append(result);
+      }
+    });
+
+  }
+
+  /*
+  * Carregar mais videos sobre música
+  */
+  var musica = 0;
+
+  document.onload = load_musica();
+
+  $(".musica-load-more").on("click", function(){
+
+    load_musica();
+
+  });
+
+  function load_musica(){
+
+    musica++;
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_musica',
+      data:{musica:musica},
+      success:function(result){
+        $(".caixa-dos-videos-musica").append(result);
+      }
+    });
+
+  }
+
+  /*
+  * Carregar mais videos sobre games
+  */
+  var games = 0;
+
+  document.onload = load_games();
+
+  $(".games-load-more").on("click", function(){
+
+    load_games();
+
+  });
+
+  function load_games(){
+
+    games++;
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_games',
+      data:{games:games},
+      success:function(result){
+        $(".caixa-dos-videos-games").append(result);
+      }
+    });
+
+  }
+
 });

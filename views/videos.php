@@ -269,52 +269,8 @@
 			</a>
 		</div>
 
-		<div class="caixa-dos-videos caixa-dos-videos-politica">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://www.gazetaesportiva.com/wp-content/uploads/imagem/2019/05/02/arte-confrontos-copa-do-brasil-2019-V3-1024x640.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://s.glbimg.com/es/ge/f/original/2020/01/10/copadobrasil.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
+		<div class="caixa-dos-videos caixa-dos-videos-politica recentes-politica">
+		
 		</div>
 	</section>
 
@@ -336,51 +292,7 @@
 		</div>
 
 		<div class="caixa-dos-videos caixa-dos-videos-televisao">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://www.gazetaesportiva.com/wp-content/uploads/imagem/2019/05/02/arte-confrontos-copa-do-brasil-2019-V3-1024x640.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://s.glbimg.com/es/ge/f/original/2020/01/10/copadobrasil.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
+			
 		</div>
 	</section>
 
@@ -402,51 +314,7 @@
 		</div>
 
 		<div class="caixa-dos-videos caixa-dos-videos-esportes">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://www.gazetaesportiva.com/wp-content/uploads/imagem/2019/05/02/arte-confrontos-copa-do-brasil-2019-V3-1024x640.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://s.glbimg.com/es/ge/f/original/2020/01/10/copadobrasil.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
+			
 		</div>
 	</section>
 
@@ -468,51 +336,7 @@
 		</div>
 
 		<div class="caixa-dos-videos caixa-dos-videos-economia">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://www.gazetaesportiva.com/wp-content/uploads/imagem/2019/05/02/arte-confrontos-copa-do-brasil-2019-V3-1024x640.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://s.glbimg.com/es/ge/f/original/2020/01/10/copadobrasil.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
+			
 		</div>
 	</section>
 
@@ -534,51 +358,7 @@
 		</div>
 
 		<div class="caixa-dos-videos caixa-dos-videos-saude">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://www.gazetaesportiva.com/wp-content/uploads/imagem/2019/05/02/arte-confrontos-copa-do-brasil-2019-V3-1024x640.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://s.glbimg.com/es/ge/f/original/2020/01/10/copadobrasil.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
+
 		</div>
 	</section>
 
@@ -600,51 +380,7 @@
 		</div>
 
 		<div class="caixa-dos-videos caixa-dos-videos-educacao">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://www.gazetaesportiva.com/wp-content/uploads/imagem/2019/05/02/arte-confrontos-copa-do-brasil-2019-V3-1024x640.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://s.glbimg.com/es/ge/f/original/2020/01/10/copadobrasil.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
+			
 		</div>
 	</section>
 
@@ -666,51 +402,7 @@
 		</div>
 
 		<div class="caixa-dos-videos caixa-dos-videos-musica">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://www.gazetaesportiva.com/wp-content/uploads/imagem/2019/05/02/arte-confrontos-copa-do-brasil-2019-V3-1024x640.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://s.glbimg.com/es/ge/f/original/2020/01/10/copadobrasil.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
+			
 		</div>
 	</section>
 
@@ -732,51 +424,7 @@
 		</div>
 
 		<div class="caixa-dos-videos caixa-dos-videos-games">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://www.gazetaesportiva.com/wp-content/uploads/imagem/2019/05/02/arte-confrontos-copa-do-brasil-2019-V3-1024x640.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://s.glbimg.com/es/ge/f/original/2020/01/10/copadobrasil.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
+			
 		</div>
 	</section>
 
