@@ -19,6 +19,19 @@ $(document).ready(function(){
   });
 
   /*
+  *   Carregar mais jogos
+  */
+  $(".esconde").hide();
+
+  $("#load-more-jogos").on("click", function(){
+
+    $(".esconde").show();
+
+    $(".carregar-mais-jogos").hide();
+
+  });
+
+  /*
   *   Fechar o menu
   */
   $(".fechar-menu").click(function(){

@@ -24,6 +24,9 @@ class Jogos extends model {
 	public $data;
 	public $init;
 	public $max;
+	public $day;
+	public $month;
+	public $year;
 
 	/*
 	* Função de Pegar todos os jogos
@@ -67,6 +70,32 @@ class Jogos extends model {
 		$sql->execute();
 		if ($sql->rowCount() > 0) {
 			return $sql->fetch();
+		} else {
+			return false;
+		}
+
+	}
+
+	/*
+	* Função de Pegar Jogos do dia
+	* 
+	* Esta função vai selecionar os jogos pela sua data
+	*
+	* @param $day int é o dia 
+	* @param $month int é o mês
+	* @param $year int é o ano
+	* @return true or false
+	*/
+	public function get_by_date(){
+
+		$sql = "SELECT id, jogo_prop, status_jogo, placar, status_jogo, url, data, DAY(data) as dia, MONTH(data) as mes, YEAR(data) as ano FROM jogos WHERE DAY(data) = :day AND MONTH(data) = :month AND YEAR(data) = :year ORDER BY id DESC";
+		$sql = $this->db->prepare($sql);
+		$sql->bindValue(':day', $this->day);
+		$sql->bindValue(':month', $this->month);
+		$sql->bindValue(':year', $this->year);
+		$sql->execute();
+		if ($sql->rowCount() > 0) {
+			return $sql->fetchAll();
 		} else {
 			return false;
 		}

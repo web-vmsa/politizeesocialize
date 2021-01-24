@@ -282,172 +282,196 @@
 
 	<!-- Data -->
 	<section class="data-jogos hoje">
-		<p class="cursor-default">JOGOS DE HOJE / 12/8/2020</p>
+		<p class="cursor-default">JOGOS DE HOJE / <?php echo date("Y/m/d"); ?></p>
 	</section>
 
 	<!-- Jogos -->
 	<main class="jogos-placares">
-		<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}">
+
+		<?php 
+			foreach($jogos_hoje as $dados): 
+
+			$propriedades_jogo = json_decode($dados['jogo_prop']);
+
+			$placar = $dados['placar'];
+
+			$resultado = explode("-", $placar);
+
+			$valor_maior = max($resultado);
+
+			$placar_time_casa = $resultado[0];
+
+			$placar_time_fora = $resultado[1];
+		?>
+
+		<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>">
 			<div class="jogo-placar jogo-sem-borda">
 				<div class="status-jogo">
-					<p>Ao vivo</p>
+					<p><?php echo $dados['status_jogo']; ?></p>
 				</div>
 				<div class="campeonato-jogo">
-					<p>Libertadores - Oitavas de Final / Ida</p>
+					<p><?php echo $propriedades_jogo->campeonato; ?> - <?php echo $propriedades_jogo->fase; ?></p>
 				</div>
 				<div class="placar">
-					<img src="https://a2.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F819.png">
-					<p>Flamengo</p>
-					<h2>2<span>-0</span></h2>
-					<p>Racing SC</p>
-					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Escudo_de_Racing_Club_%282014%29.svg/1200px-Escudo_de_Racing_Club_%282014%29.svg.png">
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_casa; ?>">
+					<p><?php echo $propriedades_jogo->time_casa; ?></p>
+					<?php if($placar_time_casa == $valor_maior && $placar_time_fora == $valor_maior): ?>
+
+						<h2><span><?php echo $placar_time_casa; ?>-<?php echo $placar_time_fora; ?></span></h2>
+
+					<?php else: ?>
+
+						<?php if($placar_time_casa == $valor_maior): ?>
+
+						<h2><?php echo $placar_time_casa; ?><span>-<?php echo $placar_time_fora; ?></span></h2>
+
+						<?php else: ?>
+
+						<h2><span><?php echo $placar_time_casa; ?>-</span><?php echo $placar_time_fora; ?></h2>
+
+						<?php endif; ?>
+
+					<?php endif; ?>
+					<p><?php echo $propriedades_jogo->time_fora; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_fora; ?>">
 				</div>
 				<div class="data-oficial">
-					<p>12/08/2020 12h30</p>
+					<p><?php echo substr(str_replace(":", "h", $dados['data']), 0,-3);?></p>
 				</div>
 			</div>
 		</a>
 
 		<div class="linha-abaixo-jogo"></div>
 
-		<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}">
-			<div class="jogo-placar jogo-sem-borda">
-				<div class="status-jogo">
-					<p>Fim de jogo</p>
-				</div>
-				<div class="campeonato-jogo">
-					<p>Libertadores - Oitavas de Final / Ida</p>
-				</div>
-				<div class="placar">
-					<img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/LDUQuitologo2.png">
-					<p>LDU Quito</p>
-					<h2><span>0-0</span></h2>
-					<p>Santos FC</p>
-					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Santos_logo.svg/1200px-Santos_logo.svg.png">
-				</div>
-				<div class="data-oficial">
-					<p>12/08/2020 12h30</p>
-				</div>
-			</div>
-		</a>
+		<?php endforeach; ?>
 
-		<div class="linha-abaixo-jogo"></div>
 	</main>
 
 	<!-- Data -->
 	<section class="data-jogos outro">
-		<p class="cursor-default">JOGOS DE AMANHÃ / 13/8/2020</p>
+		<?php $datetime = new DateTime('tomorrow'); ?>
+
+		<p class="cursor-default">JOGOS DE AMANHÃ / <?php echo $datetime->format('Y/m/d'); ?></p>
 	</section>
 
 	<!-- Jogos -->
 	<section class="jogos-placares">
-		<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}">
+
+		<?php 
+			foreach($jogos_amanha as $dados): 
+
+			$propriedades_jogo = json_decode($dados['jogo_prop']);
+		?>
+
+		<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>">
 			<div class="jogo-placar jogo-sem-borda">
 				<div class="campeonato-jogo">
-					<p>Libertadores - Oitavas de Final / Ida</p>
+					<p><?php echo $propriedades_jogo->campeonato; ?> - <?php echo $propriedades_jogo->fase; ?></p>
 				</div>
 				<div class="placar">
-					<img src="https://upload.wikimedia.org/wikipedia/pt/b/be/Delf%C3%ADn_Sporting_Club.png">
-					<p>Delfín S.C</p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_casa; ?>">
+					<p><?php echo $propriedades_jogo->time_casa; ?></p>
 					<h2><span>0-0</span></h2>
-					<p>Palmeiras</p>
-					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/1200px-Palmeiras_logo.svg.png">
+					<p><?php echo $propriedades_jogo->time_fora; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_fora; ?>">
 				</div>
 				<div class="data-oficial">
-					<p>13/08/2020 12h30</p>
+					<p><?php echo substr(str_replace(":", "h", $dados['data']), 0,-3);?></p>
 				</div>
 			</div>
 		</a>
 
 		<div class="linha-abaixo-jogo"></div>
+
+		<?php endforeach; ?>
+
 	</section>
 
 	<!-- Data -->
 	<section class="data-jogos outro">
-		<p class="cursor-default">JOGOS DO DIA / 14/8/2020</p>
+		<?php
+			$hoje = date("Y/m/d");
+			$datetime = new DateTime($hoje);
+			$datetime->modify('+2 day');
+		?>
+
+		<p class="cursor-default">JOGOS DO DIA / <?php echo $datetime->format('Y/m/d'); ?></p>
 	</section>
 
 	<!-- Jogos -->
 	<section class="jogos-placares">
-		<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}">
+		
+		<?php 
+			foreach($jogos_outro as $dados): 
+
+			$propriedades_jogo = json_decode($dados['jogo_prop']);
+		?>
+
+		<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>">
 			<div class="jogo-placar jogo-sem-borda">
 				<div class="campeonato-jogo">
-					<p>Libertadores - Oitavas de Final / Ida</p>
+					<p><?php echo $propriedades_jogo->campeonato; ?> - <?php echo $propriedades_jogo->fase; ?></p>
 				</div>
 				<div class="placar">
-					<img src="https://a2.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F819.png">
-					<p>Flamengo</p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_casa; ?>">
+					<p><?php echo $propriedades_jogo->time_casa; ?></p>
 					<h2><span>0-0</span></h2>
-					<p>Santos FC</p>
-					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Santos_logo.svg/1200px-Santos_logo.svg.png">
+					<p><?php echo $propriedades_jogo->time_fora; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_fora; ?>">
 				</div>
 				<div class="data-oficial">
-					<p>14/08/2020 12h30</p>
+					<p><?php echo substr(str_replace(":", "h", $dados['data']), 0,-3);?></p>
 				</div>
 			</div>
 		</a>
 
 		<div class="linha-abaixo-jogo"></div>
 
-		<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}">
+		<?php endforeach; ?>
+
+	</section>
+
+	<!-- Data -->
+	<section class="data-jogos outro esconde">
+		<?php
+			$hoje = date("Y/m/d");
+			$datetime = new DateTime($hoje);
+			$datetime->modify('+3 day');
+		?>
+
+		<p class="cursor-default">JOGOS DO DIA / <?php echo $datetime->format('Y/m/d'); ?></p>
+	</section>
+
+	<!-- Jogos -->
+	<section class="jogos-placares esconde">
+		
+		<?php 
+			foreach($jogos_mais as $dados): 
+
+			$propriedades_jogo = json_decode($dados['jogo_prop']);
+		?>
+
+		<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>">
 			<div class="jogo-placar jogo-sem-borda">
 				<div class="campeonato-jogo">
-					<p>Libertadores - Oitavas de Final / Ida</p>
+					<p><?php echo $propriedades_jogo->campeonato; ?> - <?php echo $propriedades_jogo->fase; ?></p>
 				</div>
 				<div class="placar">
-					<img src="https://upload.wikimedia.org/wikipedia/commons/4/41/River_Plate_logo.png">
-					<p>River Plate</p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_casa; ?>">
+					<p><?php echo $propriedades_jogo->time_casa; ?></p>
 					<h2><span>0-0</span></h2>
-					<p>Boca Juniors</p>
-					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/1200px-Boca_Juniors_logo18.svg.png">
+					<p><?php echo $propriedades_jogo->time_fora; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_fora; ?>">
 				</div>
 				<div class="data-oficial">
-					<p>14/08/2020 12h30</p>
+					<p><?php echo substr(str_replace(":", "h", $dados['data']), 0,-3);?></p>
 				</div>
 			</div>
 		</a>
 
 		<div class="linha-abaixo-jogo"></div>
 
-		<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}">
-			<div class="jogo-placar jogo-sem-borda">
-				<div class="campeonato-jogo">
-					<p>Libertadores - Oitavas de Final / Ida</p>
-				</div>
-				<div class="placar">
-					<img src="https://a1.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F17134.png">
-					<p>Brasil de Pelotas</p>
-					<h2><span>0-0</span></h2>
-					<p>Cruzeiro</p>
-					<img src="https://upload.wikimedia.org/wikipedia/pt/e/e4/CruzeiroEC2016.png">
-				</div>
-				<div class="data-oficial">
-					<p>14/08/2020 12h30</p>
-				</div>
-			</div>
-		</a>
-
-		<div class="linha-abaixo-jogo"></div>
-
-		<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}">
-			<div class="jogo-placar jogo-sem-borda">
-				<div class="campeonato-jogo">
-					<p>Libertadores - Oitavas de Final / Ida</p>
-				</div>
-				<div class="placar">
-					<img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Sport_Club_Recife.svg/1200px-Sport_Club_Recife.svg.png">
-					<p>Sport Recife</p>
-					<h2><span>0-0</span></h2>
-					<p>São Paulo FC</p>
-					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/1200px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png">
-				</div>
-				<div class="data-oficial">
-					<p>14/08/2020 12h30</p>
-				</div>
-			</div>
-		</a>
-
-		<div class="linha-abaixo-jogo"></div>
+		<?php endforeach; ?>
 
 	</section>
 
@@ -464,8 +488,8 @@
 	<section class="secao-newsletter">
 		<p>RECEBA AS NOVIDADES SOBRE FUTEBOL<br>NO SEU E-MAIL</p>
 
-		<form method="POST" id="form_newsletter">
-			<input type="text" name="email" id="email" placeholder="SEU MELHOR E-MAIL">
+		<form method="POST" id="form_newsletter_maior" autocomplete="off">
+			<input type="text" name="email" id="email_maior" placeholder="SEU MELHOR E-MAIL">
 			<button type="submit">ASSINAR    >></button>
 		</form>
 	</section>
@@ -503,18 +527,25 @@
 				</div>
 				<!-- Resultados -->
 				<div class="jogos-divs">
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>FLA 1-1 RSC</p>
+
+					<?php 
+						foreach($resultados as $dados): 
+
+						$propriedades_jogo = json_decode($dados['jogo_prop']);
+
+						$alcunha_casa = new Jogos();
+						$alcunha_casa = $alcunha_casa->get_alcunha($propriedades_jogo->time_casa);
+
+						$alcunha_fora = new Jogos();
+						$alcunha_fora = $alcunha_fora->get_alcunha($propriedades_jogo->time_fora);
+					?>
+
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>"><div class="jogo-div">
+						<p><?php echo $alcunha_casa['alcunha']; ?> <?php echo $dados['placar']; ?> <?php echo $alcunha_fora['alcunha']; ?></p>
 					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>SPFC 3-1 BAH</p>
-					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>VAS 1-4 CEA</p>
-					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>INT 0-0 ATH</p>
-					</div></a>
+
+					<?php endforeach; ?>
+
 				</div>
 			</div>
 			<div class="divisor"></div>
@@ -527,18 +558,25 @@
 				</div>
 				<!-- Jogos -->
 				<div class="jogos-divs">
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>FLA 1-1 RSC</p>
+
+					<?php 
+						foreach($agendados as $dados): 
+
+						$propriedades_jogo = json_decode($dados['jogo_prop']);
+
+						$alcunha_casa = new Jogos();
+						$alcunha_casa = $alcunha_casa->get_alcunha($propriedades_jogo->time_casa);
+
+						$alcunha_fora = new Jogos();
+						$alcunha_fora = $alcunha_fora->get_alcunha($propriedades_jogo->time_fora);
+					?>
+
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>"><div class="jogo-div">
+						<p><?php echo $alcunha_casa['alcunha']; ?> <?php echo $dados['placar']; ?> <?php echo $alcunha_fora['alcunha']; ?></p>
 					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>SPFC 3-1 BAH</p>
-					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>VAS 1-4 CEA</p>
-					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>INT 0-0 ATH</p>
-					</div></a>
+
+					<?php endforeach; ?>
+
 				</div>
 			</div>
 		</div>
@@ -546,57 +584,62 @@
 
 		<!-- Notícias -->
 		<div class="noticias-menores-politica">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+
+			<?php 
+				foreach($noticias_jogos as $dados):
+
+				$arquivo_prop = json_decode($dados['arquivo_prop']);
+			?>
+
+			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-menor-politica">
-					<img src="https://m.extra.globo.com/incoming/24751825-daf-ba9/w488h275-PROP/90486867_es-rio-de-janeiro-rj-13112020treino-do-flamengono-ninho-do-uruburogerio-c.jpg">
+					
+					<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+					<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+					<video>
+						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+					</video>
+
+					<?php endif; ?>
+
 					<div class="noticia-menor-conteudo-politica">
 						<div class="jogo-descricao">
-							<p>FLAMENGO E SANTOS</p>
+
+							<?php 
+								$tags = explode(",", $dados['tags']);
+							?>
+
+							<p><?php echo mb_strtoupper($tags[0]); ?> E <?php echo mb_strtoupper($tags[1]); ?></p>
 						</div>
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>20 DE OUT | 2020</p>
+						<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+						<p><?php echo $dados['dia']; ?> DE <?php
+								switch ($dados['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo $mes;
+							?> | <?php echo $dados['ano']; ?></p>
 					</div>
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://jpimg.com.br/uploads/2020/09/marinho-participou-de-nove-gols-em-nove-jogos-do-santos-no-brasileirao.jpg">
-					<div class="noticia-menor-conteudo-politica">
-						<div class="jogo-descricao">
-							<p>FLAMENGO E SANTOS</p>
-						</div>
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>20 DE OUT | 2020</p>
-					</div>
-				</div>
-			</a>
+			<?php endforeach; ?>
 
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://cdn.diariodolitoral.com.br/upload/dn_noticia/2020/09/marinho_2.jpg">
-					<div class="noticia-menor-conteudo-politica">
-						<div class="jogo-descricao">
-							<p>FLAMENGO E SANTOS</p>
-						</div>
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>20 DE OUT | 2020</p>
-					</div>
-				</div>
-			</a>
-
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://uploads.metropoles.com/wp-content/uploads/2020/11/09180535/Rogerio-Ceni-Flamengo-600x400.jpg">
-					<div class="noticia-menor-conteudo-politica">
-						<div class="jogo-descricao">
-							<p>FLAMENGO E SANTOS</p>
-						</div>
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>20 DE OUT | 2020</p>
-					</div>
-				</div>
-			</a>
 		</div>
 
 		<!-- Carousel e vídeos -->
@@ -612,75 +655,85 @@
 					<img data-id="0" class="passa-slide" src="<?php echo BASE_URL; ?>assets/images/right-arrow.svg">
 				</div>
 
+				<?php 
+					foreach($slide_esportes as $dados):
+
+					$arquivo_prop = json_decode($dados['arquivo_prop']);
+				?>
+
 				<div class="carousel-slide fade">
-					<img src="https://sportbuzz.uol.com.br/media/_versions/gettyimages-1160655989_widelg.jpg">
-					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+					
+					<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+					<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+					<video>
+						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+					</video>
+
+					<?php endif; ?>
+
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>">
 						<div class="slide-carousel-conteudo">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
+							<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+							<p><?php echo $dados['descricao']; ?></p>
 						</div>
 					</a>
 				</div>
-				<div class="carousel-slide fade">
-					<img src="https://esbrasil.com.br/wp-content/uploads/2019/08/Daniel_site.jpg">
-					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-						<div class="slide-carousel-conteudo">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
-						</div>
-					</a>
-				</div>
-				<div class="carousel-slide fade">
-					<img src="https://conteudo.imguol.com.br/c/esporte/41/2020/11/28/neymar-faz-gol-de-penalti-na-partida-psg-x-bordeaux-pelo-campeonato-frances-1606600195230_v2_450x337.jpg">
-					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-						<div class="slide-carousel-conteudo">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
-						</div>
-					</a>
-				</div>
+				
+				<?php endforeach; ?>
+				
 			</div>
 			<div class="videos-esportes">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+
+				<?php
+					foreach($videos_esportes as $dados):
+
+					$tags = explode(",", $dados['tags']);
+				?>
+
+				<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 					<div class="video-esporte">
 						<div class="lado-video">
-							<video id="video-esporte" class="video-js vjs-theme-city" poster="https://f.i.uol.com.br/fotografia/2020/10/01/16016045635f768bd3d96b2_1601604563_3x2_md.jpg" preload="auto" data-setup="{}">
-							 	<source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
+							<video id="video-esporte" class="video-js vjs-theme-city" preload="auto" data-setup="{}">
+							 	<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4" />
 							</video>
 							<div class="video-conteudo">
 								<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-								<p>20 DE OUT | 2020</p>
+								<p><?php echo $dados['dia']; ?> DE <?php
+								switch ($dados['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo substr($mes, 0,-2);
+							?> | <?php echo $dados['ano']; ?></p>
 							</div>
 						</div>
 						<div class="lado-descricao">
-							<h2>ROGERIO CENI</h2>
+							<h2><?php echo mb_strtoupper($tags[0]); ?></h2>
 							<div class="link-video">
-								<p>Lorem Ipsum</p>
+								<p><?php echo $tags[1]; ?></p>
 								<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 							</div>
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video-esporte">
-						<div class="lado-video">
-							<video id="video-esporte" class="video-js vjs-theme-city" poster="https://jpimg.com.br/uploads/2020/10/brenner-rubens-chiri-spfc.jpg" preload="auto" data-setup="{}">
-							 	<source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-							</video>
-							<div class="video-conteudo">
-								<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-								<p>20 DE OUT | 2020</p>
-							</div>
-						</div>
-						<div class="lado-descricao">
-							<h2>ROGERIO CENI</h2>
-							<div class="link-video">
-								<p>Lorem Ipsum</p>
-								<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
-							</div>
-						</div>
-					</div>
-				</a>
+				
+				<?php endforeach; ?>
+
 			</div>
 		</div>
 	</section>
@@ -881,69 +934,11 @@
 			</div>
 
 			<div class="caixa-videos">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://static.independent.co.uk/2020/12/04/07/w_56539538.jpg?width=640" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://thumbnails.texastribune.org/C-grfyuIcbith-IMQzQKF0ShUpw=/850x570/smart/filters:quality(75)/https://static.texastribune.org/media/files/20ddd1716338a3c77a767d8833a40208/Joe%20Biden%20MS%20TT.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://s2.glbimg.com/GZ9JHX1nNNAbFJGcpW2zqRD3uCA=/0x0:1135x757/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/Q/d/KwXr58SNiJMaYBvNcAiQ/felipeararuna.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-
-				<button id="load-more-videos">CARREGAR MAIS</button>
+				
 			</div>
+
+			<button id="load-more-videos">CARREGAR MAIS</button>
+
 		</div>
 		<!-- Widgets -->
 		<div class="asides">
@@ -969,7 +964,7 @@
 				</div>
 
 				<div class="corpo-widget-newsletter">
-					<form method="POST" id="form_newsletter">
+					<form method="POST" id="form_newsletter" autocomplete="off">
 						<input type="text" name="email" id="email" placeholder="E-mail">
 						<button type="submit">ASSINAR</button>
 					</form>
@@ -1019,7 +1014,7 @@
 		<div class="item-rodape">
 			<h3>NEWSLETTER</h3>
 			<p>NÃO PERCA NADA DE NOVO DO PORTAL, ASSINE A NEWSLETTER</p>
-			<form method="POST" id="form_newsletter_rodape">
+			<form method="POST" id="form_newsletter_rodape" autocomplete="off">
 				<input type="text" name="email" id="email_rodape" placeholder="E-mail">
 				<button type="submit">
 					<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
