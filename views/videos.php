@@ -227,52 +227,8 @@
 			<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 		</div>
 
-		<div class="caixa-dos-videos caixa-dos-videos-politica">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://www.gazetaesportiva.com/wp-content/uploads/imagem/2019/05/02/arte-confrontos-copa-do-brasil-2019-V3-1024x640.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="video">
-					<div class="topo-video">
-						<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-						<p>20 DE OUT | 2020</p>
-					</div>
-					<video id="my-video" class="video-js vjs-theme-city" poster="https://s.glbimg.com/es/ge/f/original/2020/01/10/copadobrasil.jpg" preload="auto" data-setup="{}">
-						 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-					</video>
-					<div class="conteudo-video">
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-					</div>
-				</div>
-			</a>
+		<div class="caixa-dos-videos caixa-dos-videos-politica recentes-videos">
+			
 		</div>
 	</section>
 
@@ -837,7 +793,7 @@
 	<section class="secao-newsletter">
 		<p>RECEBA OS VÍDEOS DO PORTAL<br>NO SEU E-MAIL</p>
 
-		<form method="POST" id="form_newsletter">
+		<form method="POST" id="form_newsletter" autocomplete="off">
 			<input type="text" name="email" id="email" placeholder="SEU MELHOR E-MAIL">
 			<button type="submit">ASSINAR    >></button>
 		</form>
@@ -890,7 +846,7 @@
 		<div class="item-rodape">
 			<h3>NEWSLETTER</h3>
 			<p>NÃO PERCA NADA DE NOVO DO PORTAL, ASSINE A NEWSLETTER</p>
-			<form method="POST" id="form_newsletter_rodape">
+			<form method="POST" id="form_newsletter_rodape" autocomplete="off">
 				<input type="text" name="email" id="email_rodape" placeholder="E-mail">
 				<button type="submit">
 					<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">

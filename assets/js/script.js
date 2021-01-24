@@ -218,4 +218,32 @@ $(document).ready(function(){
 
   }
 
+  /*
+  * Carregar mais videos recentes
+  */
+  var recentes = 0;
+
+  document.onload = load_recentes();
+
+  $(".recentes-load-more").on("click", function(){
+
+    load_recentes();
+
+  });
+
+  function load_recentes(){
+
+    recentes++;
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_recentes',
+      data:{recentes:recentes},
+      success:function(result){
+        $(".recentes-videos").append(result);
+      }
+    });
+
+  }
+
 });
