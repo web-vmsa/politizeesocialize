@@ -276,9 +276,15 @@
 	</header>
 
 	<!-- Tarja fixa da seção -->
+	<?php if($categoria['nome'] == "recentes"): ?>
+	<section class="tarja-categoria tarja-categoria-politica">
+		<p><?php echo mb_strtoupper($categoria['nome']); ?></p>
+	</section>
+	<?php else: ?>
 	<section class="tarja-categoria tarja-categoria-<?php echo $categoria['nome']; ?>">
 		<p><?php echo mb_strtoupper($categoria['nome']); ?></p>
 	</section>
+	<?php endif; ?>
 
 	<!-- Slideshow da categoria -->
 	<main class="slideshow-categoria">

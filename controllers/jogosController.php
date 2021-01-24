@@ -73,8 +73,62 @@ class jogosController extends controller {
 
 	public function finalizados(){
 
+		$resultados = new Jogos();
+		$resultados->status_jogo = "Fim de jogo";
+		$resultados->init = 0;
+		$resultados->max = 4;
 
-		$dados = array();
+		$agendados = new Jogos();
+		$agendados->status_jogo = "Agendado";
+		$agendados->init = 0;
+		$agendados->max = 4;
+
+		$noticias_jogos = new Noticias();
+		$noticias_jogos->categoria = "esportes";
+		$noticias_jogos->init = 0;
+		$noticias_jogos->max = 4;
+
+		$videos_esportes = new Noticias();
+		$videos_esportes->categoria = "esportes";
+		$videos_esportes->init = 0;
+		$videos_esportes->max = 2;
+
+		$slide_esportes = new Jogos();
+		$slide_esportes->status_jogo = "Fim de jogo";
+		$slide_esportes->init = 0;
+		$slide_esportes->max = 3;
+
+		$jogos_hoje = new Jogos();
+		$jogos_hoje->day = "20";
+		$jogos_hoje->month = "01";
+		$jogos_hoje->year = "2021";
+
+		$jogos_ontem = new Jogos();
+		$jogos_ontem->day = "20"/*date("d")-1*/;
+		$jogos_ontem->month = "01"/*date("m")*/;
+		$jogos_ontem->year = "2021"/*date("Y")*/;
+
+		$jogos_outro = new Jogos();
+		$jogos_outro->day = "20"/*date("d")-2*/;
+		$jogos_outro->month = "01"/*date("m")*/;
+		$jogos_outro->year = "2021"/*date("Y")*/;
+
+		$jogos_mais = new Jogos();
+		$jogos_mais->day = "20"/*date("d")-3*/;
+		$jogos_mais->month = "01"/*date("m")*/;
+		$jogos_mais->year = "2021"/*date("Y")*/;
+
+		$dados = array(
+			'resultados' => $resultados->get_jogos(),
+			'agendados' => $agendados->get_jogos(),
+			'noticias_jogos' => $noticias_jogos->get_by_categoria(),
+			'videos_esportes' => $videos_esportes->get_videos(),
+			'slide_esportes' => $slide_esportes->get_jogos(),
+			'jogos_hoje' => $jogos_hoje->get_by_date(),
+			'jogos_ontem' => $jogos_ontem->get_by_date(),
+			'jogos_outro' => $jogos_outro->get_by_date(),
+			'jogos_mais' => $jogos_mais->get_by_date()
+		);
 
 		$this->loadView('finalizados', $dados);
 
