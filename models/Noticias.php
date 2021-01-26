@@ -121,4 +121,27 @@ class Noticias extends model {
 
 	}
 
+	/*
+	* Função de busca resultados
+	* 
+	* Esta função vai dar um select nas notícias com o titulo parecido ao da pesquisa
+	*
+	* @return $titulo string é o titulo da noticia, do tipo LIKE
+	* @return true or false
+	*/
+	public function get_resultados($titulo){
+
+		$sql = "SELECT usuarios.id, usuarios.nome, noticias.id, noticias.categoria, noticias.id_usuario, noticias.titulo, noticias.arquivo, noticias.url, noticias.tags, noticias.arquivo_prop, noticias.data, DAY(noticias.data) as dia, MONTH(noticias.data) as mes, YEAR(noticias.data) as ano FROM noticias INNER JOIN usuarios ON usuarios.id = noticias.id_usuario WHERE noticias.titulo LIKE '%$titulo%' AND noticias.status = '1' ORDER BY noticias.id DESC LIMIT :init,:max";
+		$sql = $this->db->prepare($sql);
+		$sql->bindValue(':init', $this->init, PDO::PARAM_INT);
+		$sql->bindValue(':max', $this->max, PDO::PARAM_INT);
+		$sql->execute();
+		if ($sql->rowCount() > 0) {
+			return $sql->fetchAll();
+		} else {
+			return false;
+		}
+
+	}
+
 }

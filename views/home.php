@@ -133,7 +133,7 @@
 				<p>POLITIZE E SOCIALIZE</p>
 			</div>
 			<div class="item-menu conteudo-right">
-				<form method="POST" action="<?php echo BASE_URL; ?>home/resultados/{{pesquisa}}">
+				<form method="GET" autocomplete="off" action="<?php echo BASE_URL; ?>home/resultados">
 					<input type="text" id="pesquisar" name="pesquisar" placeholder="PESQUISAR...">
 					<button>
 						<img src="<?php echo BASE_URL; ?>assets/images/search.svg">

@@ -835,5 +835,75 @@ class ajaxController extends controller {
 		$this->loadView('ajax', $dados);
 
 	}
+
+	public function load_resultados(){
+
+		$dados = array();
+
+		if (!empty($_POST['resultados'])) {
+			
+			$titulo = htmlspecialchars($_POST['titulo']);
+
+			$page = $_POST['resultados'];
+
+			$max = 8;
+			$init = ($page * $max) - $max;
+
+			$postagens = new Noticias();
+			$postagens->init = $init;
+			$postagens->max = $max;
+			$data_postagens = $postagens->get_resultados($titulo);
+
+			foreach ($data_postagens as $posts) {
+
+				$arquivo_prop = json_decode($posts['arquivo_prop']);
+
+				echo '<a href="'.BASE_URL.'colunas/opiniao/'.$posts['url'].'">';
+					echo '<div class="noticia-menor-politica">';
+						
+						if ($arquivo_prop->tipo == "imagem") {
+
+							echo '<img src="'.ADMIN_URL.'users/images/'.$posts['arquivo'].'">';
+
+						} else {
+
+							echo '<video>';
+								echo '<source src="'.ADMIN_URL.'users/videos/'.$posts['arquivo'].'" type="video/mp4">';
+							echo '</video>';
+
+						}
+
+						echo '<div class="noticia-menor-conteudo-politica">';
+							echo '<h2>'.mb_strtoupper($posts['titulo']).'</h2>';
+							echo '<p>POR '.mb_strtoupper($posts['nome']).' | '.$posts['dia'].' DE ';
+
+							switch ($posts['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo $mes;
+
+							echo '<br>DE 2020</p>';
+						echo '</div>';
+					echo '</div>';
+				echo '</a>';
+			}
+
+		}
+
+		$this->loadView('ajax', $dados);
+
+	}
 	
 }

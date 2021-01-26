@@ -64,7 +64,7 @@
 				<p>POLITIZE E SOCIALIZE</p>
 			</div>
 			<div class="item-menu conteudo-right">
-				<form method="POST" action="<?php echo BASE_URL; ?>home/resultados/{{pesquisa}}">
+				<form method="GET" autocomplete="off" action="<?php echo BASE_URL; ?>home/resultados">
 					<input type="text" id="pesquisar" name="pesquisar" placeholder="PESQUISAR...">
 					<button>
 						<img src="<?php echo BASE_URL; ?>assets/images/search.svg">
@@ -447,69 +447,11 @@
 			</div>
 
 			<div class="caixa-videos">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://static.independent.co.uk/2020/12/04/07/w_56539538.jpg?width=640" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://thumbnails.texastribune.org/C-grfyuIcbith-IMQzQKF0ShUpw=/850x570/smart/filters:quality(75)/https://static.texastribune.org/media/files/20ddd1716338a3c77a767d8833a40208/Joe%20Biden%20MS%20TT.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://s2.glbimg.com/GZ9JHX1nNNAbFJGcpW2zqRD3uCA=/0x0:1135x757/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/Q/d/KwXr58SNiJMaYBvNcAiQ/felipeararuna.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-
-				<button id="load-more-videos">CARREGAR MAIS</button>
+				
 			</div>
+
+			<button id="load-more-videos">CARREGAR MAIS</button>
+			
 		</div>
 		<!-- Widgets -->
 		<div class="asides">
@@ -535,7 +477,7 @@
 				</div>
 
 				<div class="corpo-widget-newsletter">
-					<form method="POST" id="form_newsletter">
+					<form method="POST" id="form_newsletter" autocomplete="off">
 						<input type="text" name="email" id="email" placeholder="E-mail">
 						<button type="submit">ASSINAR</button>
 					</form>
@@ -585,7 +527,7 @@
 		<div class="item-rodape">
 			<h3>NEWSLETTER</h3>
 			<p>NÃO PERCA NADA DE NOVO DO PORTAL, ASSINE A NEWSLETTER</p>
-			<form method="POST" id="form_newsletter_rodape">
+			<form method="POST" id="form_newsletter_rodape" autocomplete="off">
 				<input type="text" name="email" id="email_rodape" placeholder="E-mail">
 				<button type="submit">
 					<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">

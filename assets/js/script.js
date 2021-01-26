@@ -544,4 +544,33 @@ $(document).ready(function(){
 
   }
 
+  /*
+  * Carregar mais resultados
+  */
+  var resultados = 1;
+
+  // Pega o título da pesquisa
+  var titulo = $("#titulo").val();
+
+  $("#load-more-results").on("click", function(){
+
+    load_more_results();
+
+  });
+
+  function load_more_results(){
+
+    resultados++;
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_resultados',
+      data:{resultados:resultados, titulo:titulo},
+      success:function(result){
+        $(".todas-postagens").append(result);
+      }
+    });
+
+  }
+
 });

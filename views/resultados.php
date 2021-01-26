@@ -1,9 +1,19 @@
+<?php
+
+	$titulo = htmlspecialchars($_GET['pesquisar']);
+
+	$resultados = new Noticias();
+	$resultados->init = 0;
+	$resultados->max = 8;
+	$resultados = $resultados->get_resultados($titulo);
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<!-- Primary Meta Tags -->
-	<title>Politize e socialize - Resultados da Busca por {{busca}}</title>
-	<meta name="title" content="Politize e socialize - Resultados da Busca por {{busca}}">
+	<title>Politize e socialize - Resultados da Busca por <?php echo $titulo; ?></title>
+	<meta name="title" content="Politize e socialize - Resultados da Busca por <?php echo $titulo; ?>">
 	<meta name="description" content="Faça uma busca no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,15 +27,15 @@
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="<?php echo BASE_URL; ?>home/resultados/{{resultados}}">
-	<meta property="og:title" content="Politize e socialize - Resultados da Busca por {{busca}}">
+	<meta property="og:url" content="<?php echo BASE_URL; ?>home/resultados">
+	<meta property="og:title" content="Politize e socialize - Resultados da Busca por <?php echo $titulo; ?>">
 	<meta property="og:description" content="Faça uma busca no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
 	<meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="<?php echo BASE_URL; ?>home/resultados/{{resultados}}">
-	<meta property="twitter:title" content="Politize e socialize - Resultados da Busca por {{busca}}">
+	<meta property="twitter:url" content="<?php echo BASE_URL; ?>home/resultados">
+	<meta property="twitter:title" content="Politize e socialize - Resultados da Busca por <?php echo $titulo; ?>">
 	<meta property="twitter:description" content="Faça uma busca no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
 	<meta property="twitter:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
 
@@ -52,6 +62,9 @@
 	<div id="fb-root"></div>
 	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="8w1uRG64"></script>
 
+	<!-- Pesquisa -->
+	<input type="hidden" name="titulo" id="titulo" value="<?php echo $titulo; ?>">
+
 	<!-- Modal -->
 	<div class="modal">
 		<!-- Menu -->
@@ -64,7 +77,7 @@
 				<p>POLITIZE E SOCIALIZE</p>
 			</div>
 			<div class="item-menu conteudo-right">
-				<form method="POST" action="<?php echo BASE_URL; ?>home/resultados/{{pesquisa}}">
+				<form method="GET" autocomplete="off" action="<?php echo BASE_URL; ?>home/resultados">
 					<input type="text" id="pesquisar" name="pesquisar" placeholder="PESQUISAR...">
 					<button>
 						<img src="<?php echo BASE_URL; ?>assets/images/search.svg">
@@ -218,10 +231,10 @@
 	<!-- Caixa de pesquisa -->
 	<div class="borda-top-newsletter"></div>
 	<section class="secao-newsletter search-form">
-		<p>VJEA OS RESULTADOS DA SUA BUSCA OU<br>FAÇA UMA NOVA</p>
+		<p>VEJA OS RESULTADOS DA SUA BUSCA OU<br>FAÇA UMA NOVA</p>
 
-		<form method="POST" action="<?php echo BASE_URL; ?>home/resultados/{{pesquisa}}">
-			<input type="text" name="pesquisar" id="pesquisar" placeholder="FAÇA UMA PESQUISA...">
+		<form method="GET" autocomplete="off" action="<?php echo BASE_URL; ?>home/resultados">
+			<input type="text" name="pesquisar" id="pesquisar" placeholder="FAÇA UMA PESQUISA..." value="<?php echo $titulo; ?>">
 			<button type="submit">PESQUISAR</button>
 		</form>
 	</section>
@@ -246,69 +259,59 @@
 
 	<!-- Todas as postagens -->
 	<section class="todas-postagens">
-		<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+
+		<?php 
+			foreach($resultados as $dados):
+
+			$arquivo_prop = json_decode($dados['arquivo_prop']);
+		?>
+
+		<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 			<div class="noticia-menor-politica">
-				<img src="https://s2.glbimg.com/mngGalithA5ohe3KzGBZp6Zwnlw=/0x0:2048x1152/540x304/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/O/U/FPY20dRwiOAt5VO1ZCBw/50688013266-2d0cdaa7c7-k.jpg">
+
+				<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+				<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+				<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+				<video>
+					<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+				</video>
+
+				<?php endif; ?>
+
 				<div class="noticia-menor-conteudo-politica">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
+					<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+					<p>POR <?php echo mb_strtoupper($dados['nome']); ?> | <?php echo $dados['dia']; ?> DE 
+
+					<?php
+						switch ($dados['mes']) {
+						       case "01":    $mes = "JANEIRO";     break;
+						       case "02":    $mes = "FEVEREIRO";   break;
+							   case "03":    $mes = "MARÇO";       break;
+							   case "04":    $mes = "ABRIL";       break;
+							   case "05":    $mes = "MAIO";        break;
+							   case "06":    $mes = "JUNHO";       break;
+							   case "07":    $mes = "JULHO";       break;
+							   case "08":    $mes = "AGOSTO";      break;
+							   case "09":    $mes = "SETEMBRO";    break;
+							   case "10":    $mes = "OUTUBRO";     break;
+							   case "11":    $mes = "NOVEMBRO";    break;
+							   case "12":    $mes = "DEZEMBRO";    break; 
+						}
+							 
+					    echo $mes;
+					?>
+
+
+					<br>DE <?php echo $dados['ano']; ?></p>
 				</div>
 			</div>
 		</a>
-		<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-			<div class="noticia-menor-politica">
-				<img src="https://s2.glbimg.com/UDPD9jKWz2831nnRnb7-7tmfrqs=/0x0:1280x853/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/L/z/RYs7wwTUmALWjqUDS41w/whatsapp-image-2019-09-19-at-00.43.15.jpeg">
-				<div class="noticia-menor-conteudo-politica">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</div>
-			</div>
-		</a>
-		<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-			<div class="noticia-menor-politica">
-				<img src="https://colunadofla.com/wp-content/uploads/2020/07/rodrigo-caio.jpg">
-				<div class="noticia-menor-conteudo-politica">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</div>
-			</div>
-		</a>
-		<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-			<div class="noticia-menor-politica">
-				<img src="https://www.lance.com.br/files/article_main/uploads/2020/08/29/5f4adc962b03c.jpeg">
-				<div class="noticia-menor-conteudo-politica">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</div>
-			</div>
-		</a>
-		<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-			<div class="noticia-menor-politica">
-				<img src="https://conteudo.imguol.com.br/c/esporte/82/2020/12/05/rafael-sobis-comemora-gol-marcado-pelo-cruzeiro-sobre-o-brasil-de-pelotas-no-mineirao-1607217708438_v2_450x337.jpg">
-				<div class="noticia-menor-conteudo-politica">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</div>
-			</div>
-		</a>
-		<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-			<div class="noticia-menor-politica">
-				<img src="https://www.coritiba.com.br/imgview/show/161345/50">
-				<div class="noticia-menor-conteudo-politica">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</div>
-			</div>
-		</a>
-		<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-			<div class="noticia-menor-politica">
-				<img src="https://www.lance.com.br/files/article_main/uploads/2020/08/29/5f4adc962b03c.jpeg">
-				<div class="noticia-menor-conteudo-politica">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</div>
-			</div>
-		</a>
+
+		<?php endforeach; ?>
+		
 	</section>
 
 	<!-- Carregar mais -->
@@ -342,69 +345,11 @@
 			</div>
 
 			<div class="caixa-videos">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://static.independent.co.uk/2020/12/04/07/w_56539538.jpg?width=640" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://thumbnails.texastribune.org/C-grfyuIcbith-IMQzQKF0ShUpw=/850x570/smart/filters:quality(75)/https://static.texastribune.org/media/files/20ddd1716338a3c77a767d8833a40208/Joe%20Biden%20MS%20TT.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://s2.glbimg.com/GZ9JHX1nNNAbFJGcpW2zqRD3uCA=/0x0:1135x757/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/Q/d/KwXr58SNiJMaYBvNcAiQ/felipeararuna.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-
-				<button id="load-more-videos">CARREGAR MAIS</button>
+				
 			</div>
+
+			<button id="load-more-videos">CARREGAR MAIS</button>
+
 		</div>
 		<!-- Widgets -->
 		<div class="asides">
@@ -430,7 +375,7 @@
 				</div>
 
 				<div class="corpo-widget-newsletter">
-					<form method="POST" id="form_newsletter">
+					<form method="POST" id="form_newsletter" autocomplete="off">
 						<input type="text" name="email" id="email" placeholder="E-mail">
 						<button type="submit">ASSINAR</button>
 					</form>
@@ -480,7 +425,7 @@
 		<div class="item-rodape">
 			<h3>NEWSLETTER</h3>
 			<p>NÃO PERCA NADA DE NOVO DO PORTAL, ASSINE A NEWSLETTER</p>
-			<form method="POST" id="form_newsletter_rodape">
+			<form method="POST" id="form_newsletter_rodape" autocomplete="off">
 				<input type="text" name="email" id="email_rodape" placeholder="E-mail">
 				<button type="submit">
 					<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
