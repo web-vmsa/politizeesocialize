@@ -1,37 +1,45 @@
+<?php $arquivo_prop = json_decode($jogo['arquivo_prop']); ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<!-- Primary Meta Tags -->
-	<title>Politize e socialize - Política em um só lugar</title>
-	<meta name="title" content="Politize e socialize - Política em um só lugar">
-	<meta name="description" content="Economia, esportes, política, finanças e televisão no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
+	<title><?php echo $jogo['titulo']; ?></title>
+	<meta name="title" content="<?php echo $jogo['titulo']; ?>">
+	<meta name="description" content="<?php echo $jogo['descricao']; ?>">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="Política, economia, site de notícias, televisão, novelas, esportes, Flamengo, Corinthians, jogos de futebol">
+	<meta name="keywords" content="<?php echo $jogo['tags']; ?>">
 	<meta name="robots" content="index, follow">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="language" content="Portuguese">
 	<meta name="revisit-after" content="2 days">
-	<meta name="author" content="Victor Miguel">
+	<meta name="author" content="<?php echo $jogo['nome']; ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="article">
-	<meta property="article:author" content="Autor do artigo">
-	<meta property="article:section" content="Seção do artigo">
-	<meta property="article:tag" content="Tags do artigo">
-	<meta property="article:published_time" content="date_time">
-	<meta property="og:url" content="<?php echo BASE_URL; ?>jogos/jogo/{{url}}">
-	<meta property="og:title" content="Politize e socialize - Política em um só lugar">
-	<meta property="og:description" content="Economia, esportes, política, finanças e televisão no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
-	<meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
+	<meta property="article:author" content="<?php echo $jogo['nome']; ?>">
+	<meta property="article:section" content="<?php echo $jogo['categoria']; ?>">
+	<meta property="article:tag" content="<?php echo $jogo['tags']; ?>">
+	<meta property="article:published_time" content="<?php echo $jogo['data']; ?>">
+	<meta property="og:url" content="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $jogo['url']; ?>">
+	<meta property="og:title" content="<?php echo $jogo['titulo']; ?>">
+	<meta property="og:description" content="<?php echo $jogo['descricao']; ?>">
+
+	<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+	<meta property="og:image" content="<?php echo ADMIN_URL; ?>users/images/<?php echo $jogo['arquivo']; ?>">
+
+	<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+	<meta property="og:video" content="<?php echo ADMIN_URL; ?>users/videos/<?php echo $jogo['arquivo']; ?>" />
+
+	<?php endif; ?>
 
 	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="<?php echo BASE_URL; ?>jogos/jogo/{{url}}">
-	<meta property="twitter:title" content="Politize e socialize - Política em um só lugar">
-	<meta property="twitter:description" content="Economia, esportes, política, finanças e televisão no Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
-	<meta property="twitter:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
+	<meta property="twitter:url" content="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $jogo['url']; ?>">
+	<meta property="twitter:title" content="<?php echo $jogo['titulo']; ?>">
+	<meta property="twitter:description" content="<?php echo $jogo['descricao']; ?>">
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style.css">
@@ -55,6 +63,9 @@
 	<!-- Facebook plugin -->
 	<div id="fb-root"></div>
 	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="8w1uRG64"></script>
+
+	<!-- Passa url -->
+	<input id="url" type="hidden" name="url" value="<?php echo $jogo['url']; ?>">
 
 	<!-- SlidesShow -->
 	<script type="text/javascript">
@@ -287,25 +298,29 @@
 	<!-- Placar do jogo -->
 	<div class="postagem-jogo">
 
+		<?php $jogo_prop = json_decode($jogo['jogo_prop']); ?>
+
 		<p class="placar-p">Placar</p>
 
-		<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}">
+		<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $jogo['url']; ?>">
 			<div class="jogo-placar jogo-com-borda fundo-branco">
 				<div class="status-jogo">
 					<p>Ao vivo</p>
 				</div>
 				<div class="campeonato-jogo">
-					<p>Libertadores - Oitavas de Final / Ida</p>
+					<p><?php echo $jogo_prop->campeonato; ?> - <?php echo $jogo_prop->fase; ?></p>
 				</div>
 				<div class="placar">
-					<img src="https://rceit.com.br/wp-content/uploads/2019/05/gr%C3%AAmio-escudo-1.png">
-					<p>Grêmio</p>
-					<h2><span>1-1</span></h2>
-					<p>Santos</p>
-					<img src="https://upload.wikimedia.org/wikipedia/commons/9/92/LogoSantosFC.png">
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $jogo_prop->time_casa; ?>">
+					<p><?php echo $jogo_prop->time_casa; ?></p>
+					<div id="placar_ao_vivo">
+						<h2><span>1-1</span></h2>
+					</div>
+					<p><?php echo $jogo_prop->time_fora; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $jogo_prop->time_fora; ?>">
 				</div>
 				<div class="data-oficial">
-					<p>12/08/2020 12h30</p>
+					<p><?php echo substr(str_replace(":", "h", $jogo['data']), 0,-3);?></p>
 				</div>
 			</div>
 		</a>
@@ -316,83 +331,75 @@
 
 	<!-- Dados do artigo -->
 	<div class="dados-artigo">
-		<p><span>18 de novembro de 2020</span></p>
+		<p><span><?php echo $jogo['dia']; ?> de <?php
+					switch ($jogo['mes']) {
+				        case "01":    $mes = "janeiro";     break;
+				        case "02":    $mes = "fevereiro";   break;
+				        case "03":    $mes = "março";       break;
+				        case "04":    $mes = "abril";       break;
+				        case "05":    $mes = "maio";        break;
+				        case "06":    $mes = "junho";       break;
+				        case "07":    $mes = "julho";       break;
+				        case "08":    $mes = "agosto";      break;
+				        case "09":    $mes = "setembro";    break;
+				        case "10":    $mes = "outubro";     break;
+				        case "11":    $mes = "novembro";    break;
+				        case "12":    $mes = "dezembro";    break; 
+				 }
+				 
+				 echo $mes;
+				?> de <?php echo $jogo['ano']; ?></span></p>
 
-		<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem de mer agur ipsum.</h2>
+		<h2><?php echo $jogo['titulo']; ?></h2>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eros nibh, dapibus sit amet dictum et, auctor ac massa.</p>
+		<p><?php echo $jogo['descricao']; ?></p>
 
 		<div class="autor-share">
 			<div class="lado-autor">
 				<div class="foto-autor">
-					<img src="https://rd1.com.br/wp-content/uploads/2019/07/20190729-cleber-machado-globo-1200x812.jpg">
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $jogo['foto']; ?>">
 				</div>
-				<p>Por <a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">Maicon Azevedo</a> — Politize e socialize</p>
+				<p>Por <a href="<?php echo BASE_URL; ?>colunas/colunista/<?php echo $jogo['nome']; ?>"><?php echo $jogo['nome']; ?></a> — Politize e socialize</p>
 			</div>
 			<div class="lado-share">
 				<p>Share this —</p>
 
-				<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo BASE_URL; ?>jogos/jogo/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
-				<a href="https://api.whatsapp.com/send?text=<?php echo BASE_URL; ?>jogos/jogo/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/whatsapp.svg"></a>
-				<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo BASE_URL; ?>jogos/jogo/{{url}}"><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo BASE_URL; ?>jogos/jogo/<?php echo $jogo['url']; ?>"><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
+				<a href="https://api.whatsapp.com/send?text=<?php echo BASE_URL; ?>jogos/jogo/<?php echo $jogo['url']; ?>"><img src="<?php echo BASE_URL; ?>assets/images/whatsapp.svg"></a>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo BASE_URL; ?>jogos/jogo/<?php echo $jogo['url']; ?>"><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
 			</div>
 		</div>
 	</div>
 
-	<?php
-		$type_video = "video";
-	?>
-
 	<!-- Arquivo principal do artigo -->
-	<?php if($type_video == "imagem"): ?>
+	<?php if($arquivo_prop->tipo == "imagem"): ?>
+
 	<div class="file-artigo">
-		<img src="https://img.r7.com/images/pr-jair-bolsonaro-1500-03122020151129411">
+		<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $jogo['arquivo']; ?>">
 	</div>
+
 	<?php else: ?>
+
 	<div class="file-artigo">
-		<video id="video-artigo" class="video-js" poster="https://images.daznservices.com/di/library/GOAL/47/6a/para-matheus-henrique-gremio-santos-libertadores-09122020_8l94xkiipsp91sh6t2xba1ov5.jpg?t=1318531478&quality=100" controls preload="auto" data-setup="{}">
-			<source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
+		<video id="video-artigo" class="video-js" controls preload="auto" data-setup="{}">
+			<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $jogo['arquivo']; ?>" type="video/mp4" />
 		</video>
 	</div>
+
 	<?php endif; ?>
 
 	<!-- Descrição da imagem do artigo -->
 	<div class="descricao-arquivo">
-		<p>Lorem ipsum <strong>dolor sit amet</strong>, consectetur dit dolor.</p>
+		<p><?php echo $arquivo_prop->legenda; ?></p>
 	</div>
 
 	<!-- Postagem -->
 	<div class="postagem">
 		<h2>(Lance a lance &#9917;)</h2>
 
-		<h3>&#9201; 90' minutos</h3>
-		<p>Fim de papo! Grêmio e Santos ficam com o 1-1 no placar, agora o Santos decide em casa pelas quartas de final da Libertadores.</p>
-
-		<h3>&#129349; GOOOOOOOOOOOOOOOOOOOLLLLLLL! Do Grêmiooooooooooo</h3>
-		<p>Diego Souza converte o pênalti e deixa tudo igual na Arena do Grêmio</p>
-
-		<img src="https://i.ytimg.com/vi/wK41ZWrSYhs/hqdefault.jpg">
-
-		<h3>É PÊNALTIIIII!</h3>
-		<p>O Grêmio tem a chance de deixar tudo igual no Placar, Diego Souza vai para a marca da Cal.</p>
-
-		<h3>&#9201; 90'Minutos passados, 1 a 0</h3>
-
-		<h3>EXPULSOOO! &#128213;</h3>
-
-		<p>Pituca que fazia grande partida é expulso</p>
-
-		<h3>&#9201; 45' minutos</h3>
-		<p>Fim do primeiro tempo, Santos 1-0 Grêmio</p>
-
-		<h3>&#129349; GOOOOOOOOOOOOOOOOLLLLLLLLLL! É do SANTOOOOOSS</h3>
-
-		<p>Kaio Jorge abre o marcador para o peixe aos 36' minutos de jogo.</p>
-
-		<img src="https://pbs.twimg.com/media/DW63xM-W0AA9Nd0.jpg">
-
-		<h3>&#9201; 01' minutos</h3>
-		<p>Inicio de jogo, Grêmio e Santos pela Libertadores</p>
+		<div id="lances_jogo">
+			
+		</div>
 
 		<div class="linha"></div>
 	</div>
@@ -401,7 +408,7 @@
 	<div class="facebook-comments">
 		<h2>Comentários</h2>
 
-		<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="10" data-width="100%"></div>
+		<div class="fb-comments" data-href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $jogo['url']; ?>" data-numposts="10" data-width="100%"></div>
 	</div>
 
 	<!-- Publicidade -->
@@ -437,18 +444,25 @@
 				</div>
 				<!-- Resultados -->
 				<div class="jogos-divs">
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>FLA 1-1 RSC</p>
+
+					<?php 
+						foreach($resultados as $dados): 
+
+						$propriedades_jogo = json_decode($dados['jogo_prop']);
+
+						$alcunha_casa = new Jogos();
+						$alcunha_casa = $alcunha_casa->get_alcunha($propriedades_jogo->time_casa);
+
+						$alcunha_fora = new Jogos();
+						$alcunha_fora = $alcunha_fora->get_alcunha($propriedades_jogo->time_fora);
+					?>
+
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>"><div class="jogo-div">
+						<p><?php echo $alcunha_casa['alcunha']; ?> <?php echo $dados['placar']; ?> <?php echo $alcunha_fora['alcunha']; ?></p>
 					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>SPFC 3-1 BAH</p>
-					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>VAS 1-4 CEA</p>
-					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>INT 0-0 ATH</p>
-					</div></a>
+
+					<?php endforeach; ?>
+
 				</div>
 			</div>
 			<div class="divisor"></div>
@@ -461,18 +475,25 @@
 				</div>
 				<!-- Jogos -->
 				<div class="jogos-divs">
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>FLA 1-1 RSC</p>
+
+					<?php 
+						foreach($agendados as $dados): 
+
+						$propriedades_jogo = json_decode($dados['jogo_prop']);
+
+						$alcunha_casa = new Jogos();
+						$alcunha_casa = $alcunha_casa->get_alcunha($propriedades_jogo->time_casa);
+
+						$alcunha_fora = new Jogos();
+						$alcunha_fora = $alcunha_fora->get_alcunha($propriedades_jogo->time_fora);
+					?>
+
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>"><div class="jogo-div">
+						<p><?php echo $alcunha_casa['alcunha']; ?> <?php echo $dados['placar']; ?> <?php echo $alcunha_fora['alcunha']; ?></p>
 					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>SPFC 3-1 BAH</p>
-					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>VAS 1-4 CEA</p>
-					</div></a>
-					<a href="<?php echo BASE_URL; ?>jogos/jogo/{{jogo}}"><div class="jogo-div">
-						<p>INT 0-0 ATH</p>
-					</div></a>
+
+					<?php endforeach; ?>
+
 				</div>
 			</div>
 		</div>
@@ -480,57 +501,62 @@
 
 		<!-- Notícias -->
 		<div class="noticias-menores-politica">
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+
+			<?php 
+				foreach($noticias_jogos as $dados):
+
+				$arquivo_prop = json_decode($dados['arquivo_prop']);
+			?>
+
+			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-menor-politica">
-					<img src="https://m.extra.globo.com/incoming/24751825-daf-ba9/w488h275-PROP/90486867_es-rio-de-janeiro-rj-13112020treino-do-flamengono-ninho-do-uruburogerio-c.jpg">
+					
+					<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+					<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+					<video>
+						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+					</video>
+
+					<?php endif; ?>
+
 					<div class="noticia-menor-conteudo-politica">
 						<div class="jogo-descricao">
-							<p>FLAMENGO E SANTOS</p>
+
+							<?php 
+								$tags = explode(",", $dados['tags']);
+							?>
+
+							<p><?php echo mb_strtoupper($tags[0]); ?> E <?php echo mb_strtoupper($tags[1]); ?></p>
 						</div>
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>20 DE OUT | 2020</p>
+						<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+						<p><?php echo $dados['dia']; ?> DE <?php
+								switch ($dados['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo $mes;
+							?> | <?php echo $dados['ano']; ?></p>
 					</div>
 				</div>
 			</a>
 
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://jpimg.com.br/uploads/2020/09/marinho-participou-de-nove-gols-em-nove-jogos-do-santos-no-brasileirao.jpg">
-					<div class="noticia-menor-conteudo-politica">
-						<div class="jogo-descricao">
-							<p>FLAMENGO E SANTOS</p>
-						</div>
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>20 DE OUT | 2020</p>
-					</div>
-				</div>
-			</a>
+			<?php endforeach; ?>
 
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://cdn.diariodolitoral.com.br/upload/dn_noticia/2020/09/marinho_2.jpg">
-					<div class="noticia-menor-conteudo-politica">
-						<div class="jogo-descricao">
-							<p>FLAMENGO E SANTOS</p>
-						</div>
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>20 DE OUT | 2020</p>
-					</div>
-				</div>
-			</a>
-
-			<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-				<div class="noticia-menor-politica">
-					<img src="https://uploads.metropoles.com/wp-content/uploads/2020/11/09180535/Rogerio-Ceni-Flamengo-600x400.jpg">
-					<div class="noticia-menor-conteudo-politica">
-						<div class="jogo-descricao">
-							<p>FLAMENGO E SANTOS</p>
-						</div>
-						<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-						<p>20 DE OUT | 2020</p>
-					</div>
-				</div>
-			</a>
 		</div>
 
 		<!-- Carousel e vídeos -->
@@ -546,75 +572,85 @@
 					<img data-id="0" class="passa-slide" src="<?php echo BASE_URL; ?>assets/images/right-arrow.svg">
 				</div>
 
+				<?php 
+					foreach($slide_esportes as $dados):
+
+					$arquivo_prop = json_decode($dados['arquivo_prop']);
+				?>
+
 				<div class="carousel-slide fade">
-					<img src="https://sportbuzz.uol.com.br/media/_versions/gettyimages-1160655989_widelg.jpg">
-					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+					
+					<?php if($arquivo_prop->tipo == "imagem"): ?>
+
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
+
+					<?php elseif($arquivo_prop->tipo == "video"): ?>
+
+					<video>
+						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
+					</video>
+
+					<?php endif; ?>
+
+					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>">
 						<div class="slide-carousel-conteudo">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
+							<h2><?php echo mb_strtoupper($dados['titulo']); ?></h2>
+							<p><?php echo $dados['descricao']; ?></p>
 						</div>
 					</a>
 				</div>
-				<div class="carousel-slide fade">
-					<img src="https://esbrasil.com.br/wp-content/uploads/2019/08/Daniel_site.jpg">
-					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-						<div class="slide-carousel-conteudo">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
-						</div>
-					</a>
-				</div>
-				<div class="carousel-slide fade">
-					<img src="https://conteudo.imguol.com.br/c/esporte/41/2020/11/28/neymar-faz-gol-de-penalti-na-partida-psg-x-bordeaux-pelo-campeonato-frances-1606600195230_v2_450x337.jpg">
-					<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-						<div class="slide-carousel-conteudo">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>Lorem Ipsum dolor Sit Amet, consectetur adipscing</p>
-						</div>
-					</a>
-				</div>
+				
+				<?php endforeach; ?>
+				
 			</div>
 			<div class="videos-esportes">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
+
+				<?php
+					foreach($videos_esportes as $dados):
+
+					$tags = explode(",", $dados['tags']);
+				?>
+
+				<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 					<div class="video-esporte">
 						<div class="lado-video">
-							<video id="video-esporte" class="video-js vjs-theme-city" poster="https://f.i.uol.com.br/fotografia/2020/10/01/16016045635f768bd3d96b2_1601604563_3x2_md.jpg" preload="auto" data-setup="{}">
-							 	<source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
+							<video id="video-esporte" class="video-js vjs-theme-city" preload="auto" data-setup="{}">
+							 	<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4" />
 							</video>
 							<div class="video-conteudo">
 								<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-								<p>20 DE OUT | 2020</p>
+								<p><?php echo $dados['dia']; ?> DE <?php
+								switch ($dados['mes']) {
+							        case "01":    $mes = "JANEIRO";     break;
+							        case "02":    $mes = "FEVEREIRO";   break;
+							        case "03":    $mes = "MARÇO";       break;
+							        case "04":    $mes = "ABRIL";       break;
+							        case "05":    $mes = "MAIO";        break;
+							        case "06":    $mes = "JUNHO";       break;
+							        case "07":    $mes = "JULHO";       break;
+							        case "08":    $mes = "AGOSTO";      break;
+							        case "09":    $mes = "SETEMBRO";    break;
+							        case "10":    $mes = "OUTUBRO";     break;
+							        case "11":    $mes = "NOVEMBRO";    break;
+							        case "12":    $mes = "DEZEMBRO";    break; 
+							 }
+							 
+							 echo substr($mes, 0,-2);
+							?> | <?php echo $dados['ano']; ?></p>
 							</div>
 						</div>
 						<div class="lado-descricao">
-							<h2>ROGERIO CENI</h2>
+							<h2><?php echo mb_strtoupper($tags[0]); ?></h2>
 							<div class="link-video">
-								<p>Lorem Ipsum</p>
+								<p><?php echo $tags[1]; ?></p>
 								<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 							</div>
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video-esporte">
-						<div class="lado-video">
-							<video id="video-esporte" class="video-js vjs-theme-city" poster="https://jpimg.com.br/uploads/2020/10/brenner-rubens-chiri-spfc.jpg" preload="auto" data-setup="{}">
-							 	<source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-							</video>
-							<div class="video-conteudo">
-								<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-								<p>20 DE OUT | 2020</p>
-							</div>
-						</div>
-						<div class="lado-descricao">
-							<h2>ROGERIO CENI</h2>
-							<div class="link-video">
-								<p>Lorem Ipsum</p>
-								<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
-							</div>
-						</div>
-					</div>
-				</a>
+				
+				<?php endforeach; ?>
+
 			</div>
 		</div>
 	</section>
@@ -631,8 +667,8 @@
 	<section class="secao-newsletter">
 		<p>ASSINE A NEWSLETTER E RECEBA AS NOVIDADES DE<br>ESPORTES NO SEU E-MAIL</p>
 
-		<form method="POST" id="form_newsletter">
-			<input type="text" name="email" id="email" placeholder="SEU MELHOR E-MAIL">
+		<form method="POST" id="form_newsletter_maior" autocomplete="off">
+			<input type="text" name="email" id="email_maior" placeholder="SEU MELHOR E-MAIL">
 			<button type="submit">ASSINAR    >></button>
 		</form>
 	</section>
@@ -668,69 +704,11 @@
 			</div>
 
 			<div class="caixa-videos">
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://static.independent.co.uk/2020/12/04/07/w_56539538.jpg?width=640" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://thumbnails.texastribune.org/C-grfyuIcbith-IMQzQKF0ShUpw=/850x570/smart/filters:quality(75)/https://static.texastribune.org/media/files/20ddd1716338a3c77a767d8833a40208/Joe%20Biden%20MS%20TT.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://s2.glbimg.com/GZ9JHX1nNNAbFJGcpW2zqRD3uCA=/0x0:1135x757/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/Q/d/KwXr58SNiJMaYBvNcAiQ/felipeararuna.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-				<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-					<div class="video">
-						<div class="topo-video">
-							<img src="<?php echo BASE_URL; ?>assets/images/play-button.svg">
-							<p>20 DE OUT | 2020</p>
-						</div>
-						<video id="my-video" class="video-js vjs-theme-city" poster="https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2019/04/brasileirao.jpg" preload="auto" data-setup="{}">
-							 <source src="<?php echo BASE_URL; ?>users/videos/video.mp4" type="video/mp4" />
-						</video>
-						<div class="conteudo-video">
-							<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-							<p>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</p>
-						</div>
-					</div>
-				</a>
-
-				<button id="load-more-videos">CARREGAR MAIS</button>
+				
 			</div>
+
+			<button id="load-more-videos">CARREGAR MAIS</button>
+
 		</div>
 		<!-- Widgets -->
 		<div class="asides">
@@ -756,7 +734,7 @@
 				</div>
 
 				<div class="corpo-widget-newsletter">
-					<form method="POST" id="form_newsletter">
+					<form method="POST" id="form_newsletter" autocomplete="off">
 						<input type="text" name="email" id="email" placeholder="E-mail">
 						<button type="submit">ASSINAR</button>
 					</form>
@@ -806,7 +784,7 @@
 		<div class="item-rodape">
 			<h3>NEWSLETTER</h3>
 			<p>NÃO PERCA NADA DE NOVO DO PORTAL, ASSINE A NEWSLETTER</p>
-			<form method="POST" id="form_newsletter_rodape">
+			<form method="POST" id="form_newsletter_rodape" autocomplete="off">
 				<input type="text" name="email" id="email_rodape" placeholder="E-mail">
 				<button type="submit">
 					<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">

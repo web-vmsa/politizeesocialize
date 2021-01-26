@@ -102,4 +102,26 @@ class Jogos extends model {
 
 	}
 
+	/*
+	* Função de Pegar Jogo pela url
+	* 
+	* Esta função vai selecionar um jogo pela sua url passada
+	*
+	* @param $url string é a url do jogo
+	* @return true or false
+	*/
+	public function get_jogo(){
+
+		$sql = "SELECT usuarios.id, usuarios.nome, usuarios.foto, usuarios.social, jogos.id, jogos.titulo, jogos.descricao, jogos.jogo_prop, jogos.arquivo, jogos.categoria, jogos.url, jogos.lances, jogos.status_jogo, jogos.placar, jogos.arquivo_prop, jogos.id_usuario, jogos.tags, jogos.data, DAY(jogos.data) as dia, MONTH(jogos.data) as mes, YEAR(jogos.data) as ano FROM jogos INNER JOIN usuarios ON usuarios.id = jogos.id_usuario WHERE jogos.url = :url AND jogos.status = '1'";
+		$sql = $this->db->prepare($sql);
+		$sql->bindValue(':url', $this->url);
+		$sql->execute();
+		if ($sql->rowCount() > 0) {
+			return $sql->fetch();
+		} else {
+			return false;
+		}
+
+	}
+
 }

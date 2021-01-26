@@ -747,5 +747,93 @@ class ajaxController extends controller {
 		$this->loadView('ajax', $dados);
 
 	}
+
+	public function load_lances() {
+
+		$dados = array();
+
+		if (!empty($_POST['url'])) {
+			
+			$url = $_POST['url'];
+
+			$lances = new Jogos();
+			$lances->url = $url;
+			$lances = $lances->get_jogo();
+
+			$dados['resultado'] = $lances['lances'];
+
+		}
+
+		$this->loadView('ajax', $dados);
+
+	}
+
+	public function load_status_jogo() {
+
+		$dados = array();
+
+		if (!empty($_POST['url'])) {
+			
+			$url = $_POST['url'];
+
+			$placar = new Jogos();
+			$placar->url = $url;
+			$placar = $placar->get_jogo();
+
+			$dados['resultado'] = json_encode($placar);
+
+		}
+
+		$this->loadView('ajax', $dados);
+
+	}
+
+	public function load_placar() {
+
+		$dados = array();
+
+		if (!empty($_POST['url'])) {
+			
+			$url = $_POST['url'];
+
+			$placar = new Jogos();
+			$placar->url = $url;
+			$placar = $placar->get_jogo();
+
+			$jogo_prop = json_decode($placar['jogo_prop']);
+
+			$placar = $placar['placar'];
+
+			$resultado = explode("-", $placar);
+
+			$valor_maior = max($resultado);
+
+			$placar_time_casa = $resultado[0];
+
+			$placar_time_fora = $resultado[1];
+
+			if($placar_time_casa == $valor_maior && $placar_time_fora == $valor_maior){
+
+				echo '<h2><span>'.$placar_time_casa.'-'.$placar_time_fora.'</span></h2>';
+
+			} else {
+
+				if ($placar_time_casa == $valor_maior) {
+					
+					echo '<h2>'.$placar_time_casa.'<span>-'.$placar_time_fora.'</span></h2>';
+
+				} else {
+
+					echo '<h2><span>'.$placar_time_casa.'-</span>'.$placar_time_fora.'</h2>';
+
+				}
+
+			}
+
+		}
+
+		$this->loadView('ajax', $dados);
+
+	}
 	
 }

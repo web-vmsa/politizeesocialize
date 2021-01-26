@@ -134,12 +134,57 @@ class jogosController extends controller {
 
 	}
 
-	public function jogo(){
+	public function jogo($url){
 
+		$jogo = new Jogos();
+		$jogo->url = $url;
+		$jogo = $jogo->get_jogo();
 
-		$dados = array();
+		if($jogo == true) {
 
-		$this->loadView('jogo', $dados);
+			$resultados = new Jogos();
+			$resultados->status_jogo = "Fim de jogo";
+			$resultados->init = 0;
+			$resultados->max = 4;
+
+			$agendados = new Jogos();
+			$agendados->status_jogo = "Agendado";
+			$agendados->init = 0;
+			$agendados->max = 4;
+
+			$noticias_jogos = new Noticias();
+			$noticias_jogos->categoria = "esportes";
+			$noticias_jogos->init = 0;
+			$noticias_jogos->max = 4;
+
+			$videos_esportes = new Noticias();
+			$videos_esportes->categoria = "esportes";
+			$videos_esportes->init = 0;
+			$videos_esportes->max = 2;
+
+			$slide_esportes = new Jogos();
+			$slide_esportes->status_jogo = "Fim de jogo";
+			$slide_esportes->init = 0;
+			$slide_esportes->max = 3;
+
+			$dados = array(
+				'resultados' => $resultados->get_jogos(),
+				'agendados' => $agendados->get_jogos(),
+				'noticias_jogos' => $noticias_jogos->get_by_categoria(),
+				'videos_esportes' => $videos_esportes->get_videos(),
+				'slide_esportes' => $slide_esportes->get_jogos(),
+				'jogo' => $jogo
+			);
+
+			$this->loadView('jogo', $dados);
+
+		} else {
+
+			$dados = array();
+
+			$this->loadView('404', $dados);
+
+		}
 
 	}
 	

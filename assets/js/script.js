@@ -483,4 +483,65 @@ $(document).ready(function(){
 
   }
 
+  /*
+  * Carregar os lances em tempo real do jogo
+  */
+  setInterval(load_lances,5000);
+
+  function load_lances(){
+
+    var url = $("#url").val();
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_lances',
+      data:{url:url},
+      success:function(result){
+        $("#lances_jogo").html(result);
+      }
+    });
+
+  }
+
+  /*
+  * Carregar o status do jogo
+  */
+  setInterval(load_status_jogo,5000);
+
+  function load_status_jogo(){
+
+    var url = $("#url").val();
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_status_jogo',
+      dataType:'json',
+      data:{url:url},
+      success:function(result){
+        $(".status-jogo p").html(result.status_jogo);
+      }
+    });
+
+  }
+
+  /*
+  * Carregar o placar ao vivo
+  */
+  setInterval(load_placar,5000);
+
+  function load_placar(){
+
+    var url = $("#url").val();
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_placar',
+      data:{url:url},
+      success:function(result){
+        $("#placar_ao_vivo").html(result);
+      }
+    });
+
+  }
+
 });
