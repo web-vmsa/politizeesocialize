@@ -1,10 +1,16 @@
+<?php 
+	
+	$usuario_prop = json_decode($colunista['usuario_prop']); 
+	$redes_sociais = json_decode($colunista['social']);
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<!-- Primary Meta Tags -->
-	<title>Politize e socialize - Colunista Victor Miguel</title>
-	<meta name="title" content="Politize e socialize - Colunista Victor Miguel">
-	<meta name="description" content="Tudo sobre o colunista Victor Miguel na Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
+	<title>Politize e socialize - Colunista <?php echo $colunista['nome']; ?></title>
+	<meta name="title" content="Politize e socialize - Colunista <?php echo $colunista['nome']; ?>">
+	<meta name="description" content="Tudo sobre o colunista <?php echo $colunista['nome']; ?> na Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="keywords" content="Política, Bolsonaro, Brasília, Sergio Moro">
@@ -17,16 +23,16 @@
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-	<meta property="og:title" content="Politize e socialize - Colunista Victor Miguel">
-	<meta property="og:description" content="Tudo sobre o colunista Victor Miguel na Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
+	<meta property="og:url" content="<?php echo BASE_URL; ?>colunas/colunista/<?php echo $colunista['nome']; ?>">
+	<meta property="og:title" content="Politize e socialize - Colunista <?php echo $colunista['nome']; ?>">
+	<meta property="og:description" content="Tudo sobre o colunista <?php echo $colunista['nome']; ?> na Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
 	<meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-	<meta property="twitter:title" content="Politize e socialize - Colunista Victor Miguel">
-	<meta property="twitter:description" content="Tudo sobre o colunista Victor Miguel na Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
+	<meta property="twitter:url" content="<?php echo BASE_URL; ?>colunas/colunista/<?php echo $colunista['nome']; ?>">
+	<meta property="twitter:title" content="Politize e socialize - Colunista <?php echo $colunista['nome']; ?>">
+	<meta property="twitter:description" content="Tudo sobre o colunista <?php echo $colunista['nome']; ?> na Politize e socialize. Assine a newsletter e receba gratuitamente nosso conteúdo no seu e-mail.">
 	<meta property="twitter:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
 
 	<!-- Css -->
@@ -51,6 +57,9 @@
 	<!-- Facebook plugin -->
 	<div id="fb-root"></div>
 	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="8w1uRG64"></script>
+
+	<!-- Nome do usuário -->
+	<input type="hidden" id="nome" name="nome" value="<?php echo $colunista['nome']; ?>">
 
 	<!-- Modal -->
 	<div class="modal">
@@ -216,29 +225,29 @@
 	</header>
 
 	<!-- Tarja fixa da seção -->
-	<section class="tarja-categoria tarja-categoria-politica">
-		<p>POLÍTICA</p>
+	<section class="tarja-categoria tarja-categoria-<?php echo $usuario_prop->categoria; ?>">
+		<p><?php echo mb_strtoupper($usuario_prop->categoria); ?></p>
 	</section>
 
 	<!-- Topo do perfil do Colunista -->
 	<section class="topo-perfil-colunista">
 		<div class="dados-colunista-perfil">
 			<div class="foto-colunista-perfil">
-				<img src="https://terrafm94.com.br/wp-content/uploads/2018/10/galvao.png">
+				<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $colunista['foto']; ?>">
 			</div>
-			<h2 class="cursor-default">Lorem Ipsum</h2>
+			<h2 class="cursor-default"><?php echo $colunista['nome']; ?></h2>
 		</div>
 		<div class="redes-sociais-colunista-perfil">
-			<a href=""><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
-			<a href=""><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
-			<a href=""><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
-			<a href=""><img src="<?php echo BASE_URL; ?>assets/images/youtube.svg"></a>
+			<a href="<?php echo $redes_sociais->facebook; ?>"><img src="<?php echo BASE_URL; ?>assets/images/facebook.svg"></a>
+			<a href="<?php echo $redes_sociais->instagram; ?>"><img src="<?php echo BASE_URL; ?>assets/images/instagram.svg"></a>
+			<a href="<?php echo $redes_sociais->linkedin; ?>"><img src="<?php echo BASE_URL; ?>assets/images/linkedin.svg"></a>
+			<a href="<?php echo $redes_sociais->youtube; ?>"><img src="<?php echo BASE_URL; ?>assets/images/youtube.svg"></a>
 		</div>
 	</section>
 
 	<!-- Bio -->
 	<section class="bio-colunista">
-		<p class="cursor-default">“Lorem ipsum dolor sit amet consectetur itnerest.” — Albert Einstein</p>
+		<p class="cursor-default">“<?php echo $colunista['biografia']; ?>” — <?php echo $colunista['nome']; ?></p>
 	</section>
 
 	<!-- Postagens do Colunista -->
@@ -253,75 +262,13 @@
 	</section>
 
 	<!-- Todas as postagens -->
-	<section class="todas-postagens">
-		<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-			<div class="noticia-menor-politica">
-				<img src="https://s2.glbimg.com/mngGalithA5ohe3KzGBZp6Zwnlw=/0x0:2048x1152/540x304/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/O/U/FPY20dRwiOAt5VO1ZCBw/50688013266-2d0cdaa7c7-k.jpg">
-				<div class="noticia-menor-conteudo-politica">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</div>
-			</div>
-		</a>
-		<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-			<div class="noticia-menor-politica">
-				<img src="https://s2.glbimg.com/UDPD9jKWz2831nnRnb7-7tmfrqs=/0x0:1280x853/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/L/z/RYs7wwTUmALWjqUDS41w/whatsapp-image-2019-09-19-at-00.43.15.jpeg">
-				<div class="noticia-menor-conteudo-politica">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</div>
-			</div>
-		</a>
-		<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-			<div class="noticia-menor-politica">
-				<img src="https://colunadofla.com/wp-content/uploads/2020/07/rodrigo-caio.jpg">
-				<div class="noticia-menor-conteudo-politica">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</div>
-			</div>
-		</a>
-		<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-			<div class="noticia-menor-politica">
-				<img src="https://www.lance.com.br/files/article_main/uploads/2020/08/29/5f4adc962b03c.jpeg">
-				<div class="noticia-menor-conteudo-politica">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</div>
-			</div>
-		</a>
-		<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-			<div class="noticia-menor-politica">
-				<img src="https://conteudo.imguol.com.br/c/esporte/82/2020/12/05/rafael-sobis-comemora-gol-marcado-pelo-cruzeiro-sobre-o-brasil-de-pelotas-no-mineirao-1607217708438_v2_450x337.jpg">
-				<div class="noticia-menor-conteudo-politica">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</div>
-			</div>
-		</a>
-		<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-			<div class="noticia-menor-politica">
-				<img src="https://www.coritiba.com.br/imgview/show/161345/50">
-				<div class="noticia-menor-conteudo-politica">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</div>
-			</div>
-		</a>
-		<a href="<?php echo BASE_URL; ?>home/postagem/{{postagem}}">
-			<div class="noticia-menor-politica">
-				<img src="https://www.lance.com.br/files/article_main/uploads/2020/08/29/5f4adc962b03c.jpeg">
-				<div class="noticia-menor-conteudo-politica">
-					<h2>LOREM IPSUM  DOLOR SIT AMET, CONSECTETUR ADIPISCING</h2>
-					<p>POR HUGO SOUZA | 20 DE OUTUBRO<br>DE 2020</p>
-				</div>
-			</div>
-		</a>
+	<section class="todas-postagens colunista-postagens todas-postagens-<?php echo $usuario_prop->categoria; ?>">
+		
 	</section>
 
 	<!-- Carregar mais -->
 	<div class="carregar-mais">
-		<button id="load-more-posts">
+		<button id="load-more-posts-colunista">
 			CARREGAR MAIS
 		</button>
 	</div>
@@ -331,86 +278,39 @@
 
 	<!-- Política -->
 	<section class="topo-secao politica-topo-secao">
-		<a href="<?php echo BASE_URL; ?>home/categoria/politica">
+		<a href="<?php echo BASE_URL; ?>home/categoria/<?php echo $usuario_prop->categoria; ?>">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
-				<p>POLÍTICA</p>
+				<p><?php echo mb_strtoupper($usuario_prop->categoria); ?></p>
 			</div>
 			<div class="item-topo-secao justify-right">
-				<img src="<?php echo BASE_URL; ?>assets/images/right-red.svg">
+				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</div>
 		</a>
 	</section>
 
 	<!-- Colunistas da Seção Política -->
-	<section class="colunistas-secao colunistas-secao-politica">
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static.poder360.com.br/2020/12/JairBolsonaro-PessoaComDeficiencia-Michelle-14-868x644.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
+	<section class="colunistas-secao colunistas-secao-<?php echo $usuario_prop->categoria; ?>">
+
+		<?php
+			foreach($colunistas as $dados):
+		?>
 
 		<div class="borda-colunista-secao"></div>
 
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
+		<a href="<?php echo BASE_URL; ?>colunas/colunista/<?php echo $dados['nome']; ?>">
 			<div class="colunista-secao">
 				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/PDFt8rv5N6BqUV6kcID838G79Fo=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SH7RXY3KBBGC7E2MGUR34CCHPA.jpg">
+					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['foto']; ?>">
 				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
+				<h2><?php echo mb_strtoupper($dados['nome']); ?></h2>
+				<p>"<?php echo mb_strtoupper($dados['biografia']); ?>"</p>
 			</div>
 		</a>
+
+		<?php endforeach; ?>
 
 		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://f.i.uol.com.br/fotografia/2020/05/30/15908728835ed2cb33ad63d_1590872883_3x2_md.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://imagens.brasil.elpais.com/resizer/6PompmIOEFiHliFkdnHBi-dO2EI=/768x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/SBJ3UW43NBHBLGRMP73V22ZF3I.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://www.cartacapital.com.br/wp-content/uploads/2020/10/Lula-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
-
-		<div class="borda-colunista-secao"></div>
-
-		<a href="<?php echo BASE_URL; ?>colunas/colunista/{{colunista}}">
-			<div class="colunista-secao">
-				<div class="colunista-secao-foto">
-					<img src="https://static1.purepeople.com.br/articles/0/30/68/00/@/3467315-andreia-sadi-revela-nome-dos-filhos-com-624x600-2.jpg">
-				</div>
-				<h2>VICTOR MIGUEL</h2>
-				<p>"PROGRAMADOR E UX DESIGNER APAIXONADO."</p>
-			</div>
-		</a>
 	</section>
 
 	<!-- Linha -->

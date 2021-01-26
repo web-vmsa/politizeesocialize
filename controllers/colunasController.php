@@ -46,12 +46,34 @@ class colunasController extends controller {
 
 	}
 
-	public function colunista() {
+	public function colunista($nome) {
 
+		$colunista = new Colunistas();
+		$colunista->nome = $nome;
+		$colunista = $colunista->get_colunista();
 
-		$dados = array();
+		if ($colunista == true) {
 
-		$this->loadView('colunista', $dados);
+			$categoria = json_decode($colunista['usuario_prop']);
+
+			$colunistas = new Colunistas();
+			$colunistas->categoria = $categoria->categoria;
+			
+			$dados = array(
+				'colunista' => $colunista,
+				'colunistas' => $colunistas->get_colunistas_by_categoria()
+			);
+
+			$this->loadView('colunista', $dados);
+
+		} else {
+
+			$dados = array();
+
+			$this->loadView('404', $dados);
+
+		}
+
 	}
 
 	public function opiniao($url) {

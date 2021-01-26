@@ -573,4 +573,35 @@ $(document).ready(function(){
 
   }
 
+  /*
+  * Carregar mais postagens do colunista
+  */
+  var posts_colunista = 0;
+
+  // Pega o nome do usuário
+  var nome = $("#nome").val();
+
+  document.onload = load_more_posts_colunista();
+
+  $("#load-more-posts-colunista").on("click", function(){
+
+    load_more_posts_colunista();
+
+  });
+
+  function load_more_posts_colunista(){
+
+    posts_colunista++;
+
+    $.ajax({
+      type:'POST',
+      url:raiz+'ajax/load_posts_colunista',
+      data:{posts_colunista:posts_colunista, nome:nome},
+      success:function(result){
+        $(".colunista-postagens").append(result);
+      }
+    });
+
+  }
+
 });

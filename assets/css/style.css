@@ -2473,6 +2473,37 @@ body {
 }
 
 
+
+/* Todas as postagens hover modificado */
+.todas-postagens-politica:hover .noticia-menor-conteudo-politica h2 {
+	color: #DC2121;
+}
+.todas-postagens-televisao:hover .noticia-menor-conteudo-politica h2 {
+	color: #4B0082;
+}
+.todas-postagens-esportes:hover .noticia-menor-conteudo-politica h2 {
+	color: #ECEC12;
+}
+.todas-postagens-economia:hover .noticia-menor-conteudo-politica h2 {
+	color: #32CD32;
+}
+.todas-postagens-saude:hover .noticia-menor-conteudo-politica h2 {
+	color: #6495ED;
+}
+.todas-postagens-educacao:hover .noticia-menor-conteudo-politica h2 {
+	color: #C8A2C8;
+}
+.todas-postagens-musica:hover .noticia-menor-conteudo-politica h2 {
+	color: #AA22BB;
+}
+.todas-postagens-games:hover .noticia-menor-conteudo-politica h2 {
+	color: #363636;
+}
+/*
+*
+*/
+
+
 /* 
 *	Tarja da data do jogo Especificações
 */
