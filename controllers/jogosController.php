@@ -29,31 +29,31 @@ class jogosController extends controller {
 		$slide_esportes->max = 3;
 
 		$jogos_hoje = new Jogos();
-		$jogos_hoje->day = "20";
-		$jogos_hoje->month = "01";
-		$jogos_hoje->year = "2021";
+		$jogos_hoje->day = date("d");
+		$jogos_hoje->month = date("m");
+		$jogos_hoje->year = date("Y");
 
 		$jogos_amanha = new Jogos();
 		$datetime = new DateTime('tomorrow');
-		$jogos_amanha->day = /*"20"*/$datetime->format('d');
-		$jogos_amanha->month = /*"01"*/$datetime->format('m');
-		$jogos_amanha->year = /*"2021"*/$datetime->format('Y');
+		$jogos_amanha->day = $datetime->format('d');
+		$jogos_amanha->month = $datetime->format('m');
+		$jogos_amanha->year = $datetime->format('Y');
 
 		$jogos_outro = new Jogos();
 		$hoje = date("Y/m/d");
 		$datetime = new DateTime($hoje);
 		$datetime->modify('+2 day');
-		$jogos_outro->day = "20"/*$datetime->format('d')*/;
-		$jogos_outro->month = "01"/*$datetime->format('m')*/;
-		$jogos_outro->year = "2021"/*$datetime->format('Y')*/;
+		$jogos_outro->day = $datetime->format('d');
+		$jogos_outro->month = $datetime->format('m');
+		$jogos_outro->year = $datetime->format('Y');
 
 		$jogos_mais = new Jogos();
 		$hoje = date("Y/m/d");
 		$datetime = new DateTime($hoje);
 		$datetime->modify('+3 day');
-		$jogos_mais->day = "20"/*$datetime->format('d')*/;
-		$jogos_mais->month = "01"/*$datetime->format('m')*/;
-		$jogos_mais->year = "2021"/*$datetime->format('Y')*/;
+		$jogos_mais->day = $datetime->format('d');
+		$jogos_mais->month = $datetime->format('m');
+		$jogos_mais->year = $datetime->format('Y');
 
 		$dados = array(
 			'resultados' => $resultados->get_jogos(),
@@ -99,24 +99,24 @@ class jogosController extends controller {
 		$slide_esportes->max = 3;
 
 		$jogos_hoje = new Jogos();
-		$jogos_hoje->day = "20";
-		$jogos_hoje->month = "01";
-		$jogos_hoje->year = "2021";
+		$jogos_hoje->day = date("d");
+		$jogos_hoje->month = date("m");
+		$jogos_hoje->year = date("Y");
 
 		$jogos_ontem = new Jogos();
-		$jogos_ontem->day = "20"/*date("d")-1*/;
-		$jogos_ontem->month = "01"/*date("m")*/;
-		$jogos_ontem->year = "2021"/*date("Y")*/;
+		$jogos_ontem->day = date("d")-1;
+		$jogos_ontem->month = date("m");
+		$jogos_ontem->year = date("Y");
 
 		$jogos_outro = new Jogos();
-		$jogos_outro->day = "20"/*date("d")-2*/;
-		$jogos_outro->month = "01"/*date("m")*/;
-		$jogos_outro->year = "2021"/*date("Y")*/;
+		$jogos_outro->day = date("d")-2;
+		$jogos_outro->month = date("m");
+		$jogos_outro->year = date("Y");
 
 		$jogos_mais = new Jogos();
-		$jogos_mais->day = "20"/*date("d")-3*/;
-		$jogos_mais->month = "01"/*date("m")*/;
-		$jogos_mais->year = "2021"/*date("Y")*/;
+		$jogos_mais->day = date("d")-3;
+		$jogos_mais->month = date("m");
+		$jogos_mais->year = date("Y");
 
 		$dados = array(
 			'resultados' => $resultados->get_jogos(),

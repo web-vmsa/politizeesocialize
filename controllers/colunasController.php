@@ -86,12 +86,12 @@ class colunasController extends controller {
 		if ($opiniao == true) {
 
 			$maiores = new Noticias();
-			$maiores->categoria = /*$opiniao['categoria']*/"politica";
+			$maiores->categoria = $opiniao['categoria'];
 			$maiores->init = 0;
 			$maiores->max = 2;
 
 			$menores = new Noticias();
-			$menores->categoria = /*$opiniao['categoria']*/"politica";
+			$menores->categoria = $opiniao['categoria'];
 			$menores->init = 2;
 			$menores->max = 4;
 

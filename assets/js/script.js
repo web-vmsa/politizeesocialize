@@ -583,7 +583,7 @@ $(document).ready(function(){
 
   document.onload = load_more_posts_colunista();
 
-  $("#load-more-posts-colunista").on("click", function(){
+  $(".load-more-posts-colunista").on("click", function(){
 
     load_more_posts_colunista();
 

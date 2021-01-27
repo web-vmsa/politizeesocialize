@@ -109,11 +109,11 @@ class homeController extends controller {
 				$noticias_menores->max = 2;
 
 				$maiores_destaque = new Noticias();
-				$maiores_destaque->init = 0;
+				$maiores_destaque->init = 6;
 				$maiores_destaque->max = 2;
 
 				$menores_destaque = new Noticias();
-				$menores_destaque->init = 0;
+				$menores_destaque->init = 8;
 				$menores_destaque->max = 4;
 				
 				$dados = array(
@@ -130,28 +130,28 @@ class homeController extends controller {
 			} else {
 
 				$slide = new Noticias();
-				$slide->categoria = /*$categoria['nome'];*/"politica";
+				$slide->categoria = $categoria['nome'];;
 				$slide->init = 0;
 				$slide->max = 3;
 
 				$noticia_maior = new Noticias();
-				$noticia_maior->categoria = /*$categoria['nome'];*/"politica";
+				$noticia_maior->categoria = $categoria['nome'];;
 				$noticia_maior->init = 3;
 				$noticia_maior->max = 1;
 
 				$noticias_menores = new Noticias();
-				$noticias_menores->categoria = /*$categoria['nome'];*/"politica";
+				$noticias_menores->categoria = $categoria['nome'];;
 				$noticias_menores->init = 4;
 				$noticias_menores->max = 2;
 
 				$maiores_destaque = new Noticias();
-				$maiores_destaque->categoria = /*$categoria['nome'];*/"politica";
-				$maiores_destaque->init = 0;
+				$maiores_destaque->categoria = $categoria['nome'];;
+				$maiores_destaque->init = 6;
 				$maiores_destaque->max = 2;
 
 				$menores_destaque = new Noticias();
-				$menores_destaque->categoria = /*$categoria['nome'];*/"politica";
-				$menores_destaque->init = 0;
+				$menores_destaque->categoria = $categoria['nome'];;
+				$menores_destaque->init = 8;
 				$menores_destaque->max = 4;
 				
 				$dados = array(

@@ -281,9 +281,10 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
+			$videos->categoria = 'politica';
 			$videos->init = $init;
 			$videos->max = $max;
-			$data_video = $videos->get_all_videos();
+			$data_video = $videos->get_videos();
 
 			foreach ($data_video as $item) {
 				
@@ -341,9 +342,10 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
+			$videos->categoria = 'televisao';
 			$videos->init = $init;
 			$videos->max = $max;
-			$data_video = $videos->get_all_videos();
+			$data_video = $videos->get_videos();
 
 			foreach ($data_video as $item) {
 				
@@ -401,9 +403,10 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
+			$videos->categoria = 'esportes';
 			$videos->init = $init;
 			$videos->max = $max;
-			$data_video = $videos->get_all_videos();
+			$data_video = $videos->get_videos();
 
 			foreach ($data_video as $item) {
 				
@@ -461,9 +464,10 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
+			$videos->categoria = 'economia';
 			$videos->init = $init;
 			$videos->max = $max;
-			$data_video = $videos->get_all_videos();
+			$data_video = $videos->get_videos();
 
 			foreach ($data_video as $item) {
 				
@@ -521,9 +525,10 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
+			$videos->categoria = 'saude';
 			$videos->init = $init;
 			$videos->max = $max;
-			$data_video = $videos->get_all_videos();
+			$data_video = $videos->get_videos();
 
 			foreach ($data_video as $item) {
 				
@@ -581,9 +586,10 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
+			$videos->categoria = 'educacao';
 			$videos->init = $init;
 			$videos->max = $max;
-			$data_video = $videos->get_all_videos();
+			$data_video = $videos->get_videos();
 
 			foreach ($data_video as $item) {
 				
@@ -641,9 +647,10 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
+			$videos->categoria = 'musica';
 			$videos->init = $init;
 			$videos->max = $max;
-			$data_video = $videos->get_all_videos();
+			$data_video = $videos->get_videos();
 
 			foreach ($data_video as $item) {
 				
@@ -701,9 +708,10 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
+			$videos->categoria = 'games';
 			$videos->init = $init;
 			$videos->max = $max;
-			$data_video = $videos->get_all_videos();
+			$data_video = $videos->get_videos();
 
 			foreach ($data_video as $item) {
 				
