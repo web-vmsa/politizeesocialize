@@ -24,7 +24,7 @@ class Colunistas extends model {
 	*/
 	public function get_all(){
 
-		$sql = "SELECT * FROM usuarios WHERE JSON_VALUE(usuario_prop, '$.nivel') = 'escritor' ORDER BY id DESC LIMIT :max OFFSET :init";
+		$sql = "SELECT * FROM usuarios WHERE categoria != 'NULL' ORDER BY id DESC LIMIT :max OFFSET :init";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(':init', $this->init, PDO::PARAM_INT);
 		$sql->bindValue(':max', $this->max, PDO::PARAM_INT);
@@ -47,7 +47,7 @@ class Colunistas extends model {
 	*/
 	public function get_colunistas_by_categoria(){
 
-		$sql = "SELECT * FROM usuarios WHERE JSON_VALUE(usuario_prop, '$.categoria') = :categoria ORDER BY id DESC";
+		$sql = "SELECT * FROM usuarios WHERE categoria = :categoria ORDER BY id DESC";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(':categoria', $this->categoria);
 		$sql->execute();
@@ -69,7 +69,7 @@ class Colunistas extends model {
 	*/
 	public function get_colunista(){
 
-		$sql = "SELECT * FROM usuarios WHERE JSON_VALUE(usuario_prop, '$.nivel') = 'escritor' AND nome = :nome AND status = '1'";
+		$sql = "SELECT * FROM usuarios WHERE categoria != 'NULL' AND nome = :nome AND status = '1'";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(':nome', $this->nome);
 		$sql->execute();

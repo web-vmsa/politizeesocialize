@@ -11,12 +11,12 @@ if (ENVIRONMENT == 'development') {
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = '';
 } else {
-	define("BASE_URL", "http://localhost/politizeesocialize/");
-	define("ADMIN_URL", "http://localhost/admin.politizeesocialize/");
-	$config['dbname'] = 'politizeesocialize';
+	define("BASE_URL", "https://www.politizeesocialize.com/");
+	define("ADMIN_URL", "https://www.admin.politizeesocialize.com/");
+	$config['dbname'] = 'politi07_politizeesocialize';
 	$config['host'] = 'localhost';
-	$config['dbuser'] = 'root';
-	$config['dbpass'] = '';
+	$config['dbuser'] = 'politi07_root';
+	$config['dbpass'] = 'KKqC054ipLY9';
 }
 
 global $db;

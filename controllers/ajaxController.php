@@ -24,7 +24,7 @@ class ajaxController extends controller {
 					echo '<div class="video">';
 						echo '<div class="topo-video">';
 							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
-							echo '<p>'.$item['dia'].' DE'; 
+							echo '<p>'.$item['dia'].' DE '; 
 							switch ($item['mes']) {
 							        case "01":    $mes = "JANEIRO";     break;
 							        case "02":    $mes = "FEVEREIRO";   break;
@@ -231,7 +231,7 @@ class ajaxController extends controller {
 					echo '<div class="video">';
 						echo '<div class="topo-video">';
 							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
-							echo '<p>'.$item['dia'].' DE'; 
+							echo '<p>'.$item['dia'].' DE '; 
 							switch ($item['mes']) {
 							        case "01":    $mes = "JANEIRO";     break;
 							        case "02":    $mes = "FEVEREIRO";   break;
@@ -292,7 +292,7 @@ class ajaxController extends controller {
 					echo '<div class="video">';
 						echo '<div class="topo-video">';
 							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
-							echo '<p>'.$item['dia'].' DE'; 
+							echo '<p>'.$item['dia'].' DE '; 
 							switch ($item['mes']) {
 							        case "01":    $mes = "JANEIRO";     break;
 							        case "02":    $mes = "FEVEREIRO";   break;
@@ -353,7 +353,7 @@ class ajaxController extends controller {
 					echo '<div class="video">';
 						echo '<div class="topo-video">';
 							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
-							echo '<p>'.$item['dia'].' DE'; 
+							echo '<p>'.$item['dia'].' DE '; 
 							switch ($item['mes']) {
 							        case "01":    $mes = "JANEIRO";     break;
 							        case "02":    $mes = "FEVEREIRO";   break;
@@ -414,7 +414,7 @@ class ajaxController extends controller {
 					echo '<div class="video">';
 						echo '<div class="topo-video">';
 							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
-							echo '<p>'.$item['dia'].' DE'; 
+							echo '<p>'.$item['dia'].' DE '; 
 							switch ($item['mes']) {
 							        case "01":    $mes = "JANEIRO";     break;
 							        case "02":    $mes = "FEVEREIRO";   break;
@@ -475,7 +475,7 @@ class ajaxController extends controller {
 					echo '<div class="video">';
 						echo '<div class="topo-video">';
 							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
-							echo '<p>'.$item['dia'].' DE'; 
+							echo '<p>'.$item['dia'].' DE '; 
 							switch ($item['mes']) {
 							        case "01":    $mes = "JANEIRO";     break;
 							        case "02":    $mes = "FEVEREIRO";   break;
@@ -536,7 +536,7 @@ class ajaxController extends controller {
 					echo '<div class="video">';
 						echo '<div class="topo-video">';
 							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
-							echo '<p>'.$item['dia'].' DE'; 
+							echo '<p>'.$item['dia'].' DE '; 
 							switch ($item['mes']) {
 							        case "01":    $mes = "JANEIRO";     break;
 							        case "02":    $mes = "FEVEREIRO";   break;
@@ -597,7 +597,7 @@ class ajaxController extends controller {
 					echo '<div class="video">';
 						echo '<div class="topo-video">';
 							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
-							echo '<p>'.$item['dia'].' DE'; 
+							echo '<p>'.$item['dia'].' DE '; 
 							switch ($item['mes']) {
 							        case "01":    $mes = "JANEIRO";     break;
 							        case "02":    $mes = "FEVEREIRO";   break;
@@ -658,7 +658,7 @@ class ajaxController extends controller {
 					echo '<div class="video">';
 						echo '<div class="topo-video">';
 							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
-							echo '<p>'.$item['dia'].' DE'; 
+							echo '<p>'.$item['dia'].' DE '; 
 							switch ($item['mes']) {
 							        case "01":    $mes = "JANEIRO";     break;
 							        case "02":    $mes = "FEVEREIRO";   break;
@@ -719,7 +719,7 @@ class ajaxController extends controller {
 					echo '<div class="video">';
 						echo '<div class="topo-video">';
 							echo '<img src="'.BASE_URL.'assets/images/play-button.svg">';
-							echo '<p>'.$item['dia'].' DE'; 
+							echo '<p>'.$item['dia'].' DE '; 
 							switch ($item['mes']) {
 							        case "01":    $mes = "JANEIRO";     break;
 							        case "02":    $mes = "FEVEREIRO";   break;

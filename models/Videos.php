@@ -23,7 +23,7 @@ class Videos extends model {
 	*/
 	public function get_all_videos(){
 
-		$sql = "SELECT titulo, descricao, arquivo, url, DAY(data) as dia, MONTH(data) as mes, YEAR(data) as ano FROM noticias  WHERE JSON_VALUE(noticias.arquivo_prop, '$.tipo') = 'video' ORDER BY id DESC LIMIT :max OFFSET :init";
+		$sql = "SELECT titulo, descricao, arquivo, tipo, url, DAY(data) as dia, MONTH(data) as mes, YEAR(data) as ano FROM noticias  WHERE tipo = 'video' ORDER BY id DESC LIMIT :max OFFSET :init";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(':init', $this->init, PDO::PARAM_INT);
 		$sql->bindValue(':max', $this->max, PDO::PARAM_INT);
@@ -48,7 +48,7 @@ class Videos extends model {
 	*/
 	public function get_videos(){
 
-		$sql = "SELECT titulo, descricao, arquivo, categoria, url, DAY(data) as dia, MONTH(data) as mes, YEAR(data) as ano FROM noticias  WHERE JSON_VALUE(arquivo_prop, '$.tipo') = 'video' AND categoria = :categoria ORDER BY id DESC LIMIT :max OFFSET :init";
+		$sql = "SELECT titulo, descricao, arquivo, categoria, url, DAY(data) as dia, MONTH(data) as mes, YEAR(data) as ano FROM noticias  WHERE arquivo LIKE '%.mp4%' AND categoria = :categoria ORDER BY id DESC LIMIT :max OFFSET :init";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(':categoria', $this->categoria);
 		$sql->bindValue(':init', $this->init, PDO::PARAM_INT);

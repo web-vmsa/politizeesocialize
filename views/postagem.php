@@ -32,7 +32,7 @@
 
 	<?php elseif($arquivo_prop->tipo == "video"): ?>
 
-	<meta property="og:video" content="<?php echo ADMIN_URL; ?>users/videos/<?php echo $noticia['arquivo']; ?>" />
+	<meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png" />
 
 	<?php endif; ?>
 

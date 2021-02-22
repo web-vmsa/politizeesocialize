@@ -311,17 +311,15 @@
 
 		<?php 
 			foreach($noticias_slide as $dados):
-
-			$arquivo_prop = json_decode($dados['arquivo_prop']);
 		?>
 
 		<!-- Itens -->
 		<div class="slideshow-item fade">
-			<?php if($arquivo_prop->tipo == "imagem"): ?>
+			<?php if($dados['tipo'] == "imagem"): ?>
 
 			<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-			<?php elseif($arquivo_prop->tipo == "video"): ?>
+			<?php elseif($dados['tipo'] == "video"): ?>
 
 			<video>
 				<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -411,18 +409,16 @@
 
 			<?php 
 				foreach($noticia_maior as $dados):
-
-				$arquivo_prop = json_decode($dados['arquivo_prop']);
 			?>
 
 			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-maior">
 
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -465,18 +461,16 @@
 
 				<?php 
 					foreach($noticias_menores as $dados):
-
-					$arquivo_prop = json_decode($dados['arquivo_prop']);
 				?>
 
 				<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 					<div class="noticia-menor">
 						
-						<?php if($arquivo_prop->tipo == "imagem"): ?>
+						<?php if($dados['tipo'] == "imagem"): ?>
 
 						<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-						<?php elseif($arquivo_prop->tipo == "video"): ?>
+						<?php elseif($dados['tipo'] == "video"): ?>
 
 						<video>
 							<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -558,18 +552,16 @@
 
 			<?php 
 				foreach($maiores_politica as $dados):
-
-				$arquivo_prop = json_decode($dados['arquivo_prop']);
 			?>
 
 			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-maior-politica">
 
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -614,18 +606,16 @@
 
 			<?php 
 				foreach($menores_politica as $dados):
-
-				$arquivo_prop = json_decode($dados['arquivo_prop']);
 			?>
 
 			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-menor-politica">
 					
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -693,18 +683,16 @@
 
 			<?php 
 				foreach($maior_televisao as $dados):
-
-				$arquivo_prop = json_decode($dados['arquivo_prop']);
 			?>
 
 			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-maior">
 					
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -745,18 +733,16 @@
 
 			<?php 
 				foreach($menores_televisao as $dados):
-
-				$arquivo_prop = json_decode($dados['arquivo_prop']);
 			?>
 
 			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-menor-politica">
 					
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -1040,15 +1026,13 @@
 				<div class="jogos-divs">
 
 					<?php 
-						foreach($resultados as $dados): 
-
-						$propriedades_jogo = json_decode($dados['jogo_prop']);
+						foreach($resultados as $dados):
 
 						$alcunha_casa = new Jogos();
-						$alcunha_casa = $alcunha_casa->get_alcunha($propriedades_jogo->time_casa);
+						$alcunha_casa = $alcunha_casa->get_alcunha($dados['time_casa']);
 
 						$alcunha_fora = new Jogos();
-						$alcunha_fora = $alcunha_fora->get_alcunha($propriedades_jogo->time_fora);
+						$alcunha_fora = $alcunha_fora->get_alcunha($dados['time_fora']);
 					?>
 
 					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>"><div class="jogo-div">
@@ -1073,13 +1057,11 @@
 					<?php 
 						foreach($agendados as $dados): 
 
-						$propriedades_jogo = json_decode($dados['jogo_prop']);
-
 						$alcunha_casa = new Jogos();
-						$alcunha_casa = $alcunha_casa->get_alcunha($propriedades_jogo->time_casa);
+						$alcunha_casa = $alcunha_casa->get_alcunha($dados['time_casa']);
 
 						$alcunha_fora = new Jogos();
-						$alcunha_fora = $alcunha_fora->get_alcunha($propriedades_jogo->time_fora);
+						$alcunha_fora = $alcunha_fora->get_alcunha($dados['time_fora']);
 					?>
 
 					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>"><div class="jogo-div">
@@ -1098,18 +1080,16 @@
 
 			<?php 
 				foreach($noticias_jogos as $dados):
-
-				$arquivo_prop = json_decode($dados['arquivo_prop']);
 			?>
 
 			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-menor-politica">
 					
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -1168,17 +1148,15 @@
 
 				<?php 
 					foreach($slide_esportes as $dados):
-
-					$arquivo_prop = json_decode($dados['arquivo_prop']);
 				?>
 
 				<div class="carousel-slide fade">
 					
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo']== "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">

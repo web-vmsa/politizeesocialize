@@ -6,7 +6,7 @@ $(document).ready(function(){
   if (environment == "development") {
     var raiz = "http://localhost/politizeesocialize/";
   } else {
-    var raiz = "http://localhost/politizeesocialize/";
+    raiz = "https://www.politizeesocialize.com/";
   }
 
   /*

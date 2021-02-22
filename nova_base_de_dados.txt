@@ -1,0 +1,97 @@
+USUARIOS
+
+id int(11)
+nome varchar(250)
+foto varchar(250)
+social text
+biografia text
+email varchar(250)
+senha varchar(32)
+permissoes text
+nivel varchar(150)
+categoria_id int(11)
+status tinyint(4)
+
+ASSINANTES
+
+id int(11)
+email varchar(250)
+status tinyint(4)
+
+CATEGORIAS
+
+id int(11)
+nome varchar(250)
+nome_normal varchar(250)
+descricao text
+tags text
+
+COMPETICOES
+
+id int(11)
+nome varchar(250)
+alcunha varchar(250)
+descricao text
+organizadora varchar(250)
+logotipo varchar(250)
+
+EQUIPES
+
+id int(11)
+nome varchar(250)
+alcunha varchar(250)
+escudo varchar(250)
+
+JOGOS
+
+id int(11)
+id_usuario int(11)
+categoria_id int(11)
+time_casa int(11)
+time_fora int(11)
+campeonato int(11)
+fase varchar(250)
+placar varchar(250)
+status_jogo varchar(250)
+titulo varchar(350)
+descricao text
+tags text
+url varchar(450)
+arquivo
+tipo varchar(250)
+legenda varchar(450)
+lances text
+data datetime
+status tinyint(4)
+
+NOTICIAS
+
+id int(11)
+id_usuario int(11)
+categoria_id int(11)
+titulo varchar(350)
+descricao text
+tags text
+url varchar(450)
+arquivo varchar(250)
+tipo varchar(250)
+legenda varchar(450)
+postagem text
+data datetime
+status tinyint(4)
+
+OPINIOES
+
+id int(11)
+id_usuario int(11)
+categoria_id int(11)
+titulo varchar(350)
+descricao text
+tags text
+url varchar(450)
+arquivo varchar(250)
+tipo varchar(250)
+legenda varchar(450)
+postagem text
+data datetime
+status tinyint(4)

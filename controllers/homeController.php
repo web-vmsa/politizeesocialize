@@ -16,27 +16,27 @@ class homeController extends controller {
 		$noticias_menores->max = 2;
 
 		$maiores_politica = new Noticias();
-		$maiores_politica->categoria = "politica";
+		$maiores_politica->categoria_id = 1;
 		$maiores_politica->init = 0;
 		$maiores_politica->max = 2;
 
 		$menores_politica = new Noticias();
-		$menores_politica->categoria = "politica";
+		$menores_politica->categoria_id = 1;
 		$menores_politica->init = 2;
 		$menores_politica->max = 4;
 
 		$maior_televisao = new Noticias();
-		$maior_televisao->categoria = "televisao";
+		$maior_televisao->categoria_id = 2;
 		$maior_televisao->init = 0;
 		$maior_televisao->max = 1;
 
 		$menores_televisao = new Noticias();
-		$menores_televisao->categoria = "televisao";
+		$menores_televisao->categoria_id = 2;
 		$menores_televisao->init = 1;
 		$menores_televisao->max = 2;
 
 		$videos_televisao = new Noticias();
-		$videos_televisao->categoria = "televisao";
+		$videos_televisao->categoria_id = 2;
 		$videos_televisao->init = 0;
 		$videos_televisao->max = 2;
 
@@ -51,12 +51,12 @@ class homeController extends controller {
 		$agendados->max = 4;
 
 		$noticias_jogos = new Noticias();
-		$noticias_jogos->categoria = "esportes";
+		$noticias_jogos->categoria_id = 3;
 		$noticias_jogos->init = 0;
 		$noticias_jogos->max = 4;
 
 		$videos_esportes = new Noticias();
-		$videos_esportes->categoria = "esportes";
+		$videos_esportes->categoria_id = 3;
 		$videos_esportes->init = 0;
 		$videos_esportes->max = 2;
 
