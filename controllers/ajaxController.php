@@ -156,12 +156,10 @@ class ajaxController extends controller {
 
 			foreach ($data_postagens as $posts) {
 
-				$arquivo_prop = json_decode($posts['arquivo_prop']);
-
 				echo '<a href="'.BASE_URL.'colunas/opiniao/'.$posts['url'].'">';
 					echo '<div class="noticia-menor-politica">';
 						
-						if ($arquivo_prop->tipo == "imagem") {
+						if ($posts['tipo'] == "imagem") {
 
 							echo '<img src="'.ADMIN_URL.'users/images/'.$posts['arquivo'].'">';
 

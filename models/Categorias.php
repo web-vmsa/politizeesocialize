@@ -8,21 +8,21 @@
 */
 class Categorias extends model {
 
-	public $nome;
+	public $id;
 
 	/*
 	* Função de Verificar se a categoria existe
 	* 
 	* Esta função vai selecionar a categoria e as tags da categoria
 	*
-	* @param $nome string é o nome da categoria
+	* @param $id int é o id da categoria
 	* @return true or false
 	*/
 	public function get_categoria(){
 
-		$sql = "SELECT * FROM categorias WHERE nome = :nome";
+		$sql = "SELECT * FROM categorias WHERE id = :id";
 		$sql = $this->db->prepare($sql);
-		$sql->bindValue(':nome', $this->nome);
+		$sql->bindValue(':id', $this->nome);
 		$sql->execute();
 		if ($sql->rowCount() > 0) {
 			return $sql->fetch();

@@ -9,7 +9,7 @@
 class Colunistas extends model {
 
 	public $nome;
-	public $categoria;
+	public $categoria_id;
 	public $init;
 	public $max;
 
@@ -24,7 +24,7 @@ class Colunistas extends model {
 	*/
 	public function get_all(){
 
-		$sql = "SELECT * FROM usuarios WHERE categoria != 'NULL' ORDER BY id DESC LIMIT :max OFFSET :init";
+		$sql = "SELECT * FROM usuarios WHERE nivel = 'escritor' ORDER BY id DESC LIMIT :max OFFSET :init";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(':init', $this->init, PDO::PARAM_INT);
 		$sql->bindValue(':max', $this->max, PDO::PARAM_INT);

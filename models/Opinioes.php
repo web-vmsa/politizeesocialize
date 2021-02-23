@@ -23,7 +23,7 @@ class Opinioes extends model {
 	*/
 	public function get_all_opi(){
 
-		$sql = "SELECT usuarios.id, usuarios.nome, opinioes.id, opinioes.categoria, opinioes.id_usuario, opinioes.titulo, opinioes.arquivo, opinioes.url, opinioes.tags, opinioes.arquivo_prop, opinioes.data, DAY(opinioes.data) as dia, MONTH(opinioes.data) as mes, YEAR(opinioes.data) as ano FROM opinioes INNER JOIN usuarios ON usuarios.id = opinioes.id_usuario WHERE opinioes.status = '1' ORDER BY opinioes.id DESC LIMIT :max OFFSET :init";
+		$sql = "SELECT usuarios.id, usuarios.nome, opinioes.id, opinioes.categoria_id, opinioes.id_usuario, opinioes.titulo, opinioes.arquivo, opinioes.url, opinioes.tags, opinioes.tipo, opinioes.legenda, opinioes.data, DAY(opinioes.data) as dia, MONTH(opinioes.data) as mes, YEAR(opinioes.data) as ano FROM opinioes INNER JOIN usuarios ON usuarios.id = opinioes.id_usuario WHERE opinioes.status = '1' ORDER BY opinioes.id DESC LIMIT :max OFFSET :init";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(':init', $this->init, PDO::PARAM_INT);
 		$sql->bindValue(':max', $this->max, PDO::PARAM_INT);

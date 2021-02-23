@@ -2,8 +2,8 @@
 <html>
 <head>
 	<!-- Primary Meta Tags -->
-	<title>Politize e socialize - Tudo sobre <?php echo $categoria['nome']; ?></title>
-	<meta name="title" content="Politize e socialize - Tudo sobre <?php echo $categoria['nome']; ?>">
+	<title>Politize e socialize - Tudo sobre <?php echo utf8_encode($categoria['nome_normal']); ?></title>
+	<meta name="title" content="Politize e socialize - Tudo sobre <?php echo utf8_encode($categoria['nome_normal']); ?>">
 	<meta name="description" content="<?php echo utf8_encode($categoria['descricao']); ?>">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,15 +17,15 @@
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="<?php echo BASE_URL; ?>home/categoria/<?php echo $categoria['nome']; ?>">
-	<meta property="og:title" content="Politize e socialize - Tudo sobre <?php echo $categoria['nome']; ?>">
+	<meta property="og:url" content="<?php echo BASE_URL; ?>home/categoria/<?php echo $categoria['id']; ?>">
+	<meta property="og:title" content="Politize e socialize - Tudo sobre <?php echo utf8_encode($categoria['nome_normal']); ?>">
 	<meta property="og:description" content="<?php echo utf8_encode($categoria['descricao']); ?>">
 	<meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="<?php echo BASE_URL; ?>home/categoria/<?php echo $categoria['nome']; ?>">
-	<meta property="twitter:title" content="Politize e socialize - Tudo sobre <?php echo $categoria['nome']; ?>">
+	<meta property="twitter:url" content="<?php echo BASE_URL; ?>home/categoria/<?php echo $categoria['id']; ?>">
+	<meta property="twitter:title" content="Politize e socialize - Tudo sobre <?php echo utf8_encode($categoria['nome_normal']); ?>">
 	<meta property="twitter:description" content="<?php echo utf8_encode($categoria['descricao']); ?>">
 	<meta property="twitter:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png">
 
@@ -304,7 +304,7 @@
 	</section>
 	<?php else: ?>
 	<section class="tarja-categoria tarja-categoria-<?php echo $categoria['nome']; ?>">
-		<p><?php echo mb_strtoupper($categoria['nome']); ?></p>
+		<p><?php echo mb_strtoupper(utf8_encode($categoria['nome_normal'])); ?></p>
 	</section>
 	<?php endif; ?>
 
@@ -325,17 +325,15 @@
 
 		<?php 
 			foreach($slide as $dados):
-
-			$arquivo_prop = json_decode($dados['arquivo_prop']);
 		?>
 
 		<div class="slideshow-categoria-item fade">
 
-			<?php if($arquivo_prop->tipo == "imagem"): ?>
+			<?php if($dados['tipo'] == "imagem"): ?>
 
 			<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-			<?php elseif($arquivo_prop->tipo == "video"): ?>
+			<?php elseif($dados['tipo'] == "video"): ?>
 
 			<video>
 				<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -388,18 +386,16 @@
 
 			<?php 
 				foreach($noticia_maior as $dados):
-
-				$arquivo_prop = json_decode($dados['arquivo_prop']);
 			?>
 
 			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-maior">
 
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -442,18 +438,16 @@
 
 				<?php 
 					foreach($noticias_menores as $dados):
-
-					$arquivo_prop = json_decode($dados['arquivo_prop']);
 				?>
 
 				<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 					<div class="noticia-menor">
 						
-						<?php if($arquivo_prop->tipo == "imagem"): ?>
+						<?php if($dados['tipo'] == "imagem"): ?>
 
 						<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-						<?php elseif($arquivo_prop->tipo == "video"): ?>
+						<?php elseif($dados['tipo'] == "video"): ?>
 
 						<video>
 							<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -533,17 +527,15 @@
 
 			<?php 
 				foreach($maiores_destaque as $dados):
-
-				$arquivo_prop = json_decode($dados['arquivo_prop']);
 			?>
 
 			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-maior-politica">
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -588,18 +580,16 @@
 
 			<?php 
 				foreach($menores_destaque as $dados):
-
-				$arquivo_prop = json_decode($dados['arquivo_prop']);
 			?>
 
 			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-menor-politica">
 
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
