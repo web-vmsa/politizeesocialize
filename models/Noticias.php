@@ -110,7 +110,7 @@ class Noticias extends model {
 	*/
 	public function get_new(){
 
-		$sql = "SELECT usuarios.id, usuarios.nome, usuarios.foto, noticias.id, noticias.categoria, noticias.id_usuario, noticias.titulo, noticias.descricao, noticias.tags, noticias.postagem, noticias.arquivo, noticias.url, noticias.arquivo_prop, noticias.data, DAY(noticias.data) as dia, MONTH(noticias.data) as mes, YEAR(noticias.data) as ano FROM noticias INNER JOIN usuarios ON usuarios.id = noticias.id_usuario WHERE noticias.status = '1' AND noticias.url = :url";
+		$sql = "SELECT usuarios.id, usuarios.nome, usuarios.foto, noticias.id, noticias.categoria_id, noticias.id_usuario, noticias.titulo, noticias.descricao, noticias.tags, noticias.postagem, noticias.arquivo, noticias.url, noticias.tipo, noticias.legenda, noticias.data, DAY(noticias.data) as dia, MONTH(noticias.data) as mes, YEAR(noticias.data) as ano FROM noticias INNER JOIN usuarios ON usuarios.id = noticias.id_usuario WHERE noticias.status = '1' AND noticias.url = :url";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(':url', $this->url);
 		$sql->execute();

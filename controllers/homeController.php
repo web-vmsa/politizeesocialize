@@ -85,11 +85,11 @@ class homeController extends controller {
 
 	}
 
-	public function categoria($nome){
+	public function categoria($id){
 
 
 		$categoria = new Categorias();
-		$categoria->nome = $nome;
+		$categoria->id = $id;
 		$categoria = $categoria->get_categoria();
  
 		if($categoria == true) {
@@ -193,19 +193,23 @@ class homeController extends controller {
 		if ($noticia == true) {
 
 			$maiores = new Noticias();
-			$maiores->categoria = $noticia['categoria'];
+			$maiores->categoria_id = $noticia['categoria_id'];
 			$maiores->init = 0;
 			$maiores->max = 2;
 
 			$menores = new Noticias();
-			$menores->categoria = $noticia['categoria'];
+			$menores->categoria_id = $noticia['categoria_id'];
 			$menores->init = 2;
 			$menores->max = 4;
+
+			$categoria = new Categorias();
+			$categoria->id = $noticia['categoria_id'];
 
 			$dados = array(
 				'noticia' => $noticia,
 				'maiores' => $maiores->get_by_categoria(),
-				'menores' => $menores->get_by_categoria()
+				'menores' => $menores->get_by_categoria(),
+				'categoria' => $categoria->get_categoria()
 			);
 
 			$this->loadView('postagem', $dados);

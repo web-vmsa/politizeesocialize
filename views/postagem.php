@@ -1,4 +1,3 @@
-<?php $arquivo_prop = json_decode($noticia['arquivo_prop']); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,18 +18,18 @@
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="<?php echo $noticia['nome']; ?>">
-	<meta property="article:section" content="<?php echo $noticia['categoria']; ?>">
+	<meta property="article:section" content="<?php echo utf8_encode($categoria['nome_normal']); ?>">
 	<meta property="article:tag" content="<?php echo $noticia['tags']; ?>">
 	<meta property="article:published_time" content="<?php echo $noticia['data']; ?>">
 	<meta property="og:url" content="<?php echo BASE_URL; ?>home/noticia/<?php echo $noticia['url']; ?>">
 	<meta property="og:title" content="<?php echo $noticia['titulo']; ?>">
 	<meta property="og:description" content="<?php echo $noticia['descricao']; ?>">
 
-	<?php if($arquivo_prop->tipo == "imagem"): ?>
+	<?php if($noticia['tipo'] == "imagem"): ?>
 
 	<meta property="og:image" content="<?php echo ADMIN_URL; ?>users/images/<?php echo $noticia['arquivo']; ?>">
 
-	<?php elseif($arquivo_prop->tipo == "video"): ?>
+	<?php elseif($noticia['tipo'] == "video"): ?>
 
 	<meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png" />
 
@@ -250,8 +249,8 @@
 	</header>
 
 	<!-- Tarja fixa da seção -->
-	<section class="tarja-categoria tarja-categoria-<?php echo $noticia['categoria']; ?>">
-		<p><?php echo mb_strtoupper($noticia['categoria']); ?></p>
+	<section class="tarja-categoria tarja-categoria-<?php echo $categoria['nome']; ?>">
+		<p><?php echo mb_strtoupper(utf8_encode($categoria['nome_normal'])); ?></p>
 	</section>
 
 	<!-- Dados do artigo -->
@@ -297,7 +296,7 @@
 	</div>
 
 	<!-- Arquivo principal do artigo -->
-	<?php if($arquivo_prop->tipo == "imagem"): ?>
+	<?php if($noticia['tipo'] == "imagem"): ?>
 
 	<div class="file-artigo">
 		<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $noticia['arquivo']; ?>">
@@ -315,7 +314,7 @@
 
 	<!-- Descrição da imagem do artigo -->
 	<div class="descricao-arquivo">
-		<p><?php echo $arquivo_prop->legenda; ?></p>
+		<p><?php echo $noticia['legenda']; ?></p>
 	</div>
 
 	<!-- Postagem -->
@@ -342,10 +341,10 @@
 
 	<!-- Mais da categoria -->
 	<section class="topo-secao politica-topo-secao">
-		<a href="<?php echo BASE_URL; ?>home/categoria/<?php echo $noticia['categoria']; ?>">
+		<a href="<?php echo BASE_URL; ?>home/categoria/<?php echo $categoria['id']; ?>">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
-				<p><?php echo mb_strtoupper($noticia['categoria']); ?></p>
+				<p><?php echo mb_strtoupper(utf8_encode($categoria['nome_normal'])); ?></p>
 			</div>
 			<div class="item-topo-secao justify-right">
 				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
@@ -359,18 +358,16 @@
 
 			<?php
 				foreach($maiores as $dados):
-
-				$arquivo_prop = json_decode($dados['arquivo_prop']);
 			?>
 
 			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-maior-politica">
 
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -415,18 +412,16 @@
 
 			<?php 
 				foreach($menores as $dados):
-
-				$arquivo_prop = json_decode($dados['arquivo_prop']);
 			?>
 
 			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-menor-politica">
 
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">

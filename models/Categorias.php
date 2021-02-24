@@ -22,7 +22,7 @@ class Categorias extends model {
 
 		$sql = "SELECT * FROM categorias WHERE id = :id";
 		$sql = $this->db->prepare($sql);
-		$sql->bindValue(':id', $this->nome);
+		$sql->bindValue(':id', $this->id);
 		$sql->execute();
 		if ($sql->rowCount() > 0) {
 			return $sql->fetch();
