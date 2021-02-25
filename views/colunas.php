@@ -327,7 +327,7 @@
 
 	<!-- Política -->
 	<section class="topo-secao politica-topo-secao" id="politica">
-		<a href="<?php echo BASE_URL; ?>home/categoria/politica">
+		<a href="<?php echo BASE_URL; ?>home/categoria/1">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>POLÍTICA</p>
@@ -368,7 +368,7 @@
 
 	<!-- Televisão -->
 	<section class="topo-secao televisao-topo-secao" id="televisao">
-		<a href="<?php echo BASE_URL; ?>home/categoria/televisao">
+		<a href="<?php echo BASE_URL; ?>home/categoria/2">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>TELEVISÃO</p>
@@ -409,7 +409,7 @@
 
 	<!-- Esportes -->
 	<section class="topo-secao esportes-topo-secao" id="esportes">
-		<a href="<?php echo BASE_URL; ?>home/categoria/esportes">
+		<a href="<?php echo BASE_URL; ?>home/categoria/3">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>ESPORTES</p>
@@ -450,7 +450,7 @@
 
 	<!-- Economia -->
 	<section class="topo-secao economia-topo-secao" id="economia">
-		<a href="<?php echo BASE_URL; ?>home/categoria/economia">
+		<a href="<?php echo BASE_URL; ?>home/categoria/5">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>ECONOMIA</p>
@@ -491,7 +491,7 @@
 
 	<!-- Saúde -->
 	<section class="topo-secao saude-topo-secao" id="saude">
-		<a href="<?php echo BASE_URL; ?>home/categoria/saude">
+		<a href="<?php echo BASE_URL; ?>home/categoria/4">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>SAÚDE</p>
@@ -532,7 +532,7 @@
 
 	<!-- Educação -->
 	<section class="topo-secao educacao-topo-secao" id="educacao">
-		<a href="<?php echo BASE_URL; ?>home/categoria/educacao">
+		<a href="<?php echo BASE_URL; ?>home/categoria/8">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>EDUCAÇÃO</p>
@@ -573,7 +573,7 @@
 
 	<!-- Música -->
 	<section class="topo-secao musica-topo-secao" id="musica">
-		<a href="<?php echo BASE_URL; ?>home/categoria/musica">
+		<a href="<?php echo BASE_URL; ?>home/categoria/7">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>MÚSICA</p>
@@ -614,7 +614,7 @@
 
 	<!-- Games -->
 	<section class="topo-secao games-topo-secao" id="games">
-		<a href="<?php echo BASE_URL; ?>home/categoria/financas">
+		<a href="<?php echo BASE_URL; ?>home/categoria/6">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>GAMES</p>

@@ -1,6 +1,5 @@
 <?php 
-	
-	$usuario_prop = json_decode($colunista['usuario_prop']); 
+
 	$redes_sociais = json_decode($colunista['social']);
 
 ?>
@@ -247,8 +246,8 @@
 	</header>
 
 	<!-- Tarja fixa da seção -->
-	<section class="tarja-categoria tarja-categoria-<?php echo $usuario_prop->categoria; ?>">
-		<p><?php echo mb_strtoupper($usuario_prop->categoria); ?></p>
+	<section class="tarja-categoria tarja-categoria-<?php echo $categoria['nome']; ?>">
+		<p><?php echo mb_strtoupper(utf8_encode($categoria['nome_normal'])); ?></p>
 	</section>
 
 	<!-- Topo do perfil do Colunista -->
@@ -284,7 +283,7 @@
 	</section>
 
 	<!-- Todas as postagens -->
-	<section class="todas-postagens colunista-postagens todas-postagens-<?php echo $usuario_prop->categoria; ?>">
+	<section class="todas-postagens colunista-postagens todas-postagens-<?php echo $categoria['nome']; ?>">
 		
 	</section>
 
@@ -300,10 +299,10 @@
 
 	<!-- Política -->
 	<section class="topo-secao politica-topo-secao">
-		<a href="<?php echo BASE_URL; ?>home/categoria/<?php echo $usuario_prop->categoria; ?>">
+		<a href="<?php echo BASE_URL; ?>home/categoria/<?php echo $categoria['id']; ?>">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
-				<p><?php echo mb_strtoupper($usuario_prop->categoria); ?></p>
+				<p><?php echo mb_strtoupper(utf8_encode($categoria['nome_normal'])); ?></p>
 			</div>
 			<div class="item-topo-secao justify-right">
 				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
@@ -312,7 +311,7 @@
 	</section>
 
 	<!-- Colunistas da Seção Política -->
-	<section class="colunistas-secao colunistas-secao-<?php echo $usuario_prop->categoria; ?>">
+	<section class="colunistas-secao colunistas-secao-<?php echo $categoria['nome']; ?>">
 
 		<?php
 			foreach($colunistas as $dados):

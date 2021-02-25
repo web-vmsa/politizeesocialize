@@ -284,18 +284,16 @@
 
 		<?php 
 			foreach($resultados as $dados):
-
-			$arquivo_prop = json_decode($dados['arquivo_prop']);
 		?>
 
 		<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 			<div class="noticia-menor-politica">
 
-				<?php if($arquivo_prop->tipo == "imagem"): ?>
+				<?php if($dados['tipo'] == "imagem"): ?>
 
 				<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-				<?php elseif($arquivo_prop->tipo == "video"): ?>
+				<?php elseif($dados['tipo'] == "video"): ?>
 
 				<video>
 					<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">

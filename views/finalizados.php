@@ -321,8 +321,6 @@
 		<?php 
 			foreach($jogos_hoje as $dados): 
 
-			$propriedades_jogo = json_decode($dados['jogo_prop']);
-
 			$placar = $dados['placar'];
 
 			$resultado = explode("-", $placar);
@@ -340,11 +338,11 @@
 					<p><?php echo $dados['status_jogo']; ?></p>
 				</div>
 				<div class="campeonato-jogo">
-					<p><?php echo $propriedades_jogo->campeonato; ?> - <?php echo $propriedades_jogo->fase; ?></p>
+					<p><?php echo $dados['campeonato']; ?> - <?php echo $dados['fase']; ?></p>
 				</div>
 				<div class="placar">
-					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_casa; ?>">
-					<p><?php echo $propriedades_jogo->time_casa; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $dados['time_casa']; ?>">
+					<p><?php echo $dados['time_casa']; ?></p>
 					<?php if($placar_time_casa == $valor_maior && $placar_time_fora == $valor_maior): ?>
 
 						<h2><span><?php echo $placar_time_casa; ?>-<?php echo $placar_time_fora; ?></span></h2>
@@ -362,8 +360,8 @@
 						<?php endif; ?>
 
 					<?php endif; ?>
-					<p><?php echo $propriedades_jogo->time_fora; ?></p>
-					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_fora; ?>">
+					<p><?php echo $dados['time_fora']; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $dados['time_fora']; ?>">
 				</div>
 				<div class="data-oficial">
 					<p><?php echo substr(str_replace(":", "h", $dados['data']), 0,-3);?></p>
@@ -392,8 +390,6 @@
 		<?php 
 			foreach($jogos_ontem as $dados): 
 
-			$propriedades_jogo = json_decode($dados['jogo_prop']);
-
 			$placar = $dados['placar'];
 
 			$resultado = explode("-", $placar);
@@ -408,11 +404,11 @@
 		<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>">
 			<div class="jogo-placar jogo-sem-borda">
 				<div class="campeonato-jogo">
-					<p><?php echo $propriedades_jogo->campeonato; ?> - <?php echo $propriedades_jogo->fase; ?></p>
+					<p><?php echo $dados['campeonato']; ?> - <?php echo $dados['fase']; ?></p>
 				</div>
 				<div class="placar">
-					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_casa; ?>">
-					<p><?php echo $propriedades_jogo->time_casa; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $dados['time_casa']; ?>">
+					<p><?php echo $dados['time_casa']; ?></p>
 					<?php if($placar_time_casa == $valor_maior && $placar_time_fora == $valor_maior): ?>
 
 						<h2><span><?php echo $placar_time_casa; ?>-<?php echo $placar_time_fora; ?></span></h2>
@@ -430,8 +426,8 @@
 						<?php endif; ?>
 
 					<?php endif; ?>
-					<p><?php echo $propriedades_jogo->time_fora; ?></p>
-					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_fora; ?>">
+					<p><?php echo $dados['time_fora']; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $dados['time_fora']; ?>">
 				</div>
 				<div class="data-oficial">
 					<p><?php echo substr(str_replace(":", "h", $dados['data']), 0,-3);?></p>
@@ -460,8 +456,6 @@
 		<?php 
 			foreach($jogos_outro as $dados): 
 
-			$propriedades_jogo = json_decode($dados['jogo_prop']);
-
 			$placar = $dados['placar'];
 
 			$resultado = explode("-", $placar);
@@ -476,11 +470,11 @@
 		<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>">
 			<div class="jogo-placar jogo-sem-borda">
 				<div class="campeonato-jogo">
-					<p><?php echo $propriedades_jogo->campeonato; ?> - <?php echo $propriedades_jogo->fase; ?></p>
+					<p><?php echo $dados['campeonato']; ?> - <?php echo $dados['fase']; ?></p>
 				</div>
 				<div class="placar">
-					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_casa; ?>">
-					<p><?php echo $propriedades_jogo->time_casa; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $dados['time_casa']; ?>">
+					<p><?php echo $dados['time_casa']; ?></p>
 					<?php if($placar_time_casa == $valor_maior && $placar_time_fora == $valor_maior): ?>
 
 						<h2><span><?php echo $placar_time_casa; ?>-<?php echo $placar_time_fora; ?></span></h2>
@@ -498,8 +492,8 @@
 						<?php endif; ?>
 
 					<?php endif; ?>
-					<p><?php echo $propriedades_jogo->time_fora; ?></p>
-					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_fora; ?>">
+					<p><?php echo $dados['time_fora']; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $dados['time_fora']; ?>">
 				</div>
 				<div class="data-oficial">
 					<p><?php echo substr(str_replace(":", "h", $dados['data']), 0,-3);?></p>
@@ -528,8 +522,6 @@
 		<?php 
 			foreach($jogos_mais as $dados): 
 
-			$propriedades_jogo = json_decode($dados['jogo_prop']);
-
 			$placar = $dados['placar'];
 
 			$resultado = explode("-", $placar);
@@ -544,11 +536,11 @@
 		<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>">
 			<div class="jogo-placar jogo-sem-borda">
 				<div class="campeonato-jogo">
-					<p><?php echo $propriedades_jogo->campeonato; ?> - <?php echo $propriedades_jogo->fase; ?></p>
+					<p><?php echo $dados['campeonato']; ?> - <?php echo $dados['fase']; ?></p>
 				</div>
 				<div class="placar">
-					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_casa; ?>">
-					<p><?php echo $propriedades_jogo->time_casa; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $dados['time_casa']; ?>">
+					<p><?php echo $dados['time_casa']; ?></p>
 					<?php if($placar_time_casa == $valor_maior && $placar_time_fora == $valor_maior): ?>
 
 						<h2><span><?php echo $placar_time_casa; ?>-<?php echo $placar_time_fora; ?></span></h2>
@@ -566,8 +558,8 @@
 						<?php endif; ?>
 
 					<?php endif; ?>
-					<p><?php echo $propriedades_jogo->time_fora; ?></p>
-					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $propriedades_jogo->time_fora; ?>">
+					<p><?php echo $dados['time_fora']; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $dados['time_fora']; ?>">
 				</div>
 				<div class="data-oficial">
 					<p><?php echo substr(str_replace(":", "h", $dados['data']), 0,-3);?></p>
@@ -609,7 +601,7 @@
 
 	<!-- Esportes -->
 	<section class="topo-secao esportes-topo-secao">
-		<a href="<?php echo BASE_URL; ?>home/categoria/esportes">
+		<a href="<?php echo BASE_URL; ?>home/categoria/3">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>ESPORTES</p>
@@ -637,13 +629,11 @@
 					<?php 
 						foreach($resultados as $dados): 
 
-						$propriedades_jogo = json_decode($dados['jogo_prop']);
-
 						$alcunha_casa = new Jogos();
-						$alcunha_casa = $alcunha_casa->get_alcunha($propriedades_jogo->time_casa);
+						$alcunha_casa = $alcunha_casa->get_alcunha($dados['time_casa']);
 
 						$alcunha_fora = new Jogos();
-						$alcunha_fora = $alcunha_fora->get_alcunha($propriedades_jogo->time_fora);
+						$alcunha_fora = $alcunha_fora->get_alcunha($dados['time_fora']);
 					?>
 
 					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>"><div class="jogo-div">
@@ -668,13 +658,11 @@
 					<?php 
 						foreach($agendados as $dados): 
 
-						$propriedades_jogo = json_decode($dados['jogo_prop']);
-
 						$alcunha_casa = new Jogos();
-						$alcunha_casa = $alcunha_casa->get_alcunha($propriedades_jogo->time_casa);
+						$alcunha_casa = $alcunha_casa->get_alcunha($dados['time_casa']);
 
 						$alcunha_fora = new Jogos();
-						$alcunha_fora = $alcunha_fora->get_alcunha($propriedades_jogo->time_fora);
+						$alcunha_fora = $alcunha_fora->get_alcunha($dados['time_fora']);
 					?>
 
 					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>"><div class="jogo-div">
@@ -693,18 +681,16 @@
 
 			<?php 
 				foreach($noticias_jogos as $dados):
-
-				$arquivo_prop = json_decode($dados['arquivo_prop']);
 			?>
 
 			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-menor-politica">
 					
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -763,17 +749,15 @@
 
 				<?php 
 					foreach($slide_esportes as $dados):
-
-					$arquivo_prop = json_decode($dados['arquivo_prop']);
 				?>
 
 				<div class="carousel-slide fade">
 					
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">

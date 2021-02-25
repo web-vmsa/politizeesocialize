@@ -279,7 +279,7 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
-			$videos->categoria = 'politica';
+			$videos->categoria_id = 1;
 			$videos->init = $init;
 			$videos->max = $max;
 			$data_video = $videos->get_videos();
@@ -340,7 +340,7 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
-			$videos->categoria = 'televisao';
+			$videos->categoria_id = 2;
 			$videos->init = $init;
 			$videos->max = $max;
 			$data_video = $videos->get_videos();
@@ -401,7 +401,7 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
-			$videos->categoria = 'esportes';
+			$videos->categoria_id = 3;
 			$videos->init = $init;
 			$videos->max = $max;
 			$data_video = $videos->get_videos();
@@ -462,7 +462,7 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
-			$videos->categoria = 'economia';
+			$videos->categoria_id = 5;
 			$videos->init = $init;
 			$videos->max = $max;
 			$data_video = $videos->get_videos();
@@ -523,7 +523,7 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
-			$videos->categoria = 'saude';
+			$videos->categoria_id = 4;
 			$videos->init = $init;
 			$videos->max = $max;
 			$data_video = $videos->get_videos();
@@ -584,7 +584,7 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
-			$videos->categoria = 'educacao';
+			$videos->categoria_id = 8;
 			$videos->init = $init;
 			$videos->max = $max;
 			$data_video = $videos->get_videos();
@@ -645,7 +645,7 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
-			$videos->categoria = 'musica';
+			$videos->categoria_id = 7;
 			$videos->init = $init;
 			$videos->max = $max;
 			$data_video = $videos->get_videos();
@@ -706,7 +706,7 @@ class ajaxController extends controller {
 			$init = ($page * $max) - $max;
 
 			$videos = new Videos();
-			$videos->categoria = 'games';
+			$videos->categoria_id = 6;
 			$videos->init = $init;
 			$videos->max = $max;
 			$data_video = $videos->get_videos();
@@ -862,12 +862,10 @@ class ajaxController extends controller {
 
 			foreach ($data_postagens as $posts) {
 
-				$arquivo_prop = json_decode($posts['arquivo_prop']);
-
 				echo '<a href="'.BASE_URL.'colunas/opiniao/'.$posts['url'].'">';
 					echo '<div class="noticia-menor-politica">';
 						
-						if ($arquivo_prop->tipo == "imagem") {
+						if ($posts['tipo'] == "imagem") {
 
 							echo '<img src="'.ADMIN_URL.'users/images/'.$posts['arquivo'].'">';
 
@@ -938,7 +936,7 @@ class ajaxController extends controller {
 				echo '<a href="'.BASE_URL.'colunas/opiniao/'.$posts['url'].'">';
 					echo '<div class="noticia-menor-politica">';
 						
-						if ($arquivo_prop->tipo == "imagem") {
+						if ($posts['tipo'] == "imagem") {
 
 							echo '<img src="'.ADMIN_URL.'users/images/'.$posts['arquivo'].'">';
 

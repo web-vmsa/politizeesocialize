@@ -285,7 +285,7 @@
 	<!-- Vídeos recentes sobre Política -->
 	<section class="videos-recentes" id="politica">
 		<div class="topo-recentes topo-recentes-politica">
-			<a href="<?php echo BASE_URL; ?>home/categoria/politica">
+			<a href="<?php echo BASE_URL; ?>home/categoria/1">
 				<p>POLÍTICA</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
@@ -307,7 +307,7 @@
 	<!-- Vídeos recentes sobre Televisão -->
 	<section class="videos-recentes" id="televisao">
 		<div class="topo-recentes topo-recentes-televisao">
-			<a href="<?php echo BASE_URL; ?>home/categoria/televisao">
+			<a href="<?php echo BASE_URL; ?>home/categoria/2">
 				<p>TELEVISÃO</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
@@ -329,7 +329,7 @@
 	<!-- Vídeos recentes sobre Esportes -->
 	<section class="videos-recentes" id="esportes">
 		<div class="topo-recentes topo-recentes-esportes">
-			<a href="<?php echo BASE_URL; ?>home/categoria/esportes">
+			<a href="<?php echo BASE_URL; ?>home/categoria/3">
 				<p>ESPORTES</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
@@ -351,7 +351,7 @@
 	<!-- Vídeos recentes sobre Economia -->
 	<section class="videos-recentes" id="economia">
 		<div class="topo-recentes topo-recentes-economia">
-			<a href="<?php echo BASE_URL; ?>home/categoria/economia">
+			<a href="<?php echo BASE_URL; ?>home/categoria/5">
 				<p>ECONOMIA</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
@@ -373,7 +373,7 @@
 	<!-- Vídeos recentes sobre Saúde -->
 	<section class="videos-recentes" id="saude">
 		<div class="topo-recentes topo-recentes-saude">
-			<a href="<?php echo BASE_URL; ?>home/categoria/saude">
+			<a href="<?php echo BASE_URL; ?>home/categoria/4">
 				<p>SAÚDE</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
@@ -395,7 +395,7 @@
 	<!-- Vídeos recentes sobre Educação -->
 	<section class="videos-recentes" id="educacao">
 		<div class="topo-recentes topo-recentes-educacao">
-			<a href="<?php echo BASE_URL; ?>home/categoria/educacao">
+			<a href="<?php echo BASE_URL; ?>home/categoria/8">
 				<p>EDUCAÇÃO</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
@@ -417,7 +417,7 @@
 	<!-- Vídeos recentes sobre Música -->
 	<section class="videos-recentes" id="musica">
 		<div class="topo-recentes topo-recentes-musica">
-			<a href="<?php echo BASE_URL; ?>home/categoria/musica">
+			<a href="<?php echo BASE_URL; ?>home/categoria/7">
 				<p>MÚSICA</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
@@ -439,7 +439,7 @@
 	<!-- Vídeos recentes sobre Games -->
 	<section class="videos-recentes" id="games">
 		<div class="topo-recentes topo-recentes-games">
-			<a href="<?php echo BASE_URL; ?>home/categoria/politica">
+			<a href="<?php echo BASE_URL; ?>home/categoria/6">
 				<p>GAMES</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>

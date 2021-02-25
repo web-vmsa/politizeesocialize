@@ -14,12 +14,12 @@ class jogosController extends controller {
 		$agendados->max = 4;
 
 		$noticias_jogos = new Noticias();
-		$noticias_jogos->categoria = "esportes";
+		$noticias_jogos->categoria_id = 3;
 		$noticias_jogos->init = 0;
 		$noticias_jogos->max = 4;
 
 		$videos_esportes = new Noticias();
-		$videos_esportes->categoria = "esportes";
+		$videos_esportes->categoria_id = 3;
 		$videos_esportes->init = 0;
 		$videos_esportes->max = 2;
 
@@ -84,12 +84,12 @@ class jogosController extends controller {
 		$agendados->max = 4;
 
 		$noticias_jogos = new Noticias();
-		$noticias_jogos->categoria = "esportes";
+		$noticias_jogos->categoria_id = 3;
 		$noticias_jogos->init = 0;
 		$noticias_jogos->max = 4;
 
 		$videos_esportes = new Noticias();
-		$videos_esportes->categoria = "esportes";
+		$videos_esportes->categoria_id = 3;
 		$videos_esportes->init = 0;
 		$videos_esportes->max = 2;
 
@@ -153,12 +153,12 @@ class jogosController extends controller {
 			$agendados->max = 4;
 
 			$noticias_jogos = new Noticias();
-			$noticias_jogos->categoria = "esportes";
+			$noticias_jogos->categoria_id = 3;
 			$noticias_jogos->init = 0;
 			$noticias_jogos->max = 4;
 
 			$videos_esportes = new Noticias();
-			$videos_esportes->categoria = "esportes";
+			$videos_esportes->categoria_id = 3;
 			$videos_esportes->init = 0;
 			$videos_esportes->max = 2;
 
@@ -167,13 +167,17 @@ class jogosController extends controller {
 			$slide_esportes->init = 0;
 			$slide_esportes->max = 3;
 
+			$categoria = new Categorias();
+			$categoria->id = $jogo['categoria_id'];
+
 			$dados = array(
 				'resultados' => $resultados->get_jogos(),
 				'agendados' => $agendados->get_jogos(),
 				'noticias_jogos' => $noticias_jogos->get_by_categoria(),
 				'videos_esportes' => $videos_esportes->get_videos(),
 				'slide_esportes' => $slide_esportes->get_jogos(),
-				'jogo' => $jogo
+				'jogo' => $jogo,
+				'categoria' => $categoria->get_categoria()
 			);
 
 			$this->loadView('jogo', $dados);

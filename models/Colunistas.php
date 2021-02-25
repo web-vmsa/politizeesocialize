@@ -47,9 +47,9 @@ class Colunistas extends model {
 	*/
 	public function get_colunistas_by_categoria(){
 
-		$sql = "SELECT * FROM usuarios WHERE categoria = :categoria ORDER BY id DESC";
+		$sql = "SELECT * FROM usuarios WHERE nivel = 'escritor' AND categoria_id = :categoria_id ORDER BY id DESC";
 		$sql = $this->db->prepare($sql);
-		$sql->bindValue(':categoria', $this->categoria);
+		$sql->bindValue(':categoria_id', $this->categoria_id);
 		$sql->execute();
 		if ($sql->rowCount() > 0) {
 			return $sql->fetchAll();
@@ -69,7 +69,7 @@ class Colunistas extends model {
 	*/
 	public function get_colunista(){
 
-		$sql = "SELECT * FROM usuarios WHERE categoria != 'NULL' AND nome = :nome AND status = '1'";
+		$sql = "SELECT * FROM usuarios WHERE nivel = 'escritor' AND nome = :nome AND status = '1'";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(':nome', $this->nome);
 		$sql->execute();
@@ -91,7 +91,7 @@ class Colunistas extends model {
 	*/
 	public function get_colunista_posts(){
 
-		$sql = "SELECT usuarios.id, usuarios.nome, opinioes.id, opinioes.categoria, opinioes.id_usuario, opinioes.titulo, opinioes.arquivo, opinioes.url, opinioes.tags, opinioes.arquivo_prop, opinioes.data, DAY(opinioes.data) as dia, MONTH(opinioes.data) as mes, YEAR(opinioes.data) as ano FROM opinioes INNER JOIN usuarios ON usuarios.id = opinioes.id_usuario WHERE opinioes.status = '1' AND usuarios.nome = :nome ORDER BY opinioes.id DESC LIMIT :max OFFSET :init";
+		$sql = "SELECT usuarios.id, usuarios.nome, opinioes.id, opinioes.categoria_id, opinioes.id_usuario, opinioes.titulo, opinioes.arquivo, opinioes.url, opinioes.tags, opinioes.tipo, opinioes.legenda, opinioes.data, DAY(opinioes.data) as dia, MONTH(opinioes.data) as mes, YEAR(opinioes.data) as ano FROM opinioes INNER JOIN usuarios ON usuarios.id = opinioes.id_usuario WHERE opinioes.status = '1' AND usuarios.nome = :nome ORDER BY opinioes.id DESC LIMIT :max OFFSET :init";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(':nome', $this->nome);
 		$sql->bindValue(':init', $this->init, PDO::PARAM_INT);

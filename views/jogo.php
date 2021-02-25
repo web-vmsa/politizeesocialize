@@ -1,4 +1,3 @@
-<?php $arquivo_prop = json_decode($jogo['arquivo_prop']); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,18 +18,18 @@
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="article">
 	<meta property="article:author" content="<?php echo $jogo['nome']; ?>">
-	<meta property="article:section" content="<?php echo $jogo['categoria']; ?>">
+	<meta property="article:section" content="<?php echo utf8_encode($categoria['nome_normal']); ?>">
 	<meta property="article:tag" content="<?php echo $jogo['tags']; ?>">
 	<meta property="article:published_time" content="<?php echo $jogo['data']; ?>">
 	<meta property="og:url" content="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $jogo['url']; ?>">
 	<meta property="og:title" content="<?php echo $jogo['titulo']; ?>">
 	<meta property="og:description" content="<?php echo $jogo['descricao']; ?>">
 
-	<?php if($arquivo_prop->tipo == "imagem"): ?>
+	<?php if($jogo['tipo'] == "imagem"): ?>
 
 	<meta property="og:image" content="<?php echo ADMIN_URL; ?>users/images/<?php echo $jogo['arquivo']; ?>">
 
-	<?php elseif($arquivo_prop->tipo == "video"): ?>
+	<?php elseif($jogo['tipo'] == "video"): ?>
 
 	<meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/logotipo-politizeesocialize.png" />
 
@@ -320,8 +319,6 @@
 	<!-- Placar do jogo -->
 	<div class="postagem-jogo">
 
-		<?php $jogo_prop = json_decode($jogo['jogo_prop']); ?>
-
 		<p class="placar-p">Placar</p>
 
 		<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $jogo['url']; ?>">
@@ -330,16 +327,16 @@
 					<p>Ao vivo</p>
 				</div>
 				<div class="campeonato-jogo">
-					<p><?php echo $jogo_prop->campeonato; ?> - <?php echo $jogo_prop->fase; ?></p>
+					<p><?php echo $jogo['campeonato']; ?> - <?php echo $jogo['fase']; ?></p>
 				</div>
 				<div class="placar">
-					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $jogo_prop->time_casa; ?>">
-					<p><?php echo $jogo_prop->time_casa; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $jogo['time_casa']; ?>">
+					<p><?php echo $jogo['time_casa']; ?></p>
 					<div id="placar_ao_vivo">
 						<h2><span>1-1</span></h2>
 					</div>
-					<p><?php echo $jogo_prop->time_fora; ?></p>
-					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $jogo_prop->time_fora; ?>">
+					<p><?php echo $jogo['time_fora']; ?></p>
+					<img src="<?php echo ADMIN_URL; ?>jogos/escudo/<?php echo $jogo['time_fora']; ?>">
 				</div>
 				<div class="data-oficial">
 					<p><?php echo substr(str_replace(":", "h", $jogo['data']), 0,-3);?></p>
@@ -394,7 +391,7 @@
 	</div>
 
 	<!-- Arquivo principal do artigo -->
-	<?php if($arquivo_prop->tipo == "imagem"): ?>
+	<?php if($jogo['tipo'] == "imagem"): ?>
 
 	<div class="file-artigo">
 		<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $jogo['arquivo']; ?>">
@@ -412,7 +409,7 @@
 
 	<!-- Descrição da imagem do artigo -->
 	<div class="descricao-arquivo">
-		<p><?php echo $arquivo_prop->legenda; ?></p>
+		<p><?php echo $jogo['legenda']; ?></p>
 	</div>
 
 	<!-- Postagem -->
@@ -442,7 +439,7 @@
 
 	<!-- Esportes -->
 	<section class="topo-secao esportes-topo-secao">
-		<a href="<?php echo BASE_URL; ?>home/categoria/esportes">
+		<a href="<?php echo BASE_URL; ?>home/categoria/3">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>ESPORTES</p>
@@ -470,13 +467,11 @@
 					<?php 
 						foreach($resultados as $dados): 
 
-						$propriedades_jogo = json_decode($dados['jogo_prop']);
-
 						$alcunha_casa = new Jogos();
-						$alcunha_casa = $alcunha_casa->get_alcunha($propriedades_jogo->time_casa);
+						$alcunha_casa = $alcunha_casa->get_alcunha($dados['time_casa']);
 
 						$alcunha_fora = new Jogos();
-						$alcunha_fora = $alcunha_fora->get_alcunha($propriedades_jogo->time_fora);
+						$alcunha_fora = $alcunha_fora->get_alcunha($dados['time_fora']);
 					?>
 
 					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>"><div class="jogo-div">
@@ -501,13 +496,11 @@
 					<?php 
 						foreach($agendados as $dados): 
 
-						$propriedades_jogo = json_decode($dados['jogo_prop']);
-
 						$alcunha_casa = new Jogos();
-						$alcunha_casa = $alcunha_casa->get_alcunha($propriedades_jogo->time_casa);
+						$alcunha_casa = $alcunha_casa->get_alcunha($dados['time_casa']);
 
 						$alcunha_fora = new Jogos();
-						$alcunha_fora = $alcunha_fora->get_alcunha($propriedades_jogo->time_fora);
+						$alcunha_fora = $alcunha_fora->get_alcunha($dados['time_fora']);
 					?>
 
 					<a href="<?php echo BASE_URL; ?>jogos/jogo/<?php echo $dados['url']; ?>"><div class="jogo-div">
@@ -526,18 +519,16 @@
 
 			<?php 
 				foreach($noticias_jogos as $dados):
-
-				$arquivo_prop = json_decode($dados['arquivo_prop']);
 			?>
 
 			<a href="<?php echo BASE_URL; ?>home/noticia/<?php echo $dados['url']; ?>">
 				<div class="noticia-menor-politica">
 					
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">
@@ -596,17 +587,15 @@
 
 				<?php 
 					foreach($slide_esportes as $dados):
-
-					$arquivo_prop = json_decode($dados['arquivo_prop']);
 				?>
 
 				<div class="carousel-slide fade">
 					
-					<?php if($arquivo_prop->tipo == "imagem"): ?>
+					<?php if($dados['tipo'] == "imagem"): ?>
 
 					<img src="<?php echo ADMIN_URL; ?>users/images/<?php echo $dados['arquivo']; ?>">
 
-					<?php elseif($arquivo_prop->tipo == "video"): ?>
+					<?php elseif($dados['tipo'] == "video"): ?>
 
 					<video>
 						<source src="<?php echo ADMIN_URL; ?>users/videos/<?php echo $dados['arquivo']; ?>" type="video/mp4">

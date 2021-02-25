@@ -11,7 +11,10 @@ class Jogos extends model {
 	public $id;
 	public $id_usuario;
 	public $categoria;
-	public $jogo_prop;
+	public $time_casa;
+	public $time_fora;
+	public $fase;
+	public $campeonato;
 	public $placar;
 	public $status_jogo;
 	public $titulo;
@@ -19,7 +22,8 @@ class Jogos extends model {
 	public $tags;
 	public $url;
 	public $arquivo;
-	public $arquivo_prop;
+	public $tipo;
+	public $legenda;
 	public $lances;
 	public $data;
 	public $init;
@@ -88,7 +92,7 @@ class Jogos extends model {
 	*/
 	public function get_by_date(){
 
-		$sql = "SELECT id, jogo_prop, status_jogo, placar, status_jogo, url, data, DAY(data) as dia, MONTH(data) as mes, YEAR(data) as ano FROM jogos WHERE DAY(data) = :day AND MONTH(data) = :month AND YEAR(data) = :year ORDER BY id DESC";
+		$sql = "SELECT id, time_casa, time_fora, campeonato, fase, status_jogo, placar, status_jogo, url, data, DAY(data) as dia, MONTH(data) as mes, YEAR(data) as ano FROM jogos WHERE DAY(data) = :day AND MONTH(data) = :month AND YEAR(data) = :year ORDER BY id DESC";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(':day', $this->day);
 		$sql->bindValue(':month', $this->month);
@@ -112,7 +116,7 @@ class Jogos extends model {
 	*/
 	public function get_jogo(){
 
-		$sql = "SELECT usuarios.id, usuarios.nome, usuarios.foto, usuarios.social, jogos.id, jogos.titulo, jogos.descricao, jogos.jogo_prop, jogos.arquivo, jogos.categoria, jogos.url, jogos.lances, jogos.status_jogo, jogos.placar, jogos.arquivo_prop, jogos.id_usuario, jogos.tags, jogos.data, DAY(jogos.data) as dia, MONTH(jogos.data) as mes, YEAR(jogos.data) as ano FROM jogos INNER JOIN usuarios ON usuarios.id = jogos.id_usuario WHERE jogos.url = :url AND jogos.status = '1'";
+		$sql = "SELECT usuarios.id, usuarios.nome, usuarios.foto, usuarios.social, jogos.id, jogos.titulo, jogos.descricao, jogos.time_fora, jogos.time_casa, jogos.campeonato, jogos.fase, jogos.arquivo, jogos.categoria_id, jogos.url, jogos.lances, jogos.status_jogo, jogos.placar, jogos.tipo, jogos.legenda, jogos.id_usuario, jogos.tags, jogos.data, DAY(jogos.data) as dia, MONTH(jogos.data) as mes, YEAR(jogos.data) as ano FROM jogos INNER JOIN usuarios ON usuarios.id = jogos.id_usuario WHERE jogos.url = :url AND jogos.status = '1'";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(':url', $this->url);
 		$sql->execute();

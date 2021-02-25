@@ -132,7 +132,7 @@ class Noticias extends model {
 	*/
 	public function get_resultados($titulo){
 
-		$sql = "SELECT usuarios.id, usuarios.nome, noticias.id, noticias.categoria, noticias.id_usuario, noticias.titulo, noticias.arquivo, noticias.url, noticias.tags, noticias.arquivo_prop, noticias.data, DAY(noticias.data) as dia, MONTH(noticias.data) as mes, YEAR(noticias.data) as ano FROM noticias INNER JOIN usuarios ON usuarios.id = noticias.id_usuario WHERE noticias.titulo LIKE '%$titulo%' AND noticias.status = '1' ORDER BY noticias.id DESC LIMIT :init,:max";
+		$sql = "SELECT usuarios.id, usuarios.nome, noticias.id, noticias.categoria_id, noticias.id_usuario, noticias.titulo, noticias.arquivo, noticias.url, noticias.tags, noticias.tipo, noticias.legenda, noticias.data, DAY(noticias.data) as dia, MONTH(noticias.data) as mes, YEAR(noticias.data) as ano FROM noticias INNER JOIN usuarios ON usuarios.id = noticias.id_usuario WHERE noticias.titulo LIKE '%$titulo%' AND noticias.status = '1' ORDER BY noticias.id DESC LIMIT :init,:max";
 		$sql = $this->db->prepare($sql);
 		$sql->bindValue(':init', $this->init, PDO::PARAM_INT);
 		$sql->bindValue(':max', $this->max, PDO::PARAM_INT);
