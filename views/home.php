@@ -184,7 +184,7 @@
 			</div>
 
 			<div class="itens-menu">
-				<a href="<?php echo BASE_URL; ?>home/categoria/esportes">
+				<a href="<?php echo BASE_URL; ?>home/categoria/3">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_esportes.png">
 						<div class="card-texto">
@@ -193,7 +193,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>home/categoria/politica">
+				<a href="<?php echo BASE_URL; ?>home/categoria/1">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_politica.png">
 						<div class="card-texto">
@@ -202,7 +202,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>home/categoria/saude">
+				<a href="<?php echo BASE_URL; ?>home/categoria/4">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_saude.png">
 						<div class="card-texto">
@@ -211,7 +211,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>home/categoria/economia">
+				<a href="<?php echo BASE_URL; ?>home/categoria/5">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_economia.png">
 						<div class="card-texto">
@@ -220,7 +220,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>home/categoria/games">
+				<a href="<?php echo BASE_URL; ?>home/categoria/6">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_games.png">
 						<div class="card-texto">
@@ -229,7 +229,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>home/categoria/televisao">
+				<a href="<?php echo BASE_URL; ?>home/categoria/2">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_televisao.png">
 						<div class="card-texto">
@@ -247,7 +247,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>home/categoria/musica">
+				<a href="<?php echo BASE_URL; ?>home/categoria/7">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_musica.png">
 						<div class="card-texto">
@@ -256,7 +256,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="<?php echo BASE_URL; ?>home/categoria/educacao">
+				<a href="<?php echo BASE_URL; ?>home/categoria/8">
 					<div class="card-navegacao">
 						<img class="card-navegacao-img" src="<?php echo BASE_URL; ?>assets/images/card_educacao.png">
 						<div class="card-texto">
@@ -399,7 +399,7 @@
 	<!-- Recentes -->
 	<section class="recentes">
 		<div class="topo-recentes">
-			<a href="<?php echo BASE_URL; ?>home/categoria/recentes">
+			<a href="<?php echo BASE_URL; ?>home/categoria/9">
 				<p>RECENTES</p>
 				<img src="<?php echo BASE_URL; ?>assets/images/right.svg">
 			</a>
@@ -515,15 +515,15 @@
 
 	<!-- Seções -->
 	<nav class="secoes">
-		<a href="<?php echo BASE_URL; ?>home/categoria/televisao"><div class="secao right">TELEVISÃO</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/politica"><div class="secao right">POLÍTICA</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/esportes"><div class="secao right">ESPORTES</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/economia"><div class="secao right">ECONOMIA</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/saude"><div class="secao">SAÚDE</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/educacao"><div class="secao right">EDUCAÇÃO</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/musica"><div class="secao right">MÚSICA</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/2"><div class="secao right">TELEVISÃO</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/1"><div class="secao right">POLÍTICA</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/3"><div class="secao right">ESPORTES</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/5"><div class="secao right">ECONOMIA</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/4"><div class="secao">SAÚDE</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/8"><div class="secao right">EDUCAÇÃO</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/7"><div class="secao right">MÚSICA</div></a>
 		<a href="<?php echo BASE_URL; ?>colunas"><div class="secao right">COLUNAS</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/games"><div class="secao">GAMES</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/6"><div class="secao">GAMES</div></a>
 	</nav>
 
 	<!-- Publicidade -->
@@ -535,7 +535,7 @@
 
 	<!-- Política -->
 	<section class="topo-secao politica-topo-secao">
-		<a href="<?php echo BASE_URL; ?>home/categoria/politica">
+		<a href="<?php echo BASE_URL; ?>home/categoria/1">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>POLÍTICA</p>
@@ -666,7 +666,7 @@
 
 	<!-- Televisão -->
 	<section class="topo-secao televisao-topo-secao">
-		<a href="<?php echo BASE_URL; ?>home/categoria/televisao">
+		<a href="<?php echo BASE_URL; ?>home/categoria/2">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>TELEVISÃO</p>
@@ -1000,7 +1000,7 @@
 
 	<!-- Esportes -->
 	<section class="topo-secao esportes-topo-secao">
-		<a href="<?php echo BASE_URL; ?>home/categoria/esportes">
+		<a href="<?php echo BASE_URL; ?>home/categoria/3">
 			<div class="item-topo-secao"></div>
 			<div class="item-topo-secao">
 				<p>ESPORTES</p>
@@ -1401,15 +1401,15 @@
 
 	<!-- Seções -->
 	<nav class="secoes">
-		<a href="<?php echo BASE_URL; ?>home/categoria/televisao"><div class="secao right">TELEVISÃO</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/politica"><div class="secao right">POLÍTICA</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/esportes"><div class="secao right">ESPORTES</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/economia"><div class="secao right">ECONOMIA</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/saude"><div class="secao">SAÚDE</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/educacao"><div class="secao right">EDUCAÇÃO</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/musica"><div class="secao right">MÚSICA</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/2"><div class="secao right">TELEVISÃO</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/1"><div class="secao right">POLÍTICA</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/3"><div class="secao right">ESPORTES</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/5"><div class="secao right">ECONOMIA</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/4"><div class="secao">SAÚDE</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/8"><div class="secao right">EDUCAÇÃO</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/7"><div class="secao right">MÚSICA</div></a>
 		<a href="<?php echo BASE_URL; ?>colunas"><div class="secao right">COLUNAS</div></a>
-		<a href="<?php echo BASE_URL; ?>home/categoria/games"><div class="secao">GAMES</div></a>
+		<a href="<?php echo BASE_URL; ?>home/categoria/6"><div class="secao">GAMES</div></a>
 	</nav>
 
 	<!-- Vídeos -->
@@ -1480,14 +1480,14 @@
 	<footer class="rodape">
 		<nav class="menu-rodape">
 			<a href="<?php echo BASE_URL; ?>colunas">COLUNAS</a>
-			<a href="<?php echo BASE_URL; ?>home/categoria/economia">ECONOMIA</a>	
-			<a href="<?php echo BASE_URL; ?>home/categoria/esportes">ESPORTES</a>
-			<a href="<?php echo BASE_URL; ?>home/categoria/games">GAMES</a>
-			<a href="<?php echo BASE_URL; ?>home/categoria/politica">POLÍTICA</a>
-			<a href="<?php echo BASE_URL; ?>home/categoria/saude">SAÚDE</a>
-			<a href="<?php echo BASE_URL; ?>home/categoria/televisao">TELEVISÃO</a>
-			<a href="<?php echo BASE_URL; ?>home/categoria/educacao">EDUCAÇÃO</a>
-			<a href="<?php echo BASE_URL; ?>home/categoria/musica">MÚSICA</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/5">ECONOMIA</a>	
+			<a href="<?php echo BASE_URL; ?>home/categoria/3">ESPORTES</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/6">GAMES</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/1">POLÍTICA</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/4">SAÚDE</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/2">TELEVISÃO</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/8">EDUCAÇÃO</a>
+			<a href="<?php echo BASE_URL; ?>home/categoria/7">MÚSICA</a>
 			<a href="<?php echo BASE_URL; ?>videos">VÍDEOS</a>
 			<a href="<?php echo BASE_URL; ?>">HOMEPAGE</a>
 		</nav>
