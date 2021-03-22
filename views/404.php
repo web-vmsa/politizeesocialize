@@ -367,7 +367,7 @@
 
 	<!-- Copyright -->
 	<section class="copyright">
-		<p>POLITIZE E SOCIALIZE. TODOS OS DIREITOS RESERVADOS. @2017-@2020</p>
+		<p>POLITIZE E SOCIALIZE. TODOS OS DIREITOS RESERVADOS. @2017-@<?php echo date("Y"); ?></p>
 	</section>
 </body>
 </html>
